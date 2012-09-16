@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Something Awesome]]></title>
-  <link href="http://nicnocquee.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: news | Something Awesome]]></title>
+  <link href="http://nicnocquee.github.com/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://nicnocquee.github.com/"/>
   <updated>2012-09-17T01:25:41+09:00</updated>
   <id>http://nicnocquee.github.com/</id>
@@ -23,9 +23,9 @@
 </div>
 
 
-<p>I&#8217;ve been using many blogging services. Started with Wordpress, Blogger, Tumblr and most recent one was Posterous. I was satisfied with Posterous, until Twitter acquired them. For some reason, the posts I sent via email got published hours after I sent them. Asked them via Twitter about this but no response. So I figured it is time to move on.</p>
+<p>I've been using many blogging services. Started with Wordpress, Blogger, Tumblr and most recent one was Posterous. I was satisfied with Posterous, until Twitter acquired them. For some reason, the posts I sent via email got published hours after I sent them. Asked them via Twitter about this but no response. So I figured it is time to move on.</p>
 
-<p>Going forward, I&#8217;m going to use <a href="http://octopress.org/">Octopress</a>+<a href="http://pages.github.com/">Github Pages</a> for blogging. Not really easy to setup, but seems cool. And this is the first post. I thought simply posting &#8220;Hello world&#8221; or &#8220;This is my first post&#8221; will be so boring. So I share with you a video from <a href="http://www.youtube.com/user/davidmitchellsoapbox?feature=watch">David Mitchell</a>. I mean, just for his voice this video has to be shared.</p>
+<p>Going forward, I'm going to use <a href="http://octopress.org/">Octopress</a>+<a href="http://pages.github.com/">Github Pages</a> for blogging. Not really easy to setup, but seems cool. And this is the first post. I thought simply posting "Hello world" or "This is my first post" will be so boring. So I share with you a video from <a href="http://www.youtube.com/user/davidmitchellsoapbox?feature=watch">David Mitchell</a>. I mean, just for his voice this video has to be shared.</p>
 
 <p>Until next time.</p>
 
