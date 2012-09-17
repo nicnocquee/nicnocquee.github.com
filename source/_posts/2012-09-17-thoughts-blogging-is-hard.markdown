@@ -12,7 +12,7 @@ Recently, I see a trend of what I call [Daring Fireball](http://daringfireball.n
 
 <!-- more -->
 
-I'm so amazed by people who are constantly update their blogs with new posts. Even more amazed by those who make money and make a living out of blogging. Because I find blogging a hard thing to do. It takes lots of thinking and time. What to write. How to write it. Search for other articles that can backup what you wrote. Which is why I think Twitter and Facebook became so popular. You don't really think to tweet or post to Facebook. 
+I'm so amazed by people who are constantly updating their blogs with new posts. Even more amazed by those who make money and make a living out of blogging. Because I find blogging a hard thing to do. It takes lots of thinking and time. What to write. How to write it. Search for other articles that can backup what you wrote. Which is why I think Twitter and Facebook became so popular. You don't really think to tweet or post to Facebook. 
 
 So the point of this post is … nothing actually. I just saw the comic strip above from [shoeboxblog.com](http://www.shoeboxblog.com/?p=32420) and it made me want to express my opinion on how hard blogging is. Of course I can simply say in Twitter or Facebook, "Blogging is hard". But I'm in the middle of Facebook/Twitter fasting. What's that? Next time. Be patient young Jedi.
 
