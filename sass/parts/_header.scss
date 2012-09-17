@@ -18,8 +18,9 @@ $header-height: 30px;
 		}
 	}
 	h1{
+		color: black;
 		float: left;
-		font-weight: 300;
+		font-weight: 30;
 		font-size: 30px;
 		@media screen and (max-width: 1040px){
 			float: none;
