@@ -7,7 +7,7 @@ categories: share
 ---
 
 * [Android is no longer (actually has been for a long time but this just confirmed it) open](http://www.nasdaq.com/article/acer-cancels-press-conference-to-launch-new-smartphone-on-alibaba-software-20120913-00197). Danny Sullivan suggested Google to [separate Android into two with different names](http://marketingland.com/what-is-the-one-true-android-and-how-open-is-it-21664) to avoid confusion. If I may, I suggest Android FREE and Android Pro. But Jason Harrop on [the comment](http://marketingland.com/what-is-the-one-true-android-and-how-open-is-it-21664#comment-651724639) gave the best name for the free version.
-
+<!-- more -->
 * [iPhone 5 pre-order has been very disappointing](http://www.apple.com/pr/library/2012/09/17iPhone-5-Pre-Orders-Top-Two-Million-in-First-24-Hours.html). Oops, forgot to add **\<sarcasm\>** tag there. Too bad I cannot be part of the two million sheeps because my 4S contract is still not done yet.
 
 * Love this illustration of [Wolverine](http://geektyrant.com/storage/0999-post-images/wloverine9152012.png?__SQUARESPACE_CACHEVERSION=1347816917813). Via [GeekTyrant](http://geektyrant.com/news/2012/9/16/great-piece-of-wolverine-geek-art-by-jeff-agala.html).
