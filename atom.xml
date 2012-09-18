@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.github.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-19T00:06:07+09:00</updated>
+  <updated>2012-09-19T00:14:50+09:00</updated>
   <id>http://nicnocquee.github.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -152,7 +152,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Going Forward]]></title>
+    <title type="html"><![CDATA[[NEWS] Going Forward]]></title>
     <link href="http://nicnocquee.github.com/blog/2012/09/17/going-forward/"/>
     <updated>2012-09-17T01:01:00+09:00</updated>
     <id>http://nicnocquee.github.com/blog/2012/09/17/going-forward</id>
