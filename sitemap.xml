@@ -2,40 +2,46 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://nicnocquee.github.com/blog/2012/09/17/going-forward/</loc>
-        <lastmod>2012-09-19T00:14:37+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
     </url>
     <url>
         <loc>http://nicnocquee.github.com/blog/2012/09/17/thoughts-blogging-is-hard/</loc>
-        <lastmod>2012-09-18T11:50:29+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
     </url>
     <url>
         <loc>
             http://nicnocquee.github.com/blog/2012/09/18/share-interesting-findings-number-1/
         </loc>
-        <lastmod>2012-09-18T20:57:30+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
     </url>
     <url>
         <loc>http://nicnocquee.github.com/blog/2012/09/18/photos-weekly-kansai-number-1/</loc>
-        <lastmod>2012-09-19T00:06:06+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
     </url>
     <url>
         <loc>
             http://nicnocquee.github.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/
         </loc>
-        <lastmod>2012-09-19T10:47:44+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
     </url>
     <url>
         <loc>
             http://nicnocquee.github.com/blog/2012/09/19/share-interesting-findings-number-2/
         </loc>
-        <lastmod>2012-09-19T18:04:14+09:00</lastmod>
+        <lastmod>2012-09-19T22:40:58+09:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://nicnocquee.github.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper/
+        </loc>
+        <lastmod>2012-09-19T22:43:35+09:00</lastmod>
     </url>
     <url>
         <loc>http://nicnocquee.github.com/blog/archives/</loc>
-        <lastmod>2012-09-19T18:04:14+09:00</lastmod>
+        <lastmod>2012-09-19T22:43:35+09:00</lastmod>
     </url>
     <url>
         <loc>http://nicnocquee.github.com/</loc>
-        <lastmod>2012-09-19T18:04:14+09:00</lastmod>
+        <lastmod>2012-09-19T22:43:35+09:00</lastmod>
     </url>
 </urlset>
