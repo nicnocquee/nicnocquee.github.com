@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.github.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-19T22:43:35+09:00</updated>
+  <updated>2012-09-19T22:46:36+09:00</updated>
   <id>http://nicnocquee.github.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>Billy Coover on <a href="http://coovtech.com/posts/the-apple-reaper/">The Apple Reaper</a>:</p>
 
 <blockquote><p>At this point I realize that I’m talking to a robot. Someone who’s job is mechanical. There is no empathy. No desire to learn the details of my app. His decision has already been made before he emailed me.</p></blockquote>
+
+
+<!-- more -->
 
 
 <p>Everytime my apps got rejected for unreasonable reason, I always thought the reviewer was a non-tech savvy very old gramps who just learned how to use Mac or iPhone.</p>
