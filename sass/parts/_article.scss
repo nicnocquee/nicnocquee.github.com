@@ -74,9 +74,10 @@ article{
 			height: auto;
 		}
 		blockquote{
-			background: $color-gray04;
+			background: white;
+			font-style: italic;
 			border-left: 5px solid $color-gray03;
-			padding: 15px 20px;
+			padding: 1px 20px;
 			margin-top: 10px;
 			& > p:first-of-type{
 				margin-top: 0;
