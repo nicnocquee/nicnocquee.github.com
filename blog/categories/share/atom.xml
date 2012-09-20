@@ -4,7 +4,7 @@
   <title><![CDATA[Category: share | Something Awesome]]></title>
   <link href="http://nicnocquee.github.com/blog/categories/share/atom.xml" rel="self"/>
   <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-20T12:50:07+09:00</updated>
+  <updated>2012-09-20T17:24:27+09:00</updated>
   <id>http://nicnocquee.github.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] iOS 6 Maps: It just works. NOT!]]></title>
+    <link href="http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
+    <updated>2012-09-20T17:16:00+09:00</updated>
+    <id>http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
+    <content type="html"><![CDATA[<p>SBS on <a href="http://www.japanmobiletech.com/2012/09/ios-6-maps-fail-in-japan.html">iOS 6 maps FAIL in Japan</a>:</p>
+
+<p><blockquote><p>Looking for Osaka Station? Well, it's apparently not in the database. That'll piss off Hashimoto!</p></blockquote></p>
+
+<p><img src="http://3.bp.blogspot.com/-JLuGOmWk5t4/UFrJuaCJ-TI/AAAAAAAABEY/Uuj87fkCMCU/s320/osaka.jpg" alt="Osaka station" /></p>
+
+<p>Blasphemy! Instead of that stupid ads, Samsung should attack Apple with this disgrace.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Interesting Findings #2]]></title>
