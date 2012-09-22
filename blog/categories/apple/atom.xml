@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: apple | Something Awesome]]></title>
-  <link href="http://nicnocquee.github.com/blog/categories/apple/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-22T13:26:34+09:00</updated>
-  <id>http://nicnocquee.github.com/</id>
+  <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-09-22T13:30:11+09:00</updated>
+  <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] So The Term is The Apple Reaper]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper/"/>
     <updated>2012-09-19T22:50:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper</id>
+    <id>http://nicnocquee.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper</id>
     <content type="html"><![CDATA[<p>Billy Coover on <a href="http://coovtech.com/posts/the-apple-reaper/">The Apple Reaper</a>:
 <blockquote><p>At this point I realize that I’m talking to a robot. Someone who’s job is mechanical. There is no empathy. No desire to learn the details of my app. His decision has already been made before he emailed me.</p></blockquote></p>
 

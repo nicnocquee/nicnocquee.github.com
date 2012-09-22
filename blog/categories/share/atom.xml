@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: share | Something Awesome]]></title>
-  <link href="http://nicnocquee.github.com/blog/categories/share/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-22T13:26:34+09:00</updated>
-  <id>http://nicnocquee.github.com/</id>
+  <link href="http://nicnocquee.com/blog/categories/share/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-09-22T13:30:11+09:00</updated>
+  <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[HOBBY] Linkin Park Nendoroidized!]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/22/hobby-linkin-park-nendoroidized/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/22/hobby-linkin-park-nendoroidized/"/>
     <updated>2012-09-22T13:01:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/22/hobby-linkin-park-nendoroidized</id>
+    <id>http://nicnocquee.com/blog/2012/09/22/hobby-linkin-park-nendoroidized</id>
     <content type="html"><![CDATA[<p><img src="http://img.goodsmile.info/cgm/ecommerce/goodsmile/images/large/70eb92d5b92daa10ca80f04d32ce3c72.jpg" alt="Linkin park becomes nendoroid" /></p>
 
 <!-- more -->
@@ -29,9 +29,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Speaking of Kaomoji]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
     <updated>2012-09-21T11:05:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
+    <id>http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
     <content type="html"><![CDATA[<div class="video-container">
 <iframe width="560" height="315" src="http://www.youtube.com/embed/Ku5IQXfyYyA" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] iOS 6 Maps: It just works. NOT!]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
     <updated>2012-09-20T17:16:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
+    <id>http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
     <content type="html"><![CDATA[<p>SBS on <a href="http://www.japanmobiletech.com/2012/09/ios-6-maps-fail-in-japan.html">iOS 6 maps FAIL in Japan</a>:</p>
 
 <p><blockquote><p>Looking for Osaka Station? Well, it's apparently not in the database. That'll piss off Hashimoto!</p></blockquote></p>
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Interesting Findings #2]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/19/share-interesting-findings-number-2/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/19/share-interesting-findings-number-2/"/>
     <updated>2012-09-19T13:19:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/19/share-interesting-findings-number-2</id>
+    <id>http://nicnocquee.com/blog/2012/09/19/share-interesting-findings-number-2</id>
     <content type="html"><![CDATA[<ul>
 <li>Why do I feel that this <a href="http://www.japanprobe.com/2012/09/19/chinese-sportsmanship-badminton-players-withdraw-from-japan-open-japanese-cycling-team-kicked-out-of-tour-of-china-race/">dispute between Japan and China</a> is a one-sided conflict? And what even baffled me is that it is all because of <a href="http://www.japanprobe.com/2012/08/20/violent-anti-japanese-protests-erupt-across-china/">those tiny islands</a>. And they said that religious people are out of their minds.</li>
 </ul>
@@ -99,9 +99,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Interesting Findings #1]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/18/share-interesting-findings-number-1/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/18/share-interesting-findings-number-1/"/>
     <updated>2012-09-18T19:58:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/18/share-interesting-findings-number-1</id>
+    <id>http://nicnocquee.com/blog/2012/09/18/share-interesting-findings-number-1</id>
     <content type="html"><![CDATA[<ul>
 <li><a href="http://www.nasdaq.com/article/acer-cancels-press-conference-to-launch-new-smartphone-on-alibaba-software-20120913-00197">Android is no longer (actually has been for a long time but this just confirmed it) open</a>. Danny Sullivan suggested Google to <a href="http://marketingland.com/what-is-the-one-true-android-and-how-open-is-it-21664">separate Android into two with different names</a> to avoid confusion. If I may, I suggest Android FREE and Android Pro. But Jason Harrop on <a href="http://marketingland.com/what-is-the-one-true-android-and-how-open-is-it-21664#comment-651724639">the comment</a> gave the best name for the free version.</li>
 </ul>

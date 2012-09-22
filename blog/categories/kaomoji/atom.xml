@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: kaomoji | Something Awesome]]></title>
-  <link href="http://nicnocquee.github.com/blog/categories/kaomoji/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-22T13:26:34+09:00</updated>
-  <id>http://nicnocquee.github.com/</id>
+  <link href="http://nicnocquee.com/blog/categories/kaomoji/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-09-22T13:30:11+09:00</updated>
+  <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Speaking of Kaomoji]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
     <updated>2012-09-21T11:05:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
+    <id>http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
     <content type="html"><![CDATA[<div class="video-container">
 <iframe width="560" height="315" src="http://www.youtube.com/embed/Ku5IQXfyYyA" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -29,9 +29,9 @@
   
   <entry>
     <title type="html"><![CDATA[[NEWS] Kaomoji for Mac 1.5 is out!]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/"/>
     <updated>2012-09-19T10:41:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out</id>
+    <id>http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out</id>
     <content type="html"><![CDATA[<p><img src="http://distilleryimage1.s3.amazonaws.com/1e74e32c01fa11e2ab4c22000a1d0350_7.jpg" alt="Updated #Kaomoji for #Mac! Now with Japanese localization. 日本語でMac向け顔文字を使いましょう！（＾＿＾）☆ http://kaomojiapp.com #japan #apple #顔文字" /></p>
 
 <!-- more -->

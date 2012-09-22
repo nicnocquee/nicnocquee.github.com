@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: iphone | Something Awesome]]></title>
-  <link href="http://nicnocquee.github.com/blog/categories/iphone/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.github.com/"/>
-  <updated>2012-09-22T13:26:34+09:00</updated>
-  <id>http://nicnocquee.github.com/</id>
+  <link href="http://nicnocquee.com/blog/categories/iphone/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-09-22T13:30:11+09:00</updated>
+  <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[SHARE] iOS 6 Maps: It just works. NOT!]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
     <updated>2012-09-20T17:16:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
+    <id>http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
     <content type="html"><![CDATA[<p>SBS on <a href="http://www.japanmobiletech.com/2012/09/ios-6-maps-fail-in-japan.html">iOS 6 maps FAIL in Japan</a>:</p>
 
 <p><blockquote><p>Looking for Osaka Station? Well, it's apparently not in the database. That'll piss off Hashimoto!</p></blockquote></p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] Speaking of smartphones revolution]]></title>
-    <link href="http://nicnocquee.github.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution/"/>
+    <link href="http://nicnocquee.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution/"/>
     <updated>2012-09-20T12:03:00+09:00</updated>
-    <id>http://nicnocquee.github.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution</id>
+    <id>http://nicnocquee.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution</id>
     <content type="html"><![CDATA[<p>Andrew Wulf on <a href="http://thecodist.com/article/i_39_m_sorry_but_the_revolution_in_smartphones_is_long_over">I'm sorry but the revolution in smartphones is long over</a>:
 <blockquote><p>Will there ever be a real innovation in the smartphone market anytime soon? I doubt it. Maybe plugging into my brain directly (a scary concept) but I can't see anything remaining that would be a real game changer. Bigger and smaller phones are limited by biology. Thinner phones are very hard to make much thinner since you wind up limited by physics. Maybe flexible phones might be cool. Or foldable phones you can stick in your wallet. But making things too small runs into the issue of being easy to lose or break. So what's left? Windows 8 has an interesting take on UI but I'm not sure it's better, just different. If you try to take your UI too far away from the basic design in place (finger friendly) you might lose too many customers. Android, while partially open, can't move too far way in its UI or risk irritating customers. Simple is a tough thing to improve.</p></blockquote></p>
 
