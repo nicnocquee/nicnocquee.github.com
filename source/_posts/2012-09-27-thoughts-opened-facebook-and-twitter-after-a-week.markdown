@@ -20,7 +20,7 @@ The second interesting thing was in Twitter. Specifically, in Twitter's web page
 
 I can say that I am a social network addict. But like everything else, having something excessively is never a good thing. From this one week experiment, I can conclude that once a week Twitter/Facebook consumption is good for my health. So if you have anything important to tell me, please don't do it via Facebook or Twitter. Just email me, or iMessage or text me. Thank you.
 
-Note: Unfortunately, I cannot get away from Instagram. I just couldn't miss not seeing Giee-tan for a day! I mean, look at her, she's the cutest cat in the world! ヽ(=^ ･ω･^ =)丿 Follow [tiaichima](instagram://user?username=tiaichima) for more pics of Giee! (You have to open that link from your iPhone and must have instagram app installed).
+Note: Unfortunately, I cannot get away from Instagram. I just couldn't miss seeing Giee-tan for a day! I mean, look at her, she's the cutest cat in the world! ヽ(=^ ･ω･^ =)丿 Follow [tiaichima](instagram://user?username=tiaichima) for more pics of Giee! (You have to open that link from your iPhone and must have instagram app installed).
 
 ![Giee Giee - Cutest cat in the world](http://distilleryimage5.s3.amazonaws.com/f28ea3f202e811e29e0522000a1e8894_7.jpg)
 
