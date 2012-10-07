@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-10-07T13:28:42+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] Delicious Design #1]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/07/share-delicious-design-number-1/"/>
+    <updated>2012-10-07T13:23:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/07/share-delicious-design-number-1</id>
+    <content type="html"><![CDATA[<p><a href="http://dribbble.com/shots/758431-Themes-Icon">Theme Icon</a> by By <a href="http://dribbble.com/MVBen">MVBen</a>.</p>
+
+<p><img src="http://dribbble.s3.amazonaws.com/users/191243/screenshots/758431/themes_icon.png" alt="What delicious icons" /></p>
+
+<p>Yummy.</p>
+
+<!-- more -->
+
+]]></content>
+  </entry>
+  
+</feed>
