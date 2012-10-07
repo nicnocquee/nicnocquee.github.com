@@ -76,7 +76,7 @@ The first belly dancer team wasn't in sync at all. It was like they danced indiv
 <br />
 ![Aspiring singer](http://farm9.staticflickr.com/8177/8061672755_08e974d6e1_z.jpg)
 
-Then suddenly this girl went on stage and started singing. She's a half Indonesia half Japanese. Not sure what her connection with India is.
+Then suddenly this girl went on stage and started singing. She's a half Indonesian half Japanese. Not sure what her connection with India is.
 
 <br />
 ![Me and wifey](http://farm9.staticflickr.com/8452/8061672137_8566e52f17_z.jpg)
