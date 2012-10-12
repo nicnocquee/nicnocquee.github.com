@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-12T07:06:35+09:00</updated>
+  <updated>2012-10-12T16:26:21+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] iPad Bug]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/12/ios-ipad-bug/"/>
+    <updated>2012-10-12T16:11:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/12/ios-ipad-bug</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/16082b2k0s2f0l230R1G/2012-10-12%20at%2004:07.png" alt="Weird iPad Bug" /></p>
+
+<p>It just suddenly happened today. Just swiped to the Search screen and went back to home screen. Normally, the keyboard hides automatically. But not this time. (￣(エ)￣)ゞ</p>
+
+<!-- more -->
+
+
+<p>Keyboard will not be suppressed. Keyboard will fight back.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Ironies of the day]]></title>
@@ -856,31 +872,6 @@ Well, I did feel disappointed when I couldn&#8217;t use Tweetbot for Mac anymore
 <p><img src="http://3.bp.blogspot.com/-JLuGOmWk5t4/UFrJuaCJ-TI/AAAAAAAABEY/Uuj87fkCMCU/s320/osaka.jpg" alt="Osaka station" /></p>
 
 <p>Blasphemy! Instead of that stupid ads, Samsung should attack Apple with this disgrace.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] Speaking of smartphones revolution]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution/"/>
-    <updated>2012-09-20T12:03:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/20/thoughts-speaking-of-smartphones-revolution</id>
-    <content type="html"><![CDATA[<p>Andrew Wulf on <a href="http://thecodist.com/article/i_39_m_sorry_but_the_revolution_in_smartphones_is_long_over">I&#8217;m sorry but the revolution in smartphones is long over</a>:</p>
-
-<blockquote><p>Will there ever be a real innovation in the smartphone market anytime soon? I doubt it. Maybe plugging into my brain directly (a scary concept) but I can&#8217;t see anything remaining that would be a real game changer. Bigger and smaller phones are limited by biology. Thinner phones are very hard to make much thinner since you wind up limited by physics. Maybe flexible phones might be cool. Or foldable phones you can stick in your wallet. But making things too small runs into the issue of being easy to lose or break. So what&#8217;s left? Windows 8 has an interesting take on UI but I&#8217;m not sure it&#8217;s better, just different. If you try to take your UI too far away from the basic design in place (finger friendly) you might lose too many customers. Android, while partially open, can&#8217;t move too far way in its UI or risk irritating customers. Simple is a tough thing to improve.</p></blockquote>
-
-
-<p>A day before iPhone 5 event, me and wifey were talking about what could make people be amazed with Apple&#8217;s announcement again.<!-- more -->
-The announcement of the original iPhone seemed so exciting. It was revolutionary. A phone with apps, full touch screen, no keypads. Steve Jobs looked so <a href="http://www.youtube.com/watch?v=6uW-E496FXg">proud</a>. iPhone 4 brought a new excitement with the new design. More beautiful than its predecessors. Even more entertaining with <a href="http://gizmodo.com/5520471/the-tale-of-apples-next-iphone">the saga of the lost iPhone</a>. However, iPhone 4S didn&#8217;t bring the original iPhone&#8217;s level of excitement. Of course it was selling like crazy. It was the best phone at that time. And the white one? Deserved a 12-hour waiting in line under the rain in front of Apple Store, true story. Then came the iPhone 5, with so many leaks and rumors months before its launch. People lost their excitement already from the leaks. Didn&#8217;t seem like anything new but the taller display.</p>
-
-<p>Back to our discussion, we were thinking iPhone 4/4S has the most beautiful and well designed phone ever. We couldn&#8217;t think of what kind of new design that could outmatch this phone. Simply changing the UI won&#8217;t cut it. And I&#8217;m not really a fan of transparent display and elastic phone, seems hard to use. Phone plugged to the brain? NO WAY! So we asked ourselves, what do we use phone for anyway. Hardly making calls, some playing, some texting/posting/tweeting, and mostly reading. Is there a problem with reading on iPhone. Since retina display, no problem. Text never been that clear on a phone. But without a doubt, reading in Kindle is so much better and comfortable than that in iPhone. Therefore, our crazy idea that we think could make people go crazy with the iPhone was the ability to change the display of iPhone to the <em>Reading Mode</em>. With a press of a switch/button, the display can toggle between paper like display for reading and the LED backlit display. That would be revolutionary. But very unlikely.</p>
-
-<p>Enough daydreaming. Back to work, back to work &#8230;</p>
-
-<p>/*===============================</p>
-
-<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
-
-<p>================================*/</p>
 ]]></content>
   </entry>
   
