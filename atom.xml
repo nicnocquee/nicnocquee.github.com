@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-12T16:26:21+09:00</updated>
+  <updated>2012-10-12T17:48:56+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[iPad] Upgraded to iOS 6 for The Magazine]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine/"/>
+    <updated>2012-10-12T17:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine</id>
+    <content type="html"><![CDATA[<p><a href="http://www.marco.org/">Marco Ament</a> on the <a href="http://the-magazine.org/1/foreword">Foreword of The Magazine</a>:</p>
+
+<blockquote><p>Many iPad magazines are carrying unnecessary and expensive baggage from their print days. Some born-digital magazines even took on print baggage simply because they thought they needed it.</p></blockquote>
+
+
+
+
+<!-- more -->
+
+
+<p>Indeed.</p>
+
+<p><img src="http://f.cl.ly/items/3D3n1h3g0D1Q1s2a0p02/2012-10-12%20at%2005:27.png" alt="The Magazine for iPad" /></p>
+
+<p>With many problems like the <a href="http://9to5mac.com/2012/04/04/apple-investigating-new-ipad-wifi-issues-tells-applecare-to-replace-affected-units/">wifi issue</a>, I have been hesitant to upgrade my iPad to iOS 6. But The Magazine is approved by <a href="http://daringfireball.net/linked/2012/10/11/the-magazine">John Grubber</a>. And concurred by <a href="http://parislemon.com/post/33417889715/marco-arment-launches-the-magazine">MG Siegler</a>. A week free trial. Furthermore, I like reading articles. And this one looks slick. But it needs iOS 6. There, I installed it. Let&#8217;s see if it&#8217;s worth it. You can download The Magazine from the <a href="https://itunes.apple.com/us/app/magazine-for-geeks-like-us./id557744510?mt=8">App Store</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[iOS] iPad Bug]]></title>
@@ -856,22 +879,6 @@ Well, I did feel disappointed when I couldn&#8217;t use Tweetbot for Mac anymore
 <p>Have you tried my new Mac app, <a href="http://kaomojiapp.com">Kaomoji for Mac</a>?</p>
 
 <p>======================================*/</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[SHARE] iOS 6 Maps: It just works. NOT!]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not/"/>
-    <updated>2012-09-20T17:16:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
-    <content type="html"><![CDATA[<p>SBS on <a href="http://www.japanmobiletech.com/2012/09/ios-6-maps-fail-in-japan.html">iOS 6 maps FAIL in Japan</a>:</p>
-
-<blockquote><p>Looking for Osaka Station? Well, it&#8217;s apparently not in the database. That&#8217;ll piss off Hashimoto!</p></blockquote>
-
-
-<p><img src="http://3.bp.blogspot.com/-JLuGOmWk5t4/UFrJuaCJ-TI/AAAAAAAABEY/Uuj87fkCMCU/s320/osaka.jpg" alt="Osaka station" /></p>
-
-<p>Blasphemy! Instead of that stupid ads, Samsung should attack Apple with this disgrace.</p>
 ]]></content>
   </entry>
   

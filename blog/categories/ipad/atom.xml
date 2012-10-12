@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ios | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ipad | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/ipad/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
   <updated>2012-10-12T17:48:56+09:00</updated>
   <id>http://nicnocquee.com/</id>
@@ -30,22 +30,6 @@
 <p><img src="http://f.cl.ly/items/3D3n1h3g0D1Q1s2a0p02/2012-10-12%20at%2005:27.png" alt="The Magazine for iPad" /></p>
 
 <p>With many problems like the <a href="http://9to5mac.com/2012/04/04/apple-investigating-new-ipad-wifi-issues-tells-applecare-to-replace-affected-units/">wifi issue</a>, I have been hesitant to upgrade my iPad to iOS 6. But The Magazine is approved by <a href="http://daringfireball.net/linked/2012/10/11/the-magazine">John Grubber</a>. And concurred by <a href="http://parislemon.com/post/33417889715/marco-arment-launches-the-magazine">MG Siegler</a>. A week free trial. Furthermore, I like reading articles. And this one looks slick. But it needs iOS 6. There, I installed it. Let's see if it's worth it. You can download The Magazine from the <a href="https://itunes.apple.com/us/app/magazine-for-geeks-like-us./id557744510?mt=8">App Store</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[iOS] iPad Bug]]></title>
-    <link href="http://nicnocquee.com/blog/2012/10/12/ios-ipad-bug/"/>
-    <updated>2012-10-12T16:11:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/10/12/ios-ipad-bug</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/16082b2k0s2f0l230R1G/2012-10-12%20at%2004:07.png" alt="Weird iPad Bug" /></p>
-
-<p>It just suddenly happened today. Just swiped to the Search screen and went back to home screen. Normally, the keyboard hides automatically. But not this time. (￣(エ)￣)ゞ</p>
-
-<!-- more -->
-
-
-<p>Keyboard will not be suppressed. Keyboard will fight back.</p>
 ]]></content>
   </entry>
   
