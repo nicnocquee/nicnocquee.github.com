@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-14T22:31:56+09:00</updated>
+  <updated>2012-10-14T22:43:31+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[VIDEO] Two short clips from our short trips]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/14/video-two-short-clips-from-our-short-trips/"/>
+    <updated>2012-10-14T22:36:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/14/video-two-short-clips-from-our-short-trips</id>
+    <content type="html"><![CDATA[<p><a href="http://engelene.tumblr.com/">Wifey&#8217;s</a> birthday sunrise:</p>
+
+<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Fcn-m4uQyos" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>And the Attack of the Fishes in Mount Rokko:</p>
+
+<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Rr7lVjcUirk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[SHARE] TOS. Lie.]]></title>
@@ -863,20 +889,6 @@ Example: 「ここでは分かりかねますので、あちらのカウンタ�
 
 
 <p>This is just so cute. Chester bennington looks cool! Grab them from <a href="http://www.goodsmile.info/product/en/3576/Nendoroid+Petite+LINKIN+PARK+Set.html">Good Smile</a>. They ship overseas as well.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[SHARE] Speaking of Kaomoji]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
-    <updated>2012-09-21T11:05:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
-    <content type="html"><![CDATA[<div class="video-container">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/Ku5IQXfyYyA" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<p>Did you know that you can insert kaomoji (顔文字) like this (*≧▽≦) or this （＾▽＾）／＼（＾▽＾） easily and fast using <a href="http://kaomojiapp.com">Kaomoji for Mac</a>?</p>
 ]]></content>
   </entry>
   
