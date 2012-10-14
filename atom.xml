@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-12T17:48:56+09:00</updated>
+  <updated>2012-10-14T22:31:56+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] TOS. Lie.]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/14/share-tos-lie/"/>
+    <updated>2012-10-14T22:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/14/share-tos-lie</id>
+    <content type="html"><![CDATA[<p><img src="http://images.cheezburger.com/completestore/2011/8/19/601e324e-1e21-419a-843a-ff22db559ccc.jpg" alt="Biggest lie" /></p>
+
+<p>It&#8217;s a well known fact that the biggest lie on the internet, or software world, is &#8220;I have read the terms of service&#8221;. Who would have the time (and patience) to read that very long  mambo-jambo? We would use it anyway. Because everybody is using it, right?</p>
+
+<!-- more -->
+
+
+<p>There are some people who try to fix this culture of lies. There is <a href="http://tos-dr.info/">Terms of Service; Didn&#8217;t read</a> who tries to simplify the Terms of Service (TOS) of web services and it&#8217;s doing a pretty good job actually. I just found out that users cannot delete their account in some famous services such as Skype and Wordpress. Surprising.</p>
+
+<p>Another attempt circulating around the tech-sphere recently is <a href="http://rapgenius.com/Apple-itunes-terms-of-service-lyrics">RapGenius&#8217; explanations of Apple&#8217;s iTunes TOS</a> where people are trying to explain some parts of the agreement in witty ways. Though I can&#8217;t help but wonder what&#8217;s with the <a href="http://www.youtube.com/watch?v=IX8fKLjC__c">Human Centipede</a> references.</p>
+
+<p><img src="http://f.cl.ly/items/3k3e1j2a1w383o3o0y2g/Screen%20Shot%202012-10-14%20at%209.42.38%20PM.png" alt="iTunes Terms of Service" /></p>
+
+<p><img src="http://f.cl.ly/items/2T2c0x1p3I1f0W2b0u3J/Screen%20Shot%202012-10-14%20at%209.43.14%20PM.png" alt="It's not so much of agreement" /></p>
+
+<p>If you notice, similar TOS can be found in any other services or softwares. It&#8217;s not just Apple. Every companies serve us this thing for one simple reason. They don&#8217;t want us to sue them if anything bad happens.</p>
+
+<p><img src="http://f.cl.ly/items/3g3f0M3E200v2p311f0R/Screen%20Shot%202012-10-14%20at%2010.20.17%20PM.png" alt="500px's TOS" /></p>
+
+<p>The only service that does TOS right is <a href="http://500px.com/">500px</a>. Every companies should follow <a href="http://500px.com/terms">500px&#8217;s way of presenting TOS</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[iPad] Upgraded to iOS 6 for The Magazine]]></title>
@@ -849,36 +877,6 @@ Example: 「ここでは分かりかねますので、あちらのカウンタ�
 
 
 <p>Did you know that you can insert kaomoji (顔文字) like this (*≧▽≦) or this （＾▽＾）／＼（＾▽＾） easily and fast using <a href="http://kaomojiapp.com">Kaomoji for Mac</a>?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] Dick move from Twitter]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter/"/>
-    <updated>2012-09-21T08:47:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter</id>
-    <content type="html"><![CDATA[<p>Linden Tibbets on <a href="http://ifttt.com/">IFTTT</a> alerts email:</p>
-
-<blockquote><p>In recent weeks, Twitter announced policy changes* that will affect how applications and users like yourself can interact with Twitter&#8217;s data. As a result of these changes, on September 27th we will be removing all Twitter Triggers, disabling your ability to push tweets to places like email, Evernote and Facebook. All Personal and Shared Recipes using a Twitter Trigger will also be removed. Recipes using Twitter Actions and your ability to post new tweets via IFTTT will continue to work just fine.</p></blockquote>
-
-
-<p>As a user, I thought I didn&#8217;t really mind the changes in Twitter&#8217;s policy. <!-- more -->
-Well, I did feel disappointed when I couldn&#8217;t use Tweetbot for Mac anymore, but there was still the web and the crappy official app. So I just let it pass.</p>
-
-<p><img src="http://f.cl.ly/items/1P2b2R252y1j2c3t1Q3v/Screen%20Shot%202012-09-21%20at%208.50.20%20AM.png" alt="Tweetbot for Mac stopped working" /></p>
-
-<p>Until today. For those who don&#8217;t know, <a href="http://ifttt.com/">IFTTT</a> is an amazing service which can let the internet services you use to <em>talk</em> with each other. One of the <em>receipes</em> I used in IFTTT is to backup my tweets to my Dropbox. As you might know, it&#8217;s really difficult to see your old tweets. Thus the backing up. However, with the Twitter&#8217;s policy change, this won&#8217;t be possible anymore. Very disappointing. Because the tweets I tweeted are my own. I should have the rights to do whatever I want to do with it.</p>
-
-<p>Anyhow, as the wise man says, it&#8217;s for FREE, if you don&#8217;t like it, don&#8217;t use it. As a matter of fact, I have reduced using Twitter directly. My tweets mostly came from Instagram or this blog using IFTTT.</p>
-
-<br/>
-
-
-<p>/*====================================</p>
-
-<p>Have you tried my new Mac app, <a href="http://kaomojiapp.com">Kaomoji for Mac</a>?</p>
-
-<p>======================================*/</p>
 ]]></content>
   </entry>
   

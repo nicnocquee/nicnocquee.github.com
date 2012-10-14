@@ -4,7 +4,7 @@
   <title><![CDATA[Category: share | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/share/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-12T17:48:56+09:00</updated>
+  <updated>2012-10-14T22:31:56+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] TOS. Lie.]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/14/share-tos-lie/"/>
+    <updated>2012-10-14T22:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/14/share-tos-lie</id>
+    <content type="html"><![CDATA[<p><img src="http://images.cheezburger.com/completestore/2011/8/19/601e324e-1e21-419a-843a-ff22db559ccc.jpg" alt="Biggest lie" /></p>
+
+<p>It's a well known fact that the biggest lie on the internet, or software world, is "I have read the terms of service". Who would have the time (and patience) to read that very long  mambo-jambo? We would use it anyway. Because everybody is using it, right?</p>
+
+<!-- more -->
+
+
+<p>There are some people who try to fix this culture of lies. There is <a href="http://tos-dr.info/">Terms of Service; Didn't read</a> who tries to simplify the Terms of Service (TOS) of web services and it's doing a pretty good job actually. I just found out that users cannot delete their account in some famous services such as Skype and Wordpress. Surprising.</p>
+
+<p>Another attempt circulating around the tech-sphere recently is <a href="http://rapgenius.com/Apple-itunes-terms-of-service-lyrics">RapGenius' explanations of Apple's iTunes TOS</a> where people are trying to explain some parts of the agreement in witty ways. Though I can't help but wonder what's with the <a href="http://www.youtube.com/watch?v=IX8fKLjC__c">Human Centipede</a> references.</p>
+
+<p><img src="http://f.cl.ly/items/3k3e1j2a1w383o3o0y2g/Screen%20Shot%202012-10-14%20at%209.42.38%20PM.png" alt="iTunes Terms of Service" /></p>
+
+<p><img src="http://f.cl.ly/items/2T2c0x1p3I1f0W2b0u3J/Screen%20Shot%202012-10-14%20at%209.43.14%20PM.png" alt="It's not so much of agreement" /></p>
+
+<p>If you notice, similar TOS can be found in any other services or softwares. It's not just Apple. Every companies serve us this thing for one simple reason. They don't want us to sue them if anything bad happens.</p>
+
+<p><img src="http://f.cl.ly/items/3g3f0M3E200v2p311f0R/Screen%20Shot%202012-10-14%20at%2010.20.17%20PM.png" alt="500px's TOS" /></p>
+
+<p>The only service that does TOS right is <a href="http://500px.com/">500px</a>. Every companies should follow <a href="http://500px.com/terms">500px's way of presenting TOS</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[iPad] Upgraded to iOS 6 for The Magazine]]></title>
@@ -96,24 +124,6 @@
 
 <!-- more -->
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[SHARE] What if from the creator of XKCD]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/28/share-what-if-from-the-creator-of-xkcd/"/>
-    <updated>2012-09-28T01:02:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/28/share-what-if-from-the-creator-of-xkcd</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2U1J2X2h1Y3l1c1N1m3m/Screen%20Shot%202012-09-28%20at%201.03.16%20AM.png" alt="What if?" /></p>
-
-<p>Here is a new blog that you have to follow.<!-- more -->
-From the creator of XKCD, a new blog to answer hypothetical questions with physics, <a href="http://what-if.xkcd.com/">What If</a>. I'm so fascinated by Randall Munroe's curiosity and deep analytical skill shown in this blog.</p>
-
-<p>Oh, and you should read this <a href="http://www.theatlantic.com/technology/archive/2012/09/a-conversation-with-randall-munroe-the-creator-of-xkcd/262851/">conversation with the guy himself</a>:</p>
-
-<p><blockquote><p>There are a lot of people who have written books about creativity that I haven't read, so I'm not by any means an expert on it, but my impression is that being creative is just a combination of getting new stimulus, but also having periods where you're not getting any stimulus. I had to stop reading Reddit sometime a few years ago, because I found that whenever I'd bump into a problem that was going to take a little time to solve, I'd just switch over and refresh Reddit and distract myself. Depriving myself of that has definitely been an important part of actually getting anything done, ever.</p></p><p><p>But at the same time, if you're just staring at your room with no Internet or no connection, you just go crazy and don't have anything to give you any ideas at all.</p></blockquote></p>
-
-<p>Not with Reddit, but happens to me many times too.</p>
 ]]></content>
   </entry>
   
