@@ -13,7 +13,7 @@ categories: [share, kindle]
 Did she violate any terms? Amazon will not tell. Perhaps by accident? Amazon does not care. The conclusion so far is clear: Amazon closed her account, wiped her Kindle and refuses to tell her why. End of discussion.
 {% endblockquote %}
 
-If the claim to be trusted, the fact that Amazon refused to give any reasons is very disturbing. I understand, though not favoring, that Amazon, like Apple, has the right to do pretty much anything they want with their device and platform. But punishing a customer without warning and explanation is very detestable.
+If the claim to be trusted, the fact that Amazon refused to give any reasons is very disturbing. I understand, though not favoring, that Amazon, like Apple, has the right to do pretty much anything they want with their device and platform. But punishing a customer without warning and explanation is far from being classy.
 
 As a husband of a wife who uses Amazon Kindle everyday, I found this news very saddening. Because we like Kindle. The first generation Kindle we have is the best device for reading. Better than the iPad in that area. Not to mention iBook in Japan is pretty much deserted. With its simplicity in purchasing and the vast collection of books, Amazon Kindle has become our favorite book store.
 
