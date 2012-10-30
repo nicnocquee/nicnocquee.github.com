@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apple | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-10-30T15:38:52+09:00</updated>
+  <updated>2012-10-30T15:48:37+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] The best explanation of Apple's Reshuffle]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/30/share-the-best-explanation-of-apples-reshuffle/"/>
+    <updated>2012-10-30T15:44:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/30/share-the-best-explanation-of-apples-reshuffle</id>
+    <content type="html"><![CDATA[<p>John Moltz on <a href="http://verynicewebsite.net/2012/10/forstall-browett-leaving-apple/">Forstall and Browett Leaving Apple</a>:</p>
+
+<p><blockquote><p>Tim Cook’s statement here is clear: Apple will not tolerate executives whose names end in double consonants. That’s just smart policy.</p></blockquote></p>
+
+<p>LOL.</p>
+
+<!-- more -->
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] I hope Apple will never do this]]></title>
@@ -135,27 +151,6 @@
 <p><img src="http://f.cl.ly/items/3g3f0M3E200v2p311f0R/Screen%20Shot%202012-10-14%20at%2010.20.17%20PM.png" alt="500px's TOS" /></p>
 
 <p>The only service that does TOS right is <a href="http://500px.com/">500px</a>. Every companies should follow <a href="http://500px.com/terms">500px's way of presenting TOS</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] So The Term is The Apple Reaper]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper/"/>
-    <updated>2012-09-19T22:50:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/19/thoughts-so-the-term-is-the-apple-reaper</id>
-    <content type="html"><![CDATA[<p>Billy Coover on <a href="http://coovtech.com/posts/the-apple-reaper/">The Apple Reaper</a>:
-<blockquote><p>At this point I realize that I’m talking to a robot. Someone who’s job is mechanical. There is no empathy. No desire to learn the details of my app. His decision has already been made before he emailed me.</p></blockquote></p>
-
-<!-- more -->
-
-
-<p>Everytime my apps got rejected for unreasonable reason, I always thought the reviewer was a non-tech savvy very old gramps who just learned how to use Mac or iPhone.</p>
-
-<p>/*===============================</p>
-
-<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
-
-<p>================================*/</p>
 ]]></content>
   </entry>
   
