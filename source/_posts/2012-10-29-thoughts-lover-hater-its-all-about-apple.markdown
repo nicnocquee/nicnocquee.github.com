@@ -20,7 +20,7 @@ Check out these two videos, Shit Android Users Say and Shit Apple Fanatics Say:
 
 It's hard not to notice from the two videos that Android users tend to show their *hatred/dislike* towards Apple, while on the other hand, Apple users tend to show their *love* towards Apple itself. Which is kind of weird since we all know that there was one person in Apple who hated Android so much.
 
-I always see those who hate Apple as broken hearted people. It could be an unrequited love. Or it could be a relationship that went wrong at some point. Either way, they cannot help but bitching about Apple for being disappointed. 
+I always see those who hate Apple as broken hearted people. It could be an unrequited love. Or it could be a relationship that went wrong at some point. Either way, they cannot help but bitching about Apple as a result of disappointment. 
 
 Android world needs more people who are proud of having an Android device than those who keep complaining about device that they are not going to use anyway.
 
