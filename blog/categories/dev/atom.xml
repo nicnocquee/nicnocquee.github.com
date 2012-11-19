@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dev | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/dev/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2012-11-19T22:15:36+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Split screen in XCode 4]]></title>
+    <link href="http://nicnocquee.com/blog/2012/11/19/ios-split-screen-in-xcode-4/"/>
+    <updated>2012-11-19T21:48:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/11/19/ios-split-screen-in-xcode-4</id>
+    <content type="html"><![CDATA[<p><a href="http://cocoaheads.tumblr.com/post/35711948405/xcode-in-a-nutshell"><img src="http://25.media.tumblr.com/tumblr_mdhn7nq1pE1qbs1hto1_1280.png" alt="XCode in a nutshell" /></a></p>
+
+<p>In XCode 4, to have the split screen feature, you have to use the Assistant Editor. It's that ""Black Tie" Mode.</p>
+
+<!-- more -->
+
+
+<p><img src="http://f.cl.ly/items/0R0j3V441K2q3H2r0E2c/xcode-split-0.png" alt="Tap the Assistant Editor to split the screen" /></p>
+
+<p>If you don't fancy having the editors horizontally, you can easily stack them vertically by clicking View -> Assistant Editor -> All editors stacked vertically.</p>
+
+<p><img src="http://f.cl.ly/items/0I3P2A2r0o0x1D2G4720/xcode-split-3.png" alt="Change assistant editor layout" /></p>
+
+<p><img src="http://f.cl.ly/items/0y2k3E213J3Z2T2E2Y0n/xcode-split-4.png" alt="Editors. Stack them all." /></p>
+
+<p>Normally, the assistant editor will automatically show the counterpart of the file opened in the main editor. But if you want to defy the intelligence of the xcode, you can click on the Black Tie icon Counterparts then choose Manual.</p>
+
+<p><img src="http://f.cl.ly/items/310T0L2n2M3d1h151n2i/xcode-split-5.png" alt="Manually select file to open in assistant editor" /></p>
+
+<p>If you have tons of source codes, it might be difficult to search the file you want to open. Here's the trick. Click on the file name on Assistant Editor bar, then just type the name of the file you're looking for. XCode auto-completion will do the work for you.</p>
+
+<p><img src="http://f.cl.ly/items/1H0J0a3S0q2o1d3K3U0y/xcode-split-67.png" alt="Type file name to open file fast" /></p>
+
+<p>And last, if you're not satisfied with monogamy, you can conduct polygamy up to 5 assistants. You might be able to have more assistants in a bigger screen. But in my Macbook Air, 5 is the limit. Makes sense, cause it's getting too crowded.</p>
+
+<p><img src="http://f.cl.ly/items/2E1X0s2c0w0C2r1r3h3U/xcode-split-8.png" alt="The more the merrier" /></p>
+
+<p><img src="http://f.cl.ly/items/1t2t0o1f1W1z3g0n1Y15/Screen%20Shot%202012-11-19%20at%2010.06.31%20PM.png" alt="Polygamy in XCode" /></p>
+]]></content>
+  </entry>
+  
+</feed>
