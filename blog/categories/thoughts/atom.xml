@@ -4,7 +4,7 @@
   <title><![CDATA[Category: thoughts | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/thoughts/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-12-03T17:17:46+09:00</updated>
+  <updated>2012-12-03T17:43:51+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] The end of glossy design era]]></title>
+    <link href="http://nicnocquee.com/blog/2012/12/03/thoughts-the-end-of-glossy-design-era/"/>
+    <updated>2012-12-03T17:20:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/12/03/thoughts-the-end-of-glossy-design-era</id>
+    <content type="html"><![CDATA[<p><img src="http://www.gogeeks.tv/wp-content/uploads/2010/09/iphone-icons.jpg" alt="" /></p>
+
+<p>As far as I know, Apple made the glossy design popular with the iPhone icons. But in recent years, seems like app designers/devs started to embrace the flat icons.</p>
+
+<!-- more -->
+
+
+<p><img src="http://25.media.tumblr.com/tumblr_medntudVmz1qzxzwwo1_500.jpg" alt="" /></p>
+
+<p>Some famous apps like Flipboard:</p>
+
+<p><img src="data:image/jpeg;base64,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" alt="Flipboard icon" /></p>
+
+<p>Evernote:</p>
+
+<p><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSC4IH9aU5BRgtE-w67CB1mfUUl3KFk-l4ZyQQopBit_VLGluWx" alt="" /></p>
+
+<p>And even <a href="https://itunes.apple.com/jp/app/monoco/id539376693?mt=8">Monoco</a>, the app I'm working on!</p>
+
+<p><img src="http://a2.mzstatic.com/us/r1000/119/Purple/v4/81/83/34/8183345d-3e42-43e3-9c34-1951d36dc5d6/mzm.umiabhlc.175x175-75.jpg" alt="" /></p>
+
+<p>I noticed this trend started with Microsoft's not-to-be-called-Metro style for Windows 8 (or RT?). Maybe it started even before, but it if this is true, Microsoft has done something right this time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[SHARE] Humans can never be satisfied]]></title>
@@ -107,39 +137,6 @@
 <p><img src="http://f.cl.ly/items/0a1Q2l0o0h40300A1v0J/Screen%20Shot%202012-10-30%20at%203.29.19%20PM.png" alt="Hoax photo search result" /></p>
 
 <p>Yup, it's a <a href="http://urbanlegends.about.com/od/naturalwonders/ss/New-York-City-Tornado-Picture.htm">hoax</a>, as I expected. Guess how many seconds of my life I spent to check the authenticity of a viral content. Less than 10 seconds. Maybe you should give it a try before sharing something?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] I hope Apple will never do this]]></title>
-    <link href="http://nicnocquee.com/blog/2012/10/29/thoughts-i-hope-apple-will-never-do-this/"/>
-    <updated>2012-10-29T23:39:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/10/29/thoughts-i-hope-apple-will-never-do-this</id>
-    <content type="html"><![CDATA[<p>By "this" I mean what <a href="http://www.amazon.com/">Amazon</a> just did:</p>
-
-<p><img src="http://f.cl.ly/items/2b351X3f1J0y2K1q0x23/Screen%20Shot%202012-10-29%20at%2010.48.51%20PM.png" alt="Amazon attack iPad mini" /></p>
-
-<!-- more -->
-
-
-<p>or what Samsung did:</p>
-
-<p><img src="http://kensegall.com/blog/wp-content/uploads/2012/09/120916_samsung_ad.jpg" alt="Samsung gave a blow at Apple" /></p>
-
-<p>If you still cannot grasp what I mean, it's the crappy way of advertising the product by comparing with the competitor. At least do it in a funny and classy way like Mac vs PC.</p>
-
-<div class="video-container">
-<iframe width="420" height="315" src="http://www.youtube.com/embed/K0Mt6dqFv4k" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<p>Oh, and if you're interested in the revised versions of the two ads above via <a href="http://m.imore.com/copy-editing-amazons-kindle-fire-vs-ipad-mini-ad">iMore</a></p>
-
-<p><img src="http://f.cl.ly/items/1U0B083v42051S1N2P2A/amazon_kindle_fire_vs_ipad_mini_v2-2.jpg" alt="Kindle Fire HD vs iPad Mini revised comparison" /></p>
-
-<p>and <a href="http://news.cnet.com/8301-17852_3-57513782-71/apple-fanboys-fight-back-against-samsung/">CNet</a>:</p>
-
-<p><img src="http://f.cl.ly/items/25060I3T1V2I440n3Z1C/Real_Samsung_Ad_610x1179.png" alt="Galaxy S3 vs iPhone from Apple fan's point of view" /></p>
 ]]></content>
   </entry>
   
