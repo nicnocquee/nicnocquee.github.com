@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2012-12-25T14:34:53+09:00</updated>
+  <updated>2012-12-26T17:59:11+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] Be an iOS developer now]]></title>
+    <link href="http://nicnocquee.com/blog/2012/12/26/thoughts-be-an-ios-developer-now/"/>
+    <updated>2012-12-26T17:43:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/12/26/thoughts-be-an-ios-developer-now</id>
+    <content type="html"><![CDATA[<p>Because it&#8217;s still a great time as app developer.</p>
+
+<p><img src="http://i.imgur.com/cg6O5.jpg" alt="iPad is winning" /></p>
+
+<p>The picture above (via <a href="https://twitter.com/waxpancake/status/283736105717755904">@waxpancake</a>) speaks two things at least. First, Apple must be selling tons of iPads. Second, iOS users are active and proud of using Apple device. As an iOS developer, these two things are good news.</p>
+
+<!-- more -->
+
+
+<p>And this report from <a href="http://tech.fortune.cnn.com/2012/12/24/apple-microsoft-sony-store-traffic/">CNNMoney</a> is not a good sign for Microsoft and Sony. People don&#8217;t wait for Santa to come at their homes anymore. They just go to Apple Store apparently.</p>
+
+<p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/apple.jpg" alt="Apple Store" /></p>
+
+<p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/photo1.jpg" alt="Microsoft store" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #15]]></title>
@@ -1006,26 +1028,6 @@
 
 <!-- more -->
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] Hoax photo of the Frankenstorm]]></title>
-    <link href="http://nicnocquee.com/blog/2012/10/30/thoughts-hoax-photo-of-the-frankenstorm/"/>
-    <updated>2012-10-30T15:24:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/10/30/thoughts-hoax-photo-of-the-frankenstorm</id>
-    <content type="html"><![CDATA[<p>I am not living in US, but my twitter feeds, or Google Reader RSS is full of stories about the hurricane. And today some friends (who are not living in US either) in Facebook shared this amazing picture of the tornado forming over New York City near the statue of Liberty.</p>
-
-<p><img src="http://0.tqn.com/d/urbanlegends/1/0/u/3/1/fake_ny_tornado.jpg" alt="Too good to be true" /></p>
-
-<!-- more -->
-
-
-<p>Being sceptical of me, I immediately dragged and dropped the image to Google Image Search (you do know that you can do this, right?) and there my suspicion got answered at the bottom of the search result page. Here is the <a href="https://www.google.co.jp/search?tbs=sbi:AMhZZivLXniAjEY_1P6q5anH15SQrhKeOwKAA4SrqEBn8dcVblkPpYeWNqk9G5KIalu8xqStmH4aIhYwGoG-O8um1GTsZcTHJw2mDj9Yny0Tiu8qogNv21sOlBeVTPEQb6g9_1hyya_1_1IwCuFumsBpuTaXYdwYUXaLo97Iiht81O0YWGs-eehu30eQ9DZTIUyNNdWjL0navf30DBaHD7woLqNTDa3cF-X0J04vnxPgwQ-LL4E5XVQEmMSy1m1FNFnmmeRt6dzMZp3LJFz7CnRXgKMC1W3M-OrZnnAPuNxm8KmNMXNG6SjOWlCLX7yZnY79A5q2oRZpztARx1UBjhSXrLHPQRMID551O87PRvBZXRpI3Ojx8HgCBXRMWOj_1tRo0gY6PF-OgCNOddMGNAyhc_1J2_1No4ixLwBpo-umqc358GwzvdavEG13z5OChPmzoCbnIX4JyUPwplULiMs4SRg4wEtOBKVo1ymLryNhgo7VrkCJ0Vf5vvrLaC7HRGIIccFjmG2V2PFl2ufLjogkku4t0fY7JI31foGAEifIRXTV8JRyLLr6xPjT63Gaz2UrKBNJaH3RdSyyR8V9kauE-uJb0qwYmnmFJ3v4GZRcSD7R0567e4272MkGNy7Xs_1TZH5vQw46qKW23BbQxiZIMBnVY5fb9QLaY33CnGnAL1Sqny4FgOEVIZ32okyu5y19LF0R0i_13Ut8bvTuwAeMDCi8xUSvluRbxrBSdOi7iBAZUCqp8j0JboCD5i2SYwZtqwaHH1rN59A9KSMxU-qt0BmbLwwUBfwcGwCKtzxZXOPcDQVR1t2QKFb2nRTW4-eB4WXhcauyRLTcxxp5SdkTi8ke9J9nciAP5Yja3yd4AWSKwP0_1ViBJIjOeS6iK5E6b548kz_1gRGGxWhUawz8kOmBOZNJqInShy0_1iCUmbZ-iVwk6oXjMgu_1ZWCVNrKW_1sD-82zY_1ZEt_1uuJmDPNik-Qtfm_1MD8An-6tkQk_1vSzIpIXqXy39vrTImYpIEcQfu_1SUgDuKgRIMWHzOVx-iVm_15FSXkvq0Np-K7O437oyaCooLJiJgDVDrC-0fRgNxPjOc9Iu7lRZL39qYOcUyL4QJIiNyj28k6BL20fqXvtqf4Ig83cMJoaFziPsrxrJj64PlyqTL7KCmF3b-AyGrDXjWBz-l7ZkXhV1_1fgSmLXK51A4MeKiKKFzITS_1zcgUhEggG6GETgP72_1Hjv_1yfPSywfEhR9WkeLV-VRGX3xIFUXVa2EMnLLLqtqTJJLUOk4utDlvBUz_117lUfI1ajqEpdOPK-rRPaOP3ajXszLXiJY5BFf6DY8FE3hFcmY0c9tsP6wcpgJEZ9elGVkitXofTR14ISChYN868SZUYMsqNpw&amp;num=10&amp;hl=en&amp;safe=active&amp;bih=651&amp;biw=1360">link</a> to the search page for those who have no idea how to drag-and-drop image search in Google.</p>
-
-<p><img src="http://f.cl.ly/items/0a1Q2l0o0h40300A1v0J/Screen%20Shot%202012-10-30%20at%203.29.19%20PM.png" alt="Hoax photo search result" /></p>
-
-<p>Yup, it&#8217;s a <a href="http://urbanlegends.about.com/od/naturalwonders/ss/New-York-City-Tornado-Picture.htm">hoax</a>, as I expected. Guess how many seconds of my life I spent to check the authenticity of a viral content. Less than 10 seconds. Maybe you should give it a try before sharing something?</p>
 ]]></content>
   </entry>
   
