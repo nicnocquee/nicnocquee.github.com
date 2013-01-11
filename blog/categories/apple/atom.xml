@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apple | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2013-01-10T15:55:42+09:00</updated>
+  <updated>2013-01-11T11:19:07+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
+    <updated>2013-01-11T11:04:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
+    <content type="html"><![CDATA[<p>If you didn't know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
+
+<!-- more -->
+
+
+<p>And to my surprise, there are some rules that I never thought they would exist. Some interesting ones are:</p>
+
+<ol>
+<li>Never refer to Apple Operating System. Meaning, you must not ever say "Now Available on iOS". Or "Scribeit for iOS". Instead, refer to Apple product names, such as "Scribeit for iPhone." Oops, need to make some change in <a href="http://scribeit.appsccelerated.com/">Scribeit website</a> ^ ^;</li>
+<li>Never typeset Apple product names using all uppercase letters. So IPHONE or IPAD is not allowed, people.</li>
+<li>Never use a Myriad font for App Store-related text. ⊙０⊙ Why? Anybody care to explain? What's with Myriad font?</li>
+</ol>
+
+
+<p>And many more. You should read it. It's pretty <em>interesting</em>.</p>
+
+<p>Note:</p>
+
+<p>Thank you for reading this post. Have you checked out my app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. I think you'll love it (⌒▽⌒)☆</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] RDF: It's in the Juice]]></title>
@@ -108,17 +135,6 @@
 <p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/apple.jpg" alt="Apple Store" /></p>
 
 <p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/photo1.jpg" alt="Microsoft store" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] The ugliest view in iOS 6]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6/"/>
-    <updated>2012-12-17T00:32:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0K401B2o1L0W1z0U3f1O/%E5%86%99%E7%9C%9F%202012-12-17%200%2030%2009.png" alt="This, so damn ugly" /></p>
-
-<p>The previous design of iOS Phone's keypad was so much better. This new one in iOS 6 feels like something made by Android engineer.  （；¬＿¬)</p>
 ]]></content>
   </entry>
   

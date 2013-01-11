@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2013-01-10T15:55:42+09:00</updated>
+  <updated>2013-01-11T11:19:07+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
+    <updated>2013-01-11T11:04:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
+    <content type="html"><![CDATA[<p>If you didn't know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
+
+<!-- more -->
+
+
+<p>And to my surprise, there are some rules that I never thought they would exist. Some interesting ones are:</p>
+
+<ol>
+<li>Never refer to Apple Operating System. Meaning, you must not ever say "Now Available on iOS". Or "Scribeit for iOS". Instead, refer to Apple product names, such as "Scribeit for iPhone." Oops, need to make some change in <a href="http://scribeit.appsccelerated.com/">Scribeit website</a> ^ ^;</li>
+<li>Never typeset Apple product names using all uppercase letters. So IPHONE or IPAD is not allowed, people.</li>
+<li>Never use a Myriad font for App Store-related text. ⊙０⊙ Why? Anybody care to explain? What's with Myriad font?</li>
+</ol>
+
+
+<p>And many more. You should read it. It's pretty <em>interesting</em>.</p>
+
+<p>Note:</p>
+
+<p>Thank you for reading this post. Have you checked out my app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. I think you'll love it (⌒▽⌒)☆</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] January 4 was my real new year]]></title>
@@ -124,26 +151,6 @@
 <p><img src="http://f.cl.ly/items/25100Z21171l3Q023s2K/%E5%86%99%E7%9C%9F%202012-10-15%2013%2037%2044.png" alt="Monoco on the App Store" /></p>
 
 <p>M to the O to the N to the O to the C to the O. For those who love beautiful discounted products. Japan only. Grab <a href="https://monoco.jp/signup?ref=n">Monoco</a> for iPhone <a href="https://itunes.apple.com/jp/app/monoco/id539376693?ls=1&amp;mt=8">here</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[iPad] Upgraded to iOS 6 for The Magazine]]></title>
-    <link href="http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine/"/>
-    <updated>2012-10-12T17:29:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine</id>
-    <content type="html"><![CDATA[<p><a href="http://www.marco.org/">Marco Ament</a> on the <a href="http://the-magazine.org/1/foreword">Foreword of The Magazine</a>:</p>
-
-<p><blockquote><p>Many iPad magazines are carrying unnecessary and expensive baggage from their print days. Some born-digital magazines even took on print baggage simply because they thought they needed it.</p></blockquote></p>
-
-<!-- more -->
-
-
-<p>Indeed.</p>
-
-<p><img src="http://f.cl.ly/items/3D3n1h3g0D1Q1s2a0p02/2012-10-12%20at%2005:27.png" alt="The Magazine for iPad" /></p>
-
-<p>With many problems like the <a href="http://9to5mac.com/2012/04/04/apple-investigating-new-ipad-wifi-issues-tells-applecare-to-replace-affected-units/">wifi issue</a>, I have been hesitant to upgrade my iPad to iOS 6. But The Magazine is approved by <a href="http://daringfireball.net/linked/2012/10/11/the-magazine">John Grubber</a>. And concurred by <a href="http://parislemon.com/post/33417889715/marco-arment-launches-the-magazine">MG Siegler</a>. A week free trial. Furthermore, I like reading articles. And this one looks slick. But it needs iOS 6. There, I installed it. Let's see if it's worth it. You can download The Magazine from the <a href="https://itunes.apple.com/us/app/magazine-for-geeks-like-us./id557744510?mt=8">App Store</a>.</p>
 ]]></content>
   </entry>
   
