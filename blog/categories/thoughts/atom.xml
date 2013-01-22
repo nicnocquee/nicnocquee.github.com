@@ -4,7 +4,7 @@
   <title><![CDATA[Category: thoughts | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/thoughts/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2013-01-22T10:21:08+09:00</updated>
+  <updated>2013-01-22T11:24:26+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] 28]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/22/thoughts-28/"/>
+    <updated>2013-01-22T10:15:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/22/thoughts-28</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/053P1m2W2C0G0k0D0K18/idont.jpg" alt="I don't always have birthday" /></p>
+
+<p>Yesterday was that time of the year where another year of my life has gone by. Just like most people, I like to look back and see what I have been doing and what I have accomplished. And it's easy to do these days thanks to Facebook and Twitter.</p>
+
+<!-- more -->
+
+
+<h2>The Work</h2>
+
+<p>Twelve months seems like a very long time but in reality there are only few things you can achieve in 365 days. I consider myself as a developer so I judge myself based on how many apps I have released, and how well they fare. As such, I didn't really accomplish much. During my 27, I released Flutterscape for iPhone, <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>, <a href="https://monoco.jp/signup?ref=n">Monoco for iPhone</a>, and the new <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a>.</p>
+
+<p>Kaomoji for Mac fed my ego much better than it did to my stomach. Some people who bought and used it loved it. And they expressed their love vocally. But some factors like the fact that Kaomoji for Mac has a very small market to begin with (Mac users who know what Kaomoji is), the sales was not satisfying. Its biggest achievement was when <a href="http://boingboing.net/2012/11/27/kaomojiapp-makes-crazy-text-em.html">BoingBoing</a> caught up with it which resulted in burst of sales. Not much, but at least I could say that my work was featured in famous blog.  (*≧▽≦)ﾉｼ))</p>
+
+<p>Scribeit for iPhone was my first paid app. It's been a long time since I gave it my attention, but I finally updated it early this year. It's completely rewritten and redesigned from scratch. I'm kinda proud with it. I hope people love it as much as I do.</p>
+
+<h2>The Travel</h2>
+
+<p><img src="http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg" alt="Tubingen" /></p>
+
+<p>Thanks to my wife, during my 27 I finally stepped on the land of Europe. Germany and Switzerland to be exact with a little bit of France. She had work there and I just tagged along. Few things I realized after that trip to Europe:</p>
+
+<ol>
+<li>I like living in Japan.</li>
+<li>I like beach better than mountain. （⌒▽⌒）</li>
+<li>Travelling becomes less fun when you're still thinking of your work.</li>
+</ol>
+
+
+<p>It was fun but I wasn't fully satisfied since it wasn't really a vacation. Wife was working and so did I. I'd like to go there again one day for <em>real</em> vacation.</p>
+
+<h2>The Social</h2>
+
+<p>I'm not a social person. I don't really like going to an event/meetup without any purpose but networking with people. I found it very random, meaningless, and awkward. I went to a meetup in Tokyo once, but didn't really enjoy it. It's random because you have to <em>randomly</em> introduce yourself to start conversation. Because without introducing yourself there will be no conversation. And if there's no conversation what's the point of meeting up. It's <em>meaningless</em> because if I want to know about somebody, I can do it better in Twitter. From somebody's tweets, I can grasp what kind of person he/she is. And it's simpler too since I don't need to do the hassle of introducing myself. Finally, it's very awkward. Not only it's awkward to introduce yourself randomly, but it's also very <em>awkward</em> when I find out that I have no interest at all with the person I'm talking to. Maybe because we have no common interest. Maybe because he/she acts like an ass. True story.</p>
+
+<p>Anyway, I made some new friends online and offline last year. Found somebody who is quite similiar to me in Osaka. He just released an <a href="https://itunes.apple.com/jp/app/garuda-riders/id572550607?l=en">iPhone game, check it out</a>. I also made friend with a Japanese. Fancy that  (*≧▽≦)ﾉｼ))</p>
+
+<h2>The Resolution</h2>
+
+<p>Nope, no new year resolution. Didn't even celebrate new year. I spent new year coding Scribeit. But it will be cool to pass the level 2 of Japanese Proficiency Language Test this year.</p>
+
+<p><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="Regex Man" /></p>
+
+<p>One of the new things I started this year was resuming reading the Steve Jobs by Walter Isaacson. Yeah, I haven't finished reading it. Shame on me! I'm also diving in the art of Regular Expression. It just seems cool （＾ω＾）</p>
+
+<p>If you read until here, how about checking out my apps <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a> and <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>? ^ ^</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] RDF: It's in the Juice]]></title>
@@ -102,57 +155,6 @@
 <p><blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p></p><p><p>…</p></p><p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote></p>
 
 <p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] January 4 was my real new year]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year/"/>
-    <updated>2013-01-05T01:06:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year</id>
-    <content type="html"><![CDATA[<p>As I write this sentence on my MBA which rests on my lap, the digital clock at the top right corner shows "Fri Jan 4 11:26:50 PM". In around 30 minutes, it will be January 5. It's been 4 days since the year 2013 closed the door of 2012 and came to our life. The holiday for most people in Japan has ended yesterday. Yet here I am feeling like finally I can say "Happy new year!" sincerelly.</p>
-
-<!-- more -->
-
-
-<p>Danny Choo asked good questions on his post <a href="http://www.dannychoo.com/post/en/26806/2013+New+Years+Greetings.html">2013 New Years Greetings!</a>:</p>
-
-<p><blockquote><p>Happy new year folks! Hows your new year celebrations?<br/>But before you answer that, have you ever thought to yourself why we celebrate the new year? Is it because we want to celebrate what we have achieved in the previous year? Is it because we are celebrating what we want to do in the up n coming year? Is it because we are celebrating the fact that most of us get time off work/school?</p></blockquote></p>
-
-<p>In my opinion, new year is a good time to start things new. Either starting something really new, or simply restarting what we have been doing. But remember what <a href="http://en.wikipedia.org/wiki/The_Matrix_Revolutions">Oracle</a> said,</p>
-
-<p><blockquote><p>everything that has a beginning has an end</p></blockquote></p>
-
-<p>There are ways to read that between the line, but I'd like to think that to really begin, we need to end something. I had not finished what I wanted to finish in 2012. Thus, I did not fully celebrate new year.</p>
-
-<p><img src="http://f.cl.ly/items/0G3e350L3m1a2K1N0U1M/Screen%20Shot%202013-01-04%20at%2011.42.19%20PM.png" alt="Last day of 2011 with friends in Ise" /></p>
-
-<p>This year, we, as in me and wifey, <em>celebrated</em> new year differently compared to previous years. Last year, we spent new year in Ise together with our friends. However, this year it was just the two of us in our apartment. We were just there sitting on the yellow sofa I got nearly three years ago, if my memory serves me right, from an Indian guy whom I didn't (still don't) know. We were watching Japanese TV Show called <a href="http://en.wikipedia.org/wiki/K%C5%8Dhaku_Uta_Gassen">Kohaku (紅白) Uta Gassen</a> where a bunch of Japanese singers and musicians was divided into two teams, red and white teams, and they competed with each other.</p>
-
-<p><img src="http://f.cl.ly/items/222Q0y0W1Y2h3I3s460T/maki-chan1.png" alt="Maki-chan on Kohaku" /></p>
-
-<p>But we weren't really watching the show. We were most of the time looking at our Macbook's monitors. I was busy with XCode while wifey was busy with Photoshop. We were working on Scribeit. Scribeit is the second app I put in Apple Store. It is my first paid app. And it is the only paid app at this moment. It's been two years since I updated it. It was never even updated to support retina display when iPhone 4 was released. Despite of that, number of downloads every month never reaches zero. So I finally made up my mind to update this baby and to finish it before 2012 came to an end. And my wife helped me with the graphics and stuff.</p>
-
-<p><img src="http://f.cl.ly/items/2B081D0J0h1c0c450312/9gag2013.png" alt="2013 is the first year since 1987 to have four different numbers" /></p>
-
-<p>Unfortunately, everything doesn't always work as planned. As this part of the world turned from December 31 to January 1, Scribeit was not completely done yet. An unexpected behaviour in the app prevented me from fully enjoying the moment where people celebrated the first year since 1987 to have four different numbers!</p>
-
-<p><img src="http://f.cl.ly/items/3h0o2n1X3a3T0j0R1y0s/Screen%20Shot%202013-01-05%20at%2012.17.08%20AM.png" alt="New Scribeit 2013" /></p>
-
-<p>At around 3AM of January 1, I finally found the problem. I closed my Mac and decided to wrap things up in the morning. Then came January 2. Followed by January 3. You see, I realized that contrary to popular belief, <em>finishing</em> is way more difficult than starting. You can always start <em>small</em>, but you cannot finish small. You can start from small things one by one. But you cannot finish only a part of the whole. Of course there's no such thing as completely <strong>finish</strong>. There's always something to add. Or to reduce. I'm talking about finishing the <a href="http://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a>. You cannot ship a half ass product. You need to reach that state of MVP. And here's a fact: even an MVP has many check lists to complete. If you think starting is hard, finishing will be hell for you.</p>
-
-<p>So, on the last day of new year holiday, I was finally able to submit our baby to App Store. We think it looks amazing. We love it. And we think you'll love it too. ♡＾▽＾♡ Follow me on <a href="https://twitter.com/nicnocquee">Twitter</a> to know when the update is available on the App Store.</p>
-
-<p>☆☆ Happy new year!</p>
-
-<p>☆☆ 明けましておめでとうございます！</p>
-
-<p>☆☆ Selamat tahun baru!</p>
-
-<p>☆☆ <strong>UPDATE!</strong></p>
-
-<p><strong>Scribeit is up in the <a href="http://scribeit.appsccelerated.com/">App Store</a> now! Check it out!
-</strong></p>
 ]]></content>
   </entry>
   
