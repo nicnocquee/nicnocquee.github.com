@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2013-04-06T00:39:30+09:00</updated>
+  <updated>2013-04-06T00:46:48+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -69,6 +69,8 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 </code></pre>
 
 <p>Remember to restart the Terminal everytime you make changes. If you want to change some colors, check <a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt#List_of_colors_for_prompt_and_Bash">here</a>.</p>
+
+<p>If you like this post, you might want to take a look at <a href="https://www.facebook.com/nsmemepage">NSMeme Facebook Page</a> I made to share some interesting stuff in iOS development.</p>
 ]]></content>
   </entry>
   
