@@ -49,5 +49,7 @@ So, on the last day of new year holiday, I was finally able to submit our baby t
 ☆☆ Selamat tahun baru!
 
 
+☆☆ **UPDATE!**
 
-
+**Scribeit is up in the [App Store](http://scribeit.appsccelerated.com/) now! Check it out!
+**
