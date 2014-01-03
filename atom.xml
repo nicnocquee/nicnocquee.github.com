@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2013-10-19T23:59:51+09:00</updated>
+  <updated>2014-01-03T12:32:27+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[That's so two years ago]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago/"/>
+    <updated>2014-01-03T12:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/120y351h1V2M1A3Z2o3f/sherlock.png" alt="Sherlock quote" /></p>
+
+<p>Best. TV. Show. Ever.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to enter unicode characters in Mac]]></title>
@@ -968,49 +979,6 @@ Above line not only adds emoji, but also remove name and hostname, and only show
     <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0K401B2o1L0W1z0U3f1O/%E5%86%99%E7%9C%9F%202012-12-17%200%2030%2009.png" alt="This, so damn ugly" /></p>
 
 <p>The previous design of iOS Phone&#8217;s keypad was so much better. This new one in iOS 6 feels like something made by Android engineer.  （；¬＿¬)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #13]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/11/photos-weekly-kansai-number-13/"/>
-    <updated>2012-12-11T22:02:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/11/photos-weekly-kansai-number-13</id>
-    <content type="html"><![CDATA[<p>Wow! Didn&#8217;t realize that I only posted 5 pictures last week! My week must have been a <del>boring</del> busy one. There weren&#8217;t much happening actually. Just <a href="http://itunes.apple.com/jp/app/monoco/id539376693?ls=1&amp;mt=8">Monoco</a> app (Japan only) update got approved by Apple and it climbed back to the top 4 of free apps in Catalog category. It was at the second place the first time it was released, then suddenly disappeared from the top 200 of Catalog, then appeared again at 22nd. What a ride.</p>
-
-<p>Speaking of app I made, I also updated <a href="http://kaomojiapp.com/">Kaomoji for Mac</a> with Favorites and Recent lists. Added some new categories as well like Christmas and New Year kaomoji. Check it out if you own a Mac. （＾＿－）≡★</p>
-
-<p><img src="http://f.cl.ly/items/0R2h0o1r0o0S0Z2O2q2H/2012-12-11%20at%2010:09.png" alt="Monoco in the top 4 App Store" /></p>
-
-<!-- more -->
-
-
-<p>This part of the world is getting colder and colder. I&#8217;ve been feeling under the weather since weekend. Take care of yourself, people! U＾ェ＾U</p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/b87b1c4a3de911e2a8e322000a9f13d9_7.jpg" alt="My favorite Tully's Irish Latte  is back! 😄＼(^o^)／ #coffee #koshien #kobe #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/89db34743e2f11e2a12822000a9f18f6_7.jpg" alt="#Kaomoji for #Mac update is up! New categories, Favorites, and Recently Used! 😄＼(^o^)／ http://kaomojiapp.com #japan" /></p>
-
-<p><img src="http://distilleryimage4.s3.amazonaws.com/9ede8222412211e2a7ab22000a1f97eb_7.jpg" alt="What do you call this thing in english? #train #japan #kobe #kansai #sannomiya" /></p>
-
-<p><img src="http://distilleryimage6.s3.amazonaws.com/ec4eec26412311e285f622000a1f8e95_7.jpg" alt="Empty #monorail .. #kobe #kansai #sannomiya #japan" /></p>
-
-<p><img src="http://distilleryimage10.s3.amazonaws.com/f8f8b30441c711e2af5a22000a9f18fb_7.jpg" alt="The crazy #monkey @ Fruits and Flowers Park ... #kobe  #kansai #japan" /></p>
-
-<br/>
-
-
-<p><em>// Photos are sorted from oldest to recent.</em></p>
-
-<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
-
-<p>/*===============================</p>
-
-<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
-
-<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
-
-<p>================================*/</p>
 ]]></content>
   </entry>
   
