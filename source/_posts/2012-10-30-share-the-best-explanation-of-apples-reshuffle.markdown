@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] The best explanation of Apple's Reshuffle"
 date: 2012-10-30 15:44
-comments: true
+comments: false
 categories: [share, apple]
 ---
 

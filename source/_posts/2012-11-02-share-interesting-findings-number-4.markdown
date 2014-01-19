@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Interesting Findings #4"
 date: 2012-11-02 23:25
-comments: true
+comments: false
 description: Some interesting stuffs on the net.
 categories: [share, japan]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Happy Birthday to NIH"
 date: 2012-09-28 00:29
-comments: true
+comments: false
 categories: [share, news, comic]
 ---
 

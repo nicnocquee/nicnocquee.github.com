@@ -2,7 +2,7 @@
 layout: post
 title: "[NEWS] Going Forward"
 date: 2012-09-17 01:01
-comments: true
+comments: false
 description: Going Forward
 categories: [video, share, news]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Jobs was a Romantic"
 date: 2013-01-07 09:48
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 

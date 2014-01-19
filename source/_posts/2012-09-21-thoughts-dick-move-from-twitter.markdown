@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Dick move from Twitter"
 date: 2012-09-21 08:47
-comments: true
+comments: false
 description: Twitter made a big mistake by screwing with ifttt
 categories: [thoughts, twitter]
 ---

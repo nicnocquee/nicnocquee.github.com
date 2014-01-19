@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] The ugliest view in iOS 6"
 date: 2012-12-17 00:32
-comments: true
+comments: false
 categories: [ios, apple, design]
 ---
 

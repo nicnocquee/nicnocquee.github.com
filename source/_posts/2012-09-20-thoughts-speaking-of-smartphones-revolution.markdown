@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Speaking of smartphones revolution"
 date: 2012-09-20 12:03
-comments: true
+comments: false
 categories: [thoughts, iphone]
 ---
 Andrew Wulf on [I'm sorry but the revolution in smartphones is long over](http://thecodist.com/article/i_39_m_sorry_but_the_revolution_in_smartphones_is_long_over):

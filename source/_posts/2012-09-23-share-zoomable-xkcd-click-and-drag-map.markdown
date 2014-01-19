@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Zoomable xkcd - Click and Drag Map"
 date: 2012-09-23 00:19
-comments: true
+comments: false
 description: zoomable version of xkcd click and drag huge world
 keywords: xkcd, comic
 categories: [share]

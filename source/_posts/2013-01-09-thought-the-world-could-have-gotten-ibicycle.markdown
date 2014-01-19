@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHT] The World Could Have Gotten iBicycle"
 date: 2013-01-09 11:54
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "[iPad] Upgraded to iOS 6 for The Magazine"
 date: 2012-10-12 17:29
-comments: true
+comments: false
 categories: [share, ios, ipad]
 ---
 [Marco Ament](http://www.marco.org/) on the [Foreword of The Magazine](http://the-magazine.org/1/foreword):

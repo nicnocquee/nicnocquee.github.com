@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Be an iOS developer now"
 date: 2012-12-26 17:43
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 

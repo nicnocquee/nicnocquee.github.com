@@ -2,7 +2,7 @@
 layout: post
 title: "[NEWS] Kaomoji for Mac 1.5 is out!"
 date: 2012-09-19 10:41
-comments: true
+comments: false
 description: Kaomoji for Mac version 1.5 is available for download
 categories: [news, kaomoji, mac]
 ---

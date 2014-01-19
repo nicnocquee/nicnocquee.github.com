@@ -2,7 +2,7 @@
 layout: post
 title: "[REVIEW] Mac Photo Bundle"
 date: 2012-09-23 12:55
-comments: true
+comments: false
 description: Review of Mighty Deals Mac Photo Bundle
 keywords: mac, mighty, deals, photo, snapheal, fx studio pro, colorstrokes
 categories: [review, mac]

@@ -2,7 +2,7 @@
 layout: post
 title: "[TRAVEL] India Mela 2012 Kobe Japan"
 date: 2012-10-07 14:03
-comments: true
+comments: false
 description: India Mela 2012. India Festival in Kobe Japan.
 categories: [travel, photos]
 ---

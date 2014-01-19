@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] A response to a friend's long comment on an article of someone leaving apple"
 date: 2012-11-02 16:15
-comments: true
+comments: false
 published: false
 categories: [thoughts, apple]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[VIDEO] Two short clips from our short trips"
 date: 2012-10-14 22:36
-comments: true
+comments: false
 categories: [video, travel]
 ---
 [Wifey's](http://engelene.tumblr.com/) birthday sunrise:

@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Record Labels don't want my money"
 date: 2012-10-28 13:45
-comments: true
+comments: false
 published: false
 categories: 
 ---

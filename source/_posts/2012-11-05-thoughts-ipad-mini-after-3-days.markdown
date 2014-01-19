@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] iPad Mini after 3 days"
 date: 2012-11-05 22:57
-comments: true
+comments: false
 description: Yet another iPad mini thoughts
 categories: [thoughts, apple]
 ---

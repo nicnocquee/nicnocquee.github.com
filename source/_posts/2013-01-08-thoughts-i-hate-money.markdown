@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] I Hate Money"
 date: 2013-01-08 09:23
-comments: true
+comments: false
 categories: [thoughts]
 ---
 Jobs on [Walter Isaacson's Steve Jobs](http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&tag=everlasti-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B004W2UBYW):

@@ -2,7 +2,7 @@
 layout: post
 title: "[iOS] Things I Bet You Don't Know About Promoting Your App"
 date: 2013-01-11 11:04
-comments: true
+comments: false
 description: Ways to promote iPhone app
 categories: [ios, scribeit, apple]
 ---

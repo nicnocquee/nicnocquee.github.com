@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] January 4 was my real new year"
 date: 2013-01-05 01:06
-comments: true
+comments: false
 categories: [thoughts, iphone, ios]
 ---
 As I write this sentence on my MBA which rests on my lap, the digital clock at the top right corner shows "Fri Jan 4 11:26:50 PM". In around 30 minutes, it will be January 5. It's been 4 days since the year 2013 closed the door of 2012 and came to our life. The holiday for most people in Japan has ended yesterday. Yet here I am feeling like finally I can say "Happy new year!" sincerelly.

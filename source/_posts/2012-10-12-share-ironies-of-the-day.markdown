@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Ironies of the day"
 date: 2012-10-12 06:33
-comments: true
+comments: false
 categories: [share]
 ---
 

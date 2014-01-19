@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] RDF: It's in the Juice"
 date: 2013-01-10 12:29
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Fake Monk Scam!"
 date: 2012-10-27 11:12
-comments: true
+comments: false
 description: Fake monk scam in tokyo
 categories: [share, japan]
 ---

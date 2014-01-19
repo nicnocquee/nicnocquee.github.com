@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Interesting Findings #2"
 date: 2012-09-19 13:19
-comments: true
+comments: false
 categories: [share, video, japan, camera]
 ---
 * Why do I feel that this [dispute between Japan and China](http://www.japanprobe.com/2012/09/19/chinese-sportsmanship-badminton-players-withdraw-from-japan-open-japanese-cycling-team-kicked-out-of-tour-of-china-race/) is a one-sided conflict? And what even baffled me is that it is all because of [those tiny islands](http://www.japanprobe.com/2012/08/20/violent-anti-japanese-protests-erupt-across-china/). And they said that religious people are out of their minds.

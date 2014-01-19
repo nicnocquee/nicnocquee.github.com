@@ -2,7 +2,7 @@
 layout: post
 title: "[PHOTOS] Weekly Kansai #18"
 date: 2013-01-15 22:33
-comments: true
+comments: false
 description: Photos of my week in kansai area
 categories: [photos, kansai, japan]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] No reason for Samsung to stop copying Apple"
 date: 2012-10-23 20:33
-comments: true
+comments: false
 description: Samsung oh samsung ..
 categories: [photos, thoughts]
 ---

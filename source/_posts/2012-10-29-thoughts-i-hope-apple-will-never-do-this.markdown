@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] I hope Apple will never do this"
 date: 2012-10-29 23:39
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 By "this" I mean what [Amazon](http://www.amazon.com/) just did:

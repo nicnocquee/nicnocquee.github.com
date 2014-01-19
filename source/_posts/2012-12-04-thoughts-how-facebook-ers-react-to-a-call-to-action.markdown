@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] How Facebook-ers react to a call-to-action"
 date: 2012-12-04 00:31
-comments: true
+comments: false
 categories: [share, thought]
 ---
 Google posted on Facebook a post that asks people to sign a petition to free the internet. They did not only post it in English, but in Japanese and *surprisingly* in Indonesian as well.

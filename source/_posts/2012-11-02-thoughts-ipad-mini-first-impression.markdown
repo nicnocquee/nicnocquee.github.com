@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Yet another iPad Mini first impression"
 date: 2012-11-02 16:48
-comments: true
+comments: false
 description: "Yet another iPad Mini first impression"
 categories: [thoughts, apple]
 ---

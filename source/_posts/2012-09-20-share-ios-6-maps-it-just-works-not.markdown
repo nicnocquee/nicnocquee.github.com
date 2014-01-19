@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] iOS 6 Maps: It just works. NOT!"
 date: 2012-09-20 17:16
-comments: true
+comments: false
 description: ios 6 maps fail in japan
 categories: [share, iphone]
 ---

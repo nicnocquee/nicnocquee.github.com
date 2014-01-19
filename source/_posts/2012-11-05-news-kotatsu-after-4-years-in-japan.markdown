@@ -2,7 +2,7 @@
 layout: post
 title: "[NEWS] Kotatsu after 4 years in Japan"
 date: 2012-11-05 20:43
-comments: true
+comments: false
 categories: [news, japan]
 ---
 

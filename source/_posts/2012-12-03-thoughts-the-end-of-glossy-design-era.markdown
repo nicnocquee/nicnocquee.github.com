@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] The end of glossy design era"
 date: 2012-12-03 17:20
-comments: true
+comments: false
 categories: [thoughts, share, design]
 ---
 

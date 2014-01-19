@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] iMac was the queen of the apple event"
 date: 2012-10-24 08:11
-comments: true
+comments: false
 description: The new iMac was the main thing of the Apple event.
 categories: [thoughts, share, apple]
 ---

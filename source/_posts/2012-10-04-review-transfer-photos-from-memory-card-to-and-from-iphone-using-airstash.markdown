@@ -2,7 +2,7 @@
 layout: post
 title: "[REVIEW] Transfer photos from memory card to and from iPhone using AirStash"
 date: 2012-10-04 09:47
-comments: true
+comments: false
 categories: [review, iphone]
 ---
 iPhone, with all the great things, has many shortcomings. One of the those that still does not make sense to me is its inability to transfer photos from memory card using the Camera Connection Kit while its big brother iPad can do it. Surely iPhone 4/4S/5 has the horsepower to read and transfer photos. There's no reason for this restriction. Unfortunately, there's no sign that Apple will change this policy in the near future.

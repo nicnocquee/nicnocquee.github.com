@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Interesting Findings #3"
 date: 2012-10-27 12:28
-comments: true
+comments: false
 description: Some interesting stuffs on the net.
 categories: [share]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Opened Facebook and Twitter after a week"
 date: 2012-09-27 09:49
-comments: true
+comments: false
 categories: [thoughts]
 ---
 Last week I decided to take a break from Facebook and Twitter. I deleted Facebook and Twitter app from my iPhone and resisted from opening Facebook and Twitter from the web. The reason was pretty simple. I felt that Facebook and Twitter *toxicated* my mind. There were too many posts or Tweets that were boring, stupid, unnecessary, and I found insulting to what I believe in. To respond to those posts or tweets would not only waste my time, but also mentally exhausting. Not to mention debating over something that will never have common agreement always leaves bad taste in my mouth. Therefore, I chose to keep a distance from Twitter and Facebook.

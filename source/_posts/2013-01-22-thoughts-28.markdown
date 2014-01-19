@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] 28"
 date: 2013-01-22 10:15
-comments: true
+comments: false
 categories: [thoughts]
 ---
 ![I don't always have birthday](http://f.cl.ly/items/053P1m2W2C0G0k0D0K18/idont.jpg)

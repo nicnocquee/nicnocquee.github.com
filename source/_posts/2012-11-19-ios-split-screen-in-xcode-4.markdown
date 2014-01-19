@@ -2,7 +2,7 @@
 layout: post
 title: "[iOS] Split screen in XCode 4"
 date: 2012-11-19 21:48
-comments: true
+comments: false
 description: Split screen in XCode 4
 categories: [ios, dev]
 ---

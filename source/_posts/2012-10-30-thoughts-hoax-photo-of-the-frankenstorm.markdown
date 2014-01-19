@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Hoax photo of the Frankenstorm"
 date: 2012-10-30 15:24
-comments: true
+comments: false
 description: Seriously, google before you share
 categories: [thoughts, internet]
 ---

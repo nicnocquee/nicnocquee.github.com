@@ -2,7 +2,7 @@
 layout: post
 title: "[HOBBY] Linkin Park Nendoroidized!"
 date: 2012-09-22 13:01
-comments: true
+comments: false
 description: nendoroid and linkin park
 keywords: nendoroid, figures, linkin park, japan
 categories: [hobby, share, figure]

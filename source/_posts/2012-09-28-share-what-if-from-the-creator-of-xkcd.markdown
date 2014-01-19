@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] What if from the creator of XKCD"
 date: 2012-09-28 01:02
-comments: true
+comments: false
 categories: [share, comic]
 ---
 ![What if?](http://f.cl.ly/items/2U1J2X2h1Y3l1c1N1m3m/Screen%20Shot%202012-09-28%20at%201.03.16%20AM.png)

@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Quote of the day #1"
 date: 2012-10-15 21:36
-comments: true
+comments: false
 categories: [quote, share, comic]
 ---
 [Repeating History](http://thedoghousediaries.com/4624) by Doghouse Diaries:

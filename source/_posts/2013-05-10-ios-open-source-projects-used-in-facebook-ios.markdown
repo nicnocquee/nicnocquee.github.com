@@ -2,7 +2,7 @@
 layout: post
 title: "[iOS] Open Source Projects Used in Facebook iOS"
 date: 2013-05-10 20:58
-comments: true
+comments: false
 categories: [ios]
 ---
 

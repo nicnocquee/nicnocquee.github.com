@@ -2,7 +2,7 @@
 layout: post
 title: "[VIDEO] One person Depapepe on the street of Sannomiya"
 date: 2012-10-25 23:06
-comments: true
+comments: false
 categories: [video, music]
 ---
 <div class="video-container">

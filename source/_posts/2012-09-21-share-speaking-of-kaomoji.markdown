@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Speaking of Kaomoji"
 date: 2012-09-21 11:05
-comments: true
+comments: false
 description: Kaomoji for Mac enables you to insert kaomoji fast and easily
 categories: [share, video, kaomoji]
 ---

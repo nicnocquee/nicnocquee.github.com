@@ -2,7 +2,7 @@
 layout: post
 title: "[NEWS] Monoco iPhone App is now available on the Japan App Store"
 date: 2012-10-15 18:08
-comments: true
+comments: false
 description: "Monoco brings you hand-selected collection of home decor, other design items from all over the world, up to 70% off."
 categories: [news, iphone, ios]
 ---

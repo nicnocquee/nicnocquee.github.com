@@ -2,7 +2,7 @@
 layout: post
 title: "How to enter unicode characters in Mac"
 date: 2013-10-16 18:54
-comments: true
+comments: false
 description: Input unicode characters in Mac OS X using custom icon font
 categories: [mac, osx]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[NEWS] Monoco for iPhone Update is available now"
 date: 2012-10-24 10:55
-comments: true
+comments: false
 description: Monoco for iPhone update is available now
 categories: [news, monoco, iphone]
 ---

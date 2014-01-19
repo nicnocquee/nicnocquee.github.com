@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Delicious Design #1"
 date: 2012-10-07 13:23
-comments: true
+comments: false
 design: Beautiful and delicious icons by amazing designers.
 categories: [share, design]
 ---

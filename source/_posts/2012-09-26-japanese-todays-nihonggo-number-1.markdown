@@ -2,7 +2,7 @@
 layout: post
 title: "[JAPANESE] Today's Nihonggo #1"
 date: 2012-09-26 00:11
-comments: true
+comments: false
 description: Learning nihonggo (japanese) grammar, kanji, etc.
 categories: [nihonggo, learn, japanese]
 ---

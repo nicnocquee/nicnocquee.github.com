@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] Lover? Hater? It's all about Apple"
 date: 2012-10-29 22:31
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 

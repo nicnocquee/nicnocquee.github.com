@@ -2,7 +2,7 @@
 layout: post
 title: "[THOUGHTS] So The Term is The Apple Reaper"
 date: 2012-09-19 22:50
-comments: true
+comments: false
 categories: [thoughts, apple]
 ---
 Billy Coover on [The Apple Reaper](http://coovtech.com/posts/the-apple-reaper/):

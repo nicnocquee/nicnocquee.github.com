@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Steve Jobs at International Design Conference"
 date: 2012-10-03 09:22
-comments: true
+comments: false
 description: Steve Jobs from the future
 categories: [share, audio]
 ---

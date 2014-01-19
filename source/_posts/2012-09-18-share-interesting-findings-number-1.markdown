@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Interesting Findings #1"
 date: 2012-09-18 19:58
-comments: true
+comments: false
 categories: share
 ---
 

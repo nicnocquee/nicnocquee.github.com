@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Don't Buy a Kindle"
 date: 2012-10-23 02:01
-comments: true
+comments: false
 description: "DRM is bad"
 categories: [share, kindle]
 ---

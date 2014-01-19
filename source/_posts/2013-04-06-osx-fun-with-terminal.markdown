@@ -2,7 +2,7 @@
 layout: post
 title: "[OSX] Fun with Terminal"
 date: 2013-04-06 00:08
-comments: true
+comments: false
 categories: [osx, hack]
 ---
 

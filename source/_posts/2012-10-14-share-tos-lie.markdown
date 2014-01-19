@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] TOS. Lie."
 date: 2012-10-14 22:29
-comments: true
+comments: false
 description: I have read the terms of agreement… NOT!
 categories: [share, apple]
 ---

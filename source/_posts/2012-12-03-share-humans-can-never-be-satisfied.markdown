@@ -2,7 +2,7 @@
 layout: post
 title: "[SHARE] Humans can never be satisfied"
 date: 2012-12-03 17:01
-comments: true
+comments: false
 categories: [share, thoughts]
 ---
 Art de Vany on [Human's satisfaction](http://artdevanyonline.com/1/post/2012/12/we-humans-can-never-be-satisfied.html):
