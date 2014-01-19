@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apple | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-01-03T12:32:27+09:00</updated>
+  <updated>2014-01-19T22:37:05+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Your Verse]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/19/your-verse/"/>
+    <updated>2014-01-19T22:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/19/your-verse</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/jiyIcz7wUH0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+<br/>
+
+
+<p><em>You don’t read and write poetry because it’s cute, we read and write poetry because we are members of the human race and the human race is filled with passion, medicine, law, business, engineering, these are noble pursuits necessary to sustain life but poetry beauty, romance, love, these are what we stay alive for. The quote from Whitman:</em></p>
+
+<p><em>Oh me! Oh life! of the questions of these recurring,
+Of the endless trains of the faithless, of cities fill’d with the foolish,
+- What good amid these, O me, O life?</em></p>
+
+<p><em>Answer. That you are here—that life exists and identity. That the powerful play goes on, and you may contribute a verse. <strong>That the powerful play goes on, and that you can contribute a verse, what will your verse be?</strong></em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
@@ -113,28 +138,6 @@
 <p><blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p></p><p><p>…</p></p><p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote></p>
 
 <p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] Be an iOS developer now]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/26/thoughts-be-an-ios-developer-now/"/>
-    <updated>2012-12-26T17:43:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/26/thoughts-be-an-ios-developer-now</id>
-    <content type="html"><![CDATA[<p>Because it's still a great time as app developer.</p>
-
-<p><img src="http://i.imgur.com/cg6O5.jpg" alt="iPad is winning" /></p>
-
-<p>The picture above (via <a href="https://twitter.com/waxpancake/status/283736105717755904">@waxpancake</a>) speaks two things at least. First, Apple must be selling tons of iPads. Second, iOS users are active and proud of using Apple device. As an iOS developer, these two things are good news.</p>
-
-<!-- more -->
-
-
-<p>And this report from <a href="http://tech.fortune.cnn.com/2012/12/24/apple-microsoft-sony-store-traffic/">CNNMoney</a> is not a good sign for Microsoft and Sony. People don't wait for Santa to come at their homes anymore. They just go to Apple Store apparently.</p>
-
-<p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/apple.jpg" alt="Apple Store" /></p>
-
-<p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/photo1.jpg" alt="Microsoft store" /></p>
 ]]></content>
   </entry>
   

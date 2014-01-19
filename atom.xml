@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-01-03T12:32:27+09:00</updated>
+  <updated>2014-01-19T22:37:05+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Your Verse]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/19/your-verse/"/>
+    <updated>2014-01-19T22:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/19/your-verse</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/jiyIcz7wUH0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+<br/>
+
+
+<p><em>You don’t read and write poetry because it’s cute, we read and write poetry because we are members of the human race and the human race is filled with passion, medicine, law, business, engineering, these are noble pursuits necessary to sustain life but poetry beauty, romance, love, these are what we stay alive for. The quote from Whitman:</em></p>
+
+<p><em>Oh me! Oh life! of the questions of these recurring,
+Of the endless trains of the faithless, of cities fill’d with the foolish,
+- What good amid these, O me, O life?</em></p>
+
+<p><em>Answer. That you are here—that life exists and identity. That the powerful play goes on, and you may contribute a verse. <strong>That the powerful play goes on, and that you can contribute a verse, what will your verse be?</strong></em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[That's so two years ago]]></title>
@@ -968,17 +993,6 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 <p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
 
 <p>================================*/</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] The ugliest view in iOS 6]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6/"/>
-    <updated>2012-12-17T00:32:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0K401B2o1L0W1z0U3f1O/%E5%86%99%E7%9C%9F%202012-12-17%200%2030%2009.png" alt="This, so damn ugly" /></p>
-
-<p>The previous design of iOS Phone&#8217;s keypad was so much better. This new one in iOS 6 feels like something made by Android engineer.  （；¬＿¬)</p>
 ]]></content>
   </entry>
   
