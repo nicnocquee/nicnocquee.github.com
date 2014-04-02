@@ -4,18 +4,18 @@ article{
 	padding: 30px 0;
 	position: relative;
 	@media screen and (max-width: 800px){
-		padding-bottom: 15px;
+		padding: 15px 15px;
 	}
 	@media screen and (max-width: 600px){
-		padding: 15px 0;
+		padding: 15px 15px;
 	}
-	h1.title{
-		color: black;
-		font-weight: 30;
+	h2.title{
+		font-size: 28px;
+		font-weight: bold;
 		line-height: 35px;
 		margin-bottom: 20px;
 		a{
-			color: $color-gray01;
+			color: rgb(51,51,50);
 		}
 	}
 	.entry-content{
@@ -74,10 +74,9 @@ article{
 			height: auto;
 		}
 		blockquote{
-			background: white;
-			font-style: italic;
+			background: $color-gray04;
 			border-left: 5px solid $color-gray03;
-			padding: 1px 20px;
+			padding: 15px 20px;
 			margin-top: 10px;
 			& > p:first-of-type{
 				margin-top: 0;

@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://nicnocquee.com
-title: Something Awesome 
-subtitle: A blog by Nico
+title: Something Awesome
+subtitle: Hopefully
 author: Nico Prananta
 simple_search: http://google.com/search
 description: Blog about thoughts, life, iPhone, iOS, web, programming, design, and Japan
@@ -64,7 +64,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: nicnocquee
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -96,4 +96,8 @@ disqus_show_comment_count: false
 google_analytics_tracking_id: UA-34880613-1
 
 # Facebook Like
+facebook_app_id: 160411063986286
 facebook_like: true
+
+#Gravatar
+gravatar_email: nicnocquee@yahoo.com
