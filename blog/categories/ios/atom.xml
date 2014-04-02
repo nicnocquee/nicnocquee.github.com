@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-03-13T17:22:54+09:00</updated>
+  <updated>2014-04-02T16:59:08+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install any fonts and use it in any apps in iOS 7]]></title>
+    <link href="http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/"/>
+    <updated>2014-04-02T16:43:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7</id>
+    <content type="html"><![CDATA[<p>I just found out about this and turns out it's pretty easy to do.</p>
+
+<ol>
+<li><p>Create a XML file and copy the following</p>
+
+<p> <script src="https://gist.github.com/nicnocquee/9929652.js"></script>
+ <!-- more --></p></li>
+<li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
+
+<pre><code> openssl base64 -in font_name -out output_file_name
+</code></pre></li>
+<li><p>Copy the base64 string to clipboard</p>
+
+<pre><code> cat output_file_name | pbcopy
+</code></pre>
+
+<p> and paste it into the XML file between the <code>&lt;data&gt;  &lt;/data&gt;</code> tags.</p></li>
+<li><p>Open the XML from your iOS 7 device by sending it via email or uploading it to Dropbox or something.</p></li>
+<li><p>Install the profile.</p>
+
+<p> <img src="http://f.cl.ly/items/0F021r1Y2G0A333p2t3U/April_02__2014_at_0451PM.png" alt="" /></p></li>
+</ol>
+
+
+<p>Now you can use the font in any apps that allow font selection, like Keynote for example.</p>
+
+<p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
+
+<p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Run iOS app in different languages quickly in iOS simulator]]></title>
@@ -162,17 +199,6 @@
 
 <p><strong>Scribeit is up in the <a href="http://scribeit.appsccelerated.com/">App Store</a> now! Check it out!
 </strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] The ugliest view in iOS 6]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6/"/>
-    <updated>2012-12-17T00:32:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/17/thoughts-the-ugliest-view-in-ios-6</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0K401B2o1L0W1z0U3f1O/%E5%86%99%E7%9C%9F%202012-12-17%200%2030%2009.png" alt="This, so damn ugly" /></p>
-
-<p>The previous design of iOS Phone's keypad was so much better. This new one in iOS 6 feels like something made by Android engineer.  （；¬＿¬)</p>
 ]]></content>
   </entry>
   

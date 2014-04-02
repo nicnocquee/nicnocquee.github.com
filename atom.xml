@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-03-13T17:22:54+09:00</updated>
+  <updated>2014-04-02T16:59:08+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install any fonts and use it in any apps in iOS 7]]></title>
+    <link href="http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/"/>
+    <updated>2014-04-02T16:43:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7</id>
+    <content type="html"><![CDATA[<p>I just found out about this and turns out it&#8217;s pretty easy to do.</p>
+
+<ol>
+<li><p>Create a XML file and copy the following</p>
+
+<p> <script src="https://gist.github.com/nicnocquee/9929652.js"></script>
+ <!-- more --></p></li>
+<li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
+
+<pre><code> openssl base64 -in font_name -out output_file_name
+</code></pre></li>
+<li><p>Copy the base64 string to clipboard</p>
+
+<pre><code> cat output_file_name | pbcopy
+</code></pre>
+
+<p> and paste it into the XML file between the <code>&lt;data&gt;  &lt;/data&gt;</code> tags.</p></li>
+<li><p>Open the XML from your iOS 7 device by sending it via email or uploading it to Dropbox or something.</p></li>
+<li><p>Install the profile.</p>
+
+<p> <img src="http://f.cl.ly/items/0F021r1Y2G0A333p2t3U/April_02__2014_at_0451PM.png" alt="" /></p></li>
+</ol>
+
+
+<p>Now you can use the font in any apps that allow font selection, like Keynote for example.</p>
+
+<p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
+
+<p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Run iOS app in different languages quickly in iOS simulator]]></title>
@@ -832,119 +869,6 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 <p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/apple.jpg" alt="Apple Store" /></p>
 
 <p><img src="http://fortunebrainstormtech.files.wordpress.com/2012/12/photo1.jpg" alt="Microsoft store" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #15]]></title>
-    <link href="http://nicnocquee.com/blog/2012/12/25/photos-weekly-kansai-number-15/"/>
-    <updated>2012-12-25T13:50:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/12/25/photos-weekly-kansai-number-15</id>
-    <content type="html"><![CDATA[<p>Merry christmas, everyone! Seems like there&#8217;s no white christmas here in Kobe. And since Japan does not officially celebrate Christmas, everyone is working now. At least we got a holiday yesterday thanks to the <a href="http://en.wikipedia.org/wiki/Akihito">Emperor&#8217;s birthday</a>. The emperor&#8217;s birthday was actually on the 23rd, but since December 23 was Sunday, they moved the holiday to Monday.</p>
-
-<p>So we took this chance to visit an illumination event in Tennoji, Tennoji Illuminage. Not as impressive as other illumination events we have visited before though. Not to mention it&#8217;s not free. Got to pay 1000 yen to enter the park.</p>
-
-<p>On weekend, we watched the long waited Les Misérables. Pretty interesting movie for me. It felt like watching a 2.5-hour trailer. Because every scene was so dramatic thanks to the nonstop music. I like Anne Hatheway&#8217;s acting. My only problem was Russell Crowe&#8217;s singing. It just felt not quite right. Anyway, I wasn&#8217;t really a fan of musical movie, but Les Misérables was not bad.</p>
-
-<div class="video-container">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/EkHHHUk8RCw" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-<p>After the movie, we went to German Christmas Market. Nothing was really special except the cute Santa mug which we got for buying a cup of cocoa.</p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/3f5e957049e811e288ea22000a1f9318_7.jpg" alt="Wifey's 💞😁 #ipad #mini" /></p>
-
-<p> <!-- more --></p>
-
-<p><img src="http://distilleryimage9.s3.amazonaws.com/2d9e37864a7011e2bc0822000a1f9737_7.jpg" alt="Watching @nina_oikawa final thesis presentation. #naist #nara #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage5.s3.amazonaws.com/32ffb03a4a8711e2b70422000a9d0df6_7.jpg" alt="久々に寿司！#food #nara #sushi #japan" /></p>
-
-<p><img src="http://distilleryimage6.s3.amazonaws.com/1849b7fc4a9311e2bf8b22000a1fb004_7.jpg" alt="Yeay! Won a toy from Kura #sushi! #food #nara #japan #kansai" /></p>
-
-<p><img src="http://distilleryimage11.s3.amazonaws.com/0a1b8c484a9611e28df322000a1f9367_7.jpg" alt="#Pikachu, I got you! #anime #figure #kansai #nara #japan" /></p>
-
-<p><img src="http://distilleryimage2.s3.amazonaws.com/bad3c0164c0611e2a03b22000a1f92d6_7.jpg" alt="Japan's Glee. Terrible voices though. 😓 #umeda #osaka #kansai #japan #christmas" /></p>
-
-<p><img src="http://distilleryimage9.s3.amazonaws.com/3d5a88824c0a11e299af22000a9e29bc_7.jpg" alt="まもなく。。。#movie #umeda #osaka #japan" /></p>
-
-<p><img src="http://distilleryimage4.s3.amazonaws.com/8b3e0b004c0a11e2b44322000a1f92df_7.jpg" alt="Ice Irish Latte! #drink #umeda #osaka #japan" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/db8000f04c0a11e29a0922000a1f8c1a_7.jpg" alt="The perverted bear, my friend said. 😄#movie #osaka #umeda #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage9.s3.amazonaws.com/4530fdf64c0b11e2873222000a1f9e77_7.jpg" alt="Luffy! #onepiece #movie #umeda #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/1fc850e44c3011e2aaa222000a1fb843_7.jpg" alt="Drinking cocoa from #Santa! 😄 :p #christmas #nights #german #market #umeda #osaka" /></p>
-
-<p><img src="http://distilleryimage6.s3.amazonaws.com/f136406e4c3011e2957722000a1f9a39_7.jpg" alt="#Christmas tree under #Umeda #sky building at #german market. #night #umeda #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage0.s3.amazonaws.com/624341e44c3111e284c322000a1fbca9_7.jpg" alt="#Santa mug at #german market. #night #christmas #umeda #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage10.s3.amazonaws.com/4024abf04c3811e29f5522000a9f14ae_7.jpg" alt="Houses.. Kinda expensive though. At #german market. #christmas #night #umeda #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage5.s3.amazonaws.com/73e484e24c3811e2a15422000a9f19a4_7.jpg" alt="#german  guy decorating cake at German market. #night #umeda #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage8.s3.amazonaws.com/a58db19e4c3811e28dba22000a1f97e5_7.jpg" alt="Merry go round at #german market. #umeda #kansai #osaka #japan" /></p>
-
-<p><img src="http://distilleryimage7.s3.amazonaws.com/f54144084c3811e2b4d922000a1fae83_7.jpg" alt="Lots of pop corns at #german market. #umeda #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage9.s3.amazonaws.com/5c4891924dab11e2bd9a22000a9f14ba_7.jpg" alt="Visiting #Tennoji Luminage. #osaka #kansai #japan #night #christmas" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/bc5fe18e4dab11e2a94522000a1fbc56_7.jpg" alt="#osaka #kansai #japan #night #christmas #tennoji" /></p>
-
-<p><img src="http://distilleryimage2.s3.amazonaws.com/70e211f04db011e2862522000a1f9c96_7.jpg" alt="4th Floor.. #osaka #kansai #japan #night #christmas #tennoji" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/0ab6edbe4db111e2aacd22000a1f932c_7.jpg" alt="Joining the 4&quot; club. #ipod #apple #christmas #gift #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage10.s3.amazonaws.com/acc5daac4db111e2b1d222000a1fb859_7.jpg" alt="#christmas eve dinner at Gyukaku restaurant .. #osaka #kansai #japan #night #tennoji #food" /></p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/fdd8acd24db411e2b59422000a9f13f8_7.jpg" alt="#iPad mini visited #Tennoji #illuminage. #osaka #kansai #japan #night #christmas #light" /></p>
-
-<p><img src="http://distilleryimage2.s3.amazonaws.com/ac8494804db511e2b7ea22000a1f9366_7.jpg" alt="Tunnel of #stars. #osaka #kansai #japan #night #christmas #tennoji" /></p>
-
-<p><img src="http://distilleryimage4.s3.amazonaws.com/06f3e0e24db611e2af3622000a9f17ea_7.jpg" alt="#christmas eve with #yakiniku! #osaka #kansai #japan #night #food" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/f001c43a4dbf11e2b9c722000a9e07b7_7.jpg" alt="#bokeh #light #osaka #kansai #japan #night #christmas #tennoji" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/8c6cb74c4dc711e2947622000a9e138b_7.jpg" alt="Got a mini #otamatone from @nina_oikawa! Thanks! #music #christmas #gift #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage5.s3.amazonaws.com/ca9314624dcc11e28a0c22000a9d0ded_7.jpg" alt="Yellow... #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/175ffa8a4dcd11e2957722000a1f9a39_7.jpg" alt="Photo service at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage10.s3.amazonaws.com/bef38a964dcd11e289de22000a9f1406_7.jpg" alt="#christmas bears at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage4.s3.amazonaws.com/ddbc39e64dd211e2a77f22000a9e29a0_7.jpg" alt="Can't compete with these guys and their big ass lenses! at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage3.s3.amazonaws.com/0a1ed6564dd311e2ab4c22000a1faffd_7.jpg" alt="(Maybe) the tallest building in Tennoji. at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage4.s3.amazonaws.com/34c512624dd311e2b22b22000a1f96e2_7.jpg" alt="Fruit lights at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage9.s3.amazonaws.com/6d92ec364dd311e2b5f422000a1f9a34_7.jpg" alt="#Sakura lights at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage0.s3.amazonaws.com/c8aa6be44dd311e28f8322000a9f18ae_7.jpg" alt="Leaves lights at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage6.s3.amazonaws.com/ef8cd9224dd311e2a5d322000a1f90e5_7.jpg" alt="Colorful leaves at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage11.s3.amazonaws.com/2f8690ea4dd411e295e122000a9e2965_7.jpg" alt="Beautiful flower lights at Tennoji Illuminage.  #lights #night #christmas #illumination #tennoji #osaka #kansai #japan" /></p>
-
-<p><img src="http://distilleryimage1.s3.amazonaws.com/637d03ac4dd411e2a77722000a1fbc49_7.jpg" alt="#Santa and #Snowman in the house! ^^ 😊🎅⛄at Tennoji Illuminage.  #night #christmas #kobe #osaka #kansai #japan" /></p>
-
-<br/>
-
-
-<p><em>// Photos are sorted from oldest to recent.</em></p>
-
-<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
-
-<p>/*===============================</p>
-
-<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
-
-<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
-
-<p>================================*/</p>
 ]]></content>
   </entry>
   
