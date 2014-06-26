@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apple | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-04-02T19:14:09+09:00</updated>
+  <updated>2014-06-26T23:59:29+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Script to download wwdc 2014 videos]]></title>
+    <link href="http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos/"/>
+    <updated>2014-06-26T23:38:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2m2M471z1O072F1F0B2u/Screen%20Shot%202014-06-26%20at%2023.54.57.png" alt="Script to download wwdc 14 videos" /></p>
+
+<p>Although I'll be most likely sleeping, I'm planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they'll eat up my iPhone's free space. And I also want to speed up the videos a little bit. But downloading the videos one by one from the <a href="https://developer.apple.com/videos/wwdc/2014/">download page</a> is too barbaric.</p>
+
+<!-- more -->
+
+
+<p>There must be a script to download them all in one click. Google top search result returns this <a href="https://github.com/ohoachuck/wwdc-downloader">wwdc-downloader</a>, this <a href="http://samwize.com/2014/06/06/download-all-wwdc-2014-pdf-slides-only/">script to download PDF only or the HD videos</a>, and <a href="http://andrewcook.org/2014/06/07/download-wwdc-2014-videos/">this script to download the SD videos</a>. But for some reasons they didn't work.</p>
+
+<p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
+
+<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+</code></pre>
+
+<p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
+
+<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Your Verse]]></title>
@@ -102,42 +128,6 @@ Of the endless trains of the faithless, of cities fill’d with the foolish,
 <p><blockquote><p></p></p><p><p>In various interviews, Jobs had been referring to computers as a bicycle for the mind; the ability of humans to create a bicycle allowed them to move more efficiently than even a condor, and likewise the ability to create computers would multiply the efficiency of their minds. So one day Jobs decreed that henceforth the Macintosh should be known instead as the Bicycle. This did not go over well. “Burrell and I thought this was the silliest thing we ever heard, and we simply refused to use the new name,” recalled Hertzfeld. Within a month the idea was dropped.</p></p><p><p></p></blockquote></p>
 
 <p>Thank God there were people who dared to stand up to Steve for his silly decisions.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[SHARE] Jobs was a Romantic]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic/"/>
-    <updated>2013-01-07T09:48:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2E1m0R0422463g2p3M3n/%E5%86%99%E7%9C%9F%202013-01-07%209%2029%2039.jpg" alt="Xerox and Lisa" /></p>
-
-<p>Chapter 8 of Steve Jobs by Walter Isaacson on the <em>myth of Apple stealing from Xerox</em>:</p>
-
-<p><blockquote><p></p></p><p><p>Xerox’s venture capital division wanted to be part of the second round of Apple financing during the summer of 1979. Jobs made an offer: “I will let you invest a million dollars in Apple if you will open the kimono at PARC.” Xerox accepted. It agreed to show Apple its new technology and in return got to buy 100,000 shares at about $10 each.</p></p><p><p></p></blockquote></p>
-
-<p>So much for the stealing. Better call it fair trade.</p>
-
-<!-- more -->
-
-
-<p>Continuing,</p>
-
-<p><blockquote><p></p></p><p><p>As he once said, “Picasso had a saying—‘good artists copy, great artists steal’—and we have always been shameless about stealing great ideas.”</p></p><p><p></p></blockquote></p>
-
-<p>Jobs was a romantic. He liked to exaggerate things. However, he was a good executioner:</p>
-
-<p><blockquote><p>Jobs and his engineers significantly improved the graphical interface ideas they saw at Xerox PARC, and then were able to implement them in ways that Xerox never could accomplish. For example, the Xerox mouse had three buttons, was complicated, cost $300 apiece, and didn’t roll around smoothly; a few days after his second Xerox PARC visit, Jobs went to a local industrial design firm, IDEO, and told one of its founders, Dean Hovey, that he wanted a simple single-button model that cost $15, “and I want to be able to use it on Formica and my blue jeans.” Hovey complied.</p></blockquote></p>
-
-<p>and ..</p>
-
-<p><blockquote><p>Apple’s engineers devised an interface so you could not only drag windows and files around, you could even drop them into folders.</p></blockquote></p>
-
-<p>He had a good team as well:</p>
-
-<p><blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p></p><p><p>…</p></p><p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote></p>
-
-<p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
 ]]></content>
   </entry>
   
