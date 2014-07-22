@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-06-26T23:59:29+09:00</updated>
+  <updated>2014-07-22T23:37:50+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[App: My Story]]></title>
+    <link href="http://nicnocquee.com/blog/2014/07/22/app-my-story/"/>
+    <updated>2014-07-22T18:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/07/22/app-my-story</id>
+    <content type="html"><![CDATA[<p><img src="https://pbs.twimg.com/media/BtGz0bLIMAA0UEk.jpg" alt="Comic I made when I was in master course" /></p>
+
+<p>My first app was a bingo game. Prior to that, I had only learned Java in college. Before learning Java, I always thought that software was the result of magic. When I entered master course in Japan, I was coding sloppily in C for research. Mostly playing with <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a>. I didn't have a Mac nor iPhone. I even teased my friend who used OSX on his laptop back in college.</p>
+
+<!--more-->
+
+
+<p><img src="http://i1.kym-cdn.com/photos/images/newsfeed/000/234/765/b7e.jpg" alt="" /></p>
+
+<p>A year passing by since I took master course and I still had no idea what I was doing. Then I stumbled upon an article by <a href="http://www.dannychoo.com">Danny Choo</a> about his passion and how he started his career. I can't recall which article it was but probably this article about <a href="http://www.dannychoo.com/en/post/1691/Pursue+Your+Passion+A+Summary.html">pursuing passion</a> or this article about <a href="http://www.dannychoo.com/en/post/26094/How+Discovering+Japan+Changed+My+Life.html">how discovering Japan changed his life</a>. Reading about his life got me thinking that I needed to find something I'm passionate about. After digging through more articles on his website, I saw his iMac. I was amazed by how beautiful it was. I ended up buying one for myself. My very first Apple product.</p>
+
+<p>One day in the class room, I saw my Japanese friend was playing with his shiny black phone. I was interested so I asked if I could take a look. There was only one button. And it has this slide to unlock mechanism. Mind. Blown. It was iPhone 3GS. My very first iPhone.</p>
+
+<p>Having free time and lack of interest in what I was doing at that time, I decided to get the Apple Developer Program. Learning Objective-C, submitting my first app, and receiving my first payment from the App Store admittedly changed my life. I decided to quit my PhD and took a job in a startup in Japan as an iOS developer.</p>
+
+<p><img src="https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg" alt="My Apple products family" /></p>
+
+<p>I'm writing this to support <a href="http://appdocumentary.com">App: The Human Story</a>. I didn't plan to write anything since I figured my story is not that exciting. I haven't made any hit game or app like Flappy Bird. But I'm making a living doing what I'm passionate about and I want to share it with others. I'm also pretty proud of the app I'm making for the company, <a href="https://itunes.apple.com/jp/app/monoco-monoko-akusesarinoserekutoshoppu/id539376693?mt=8">Monoco (Japan App Store only)</a>, and my own latest app, <a href="http://www.getdelightfulapp.com">Delightful</a>.</p>
+
+<p>If you're an app developer, help them to reach their goal in <a href="https://www.kickstarter.com/projects/appdocu/app-the-human-story">kickstarter</a> and spread the word. It seems like it's gonna be an interesting documentary.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Script to download wwdc 2014 videos]]></title>
@@ -147,33 +175,6 @@
 
 
 <p>That's about it. Maybe I missed something though because Facebook makes it really unconvenient to read these attributions.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
-    <updated>2013-01-11T11:04:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
-    <content type="html"><![CDATA[<p>If you didn't know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
-
-<!-- more -->
-
-
-<p>And to my surprise, there are some rules that I never thought they would exist. Some interesting ones are:</p>
-
-<ol>
-<li>Never refer to Apple Operating System. Meaning, you must not ever say "Now Available on iOS". Or "Scribeit for iOS". Instead, refer to Apple product names, such as "Scribeit for iPhone." Oops, need to make some change in <a href="http://scribeit.appsccelerated.com/">Scribeit website</a> ^ ^;</li>
-<li>Never typeset Apple product names using all uppercase letters. So IPHONE or IPAD is not allowed, people.</li>
-<li>Never use a Myriad font for App Store-related text. ⊙０⊙ Why? Anybody care to explain? What's with Myriad font?</li>
-</ol>
-
-
-<p>And many more. You should read it. It's pretty <em>interesting</em>.</p>
-
-<p>Note:</p>
-
-<p>Thank you for reading this post. Have you checked out my app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. I think you'll love it (⌒▽⌒)☆</p>
 ]]></content>
   </entry>
   
