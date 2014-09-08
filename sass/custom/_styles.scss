@@ -31,3 +31,12 @@ html body .full-single-article {
     width: auto;
     max-height: 500px;
 }
+
+.video-container {
+	margin-top: 40px;
+}
+.video-container .flash-video iframe {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
