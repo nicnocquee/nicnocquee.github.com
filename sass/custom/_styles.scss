@@ -26,6 +26,18 @@ html body .full-single-article {
     max-height: 500px;
 }
 
+@media (max-width: 480px) {
+	.article-list .container article p img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		max-height: 500px;
+	}
+}
+
 .full-single-article .container p img {
   	display: block;
 	margin-left: auto;
@@ -36,6 +48,18 @@ html body .full-single-article {
     max-height: 500px;
 }
 
+@media (max-width: 480px) {
+	.full-single-article .container p img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		max-height: 500px;
+	}
+}
+
 .video-container {
 	margin-top: 40px;
 }
@@ -43,6 +67,15 @@ html body .full-single-article {
 	display: block;
 	margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 480px) {
+	.video-container .flash-video iframe {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
 }
 
 .her-row h4 {
@@ -72,6 +105,18 @@ html body .full-single-article {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+	.pagination p {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
 }
 
 .pagination p a {
