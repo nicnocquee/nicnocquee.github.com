@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: music | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/music/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-07-23T04:01:48+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[VIDEO] One person Depapepe on the street of Sannomiya]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/25/video-one-person-depapepe-on-the-street-of-sannomiya/"/>
+    <updated>2012-10-25T23:06:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/25/video-one-person-depapepe-on-the-street-of-sannomiya</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/LGXREIbjH6s" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<p>Was walking to the station when I was stopped by this guy's guitar performance. His name is Matsubara Kei (松原　恵).<!-- more -->
+He wasn't selling any CDs. Maybe it's just his hobby to play on the street.</p>
+]]></content>
+  </entry>
+  
+</feed>

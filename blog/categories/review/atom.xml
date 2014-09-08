@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: review | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/review/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-07-23T04:01:48+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[REVIEW] Transfer photos from memory card to and from iPhone using AirStash]]></title>
+    <link href="http://nicnocquee.com/blog/2012/10/04/review-transfer-photos-from-memory-card-to-and-from-iphone-using-airstash/"/>
+    <updated>2012-10-04T09:47:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/10/04/review-transfer-photos-from-memory-card-to-and-from-iphone-using-airstash</id>
+    <content type="html"><![CDATA[<p>iPhone, with all the great things, has many shortcomings. One of the those that still does not make sense to me is its inability to transfer photos from memory card using the Camera Connection Kit while its big brother iPad can do it. Surely iPhone 4/4S/5 has the horsepower to read and transfer photos. There's no reason for this restriction. Unfortunately, there's no sign that Apple will change this policy in the near future.</p>
+
+<!-- more -->
+
+
+<p>Here is where <a href="http://www.airstash.com/">Airstash</a> comes and saves the day. Airstash is a wifi card reader. Insert your memory card (SD/SDHC) to it, turn it on, connect to its wifi network from your iPhone, and you can now copy your photos to iPhone's camera roll. Easy and simple. Recommended.</p>
+
+<p><img src="http://f.cl.ly/items/0n0O0v1p1n12323Q071v/resized-0.JPG" alt="Airstash to transfer photos from memory card to/from iPhone." /></p>
+
+<br />
+
+
+<p><img src="http://f.cl.ly/items/2t161k1d3k2F3C043z0p/resized-2.JPG" alt="Airstash can be used to transfer other files, not only photos." /></p>
+
+<br />
+
+
+<p><img src="http://f.cl.ly/items/432b0M3d1o3O0L0t3r2J/resized-1.JPG" alt="Airstash can also stream movies to iPhone, though I haven't tried this one yet." /></p>
+
+<br />
+
+
+<p><img src="http://f.cl.ly/items/2W0n193E270S2Q1O0F3D/resized-04.JPG" alt="Airstash is very light" /></p>
+
+<br />
+
+
+<p><img src="http://f.cl.ly/items/302R1e0R1Q2U1B0P0o23/iphone.jpg" alt="Airstash iPhone app. Can use GoodReader or any app that can access WebDav Server actually." /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[REVIEW] Mac Photo Bundle]]></title>
+    <link href="http://nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle/"/>
+    <updated>2012-09-23T12:55:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle</id>
+    <content type="html"><![CDATA[<p><a href="http://www.mightydeals.com?refID=81ccb6">Mighty Deals</a> have an interesting deal for non-pro photography enthusiasts like me, <a href="http://www.mightydeals.com/deal/macphun-photo-bundle.html?refID=81ccb6">The Mac Photo Bundle</a>. There are three apps: Snapheal, FX Studio Pro, and ColorStrokes. My favorite and the one that make the deal worth it is F<a href="http://www.fxphotostudioapp.com/">X Studio Pro</a>.<!-- more --></p>
+
+<p><img src="http://f.cl.ly/items/2I3L1i2S2B2Q1i352U1X/Screen%20Shot%202012-09-23%20at%2012.17.10%20PM.png" alt="FX Studio Pro for Mac" /></p>
+
+<p>It's basically <a href="http://campl.us/">Camera+</a> for Mac. Lots of filters and frames to choose from. Easy navigation. Switching to another filter is easy, fast, and smooth, at least in my 11-inch, Mid 2012 Macbook Air.</p>
+
+<p>Second one for my favorite is <a href="http://www.colorsplashphoto.com/">ColorStrokes</a>. From the website:</p>
+
+<p><blockquote><p>With ColorStrokes you have the entire color palette in your hands. You can recolor the image and even bring colors to the black and white shots, thus letting your photo creativity truly blossom.</p></blockquote></p>
+
+<p><img src="http://f.cl.ly/items/191h203H252P1r1z0k2J/Screen%20Shot%202012-09-23%20at%201.16.39%20PM.png" alt="ColorStrokes for Mac in action" /></p>
+
+<p>And the last is <a href="http://www.snapheal.com/">Snapheal</a>. To be honest, I'm not satisfied with this one. It didn't work as expected and advertised. It depends on the photo and the object you will try to remove. Works better on small objects. Though the developers included interesting UX to prevent you from getting bored while waiting for the processing to finish.</p>
+
+<p><img src="http://f.cl.ly/items/2i3M152M3E0M1A3j3747/Screen%20Shot%202012-09-23%20at%2012.28.15%20PM.png" alt="Snapheal in action" /></p>
+
+<p>FX Studio Pro is $39.99 (3,450JPY) in the <a href="http://itunes.apple.com/us/app/fx-photo-studio-pro/id432888949?mt=12">Mac App Store</a>. ColorStrokes is $4 in the <a href="http://itunes.apple.com/us/app/color-splash-studio/id459413843?mt=12">Mac App Store</a>, though it's 30% OFF for a limited time now. Snapheal is $19.99 in the <a href="http://itunes.apple.com/us/app/snapheal/id480623975?mt=12">Mac App Store</a>. All three in this <a href="http://www.mightydeals.com/deal/macphun-photo-bundle.html?refID=81ccb6">bundle</a> will set you back $20 (1,600JPY) only. Grab it while it lasts.</p>
+]]></content>
+  </entry>
+  
+</feed>

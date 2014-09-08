@@ -1,0 +1,194 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Script to download wwdc 2014 videos - Something Awesome</title>
+	<meta name="author" content="Nico Prananta">
+
+	
+	<meta name="description" content="Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+<meta property="fb:app_id" content="160411063986286" />
+<meta property="og:title" content="Script to download wwdc 2014 videos" />
+<meta property="og:site_name" content="Something Awesome" />
+<meta property="og:url" content="http://nicnocquee.com/" />
+<meta property="og:description" content="Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they &hellip;" />
+<meta property="og:author" content="" />
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="nicnocquee" />
+<meta property="twitter:url" content="http://nicnocquee.com" />
+<meta property="twitter:title" content="Script to download wwdc 2014 videos" />
+<meta property="twitter:description" content="Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they &hellip;" />
+<meta property="twitter:creator" content="nicnocquee" />
+
+
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Something Awesome</a></h1>
+<!-- <nav id="main-nav"></nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"></div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:nicnocquee.com">
+			</form>
+		</div>
+	</div>
+</nav> -->
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+    
+		
+		
+		
+		
+		
+<!--		<a class="rss" href="/atom.xml" title="RSS">RSS</a> -->
+		
+    
+	</div>
+<!--	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:nicnocquee.com">
+	</form> -->
+</nav>
+
+</header>
+	
+		
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/nicnocquee">nicnocquee</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('nicnocquee', 4, false);
+	})(jQuery);
+</script>
+
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Script to Download Wwdc 2014 Videos</h2>
+	<div class="entry-content"><p><img src="http://f.cl.ly/items/2m2M471z1O072F1F0B2u/Screen%20Shot%202014-06-26%20at%2023.54.57.png" alt="Script to download wwdc 14 videos" /></p>
+
+<p>Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they&#8217;ll eat up my iPhone&#8217;s free space. And I also want to speed up the videos a little bit. But downloading the videos one by one from the <a href="https://developer.apple.com/videos/wwdc/2014/">download page</a> is too barbaric.</p>
+
+<!-- more -->
+
+
+<p>There must be a script to download them all in one click. Google top search result returns this <a href="https://github.com/ohoachuck/wwdc-downloader">wwdc-downloader</a>, this <a href="http://samwize.com/2014/06/06/download-all-wwdc-2014-pdf-slides-only/">script to download PDF only or the HD videos</a>, and <a href="http://andrewcook.org/2014/06/07/download-wwdc-2014-videos/">this script to download the SD videos</a>. But for some reasons they didn&#8217;t work.</p>
+
+<p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
+
+<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+</code></pre>
+
+<p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
+
+<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+</code></pre>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-26T23:38:00+09:00" pubdate data-updated="true">Jun 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/apple/'>apple</a>, <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/wwdc/'>wwdc</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Nico Prananta
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-34880613-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
