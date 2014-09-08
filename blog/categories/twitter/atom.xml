@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:20:51+09:00</updated>
+  <updated>2014-09-09T00:33:54+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -20,7 +20,9 @@
     <id>http://nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter</id>
     <content type="html"><![CDATA[<p>Linden Tibbets on <a href="http://ifttt.com/">IFTTT</a> alerts email:</p>
 
-<p><blockquote><p>In recent weeks, Twitter announced policy changes* that will affect how applications and users like yourself can interact with Twitter&#8217;s data. As a result of these changes, on September 27th we will be removing all Twitter Triggers, disabling your ability to push tweets to places like email, Evernote and Facebook. All Personal and Shared Recipes using a Twitter Trigger will also be removed. Recipes using Twitter Actions and your ability to post new tweets via IFTTT will continue to work just fine.</p></blockquote></p>
+<p>{% blockquote %}
+In recent weeks, Twitter announced policy changes* that will affect how applications and users like yourself can interact with Twitter&#8217;s data. As a result of these changes, on September 27th we will be removing all Twitter Triggers, disabling your ability to push tweets to places like email, Evernote and Facebook. All Personal and Shared Recipes using a Twitter Trigger will also be removed. Recipes using Twitter Actions and your ability to post new tweets via IFTTT will continue to work just fine.
+{% endblockquote %}</p>
 
 <p>As a user, I thought I didn&#8217;t really mind the changes in Twitter&#8217;s policy. <!-- more -->
 Well, I did feel disappointed when I couldn&#8217;t use Tweetbot for Mac anymore, but there was still the web and the crappy official app. So I just let it pass.</p>

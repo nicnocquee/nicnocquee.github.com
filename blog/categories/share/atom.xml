@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Share | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/share/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:20:51+09:00</updated>
+  <updated>2014-09-09T00:33:54+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -80,7 +80,9 @@
     <id>http://nicnocquee.com/blog/2012/12/03/share-humans-can-never-be-satisfied</id>
     <content type="html"><![CDATA[<p>Art de Vany on <a href="http://artdevanyonline.com/1/post/2012/12/we-humans-can-never-be-satisfied.html">Human&#8217;s satisfaction</a>:</p>
 
-<p><blockquote><p>To be fulfilled means the journey is over. We have to love the journey, not where it ends.</p></blockquote></p>
+<p>{%blockquote%}
+To be fulfilled means the journey is over. We have to love the journey, not where it ends.
+{%endblockquote%}</p>
 
 <p>Short explanation. But makes sense.</p>
 ]]></content>
@@ -117,7 +119,9 @@
     <id>http://nicnocquee.com/blog/2012/10/30/share-the-best-explanation-of-apples-reshuffle</id>
     <content type="html"><![CDATA[<p>John Moltz on <a href="http://verynicewebsite.net/2012/10/forstall-browett-leaving-apple/">Forstall and Browett Leaving Apple</a>:</p>
 
-<p><blockquote><p>Tim Cook’s statement here is clear: Apple will not tolerate executives whose names end in double consonants. That’s just smart policy.</p></blockquote></p>
+<p>{% blockquote %}
+Tim Cook’s statement here is clear: Apple will not tolerate executives whose names end in double consonants. That’s just smart policy.
+{% endblockquote %}</p>
 
 <p>LOL.</p>
 
