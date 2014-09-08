@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sherlock | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/sherlock/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-09T00:20:51+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[That's So Two Years Ago]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago/"/>
+    <updated>2014-01-03T12:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/120y351h1V2M1A3Z2o3f/sherlock.png" alt="Sherlock quote" /></p>
+
+<p>Best. TV. Show. Ever.</p>
+]]></content>
+  </entry>
+  
+</feed>

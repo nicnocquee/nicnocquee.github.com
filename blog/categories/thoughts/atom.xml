@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Thoughts | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/thoughts/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-09T00:20:51+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] 28]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/22/thoughts-28/"/>
+    <updated>2013-01-22T10:15:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/22/thoughts-28</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/053P1m2W2C0G0k0D0K18/idont.jpg" alt="I don't always have birthday" /></p>
+
+<p>Yesterday was that time of the year where another year of my life has gone by. Just like most people, I like to look back and see what I have been doing and what I have accomplished. And it&#8217;s easy to do these days thanks to Facebook and Twitter.</p>
+
+<!-- more -->
+
+
+<h2>The Work</h2>
+
+<p>Twelve months seems like a very long time but in reality there are only few things you can achieve in 365 days. I consider myself as a developer so I judge myself based on how many apps I have released, and how well they fare. As such, I didn&#8217;t really accomplish much. During my 27, I released Flutterscape for iPhone, <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>, <a href="https://monoco.jp/signup?ref=n">Monoco for iPhone</a>, and the new <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a>.</p>
+
+<p>Kaomoji for Mac fed my ego much better than it did to my stomach. Some people who bought and used it loved it. And they expressed their love vocally. But some factors like the fact that Kaomoji for Mac has a very small market to begin with (Mac users who know what Kaomoji is), the sales was not satisfying. Its biggest achievement was when <a href="http://boingboing.net/2012/11/27/kaomojiapp-makes-crazy-text-em.html">BoingBoing</a> caught up with it which resulted in burst of sales. Not much, but at least I could say that my work was featured in famous blog.  (*≧▽≦)ﾉｼ))</p>
+
+<p>Scribeit for iPhone was my first paid app. It&#8217;s been a long time since I gave it my attention, but I finally updated it early this year. It&#8217;s completely rewritten and redesigned from scratch. I&#8217;m kinda proud with it. I hope people love it as much as I do.</p>
+
+<h2>The Travel</h2>
+
+<p><img src="http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg" alt="Tubingen" /></p>
+
+<p>Thanks to my wife, during my 27 I finally stepped on the land of Europe. Germany and Switzerland to be exact with a little bit of France. She had work there and I just tagged along. Few things I realized after that trip to Europe:</p>
+
+<ol>
+<li>I like living in Japan.</li>
+<li>I like beach better than mountain. （⌒▽⌒）</li>
+<li>Travelling becomes less fun when you&#8217;re still thinking of your work.</li>
+</ol>
+
+
+<p>It was fun but I wasn&#8217;t fully satisfied since it wasn&#8217;t really a vacation. Wife was working and so did I. I&#8217;d like to go there again one day for <em>real</em> vacation.</p>
+
+<h2>The Social</h2>
+
+<p>I&#8217;m not a social person. I don&#8217;t really like going to an event/meetup without any purpose but networking with people. I found it very random, meaningless, and awkward. I went to a meetup in Tokyo once, but didn&#8217;t really enjoy it. It&#8217;s random because you have to <em>randomly</em> introduce yourself to start conversation. Because without introducing yourself there will be no conversation. And if there&#8217;s no conversation what&#8217;s the point of meeting up. It&#8217;s <em>meaningless</em> because if I want to know about somebody, I can do it better in Twitter. From somebody&#8217;s tweets, I can grasp what kind of person he/she is. And it&#8217;s simpler too since I don&#8217;t need to do the hassle of introducing myself. Finally, it&#8217;s very awkward. Not only it&#8217;s awkward to introduce yourself randomly, but it&#8217;s also very <em>awkward</em> when I find out that I have no interest at all with the person I&#8217;m talking to. Maybe because we have no common interest. Maybe because he/she acts like an ass. True story.</p>
+
+<p>Anyway, I made some new friends online and offline last year. Found somebody who is quite similiar to me in Osaka. He just released an <a href="https://itunes.apple.com/jp/app/garuda-riders/id572550607?l=en">iPhone game, check it out</a>. I also made friend with a Japanese. Fancy that  (*≧▽≦)ﾉｼ))</p>
+
+<h2>The Resolution</h2>
+
+<p>Nope, no new year resolution. Didn&#8217;t even celebrate new year. I spent new year coding Scribeit. But it will be cool to pass the level 2 of Japanese Proficiency Language Test this year.</p>
+
+<p><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="Regex Man" /></p>
+
+<p>One of the new things I started this year was resuming reading the Steve Jobs by Walter Isaacson. Yeah, I haven&#8217;t finished reading it. Shame on me! I&#8217;m also diving in the art of Regular Expression. It just seems cool （＾ω＾）</p>
+
+<p>If you read until here, how about checking out my apps <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a> and <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>? ^ ^</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] RDF: It's in the Juice]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice/"/>
+    <updated>2013-01-10T12:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice</id>
+    <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, regarding Job&#8217;s superpower Reality Distortion Field:</p>
+
+<p><blockquote><p></p></p><p><p>There was little that could shield you from the force, Hertzfeld discovered. “Amazingly, the reality distortion field seemed to be effective even if you were acutely aware of it. We would often discuss potential techniques for grounding it, but after a while most of us gave up, accepting it as a force of nature.” After Jobs decreed that the sodas in the office refrigerator be replaced by Odwalla organic orange and carrot juices, someone on the team had T-shirts made. “Reality Distortion Field,” they said on the front, and on the back, “It’s in the juice!”</p></p><p><p></p></blockquote></p>
+
+<p>I want that T-shirt!!</p>
+
+<!-- more -->
+
+
+<p><blockquote><p></p></p><p><p>The result was that the Macintosh team came to share Jobs’s passion for making a great product, not just a profitable one. “Jobs thought of himself as an artist, and he encouraged the design team to think of ourselves that way too,” said Hertzfeld. “The goal was never to beat the competition, or to make a lot of money. It was to do the greatest thing possible, or even a little greater.” He once took the team to see an exhibit of Tiffany glass at the Metropolitan Museum in Manhattan because he believed they could learn from Louis Tiffany’s example of creating great art that could be mass-produced. Recalled Bud Tribble, “We said to ourselves, ‘Hey, if we’re going to make things in our lives, we might as well make them beautiful.’”</p></p><p><p></p></blockquote></p>
+
+<p>The end results are indeed amazing. But the process seemed so painful. If I have the chance to lead a team, I&#8217;d rather doing it in a fun way. Life is short anyway, why not having fun?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHT] the World Could Have Gotten iBicycle]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle/"/>
+    <updated>2013-01-09T11:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle</id>
+    <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, the Mac was initially called <strong>Annie</strong>:</p>
+
+<p><blockquote><p>One of Raskin’s dreams was to build an inexpensive computer for the masses, and in 1979 he convinced Mike Markkula to put him in charge of a small development project code-named “Annie” to do just that. Since Raskin thought it was sexist to name computers after women, he redubbed the project in honor of his favorite type of apple, the McIntosh. But he changed the spelling in order not to conflict with the name of the audio equipment maker McIntosh Laboratory. The proposed computer became known as the Macintosh.</p></blockquote></p>
+
+<p>Today I learned that a guy named Jef Raskin was the <em>biological</em> father of what we know now as Mac.</p>
+
+<!-- more -->
+
+
+<p><blockquote><p></p></p><p><p>In various interviews, Jobs had been referring to computers as a bicycle for the mind; the ability of humans to create a bicycle allowed them to move more efficiently than even a condor, and likewise the ability to create computers would multiply the efficiency of their minds. So one day Jobs decreed that henceforth the Macintosh should be known instead as the Bicycle. This did not go over well. “Burrell and I thought this was the silliest thing we ever heard, and we simply refused to use the new name,” recalled Hertzfeld. Within a month the idea was dropped.</p></p><p><p></p></blockquote></p>
+
+<p>Thank God there were people who dared to stand up to Steve for his silly decisions.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] I Hate Money]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/08/thoughts-i-hate-money/"/>
+    <updated>2013-01-08T09:23:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/08/thoughts-i-hate-money</id>
+    <content type="html"><![CDATA[<p>Jobs on <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>:</p>
+
+<p><blockquote><p></p></p><p><p>I never worried about money. I grew up in a middle-class family, so I never thought I would starve. And I learned at Atari that I could be an okay engineer, so I always knew I could get by. I was voluntarily poor when I was in college and India, and I lived a pretty simple life even when I was working. So I went from fairly poor, which was wonderful, because I didn’t have to worry about money, to being incredibly rich, when I also didn’t have to worry about money.</p></p><p><p></p></blockquote></p>
+
+<!-- more -->
+
+
+<p>Lucky him. Money depresses me everytime. Actually, thinking about money depresses me. It&#8217;s not that I lack money. It&#8217;s enough to enjoy and stay alive. And I&#8217;m very grateful for it. It&#8217;s just not enough to make me not to worry about it. I&#8217;m not worrying about it every seconds. But it just has to come from time to time to slap me in the face to remind me to worry about it. Are you following me? Me neither.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] Jobs Was a Romantic]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic/"/>
+    <updated>2013-01-07T09:48:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2E1m0R0422463g2p3M3n/%E5%86%99%E7%9C%9F%202013-01-07%209%2029%2039.jpg" alt="Xerox and Lisa" /></p>
+
+<p>Chapter 8 of Steve Jobs by Walter Isaacson on the <em>myth of Apple stealing from Xerox</em>:</p>
+
+<p><blockquote><p></p></p><p><p>Xerox’s venture capital division wanted to be part of the second round of Apple financing during the summer of 1979. Jobs made an offer: “I will let you invest a million dollars in Apple if you will open the kimono at PARC.” Xerox accepted. It agreed to show Apple its new technology and in return got to buy 100,000 shares at about $10 each.</p></p><p><p></p></blockquote></p>
+
+<p>So much for the stealing. Better call it fair trade.</p>
+
+<!-- more -->
+
+
+<p>Continuing,</p>
+
+<p><blockquote><p></p></p><p><p>As he once said, “Picasso had a saying—‘good artists copy, great artists steal’—and we have always been shameless about stealing great ideas.”</p></p><p><p></p></blockquote></p>
+
+<p>Jobs was a romantic. He liked to exaggerate things. However, he was a good executioner:</p>
+
+<p><blockquote><p>Jobs and his engineers significantly improved the graphical interface ideas they saw at Xerox PARC, and then were able to implement them in ways that Xerox never could accomplish. For example, the Xerox mouse had three buttons, was complicated, cost $300 apiece, and didn’t roll around smoothly; a few days after his second Xerox PARC visit, Jobs went to a local industrial design firm, IDEO, and told one of its founders, Dean Hovey, that he wanted a simple single-button model that cost $15, “and I want to be able to use it on Formica and my blue jeans.” Hovey complied.</p></blockquote></p>
+
+<p>and ..</p>
+
+<p><blockquote><p>Apple’s engineers devised an interface so you could not only drag windows and files around, you could even drop them into folders.</p></blockquote></p>
+
+<p>He had a good team as well:</p>
+
+<p><blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p></p><p><p>…</p></p><p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote></p>
+
+<p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
+]]></content>
+  </entry>
+  
+</feed>

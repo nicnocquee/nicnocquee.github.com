@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ios | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-09T00:20:51+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[App: My Story]]></title>
+    <link href="http://nicnocquee.com/blog/2014/07/22/app-my-story/"/>
+    <updated>2014-07-22T18:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/07/22/app-my-story</id>
+    <content type="html"><![CDATA[<p><img src="https://pbs.twimg.com/media/BtGz0bLIMAA0UEk.jpg" alt="Comic I made when I was in master course" /></p>
+
+<p>My first app was a bingo game. Prior to that, I had only learned Java in college. Before learning Java, I always thought that software was the result of magic. When I entered master course in Japan, I was coding sloppily in C for research. Mostly playing with <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a>. I didn&#8217;t have a Mac nor iPhone. I even teased my friend who used OSX on his laptop back in college.</p>
+
+<!--more-->
+
+
+<p><img src="http://i1.kym-cdn.com/photos/images/newsfeed/000/234/765/b7e.jpg" alt="" /></p>
+
+<p>A year passed by since I took master course and I still had no idea what I was doing. Then I stumbled upon an article by <a href="http://www.dannychoo.com">Danny Choo</a> about his passion and how he started his career. I can&#8217;t recall which article it was but probably this article about <a href="http://www.dannychoo.com/en/post/1691/Pursue+Your+Passion+A+Summary.html">pursuing passion</a> or this article about <a href="http://www.dannychoo.com/en/post/26094/How+Discovering+Japan+Changed+My+Life.html">how discovering Japan changed his life</a>. Reading about his life got me thinking that I needed to find something I&#8217;m passionate about. After digging through more articles on his website, I saw his iMac. I was amazed by how beautiful it was. I ended up buying one for myself. My very first Apple product.</p>
+
+<p>One day in the class room, I saw my Japanese friend was playing with his shiny black phone. I was interested so I asked if I could take a look. There was only one button. And it has this slide to unlock mechanism. Mind. Blown. It was iPhone 3GS. My very first iPhone.</p>
+
+<p>Having free time and lack of interest in what I was doing at that time, I decided to get the Apple Developer Program. Learning Objective-C, submitting my first app, and receiving my first payment from the App Store admittedly changed my life. I decided to quit my PhD and took a job in a startup in Japan as an iOS developer.</p>
+
+<p><img src="https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg" alt="My Apple products family" /></p>
+
+<p>I&#8217;m writing this to support <a href="http://appdocumentary.com">App: The Human Story</a>. I didn&#8217;t plan to write anything since I figured my story is not that exciting. I haven&#8217;t made any hit game or app like Flappy Bird. But I&#8217;m making a living doing what I&#8217;m passionate about and I want to share it with others. I&#8217;m also pretty proud of the app I&#8217;m making for the company, <a href="https://itunes.apple.com/jp/app/monoco-monoko-akusesarinoserekutoshoppu/id539376693?mt=8">Monoco (Japan App Store only)</a>, and my own latest app, <a href="http://www.getdelightfulapp.com">Delightful</a>.</p>
+
+<p>If you&#8217;re an app developer, help them to reach their goal in <a href="https://www.kickstarter.com/projects/appdocu/app-the-human-story">kickstarter</a> and spread the word. It seems like it&#8217;s gonna be an interesting documentary.</p>
+
+<p>Update: Also posted in <a href="https://medium.com/@nicnocquee/app-my-story-98803b1299a4">Medium</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Script to Download Wwdc 2014 Videos]]></title>
+    <link href="http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos/"/>
+    <updated>2014-06-26T23:38:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2m2M471z1O072F1F0B2u/Screen%20Shot%202014-06-26%20at%2023.54.57.png" alt="Script to download wwdc 14 videos" /></p>
+
+<p>Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they&#8217;ll eat up my iPhone&#8217;s free space. And I also want to speed up the videos a little bit. But downloading the videos one by one from the <a href="https://developer.apple.com/videos/wwdc/2014/">download page</a> is too barbaric.</p>
+
+<!-- more -->
+
+
+<p>There must be a script to download them all in one click. Google top search result returns this <a href="https://github.com/ohoachuck/wwdc-downloader">wwdc-downloader</a>, this <a href="http://samwize.com/2014/06/06/download-all-wwdc-2014-pdf-slides-only/">script to download PDF only or the HD videos</a>, and <a href="http://andrewcook.org/2014/06/07/download-wwdc-2014-videos/">this script to download the SD videos</a>. But for some reasons they didn&#8217;t work.</p>
+
+<p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
+
+<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+</code></pre>
+
+<p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
+
+<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Any Fonts and Use It in Any Apps in iOS 7]]></title>
+    <link href="http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/"/>
+    <updated>2014-04-02T16:43:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7</id>
+    <content type="html"><![CDATA[<p>I just found out about this and turns out it&#8217;s pretty easy to do.</p>
+
+<ol>
+<li><p>Create a XML file and copy the following</p>
+
+<p> <script src="https://gist.github.com/nicnocquee/9929652.js"></script>
+ <!-- more --></p></li>
+<li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
+
+<pre><code> openssl base64 -in font_name -out output_file_name
+</code></pre></li>
+<li><p>Copy the base64 string to clipboard</p>
+
+<pre><code> cat output_file_name | pbcopy
+</code></pre>
+
+<p> and paste it into the XML file between the <code>&lt;data&gt;  &lt;/data&gt;</code> tags.</p></li>
+<li><p>Open the XML from your iOS 7 device by sending it via email or uploading it to Dropbox or something.</p></li>
+<li><p>Install the profile.</p>
+
+<p> <img src="http://f.cl.ly/items/0F021r1Y2G0A333p2t3U/April_02__2014_at_0451PM.png" alt="" /></p></li>
+</ol>
+
+
+<p>Now you can use the font in any apps that allow font selection, like Keynote for example.</p>
+
+<p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
+
+<p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Run iOS App in Different Languages Quickly in iOS Simulator]]></title>
+    <link href="http://nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator/"/>
+    <updated>2014-03-13T16:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator</id>
+    <content type="html"><![CDATA[<p>If you make an app which support multiple languages, you need to check how your app looks like in different languages. The manual way of doing it is to open Settings app → General → International → Language.</p>
+
+<p><img src="http://f.cl.ly/items/232E1P3V3w3e1w1A3c43/iOS%20Simulator%20Screen%20shot%20Mar%2013,%202014,%204.39.07%20PM.png" alt="" /></p>
+
+<!-- more -->
+
+
+<p>What a waste of time. Put this code instead inside app&#8217;s <code>main.m</code> file.</p>
+
+<script src="https://gist.github.com/nicnocquee/9523311.js"></script>
+
+
+<p>Edit the scheme and add the language&#8217;s <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 codes</a> to <code>Arguments Passed On Launch</code>. For example, <code>ja</code> for Japanese.</p>
+
+<p><img src="http://f.cl.ly/items/042U3F3d2p0d0d2H0E1c/Screen_Shot_2014-03-13_at_5_00_59_PM.png" alt="" /></p>
+
+<p><img src="http://f.cl.ly/items/3N1Y1c311J0y091A1j0C/Screen%20Shot%202014-03-13%20at%205.01.46%20PM.png" alt="" /></p>
+
+<p>Then simply choose one language and run the app.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Open Source Projects Used in Facebook iOS]]></title>
+    <link href="http://nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios/"/>
+    <updated>2013-05-10T20:58:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2O163t1B1i46112q0n1L/Photo%202013-05-10%2021%2003%2015.png" alt="Facebook-Open-Source-Licenses" /></p>
+
+<p>One of my hobby is to star or clone open source iOS components/libraries in Github. There are just many good open source projects there that can speed up app development. And I&#8217;m pretty sure many apps in the app store are using these open source libraries. Unfortunately, most apps don&#8217;t act like good open source citizens by not showing the attributions.</p>
+
+<!--more-->
+
+
+<p>Some big name apps show the attributions in the app. Facebook for example. You can find it in Settings -> Facebook -> Settings -> About. There are many libraries they listed there. But some libraries seem to be server-side libraries. The iOS-related open source libraries (as for version 183159) are</p>
+
+<ol>
+<li><a href="http://code.google.com/p/google-toolbox-for-mac/">Google Toolbox for Mac</a>. I&#8217;ve never used this. Anything insteresting there?</li>
+<li><a href="https://github.com/robbiehanson/CocoaLumberjack">CocoaLumberjack</a>. Never used this one either. But looking at the README, I think I&#8217;ll use this from now on.</li>
+<li><a href="http://gabriel.github.io/gh-kit/">GHKit</a>.</li>
+<li><a href="http://goodliffe.blogspot.jp/2010/09/building-boost-framework-for-ios-iphone.html?m=1">Boost for iPhone</a>. Wonder what part they use Boost for.</li>
+<li><a href="https://github.com/AlanQuatermain/AQGridView">AQGridView</a>. For the feeds stream I guess.</li>
+<li><a href="https://github.com/jasarien/CoreTextHyperlinkView">CoreTextHyperlinkView</a>.</li>
+<li><a href="https://github.com/mikeash/MAZeroingWeakRef">MAZeroingWeakRef</a>.</li>
+<li><a href="https://github.com/mikeash/MAZeroingWeakRef">Mixpanel iPhone</a>. So they use Mixpanel for analytics. I wonder if they will acquire it some time in the future.</li>
+<li><a href="https://github.com/msgpack/msgpack-objectivec">MessagePack Objective-C</a>. Just found out about this JSON alternative.</li>
+<li><a href="https://github.com/jverkoey/nimbus">Nimbus</a>. Even Facebook is not using Three20 anymore.</li>
+<li><a href="https://github.com/jverkoey/ObjQREncoder">Objective-c QR Encoder</a>. Why does the app need this?</li>
+<li><a href="https://github.com/ocrickard/OCPDFGen">OCPDFGen</a>. What feature in the app that requires this library?</li>
+<li><a href="https://github.com/ylechelle/OpenUDID">OpenUDID</a>. Didn&#8217;t know there is such thing.</li>
+<li><a href="https://code.google.com/p/plcrashreporter/">PLCrashReporter</a>.</li>
+<li><a href="https://github.com/mikeho/QSUtilities/">QSUtilities</a>.</li>
+<li><a href="https://github.com/rs/SDURLCache">SDURLCache</a>.</li>
+<li><a href="https://github.com/RestKit/RestKit">RestKit</a>.</li>
+<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a>.</li>
+<li><a href="https://github.com/jverkoey/sockit">SOCKit</a>.</li>
+<li><a href="https://github.com/sorced-jim/SPDY-for-iPhone">SPDY for iPhone</a>. I don&#8217;t know what this is for.</li>
+<li><a href="https://github.com/tweetdeck/TDOAuth">TDOauth</a>.</li>
+<li><a href="https://github.com/coneybeare/UAModalPanel">UIModalPanel</a>. I don&#8217;t think they&#8217;re still using this on the app.</li>
+<li><a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>. This too.</li>
+<li><a href="https://github.com/amarcadet/XMLReader">XMLReader</a>.</li>
+<li><a href="https://code.google.com/p/zxing/">ZXing</a>. Barcode again?</li>
+</ol>
+
+
+<p>That&#8217;s about it. Maybe I missed something though because Facebook makes it really unconvenient to read these attributions.</p>
+]]></content>
+  </entry>
+  
+</feed>

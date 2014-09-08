@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Kaomoji | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/kaomoji/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-09T00:20:51+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] Speaking of Kaomoji]]></title>
+    <link href="http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji/"/>
+    <updated>2012-09-21T11:05:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/09/21/share-speaking-of-kaomoji</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Ku5IQXfyYyA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<p>Did you know that you can insert kaomoji (顔文字) like this (*≧▽≦) or this （＾▽＾）／＼（＾▽＾） easily and fast using <a href="http://kaomojiapp.com">Kaomoji for Mac</a>?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[NEWS] Kaomoji for Mac 1.5 Is Out!]]></title>
+    <link href="http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/"/>
+    <updated>2012-09-19T10:41:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out</id>
+    <content type="html"><![CDATA[<p><img src="http://distilleryimage1.s3.amazonaws.com/1e74e32c01fa11e2ab4c22000a1d0350_7.jpg" alt="Updated #Kaomoji for #Mac! Now with Japanese localization. 日本語でMac向け顔文字を使いましょう！（＾＿＾）☆ http://kaomojiapp.com #japan #apple #顔文字" /></p>
+
+<!-- more -->
+
+
+<p>
+If you haven&#8217;t, you can download Kaomoji for Mac <a href="http://kaomojiapp.com">here</a>. And if you like it, let me know in <a href="http://www.facebook.com/kaomoji.mac">Kaomoji for Mac Facebook page</a>
+<br/>（＾＿－）≡★</p>
+
+<p>/*===============================</p>
+
+<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
+
+<p>================================*/</p>
+]]></content>
+  </entry>
+  
+</feed>

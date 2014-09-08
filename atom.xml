@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Something Awesome]]></title>
+  <link href="http://nicnocquee.com/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-09T00:20:51+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[App: My Story]]></title>
+    <link href="http://nicnocquee.com/blog/2014/07/22/app-my-story/"/>
+    <updated>2014-07-22T18:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/07/22/app-my-story</id>
+    <content type="html"><![CDATA[<p><img src="https://pbs.twimg.com/media/BtGz0bLIMAA0UEk.jpg" alt="Comic I made when I was in master course" /></p>
+
+<p>My first app was a bingo game. Prior to that, I had only learned Java in college. Before learning Java, I always thought that software was the result of magic. When I entered master course in Japan, I was coding sloppily in C for research. Mostly playing with <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a>. I didn&#8217;t have a Mac nor iPhone. I even teased my friend who used OSX on his laptop back in college.</p>
+
+<!--more-->
+
+
+<p><img src="http://i1.kym-cdn.com/photos/images/newsfeed/000/234/765/b7e.jpg" alt="" /></p>
+
+<p>A year passed by since I took master course and I still had no idea what I was doing. Then I stumbled upon an article by <a href="http://www.dannychoo.com">Danny Choo</a> about his passion and how he started his career. I can&#8217;t recall which article it was but probably this article about <a href="http://www.dannychoo.com/en/post/1691/Pursue+Your+Passion+A+Summary.html">pursuing passion</a> or this article about <a href="http://www.dannychoo.com/en/post/26094/How+Discovering+Japan+Changed+My+Life.html">how discovering Japan changed his life</a>. Reading about his life got me thinking that I needed to find something I&#8217;m passionate about. After digging through more articles on his website, I saw his iMac. I was amazed by how beautiful it was. I ended up buying one for myself. My very first Apple product.</p>
+
+<p>One day in the class room, I saw my Japanese friend was playing with his shiny black phone. I was interested so I asked if I could take a look. There was only one button. And it has this slide to unlock mechanism. Mind. Blown. It was iPhone 3GS. My very first iPhone.</p>
+
+<p>Having free time and lack of interest in what I was doing at that time, I decided to get the Apple Developer Program. Learning Objective-C, submitting my first app, and receiving my first payment from the App Store admittedly changed my life. I decided to quit my PhD and took a job in a startup in Japan as an iOS developer.</p>
+
+<p><img src="https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg" alt="My Apple products family" /></p>
+
+<p>I&#8217;m writing this to support <a href="http://appdocumentary.com">App: The Human Story</a>. I didn&#8217;t plan to write anything since I figured my story is not that exciting. I haven&#8217;t made any hit game or app like Flappy Bird. But I&#8217;m making a living doing what I&#8217;m passionate about and I want to share it with others. I&#8217;m also pretty proud of the app I&#8217;m making for the company, <a href="https://itunes.apple.com/jp/app/monoco-monoko-akusesarinoserekutoshoppu/id539376693?mt=8">Monoco (Japan App Store only)</a>, and my own latest app, <a href="http://www.getdelightfulapp.com">Delightful</a>.</p>
+
+<p>If you&#8217;re an app developer, help them to reach their goal in <a href="https://www.kickstarter.com/projects/appdocu/app-the-human-story">kickstarter</a> and spread the word. It seems like it&#8217;s gonna be an interesting documentary.</p>
+
+<p>Update: Also posted in <a href="https://medium.com/@nicnocquee/app-my-story-98803b1299a4">Medium</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Script to Download Wwdc 2014 Videos]]></title>
+    <link href="http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos/"/>
+    <updated>2014-06-26T23:38:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2m2M471z1O072F1F0B2u/Screen%20Shot%202014-06-26%20at%2023.54.57.png" alt="Script to download wwdc 14 videos" /></p>
+
+<p>Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they&#8217;ll eat up my iPhone&#8217;s free space. And I also want to speed up the videos a little bit. But downloading the videos one by one from the <a href="https://developer.apple.com/videos/wwdc/2014/">download page</a> is too barbaric.</p>
+
+<!-- more -->
+
+
+<p>There must be a script to download them all in one click. Google top search result returns this <a href="https://github.com/ohoachuck/wwdc-downloader">wwdc-downloader</a>, this <a href="http://samwize.com/2014/06/06/download-all-wwdc-2014-pdf-slides-only/">script to download PDF only or the HD videos</a>, and <a href="http://andrewcook.org/2014/06/07/download-wwdc-2014-videos/">this script to download the SD videos</a>. But for some reasons they didn&#8217;t work.</p>
+
+<p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
+
+<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+</code></pre>
+
+<p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
+
+<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Any Fonts and Use It in Any Apps in iOS 7]]></title>
+    <link href="http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/"/>
+    <updated>2014-04-02T16:43:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7</id>
+    <content type="html"><![CDATA[<p>I just found out about this and turns out it&#8217;s pretty easy to do.</p>
+
+<ol>
+<li><p>Create a XML file and copy the following</p>
+
+<p> <script src="https://gist.github.com/nicnocquee/9929652.js"></script>
+ <!-- more --></p></li>
+<li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
+
+<pre><code> openssl base64 -in font_name -out output_file_name
+</code></pre></li>
+<li><p>Copy the base64 string to clipboard</p>
+
+<pre><code> cat output_file_name | pbcopy
+</code></pre>
+
+<p> and paste it into the XML file between the <code>&lt;data&gt;  &lt;/data&gt;</code> tags.</p></li>
+<li><p>Open the XML from your iOS 7 device by sending it via email or uploading it to Dropbox or something.</p></li>
+<li><p>Install the profile.</p>
+
+<p> <img src="http://f.cl.ly/items/0F021r1Y2G0A333p2t3U/April_02__2014_at_0451PM.png" alt="" /></p></li>
+</ol>
+
+
+<p>Now you can use the font in any apps that allow font selection, like Keynote for example.</p>
+
+<p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
+
+<p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Run iOS App in Different Languages Quickly in iOS Simulator]]></title>
+    <link href="http://nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator/"/>
+    <updated>2014-03-13T16:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator</id>
+    <content type="html"><![CDATA[<p>If you make an app which support multiple languages, you need to check how your app looks like in different languages. The manual way of doing it is to open Settings app → General → International → Language.</p>
+
+<p><img src="http://f.cl.ly/items/232E1P3V3w3e1w1A3c43/iOS%20Simulator%20Screen%20shot%20Mar%2013,%202014,%204.39.07%20PM.png" alt="" /></p>
+
+<!-- more -->
+
+
+<p>What a waste of time. Put this code instead inside app&#8217;s <code>main.m</code> file.</p>
+
+<script src="https://gist.github.com/nicnocquee/9523311.js"></script>
+
+
+<p>Edit the scheme and add the language&#8217;s <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 codes</a> to <code>Arguments Passed On Launch</code>. For example, <code>ja</code> for Japanese.</p>
+
+<p><img src="http://f.cl.ly/items/042U3F3d2p0d0d2H0E1c/Screen_Shot_2014-03-13_at_5_00_59_PM.png" alt="" /></p>
+
+<p><img src="http://f.cl.ly/items/3N1Y1c311J0y091A1j0C/Screen%20Shot%202014-03-13%20at%205.01.46%20PM.png" alt="" /></p>
+
+<p>Then simply choose one language and run the app.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your Verse]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/19/your-verse/"/>
+    <updated>2014-01-19T22:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/19/your-verse</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/jiyIcz7wUH0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<p><br/>
+<em>You don’t read and write poetry because it’s cute, we read and write poetry because we are members of the human race and the human race is filled with passion, medicine, law, business, engineering, these are noble pursuits necessary to sustain life but poetry beauty, romance, love, these are what we stay alive for. The quote from Whitman:</em></p>
+
+<p><em>Oh me! Oh life! of the questions of these recurring,
+Of the endless trains of the faithless, of cities fill’d with the foolish,
+- What good amid these, O me, O life?</em></p>
+
+<p><em>Answer. That you are here—that life exists and identity. That the powerful play goes on, and you may contribute a verse. <strong>That the powerful play goes on, and that you can contribute a verse, what will your verse be?</strong></em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[That's So Two Years Ago]]></title>
+    <link href="http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago/"/>
+    <updated>2014-01-03T12:27:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/01/03/thats-so-two-years-ago</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/120y351h1V2M1A3Z2o3f/sherlock.png" alt="Sherlock quote" /></p>
+
+<p>Best. TV. Show. Ever.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Enter Unicode Characters in Mac]]></title>
+    <link href="http://nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac/"/>
+    <updated>2013-10-16T18:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac</id>
+    <content type="html"><![CDATA[<p>So I found out about <a href="http://icomoon.io/">icomoon</a> and was wondering how to use the icon fonts on Mac. Turns out it&#8217;s not so difficult.</p>
+
+<p>Skipt this steps if you already have icon fonts.</p>
+
+<ol>
+<li>Go to <a href="http://icomoon.io/app/">icomoon app</a>, select some fonts. (Tip: You can drag and select multiple fonts quickly.)</li>
+<li>Generate the font then download.</li>
+<li>Install the downloaded icomoon.ttf font by double clicking it.</li>
+</ol>
+
+
+<!-- more -->
+
+
+<p>Now the fun part.</p>
+
+<ol>
+<li>Open System Preferences.</li>
+<li>Select Language &amp; Text.</li>
+<li>Check Unicode Hex Input in Input Source.</li>
+</ol>
+
+
+<p><img src="http://f.cl.ly/items/3I3s2v121n3d1i2r311Z/Screen%20Shot%202013-10-16%20at%207.08.13%20PM.png" alt="Unicode Hex Input in System Preferences OS X" /></p>
+
+<p>That&#8217;s it! Well not quite. The secret to use the font is <strong>by choosing Unicode Hex Input from Input menu in menu bar, then type the unicode code while pressing Option (⌥) key</strong>.</p>
+
+<p><img src="http://f.cl.ly/items/0a1x2q2I3K3L1J05472Z/Screen%20Shot%202013-10-16%20at%206.45.42%20PM.png" alt="Change Input from Menu bar" /></p>
+
+<p>So for example, to insert ♥, while pressing Option, type 2665. (Option+2665). The same goes for icon fonts generated by icomoon. Insert the unicde character then change the font to icomoon font.</p>
+
+<p><img src="http://f.cl.ly/items/0D2c3Z1W2d0M163D3g3k/Screen%20Shot%202013-10-16%20at%206.50.25%20PM.png" alt="Insert unicode and use custom icon font in Pixelmator" /></p>
+
+<p>Now have fun with custom icon fonts!</p>
+
+<p>Reference: <a href="http://cl.ly/image/0c031i190x18">TUAW</a>.
+You can find me on <a href="http://twitter.com/nicnocquee">Twitter</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Open Source Projects Used in Facebook iOS]]></title>
+    <link href="http://nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios/"/>
+    <updated>2013-05-10T20:58:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2O163t1B1i46112q0n1L/Photo%202013-05-10%2021%2003%2015.png" alt="Facebook-Open-Source-Licenses" /></p>
+
+<p>One of my hobby is to star or clone open source iOS components/libraries in Github. There are just many good open source projects there that can speed up app development. And I&#8217;m pretty sure many apps in the app store are using these open source libraries. Unfortunately, most apps don&#8217;t act like good open source citizens by not showing the attributions.</p>
+
+<!--more-->
+
+
+<p>Some big name apps show the attributions in the app. Facebook for example. You can find it in Settings -> Facebook -> Settings -> About. There are many libraries they listed there. But some libraries seem to be server-side libraries. The iOS-related open source libraries (as for version 183159) are</p>
+
+<ol>
+<li><a href="http://code.google.com/p/google-toolbox-for-mac/">Google Toolbox for Mac</a>. I&#8217;ve never used this. Anything insteresting there?</li>
+<li><a href="https://github.com/robbiehanson/CocoaLumberjack">CocoaLumberjack</a>. Never used this one either. But looking at the README, I think I&#8217;ll use this from now on.</li>
+<li><a href="http://gabriel.github.io/gh-kit/">GHKit</a>.</li>
+<li><a href="http://goodliffe.blogspot.jp/2010/09/building-boost-framework-for-ios-iphone.html?m=1">Boost for iPhone</a>. Wonder what part they use Boost for.</li>
+<li><a href="https://github.com/AlanQuatermain/AQGridView">AQGridView</a>. For the feeds stream I guess.</li>
+<li><a href="https://github.com/jasarien/CoreTextHyperlinkView">CoreTextHyperlinkView</a>.</li>
+<li><a href="https://github.com/mikeash/MAZeroingWeakRef">MAZeroingWeakRef</a>.</li>
+<li><a href="https://github.com/mikeash/MAZeroingWeakRef">Mixpanel iPhone</a>. So they use Mixpanel for analytics. I wonder if they will acquire it some time in the future.</li>
+<li><a href="https://github.com/msgpack/msgpack-objectivec">MessagePack Objective-C</a>. Just found out about this JSON alternative.</li>
+<li><a href="https://github.com/jverkoey/nimbus">Nimbus</a>. Even Facebook is not using Three20 anymore.</li>
+<li><a href="https://github.com/jverkoey/ObjQREncoder">Objective-c QR Encoder</a>. Why does the app need this?</li>
+<li><a href="https://github.com/ocrickard/OCPDFGen">OCPDFGen</a>. What feature in the app that requires this library?</li>
+<li><a href="https://github.com/ylechelle/OpenUDID">OpenUDID</a>. Didn&#8217;t know there is such thing.</li>
+<li><a href="https://code.google.com/p/plcrashreporter/">PLCrashReporter</a>.</li>
+<li><a href="https://github.com/mikeho/QSUtilities/">QSUtilities</a>.</li>
+<li><a href="https://github.com/rs/SDURLCache">SDURLCache</a>.</li>
+<li><a href="https://github.com/RestKit/RestKit">RestKit</a>.</li>
+<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a>.</li>
+<li><a href="https://github.com/jverkoey/sockit">SOCKit</a>.</li>
+<li><a href="https://github.com/sorced-jim/SPDY-for-iPhone">SPDY for iPhone</a>. I don&#8217;t know what this is for.</li>
+<li><a href="https://github.com/tweetdeck/TDOAuth">TDOauth</a>.</li>
+<li><a href="https://github.com/coneybeare/UAModalPanel">UIModalPanel</a>. I don&#8217;t think they&#8217;re still using this on the app.</li>
+<li><a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>. This too.</li>
+<li><a href="https://github.com/amarcadet/XMLReader">XMLReader</a>.</li>
+<li><a href="https://code.google.com/p/zxing/">ZXing</a>. Barcode again?</li>
+</ol>
+
+
+<p>That&#8217;s about it. Maybe I missed something though because Facebook makes it really unconvenient to read these attributions.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[OSX] Fun With Terminal]]></title>
+    <link href="http://nicnocquee.com/blog/2013/04/06/osx-fun-with-terminal/"/>
+    <updated>2013-04-06T00:08:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/04/06/osx-fun-with-terminal</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/1c3C0z0t1g0e2K1y2X0M/Screen%20Shot%202013-04-06%20at%2012.00.21%20AM.png" alt="Customize OSX Terminal" /></p>
+
+<p>Some fun things you can do to pimp your OSX Terminal: (I&#8217;m using Mountain Lion fyi)</p>
+
+<h2>Customize Terminal Prompt with Emoji</h2>
+
+<p>Add this line to ~/.bash_profile (Note: You should see the yellow emoji with shade below)</p>
+
+<pre><code>export PS1='\[\e[0;37m\]⌘ \[\e[1;36m\]\W\[\e[1;33m\] &lt;put_emoji_here&gt;  \[\e[0m\]'
+</code></pre>
+
+<p>Replace <code>&lt;put_emoji_here&gt;</code> with any emoji you want. Alt+Command+T to open emoji window.
+Above line not only adds emoji, but also remove name and hostname, and only show current directory name (not full path). Read <a href="http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/">here</a> for more information.</p>
+
+<!-- more -->
+
+
+<h2>Set Current Directory as Terminal&#8217;s Tab Title</h2>
+
+<p>By default, the tab&#8217;s title is &#8216;bash&#8217; and it doesn&#8217;t change. The window title does change. To make tab&#8217;s title changes to current directory automatically, add this line to ~/.bash_profile</p>
+
+<pre><code>PROMPT_COMMAND='update_terminal_cwd; echo -ne "\033]0; ${PWD##*/}\007"'
+</code></pre>
+
+<h2>Show Git Branch on Terminal Prompt</h2>
+
+<p>For developers, add this function to ~/.bash_profile</p>
+
+<pre><code>parse_git_branch() {
+    git branch --no-color 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ &lt;emoji&gt; \ \1/'
+}
+</code></pre>
+
+<p>then update the PS1</p>
+
+<pre><code>export PS1='\[\e[0;37m\]⌘ \[\e[1;36m\]\W\[\e[1;33m\]$(parse_git_branch) &lt;emoji&gt;  \[\e[0m\]'
+</code></pre>
+
+<h2>Show Random Quote on Terminal New Session</h2>
+
+<p>Install fortune</p>
+
+<pre><code>sudo port install fortune
+</code></pre>
+
+<p>Add this line to ~/.bash_profile</p>
+
+<pre><code>echo -e "\n\x1B[00;33m$(fortune)\x1B[00m\n"
+</code></pre>
+
+<p>Remember to restart the Terminal everytime you make changes. If you want to change some colors, check <a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt#List_of_colors_for_prompt_and_Bash">here</a>.</p>
+
+<p>If you like this post, you might want to take a look at <a href="https://www.facebook.com/nsmemepage">NSMeme Facebook Page</a> I made to share some interesting stuff in iOS development.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #20]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/29/photos-weekly-kansai-number-20/"/>
+    <updated>2013-01-29T21:01:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/29/photos-weekly-kansai-number-20</id>
+    <content type="html"><![CDATA[<p>So <a href="http://ninjablocks.com/">Ninja Blocks</a> came last week. Still thinking of what to do with it though. And also when to play with it. 😜 Weekend was busy with <a href="https://www.facebook.com/hackercup">Facebook Hacker Cup</a>. Did you participate? How did you do? I couldn&#8217;t finish the third problem. The program I wrote worked, but took quite some time to complete a test case. （＞д＜）</p>
+
+<p>Got good news today. I passed the Japanese Language Proficiency Test Level 2! ＼（Ｔ∇Ｔ）／  Barely passed it though. Maybe I&#8217;ll take level 2 again this year and will aim for a better score. Did you take one? How was the result?</p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/806f5ba665ba11e2904b22000a1f8c1d_7.jpg" alt="Woke up early today! 😜 #scribeit #sun #sunrise #nature #kobe #kansai #japan #morning" /></p>
+
+<p> <!-- more --></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/d739445065bb11e2873222000a1f9e77_7.jpg" alt="The #sun feels good ^^ 😊#☀ #scribeit #nature #kobe #koshien #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/ff274572661811e293dd22000a1fb194_7.jpg" alt="キタ！ｖ（＾＿＾ｖ）♪ #scribeit #ninja #blocks #kobe #kansai #japan #hobby #hack" /></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/97c68b52661a11e2ab3b22000a9f14cb_7.jpg" alt="What a cool URL! 👍😄 :) #scribeit #ninja #blocks #hack #hobby #kobe #japan #kansai" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/e904bffa668a11e2a50222000a1fb870_7.jpg" alt="おはよう！Good morning! It's Friday! #scribeit #morning #friday #coffee #anime #manga #space #brothers #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/7f90adb4675611e2b1c722000a1fba7b_7.jpg" alt="What a funny coincidence. Saw a guy drinking the same drink right in front of me on the train 😄:D  #scribeit #drink #lemon #kobe #kansai #japan #quotes" /></p>
+
+<p><img src="http://distilleryimage10.s3.amazonaws.com/a87f45c4676411e28c4722000a9f1966_7.jpg" alt="Finished the first problem of Facebook #Hackers Cup Round 1 while waiting for wifey in the dentist 😁ｖ（＾＿＾ｖ）♪ #scribeit #coding #mac #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/6705e366677111e283d722000a1f99fc_7.jpg" alt="#space pen! #scribeit #random #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/b699aca8678711e2b4f022000a1f9ac6_7.jpg" alt="Love the blue #sky today. Hate the #wind though.  #scribeit #nature #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage4.s3.amazonaws.com/3809f938678c11e2912322000a1f933e_7.jpg" alt="#random #sun #sunset #kobe #kansai #japan" /></p>
+
+<p><br/>
+<em>// Photos are sorted from oldest to recent.</em></p>
+
+<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
+
+<p>/*===============================</p>
+
+<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
+
+<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
+
+<p>================================*/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] 28]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/22/thoughts-28/"/>
+    <updated>2013-01-22T10:15:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/22/thoughts-28</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/053P1m2W2C0G0k0D0K18/idont.jpg" alt="I don't always have birthday" /></p>
+
+<p>Yesterday was that time of the year where another year of my life has gone by. Just like most people, I like to look back and see what I have been doing and what I have accomplished. And it&#8217;s easy to do these days thanks to Facebook and Twitter.</p>
+
+<!-- more -->
+
+
+<h2>The Work</h2>
+
+<p>Twelve months seems like a very long time but in reality there are only few things you can achieve in 365 days. I consider myself as a developer so I judge myself based on how many apps I have released, and how well they fare. As such, I didn&#8217;t really accomplish much. During my 27, I released Flutterscape for iPhone, <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>, <a href="https://monoco.jp/signup?ref=n">Monoco for iPhone</a>, and the new <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a>.</p>
+
+<p>Kaomoji for Mac fed my ego much better than it did to my stomach. Some people who bought and used it loved it. And they expressed their love vocally. But some factors like the fact that Kaomoji for Mac has a very small market to begin with (Mac users who know what Kaomoji is), the sales was not satisfying. Its biggest achievement was when <a href="http://boingboing.net/2012/11/27/kaomojiapp-makes-crazy-text-em.html">BoingBoing</a> caught up with it which resulted in burst of sales. Not much, but at least I could say that my work was featured in famous blog.  (*≧▽≦)ﾉｼ))</p>
+
+<p>Scribeit for iPhone was my first paid app. It&#8217;s been a long time since I gave it my attention, but I finally updated it early this year. It&#8217;s completely rewritten and redesigned from scratch. I&#8217;m kinda proud with it. I hope people love it as much as I do.</p>
+
+<h2>The Travel</h2>
+
+<p><img src="http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg" alt="Tubingen" /></p>
+
+<p>Thanks to my wife, during my 27 I finally stepped on the land of Europe. Germany and Switzerland to be exact with a little bit of France. She had work there and I just tagged along. Few things I realized after that trip to Europe:</p>
+
+<ol>
+<li>I like living in Japan.</li>
+<li>I like beach better than mountain. （⌒▽⌒）</li>
+<li>Travelling becomes less fun when you&#8217;re still thinking of your work.</li>
+</ol>
+
+
+<p>It was fun but I wasn&#8217;t fully satisfied since it wasn&#8217;t really a vacation. Wife was working and so did I. I&#8217;d like to go there again one day for <em>real</em> vacation.</p>
+
+<h2>The Social</h2>
+
+<p>I&#8217;m not a social person. I don&#8217;t really like going to an event/meetup without any purpose but networking with people. I found it very random, meaningless, and awkward. I went to a meetup in Tokyo once, but didn&#8217;t really enjoy it. It&#8217;s random because you have to <em>randomly</em> introduce yourself to start conversation. Because without introducing yourself there will be no conversation. And if there&#8217;s no conversation what&#8217;s the point of meeting up. It&#8217;s <em>meaningless</em> because if I want to know about somebody, I can do it better in Twitter. From somebody&#8217;s tweets, I can grasp what kind of person he/she is. And it&#8217;s simpler too since I don&#8217;t need to do the hassle of introducing myself. Finally, it&#8217;s very awkward. Not only it&#8217;s awkward to introduce yourself randomly, but it&#8217;s also very <em>awkward</em> when I find out that I have no interest at all with the person I&#8217;m talking to. Maybe because we have no common interest. Maybe because he/she acts like an ass. True story.</p>
+
+<p>Anyway, I made some new friends online and offline last year. Found somebody who is quite similiar to me in Osaka. He just released an <a href="https://itunes.apple.com/jp/app/garuda-riders/id572550607?l=en">iPhone game, check it out</a>. I also made friend with a Japanese. Fancy that  (*≧▽≦)ﾉｼ))</p>
+
+<h2>The Resolution</h2>
+
+<p>Nope, no new year resolution. Didn&#8217;t even celebrate new year. I spent new year coding Scribeit. But it will be cool to pass the level 2 of Japanese Proficiency Language Test this year.</p>
+
+<p><img src="http://imgs.xkcd.com/comics/regular_expressions.png" alt="Regex Man" /></p>
+
+<p>One of the new things I started this year was resuming reading the Steve Jobs by Walter Isaacson. Yeah, I haven&#8217;t finished reading it. Shame on me! I&#8217;m also diving in the art of Regular Expression. It just seems cool （＾ω＾）</p>
+
+<p>If you read until here, how about checking out my apps <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a> and <a href="http://kaomojiapp.com/">Kaomoji for Mac</a>? ^ ^</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #19]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/22/photos-weekly-kansai-number-19/"/>
+    <updated>2013-01-22T09:31:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/22/photos-weekly-kansai-number-19</id>
+    <content type="html"><![CDATA[<p>Not so many pictures last week. We just went to Namba on weekend. I wasn&#8217;t really planning on buying anything. It was just that it&#8217;s been a long time since I last visited Namba. But unexpectedly, we got some cool stuff! Like the goods from 宇宙兄弟 (Space Brothers) anime! And a Mini Cooper remote control car! I&#8217;m so gonna hack that thing to control it with iPhone. (⌒▽⌒)☆</p>
+
+<p>Oh and I had my birthday yesterday so I made <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit for iPhone</a> free for a limited time. Grab it now! ;)</p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/1f7d42fa5f7e11e2b13b22000a9e0790_7.jpg" alt="Luffy is so cool ^^ #onepiece #scribeit #anime #manga #kobe #osaka #kansai #japan" /></p>
+
+<p> <!--more--></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/3ff75340618b11e2bacd22000a9e08df_7.jpg" alt="Don't reinvent the wheel. Except the ferries wheel.  #scribeit #random #umeda #osaka #kobe #japan #night #winter" /></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/5b4ac1e4618c11e291a022000a9f13ef_7.jpg" alt="Happy Jinbei ^^ #scribeit #onepiece #anime #manga #figure #hobby #cute #umeda #osaka #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/a4430c7061fb11e2b3d922000a9f309f_7.jpg" alt="Welcoming a new gadget to the house! #scribeit #coffee #kobe #kansai #japan #bw" /></p>
+
+<p><img src="http://distilleryimage2.s3.amazonaws.com/11b292da62d811e28ad722000a9f1498_7.jpg" alt="Walking around #namba .. #sunday #scribeit #random #sky #blue #nature #osaka #japan #kansai" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/15ac5e1c62dc11e2a88722000a1f90d0_7.jpg" alt="#Yakisoba for late lunch^^ #scribeit #food #namba #osaka #kansai #japan #anime #manga #onepiece" /></p>
+
+<p><img src="http://distilleryimage11.s3.amazonaws.com/55b4808462e111e2b10722000a1f98d4_7.jpg" alt="Walking around #namba. #scribeit #random #illumination #night #sunday #osaka #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage9.s3.amazonaws.com/f4135c0062e111e29c6622000a1f9e4a_7.jpg" alt="Late #illumination at #namba. #scribeit #random #night #lights #osaka #kansai #japan #stars" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/eb22cbd062e611e28a7322000a1fa414_7.jpg" alt="Kuromon #namba. #osaka #kansai #scribeit #japan #random" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/33e573d462f311e292a722000a1f97f4_7.jpg" alt="So we went to #namba. Finally found 宇宙兄弟 goodies! 😄 *(^o^)/* #scribeit #osaka #kansai #japan #anime #manga #space #brothers #宇宙兄弟 #mini #cooper" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/3f42d79e62f811e2a31922000a1fbcdc_7.jpg" alt="Getting closer to my dream car 😄(⌒▽⌒) #scribeit #mini #cooper #robin #onepiece #figure #anime #manga #osaka #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/92222da662f911e2afd722000a1f98d6_7.jpg" alt="Wife-made #latte #art ^^ ❤😊😍 #scribeit #love #heart #coffee #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/2e5c1ec0636311e2b42122000a9d0ed9_7.jpg" alt="おはよう！Good morning! Coffee time! With the rare mug of 宇宙兄弟 (space brothers) 😊 You should watch it, very inspiring #anime 😁 #scribeit #kobe #kansai #japan #manga #quotes #coffee" /></p>
+
+<p><img src="http://distilleryimage0.s3.amazonaws.com/2073882263ca11e2aadd22000a1fbd6a_7.jpg" alt="#scribeit #birthday #cake #quotes #kobe #kansai #japan #food" /></p>
+
+<p><br/>
+<em>// Photos are sorted from oldest to recent.</em></p>
+
+<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
+
+<p>/*===============================</p>
+
+<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
+
+<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
+
+<p>================================*/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #18]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/15/photos-weekly-kansai-number-18/"/>
+    <updated>2013-01-15T22:33:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/15/photos-weekly-kansai-number-18</id>
+    <content type="html"><![CDATA[<p>Not much happened last week. But there was one very good news. Scribeit has been approved and now is now available on the <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">App Store</a>. Grab it and tell me what you think （＾ _ ＾）</p>
+
+<p>On weekend, we went to the World Snake Exhibition. Because you know, it&#8217;s the year of Slytherin! As expected, nobody spoke parseltongue.</p>
+
+<p><img src="http://distilleryimage10.s3.amazonaws.com/372435b0591d11e2b44322000a1f92df_7.jpg" alt="I always wonder who decided on this abbreviation in Zip #japanese TV Show. So here they explained about GTSY. Can you guess what GTSY stands for? #japan #weird #kobe #kansai" /></p>
+
+<p> <!-- more --></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/f1020b40592411e292b622000a1fb73b_7.jpg" alt="おはよう！ #scribeit #kobe #osaka #kansai #japan #coffee #morning" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/422b1a68595f11e2965422000a9f18cc_7.jpg" alt="One of those moments where I'm glad I decided to go out 😁  #scribeit #nature #sun #sky #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/b6937c78596511e2a0d522000a1f970a_7.jpg" alt="Love it when I got the flare! ^^ #scribeit #sunset #sun #sky #nature #kobe #sannomiya #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/40b7a8285a5811e2a2e022000a1faf45_7.jpg" alt="Happy Birthday, iPhone!🎉🎊 #scribeit #apple" /></p>
+
+<p><img src="http://distilleryimage2.s3.amazonaws.com/d639ac2a5ac611e2afd722000a1f98d6_7.jpg" alt="Good morning! おはよう！Woke up feeling #awesome today, thanks to good news 😊 And the weather is also great, not too cold ☺ #scribeit #sky #sun #nature #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/3e2798ae5ace11e2ab6822000a1fb191_7.jpg" alt="Hello world! I'm proudly present the new Scribeit app! Add text/caption/collage/stickers to your photo easily! Search for &quot;scribeit&quot; in the App Store now! ;) 😄😉 #scribeit #app #apple #ios" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/bc6a330a5aee11e2979222000a1f9bc6_7.jpg" alt="Gero gero #scribeit #frog #kobe #kansai #japan #random" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/aa2852025aef11e29df022000a1fb07c_7.jpg" alt="The corner less visited in #osaka station.. #scribeit #umeda #kansai #japan #sun #sunset #nature" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/6a6f65d85b2611e2ada322000a1fbcdb_7.jpg" alt="Waiting... #scribeit #random #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/9248193a5b2911e29c2922000a9e48da_7.jpg" alt="Still waiting.. #scribeit #random #sannomiya #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/bca3f4ce5b4211e2a98422000a9f1513_7.jpg" alt="I set alarm to not miss this moment 😄:p #scribeit #kobe #koshien #japan #ipod" /></p>
+
+<p><img src="http://distilleryimage0.s3.amazonaws.com/f22da6885bad11e28ed022000a1fbc58_7.jpg" alt="#scribeit #random #kobe #kansai #osaka #japan" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/48d75e145c6e11e2852322000a9e288c_7.jpg" alt="I need to get a stronger cable ... #scribeit #random #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/95d383885c7211e299e522000a9e28c4_7.jpg" alt="Great time to stroll around during #winter!  #scribeit #sun #nature #kobe #koshien #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage4.s3.amazonaws.com/0a38f9c25c7f11e2a1c022000a1fb718_7.jpg" alt="#Pokemon Trading Card #Game in a mall nearby. Reminds me of the days I was so into #Magic the Gathering ^^ #scribeit #kobe #koshien #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/fab036f25c8111e28a2c22000a9f15d9_7.jpg" alt="#Love the #sun today. It created interesting #shadow ^^ #scribeit #nature #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage4.s3.amazonaws.com/ba28e7345c8411e2a2d522000a1fb04d_7.jpg" alt="#shadow #scribeit #quote #sun #nature #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/5fe77a245c8e11e28e6622000a9f0a1a_7.jpg" alt="Another day, another blessing from the #sunset :) #scribeit #sun #nature #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/4073a6b65cae11e2b9da22000a1faf53_7.jpg" alt="I want to try riding this kind of bike ^^ #scribeit #bicycle #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/efd2d2bc5cdb11e29dbc22000a1f9e59_7.jpg" alt="#sun #nature #scribeit #random #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage1.s3.amazonaws.com/5b23f04a5d5011e2890322000a9e48f1_7.jpg" alt="Visiting some #snakes.. #scribeit #animal #nature #osaka #umeda #japan #festival" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/a57f22645d6811e2b23022000a1f9ad5_7.jpg" alt="In #Japan, people usually eat #yakiniku together. If you want to eat yakiniku alone, there's this special yakiniku restaurant :p  #scribeit" /></p>
+
+<p><img src="http://distilleryimage9.s3.amazonaws.com/f76d316e5d6e11e2bbd822000a9f15da_7.jpg" alt="Dinner with #korean #food! Extra spicy! #scribeit #osaka #tennoji #kansai #japan #love #couples" /></p>
+
+<p><img src="http://distilleryimage2.s3.amazonaws.com/af9c0d2c5e0611e280a722000a9e28dc_7.jpg" alt="#building #scribeit #trees #winter #random #osaka #kyobashi #kansai #japan #nature #bw" /></p>
+
+<p><br/>
+<em>// Photos are sorted from oldest to recent.</em></p>
+
+<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
+
+<p>/*===============================</p>
+
+<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
+
+<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
+
+<p>================================*/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
+    <updated>2013-01-11T11:04:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
+    <content type="html"><![CDATA[<p>If you didn&#8217;t know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
+
+<!-- more -->
+
+
+<p>And to my surprise, there are some rules that I never thought they would exist. Some interesting ones are:</p>
+
+<ol>
+<li>Never refer to Apple Operating System. Meaning, you must not ever say &#8220;Now Available on iOS&#8221;. Or &#8220;Scribeit for iOS&#8221;. Instead, refer to Apple product names, such as &#8220;Scribeit for iPhone.&#8221; Oops, need to make some change in <a href="http://scribeit.appsccelerated.com/">Scribeit website</a> ^ ^;</li>
+<li>Never typeset Apple product names using all uppercase letters. So IPHONE or IPAD is not allowed, people.</li>
+<li>Never use a Myriad font for App Store-related text. ⊙０⊙ Why? Anybody care to explain? What&#8217;s with Myriad font?</li>
+</ol>
+
+
+<p>And many more. You should read it. It&#8217;s pretty <em>interesting</em>.</p>
+
+<p>Note:</p>
+
+<p>Thank you for reading this post. Have you checked out my app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. I think you&#8217;ll love it (⌒▽⌒)☆</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] RDF: It's in the Juice]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice/"/>
+    <updated>2013-01-10T12:29:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice</id>
+    <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, regarding Job&#8217;s superpower Reality Distortion Field:</p>
+
+<blockquote><p>There was little that could shield you from the force, Hertzfeld discovered. “Amazingly, the reality distortion field seemed to be effective even if you were acutely aware of it. We would often discuss potential techniques for grounding it, but after a while most of us gave up, accepting it as a force of nature.” After Jobs decreed that the sodas in the office refrigerator be replaced by Odwalla organic orange and carrot juices, someone on the team had T-shirts made. “Reality Distortion Field,” they said on the front, and on the back, “It’s in the juice!”</p></blockquote>
+
+
+<p>I want that T-shirt!!</p>
+
+<!-- more -->
+
+
+
+
+<blockquote><p>The result was that the Macintosh team came to share Jobs’s passion for making a great product, not just a profitable one. “Jobs thought of himself as an artist, and he encouraged the design team to think of ourselves that way too,” said Hertzfeld. “The goal was never to beat the competition, or to make a lot of money. It was to do the greatest thing possible, or even a little greater.” He once took the team to see an exhibit of Tiffany glass at the Metropolitan Museum in Manhattan because he believed they could learn from Louis Tiffany’s example of creating great art that could be mass-produced. Recalled Bud Tribble, “We said to ourselves, ‘Hey, if we’re going to make things in our lives, we might as well make them beautiful.’”</p></blockquote>
+
+
+<p>The end results are indeed amazing. But the process seemed so painful. If I have the chance to lead a team, I&#8217;d rather doing it in a fun way. Life is short anyway, why not having fun?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHT] the World Could Have Gotten iBicycle]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle/"/>
+    <updated>2013-01-09T11:54:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle</id>
+    <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, the Mac was initially called <strong>Annie</strong>:</p>
+
+<blockquote><p>One of Raskin’s dreams was to build an inexpensive computer for the masses, and in 1979 he convinced Mike Markkula to put him in charge of a small development project code-named “Annie” to do just that. Since Raskin thought it was sexist to name computers after women, he redubbed the project in honor of his favorite type of apple, the McIntosh. But he changed the spelling in order not to conflict with the name of the audio equipment maker McIntosh Laboratory. The proposed computer became known as the Macintosh.</p></blockquote>
+
+
+<p>Today I learned that a guy named Jef Raskin was the <em>biological</em> father of what we know now as Mac.</p>
+
+<!-- more -->
+
+
+
+
+<blockquote><p>In various interviews, Jobs had been referring to computers as a bicycle for the mind; the ability of humans to create a bicycle allowed them to move more efficiently than even a condor, and likewise the ability to create computers would multiply the efficiency of their minds. So one day Jobs decreed that henceforth the Macintosh should be known instead as the Bicycle. This did not go over well. “Burrell and I thought this was the silliest thing we ever heard, and we simply refused to use the new name,” recalled Hertzfeld. Within a month the idea was dropped.</p></blockquote>
+
+
+<p>Thank God there were people who dared to stand up to Steve for his silly decisions.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] I Hate Money]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/08/thoughts-i-hate-money/"/>
+    <updated>2013-01-08T09:23:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/08/thoughts-i-hate-money</id>
+    <content type="html"><![CDATA[<p>Jobs on <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>:</p>
+
+<blockquote><p>I never worried about money. I grew up in a middle-class family, so I never thought I would starve. And I learned at Atari that I could be an okay engineer, so I always knew I could get by. I was voluntarily poor when I was in college and India, and I lived a pretty simple life even when I was working. So I went from fairly poor, which was wonderful, because I didn’t have to worry about money, to being incredibly rich, when I also didn’t have to worry about money.</p></blockquote>
+
+
+
+
+<!-- more -->
+
+
+<p>Lucky him. Money depresses me everytime. Actually, thinking about money depresses me. It&#8217;s not that I lack money. It&#8217;s enough to enjoy and stay alive. And I&#8217;m very grateful for it. It&#8217;s just not enough to make me not to worry about it. I&#8217;m not worrying about it every seconds. But it just has to come from time to time to slap me in the face to remind me to worry about it. Are you following me? Me neither.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[PHOTOS] Weekly Kansai #17]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/08/photos-weekly-kansai-number-17/"/>
+    <updated>2013-01-08T09:04:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/08/photos-weekly-kansai-number-17</id>
+    <content type="html"><![CDATA[<p>Happy Tuesday! Another week has passed by. Nothing much happened here. Just walked around Umeda during the weekend. Got ourselves two 2013 calendars. One is with lots of cute Maru pictures b(= ^ ‥ ^ =)o</p>
+
+<div class="video-container">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/hPzNl6NKAG0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>And the other one is One Piece calendar! Too bad there was no 宇宙兄弟 (Space Brothers) calendar. But we found the puzzle of it. （＾▽＾）／＼（＾▽＾）Are you watching the anime too? You should. It&#8217;s like the best anime of 2012. It&#8217;s been a long time since I watched a high quality anime like this. Great story. Very inspiring.</p>
+
+<div class="video-container">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/zkxqHxc-zUM" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<p><br/></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/92d58a0253e711e29bb822000a1f9abd_7.jpg" alt="Happy new year! #scribeit #sunset #nature #koshien #kobe #kansai #japan #newyear" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/e1ceb69653f211e283b822000a9f124c_7.jpg" alt="Raise your hand if you need this! 😁 #scribeit #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/34bbb584540711e2a31922000a1fbcdc_7.jpg" alt="Two crossing flags on the train to mark the holiday in #japan. #scribeit #kobe #osaka #umeda" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/6d896668540c11e28c8422000a1f931c_7.jpg" alt="買っちゃった^_^; #scribeit #onepiece #calendar #anime #manga #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage4.s3.amazonaws.com/cce41c00540e11e2830722000a1f9d75_7.jpg" alt="これも買いました(⌒▽⌒) @tiaichima さんのギーギーのカレンダーがあったほうがいいと思うけどね^_^ #cat #calendar #osaka #umeda #japan" /></p>
+
+<p><img src="http://distilleryimage10.s3.amazonaws.com/abee1f2054bb11e2983d22000a9f199e_7.jpg" alt="Wifey is inspired by Space Brothers (宇宙兄弟) 😄 #scribeit #anime #manga #space #kobe #kansai #japan #puzzle" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/a93fe72e54c311e28cc022000a9f308d_7.jpg" alt="壁に掛かった😊😁 #scribeit #cat #calendar #maru #kobe #kansai #japan #january #newyear" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/f27bada2558f11e29b2522000a9f13d5_7.jpg" alt="There goes New Year's #holiday. Guess who said that #quote. ... #scribeit #newyear #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage5.s3.amazonaws.com/6fc5d914563911e2b46022000a1f9be1_7.jpg" alt="#sun #random #nature #cloud #scribeit #kansai #kobe #japan" /></p>
+
+<p><img src="http://distilleryimage6.s3.amazonaws.com/2dc85ad2564311e2a82b22000a9f1408_7.jpg" alt="I feel like new year finally dawns on me looking at this brilliant #nature phenomenon😊 :) #scribeit #sun #sunset #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/a762d30a566011e2b22122000a9f12bd_7.jpg" alt="Getting started .. #scribeit #puzzle #space #brothers #anime #manga #kansai #kobe #japan" /></p>
+
+<p><img src="http://distilleryimage9.s3.amazonaws.com/9a489aaa566111e2815722000a1fa518_7.jpg" alt="Then it was done!!😜😄*(^o^)/* #scribeit #puzzle #space #brothers #anime #manga #kansai #kobe #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/211e480e566711e281cb22000a1f9a0a_7.jpg" alt="Then it's framed.. ^^ #scribeit #puzzle #space #brothers #anime #manga #kansai #kobe #japan" /></p>
+
+<p><img src="http://distilleryimage9.s3.amazonaws.com/e510012c56d411e2af7822000a1fb04e_7.jpg" alt="That's why it's so cold today 😖 #scribeit #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/2ad43f7656de11e2b9c422000a1f968f_7.jpg" alt="In dentist now. Waiting for wifey having her teeth checked up. I think this is the first time I go to a dentist in #japan. #scribeit #kobe #kansai #life #quote" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/e014ebda56e611e28e3c22000a1f9d44_7.jpg" alt="Visited temple after dentist. So many bad fortunes hanging on the trees. #scribeit #japan #kobe #newyear #kansai #tradition" /></p>
+
+<p><img src="http://distilleryimage3.s3.amazonaws.com/8f76831c56f211e29e1622000a9d0ec7_7.jpg" alt="Lunch at Asian restaurant. Vietnam noodle. #scribeit #food #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage2.s3.amazonaws.com/6bfd7fcc570511e2862522000a1f9c96_7.jpg" alt="@nina_oikawa have you been here?😁 #snoopy #umeda #osaka #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage8.s3.amazonaws.com/f0ff700a570e11e2ada322000a1fbcdb_7.jpg" alt="There are still things you cannot find on Internet but are available in a book store. Amazing. #scribeit #book #umeda #osaka #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage7.s3.amazonaws.com/dcfc4ed6571111e29ca422000a1fb149_7.jpg" alt="#scribeit #random #sunset #nature #quote #osaka #umeda #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage10.s3.amazonaws.com/96d94b3457d911e2be0322000a9f38f1_7.jpg" alt="Got an amazing gift from the mother #nature for a few minutes 😊 #scribeit #sunset #beautiful #kobe #kansai #japan" /></p>
+
+<p><img src="http://distilleryimage4.s3.amazonaws.com/8439047c585d11e2829822000a9f1487_7.jpg" alt="おはよう！ First official coffee time of the year commences! ^^ 😁☕ #scribeit #kobe #kansai #japan #coffee #morning #mug" /></p>
+
+<p><br/>
+<em>// Photos are sorted from oldest to recent.</em></p>
+
+<p><em>// Unlikely, but just in case you have a crazy idea to use my photos, contact me first, ok?</em></p>
+
+<p>/*===============================</p>
+
+<p>How about say hi to <a href="http://twitter.com/nicnocquee">me</a> if you like this post?</p>
+
+<p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
+
+<p>================================*/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[SHARE] Jobs Was a Romantic]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic/"/>
+    <updated>2013-01-07T09:48:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2E1m0R0422463g2p3M3n/%E5%86%99%E7%9C%9F%202013-01-07%209%2029%2039.jpg" alt="Xerox and Lisa" /></p>
+
+<p>Chapter 8 of Steve Jobs by Walter Isaacson on the <em>myth of Apple stealing from Xerox</em>:</p>
+
+<blockquote><p>Xerox’s venture capital division wanted to be part of the second round of Apple financing during the summer of 1979. Jobs made an offer: “I will let you invest a million dollars in Apple if you will open the kimono at PARC.” Xerox accepted. It agreed to show Apple its new technology and in return got to buy 100,000 shares at about $10 each.</p></blockquote>
+
+
+<p>So much for the stealing. Better call it fair trade.</p>
+
+<!-- more -->
+
+
+<p>Continuing,</p>
+
+<blockquote><p>As he once said, “Picasso had a saying—‘good artists copy, great artists steal’—and we have always been shameless about stealing great ideas.”</p></blockquote>
+
+
+<p>Jobs was a romantic. He liked to exaggerate things. However, he was a good executioner:</p>
+
+<blockquote><p>Jobs and his engineers significantly improved the graphical interface ideas they saw at Xerox PARC, and then were able to implement them in ways that Xerox never could accomplish. For example, the Xerox mouse had three buttons, was complicated, cost $300 apiece, and didn’t roll around smoothly; a few days after his second Xerox PARC visit, Jobs went to a local industrial design firm, IDEO, and told one of its founders, Dean Hovey, that he wanted a simple single-button model that cost $15, “and I want to be able to use it on Formica and my blue jeans.” Hovey complied.</p></blockquote>
+
+
+<p>and ..</p>
+
+<blockquote><p>Apple’s engineers devised an interface so you could not only drag windows and files around, you could even drop them into folders.</p></blockquote>
+
+
+<p>He had a good team as well:</p>
+
+<blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p><p>…</p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote>
+
+
+<p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[THOUGHTS] January 4 Was My Real New Year]]></title>
+    <link href="http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year/"/>
+    <updated>2013-01-05T01:06:00+09:00</updated>
+    <id>http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year</id>
+    <content type="html"><![CDATA[<p>As I write this sentence on my MBA which rests on my lap, the digital clock at the top right corner shows &#8220;Fri Jan 4 11:26:50 PM&#8221;. In around 30 minutes, it will be January 5. It&#8217;s been 4 days since the year 2013 closed the door of 2012 and came to our life. The holiday for most people in Japan has ended yesterday. Yet here I am feeling like finally I can say &#8220;Happy new year!&#8221; sincerelly.</p>
+
+<!-- more -->
+
+
+<p>Danny Choo asked good questions on his post <a href="http://www.dannychoo.com/post/en/26806/2013+New+Years+Greetings.html">2013 New Years Greetings!</a>:</p>
+
+<blockquote><p>Happy new year folks! Hows your new year celebrations? <br/>But before you answer that, have you ever thought to yourself why we celebrate the new year? Is it because we want to celebrate what we have achieved in the previous year? Is it because we are celebrating what we want to do in the up n coming year? Is it because we are celebrating the fact that most of us get time off work/school?</p></blockquote>
+
+
+<p>In my opinion, new year is a good time to start things new. Either starting something really new, or simply restarting what we have been doing. But remember what <a href="http://en.wikipedia.org/wiki/The_Matrix_Revolutions">Oracle</a> said,</p>
+
+<blockquote><p>everything that has a beginning has an end</p></blockquote>
+
+
+<p>There are ways to read that between the line, but I&#8217;d like to think that to really begin, we need to end something. I had not finished what I wanted to finish in 2012. Thus, I did not fully celebrate new year.</p>
+
+<p><img src="http://f.cl.ly/items/0G3e350L3m1a2K1N0U1M/Screen%20Shot%202013-01-04%20at%2011.42.19%20PM.png" alt="Last day of 2011 with friends in Ise" /></p>
+
+<p>This year, we, as in me and wifey, <em>celebrated</em> new year differently compared to previous years. Last year, we spent new year in Ise together with our friends. However, this year it was just the two of us in our apartment. We were just there sitting on the yellow sofa I got nearly three years ago, if my memory serves me right, from an Indian guy whom I didn&#8217;t (still don&#8217;t) know. We were watching Japanese TV Show called <a href="http://en.wikipedia.org/wiki/K%C5%8Dhaku_Uta_Gassen">Kohaku (紅白) Uta Gassen</a> where a bunch of Japanese singers and musicians was divided into two teams, red and white teams, and they competed with each other.</p>
+
+<p><img src="http://f.cl.ly/items/222Q0y0W1Y2h3I3s460T/maki-chan1.png" alt="Maki-chan on Kohaku" /></p>
+
+<p>But we weren&#8217;t really watching the show. We were most of the time looking at our Macbook&#8217;s monitors. I was busy with XCode while wifey was busy with Photoshop. We were working on Scribeit. Scribeit is the second app I put in Apple Store. It is my first paid app. And it is the only paid app at this moment. It&#8217;s been two years since I updated it. It was never even updated to support retina display when iPhone 4 was released. Despite of that, number of downloads every month never reaches zero. So I finally made up my mind to update this baby and to finish it before 2012 came to an end. And my wife helped me with the graphics and stuff.</p>
+
+<p><img src="http://f.cl.ly/items/2B081D0J0h1c0c450312/9gag2013.png" alt="2013 is the first year since 1987 to have four different numbers" /></p>
+
+<p>Unfortunately, everything doesn&#8217;t always work as planned. As this part of the world turned from December 31 to January 1, Scribeit was not completely done yet. An unexpected behaviour in the app prevented me from fully enjoying the moment where people celebrated the first year since 1987 to have four different numbers!</p>
+
+<p><img src="http://f.cl.ly/items/3h0o2n1X3a3T0j0R1y0s/Screen%20Shot%202013-01-05%20at%2012.17.08%20AM.png" alt="New Scribeit 2013" /></p>
+
+<p>At around 3AM of January 1, I finally found the problem. I closed my Mac and decided to wrap things up in the morning. Then came January 2. Followed by January 3. You see, I realized that contrary to popular belief, <em>finishing</em> is way more difficult than starting. You can always start <em>small</em>, but you cannot finish small. You can start from small things one by one. But you cannot finish only a part of the whole. Of course there&#8217;s no such thing as completely <strong>finish</strong>. There&#8217;s always something to add. Or to reduce. I&#8217;m talking about finishing the <a href="http://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a>. You cannot ship a half ass product. You need to reach that state of MVP. And here&#8217;s a fact: even an MVP has many check lists to complete. If you think starting is hard, finishing will be hell for you.</p>
+
+<p>So, on the last day of new year holiday, I was finally able to submit our baby to App Store. We think it looks amazing. We love it. And we think you&#8217;ll love it too. ♡＾▽＾♡ Follow me on <a href="https://twitter.com/nicnocquee">Twitter</a> to know when the update is available on the App Store.</p>
+
+<p>☆☆ Happy new year!</p>
+
+<p>☆☆ 明けましておめでとうございます！</p>
+
+<p>☆☆ Selamat tahun baru!</p>
+
+<p>☆☆ <strong>UPDATE!</strong></p>
+
+<p><strong>Scribeit is up in the <a href="http://scribeit.appsccelerated.com/">App Store</a> now! Check it out!
+</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

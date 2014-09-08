@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Run iOS App in Different Languages Quickly in iOS Simulator - Something Awesome</title>
+  <meta name="author" content="Nico Prananta">
+
+  
+  <meta name="description" content="Run iOS App in Different Languages Quickly in iOS Simulator written in ios If you make an app which support multiple languages, you need to check &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34880613-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Run iOS App in Different Languages Quickly in iOS Simulator</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-13T16:29:00+09:00" pubdate data-updated="true"></time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>
+  
+</span>
+
+
+        </div>
+        <p>If you make an app which support multiple languages, you need to check how your app looks like in different languages. The manual way of doing it is to open Settings app → General → International → Language.</p>
+
+<p><img src="http://f.cl.ly/items/232E1P3V3w3e1w1A3c43/iOS%20Simulator%20Screen%20shot%20Mar%2013,%202014,%204.39.07%20PM.png" alt="" /></p>
+
+<!-- more -->
+
+
+<p>What a waste of time. Put this code instead inside app&#8217;s <code>main.m</code> file.</p>
+
+<script src="https://gist.github.com/nicnocquee/9523311.js"></script>
+
+
+<p>Edit the scheme and add the language&#8217;s <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 codes</a> to <code>Arguments Passed On Launch</code>. For example, <code>ja</code> for Japanese.</p>
+
+<p><img src="http://f.cl.ly/items/042U3F3d2p0d0d2H0E1c/Screen_Shot_2014-03-13_at_5_00_59_PM.png" alt="" /></p>
+
+<p><img src="http://f.cl.ly/items/3N1Y1c311J0y091A1j0C/Screen%20Shot%202014-03-13%20at%205.01.46%20PM.png" alt="" /></p>
+
+<p>Then simply choose one language and run the app.</p>
+
+
+        <hr class="divider-short"/>
+        
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/01/19/your-verse/" title="Previous Post: Your Verse">&laquo; Previous: Your Verse</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/" title="Next Post: Install any fonts and use it in any apps in iOS 7">Next: Install any fonts and use it in any apps in iOS 7 &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/nicnocquee"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+
+    
+
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Designed by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
