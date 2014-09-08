@@ -10,6 +10,8 @@ categories: [osx, hack]
 
 Some fun things you can do to pimp your OSX Terminal: (I'm using Mountain Lion fyi)
 
+<!-- more -->
+
 ## Customize Terminal Prompt with Emoji
 
 Add this line to ~/.bash_profile (Note: You should see the yellow emoji with shade below)
@@ -19,7 +21,7 @@ Add this line to ~/.bash_profile (Note: You should see the yellow emoji with sha
 Replace `<put_emoji_here>` with any emoji you want. Alt+Command+T to open emoji window.
 Above line not only adds emoji, but also remove name and hostname, and only show current directory name (not full path). Read [here](http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/) for more information.
 
-<!-- more -->
+
 
 ## Set Current Directory as Terminal's Tab Title
 
