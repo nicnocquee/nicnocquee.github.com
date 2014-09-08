@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -71,9 +71,7 @@ You can find me on <a href="http://twitter.com/nicnocquee">Twitter</a>.</p>
 
 <p>Second one for my favorite is <a href="http://www.colorsplashphoto.com/">ColorStrokes</a>. From the website:</p>
 
-<p>{% blockquote %}
-With ColorStrokes you have the entire color palette in your hands. You can recolor the image and even bring colors to the black and white shots, thus letting your photo creativity truly blossom.
-{% endblockquote %}</p>
+<p><blockquote><p>With ColorStrokes you have the entire color palette in your hands. You can recolor the image and even bring colors to the black and white shots, thus letting your photo creativity truly blossom.</p></blockquote></p>
 
 <p><img src="http://f.cl.ly/items/191h203H252P1r1z0k2J/Screen%20Shot%202012-09-23%20at%201.16.39%20PM.png" alt="ColorStrokes for Mac in action" /></p>
 

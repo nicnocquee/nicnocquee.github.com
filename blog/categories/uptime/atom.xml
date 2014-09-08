@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Uptime | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/uptime/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -18,9 +18,10 @@
     <link href="http://nicnocquee.com/blog/2012/07/22/the-problem-with-pingdom/"/>
     <updated>2012-07-22T19:13:00+09:00</updated>
     <id>http://nicnocquee.com/blog/2012/07/22/the-problem-with-pingdom</id>
-    <content type="html"><![CDATA[<p>{% codeblock Time to be Awesome - awesome.rb %}
-puts &#8220;Awesome!&#8221; unless lame
-{% endcodeblock %}</p>
+    <content type="html"><![CDATA[<p><figure class='code'><figcaption><span>Time to be Awesome - awesome.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Awesome!&quot;</span> <span class="k">unless</span> <span class="n">lame</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p><a href="http://www.pingdom.com%20Pingdom">The problem with pingdom.</a></p>
 

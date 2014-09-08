@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Quote | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/quote/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -25,9 +25,7 @@
 <!-- more -->
 
 
-<p>{% blockquote %}
-If you wish to make an apple pie from scratch, you must first invent the universe. - Carl Sagan
-{% endblockquote %}</p>
+<p><blockquote><p>If you wish to make an apple pie from scratch, you must first invent the universe. - Carl Sagan</p></blockquote></p>
 
 <p><a href="http://www.everythingisaremix.info/">Everything is a REMIX</a> indeed. <a href="http://thedoghousediaries.com/">Doghouse Diaries</a> is a pretty funny webcomic. You should follow it.</p>
 ]]></content>

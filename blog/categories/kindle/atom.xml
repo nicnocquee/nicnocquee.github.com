@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Kindle | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/kindle/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -20,9 +20,7 @@
     <id>http://nicnocquee.com/blog/2012/10/23/share-dont-buy-a-kindle</id>
     <content type="html"><![CDATA[<p><a href="http://www.bekkelund.net/">Martin Bekkelund</a> on <a href="http://www.bekkelund.net/2012/10/22/outlawed-by-amazon-drm/">Outlawed by Amazon DRM</a>:</p>
 
-<p>{% blockquote %}
-Did she violate any terms? Amazon will not tell. Perhaps by accident? Amazon does not care. The conclusion so far is clear: Amazon closed her account, wiped her Kindle and refuses to tell her why. End of discussion.
-{% endblockquote %}</p>
+<p><blockquote><p>Did she violate any terms? Amazon will not tell. Perhaps by accident? Amazon does not care. The conclusion so far is clear: Amazon closed her account, wiped her Kindle and refuses to tell her why. End of discussion.</p></blockquote></p>
 
 <p>If the claim to be trusted, the fact that Amazon refused to give any reasons is very disturbing. I understand, though not favoring, that Amazon, like Apple, has the right to do pretty much anything they want with their device and platform. But punishing a customer without warning and explanation is far from being classy.</p>
 
@@ -33,9 +31,7 @@ Did she violate any terms? Amazon will not tell. Perhaps by accident? Amazon doe
 
 <p>Cory Doctorow on <a href="http://boingboing.net/2012/10/22/kindle-user-claims-amazon-dele.html">Kindle user claims Amazon deleted whole library without explanation</a>:</p>
 
-<p>{% blockquote %}
-This fine print will always have a clause that says you are a mere tenant farmer of your books, and not their owner, and your right to carry around your &#8220;purchases&#8221; (which are really conditional licenses, despite misleading buttons labelled with words like &#8220;Buy this with one click&#8221; &#8211; I suppose &#8220;Conditionally license this with one click&#8221; is deemed too cumbersome for a button) can be revoked without notice or explanation (or, notably, refund) at any time.
-{% endblockquote %}</p>
+<p><blockquote><p>This fine print will always have a clause that says you are a mere tenant farmer of your books, and not their owner, and your right to carry around your &#8220;purchases&#8221; (which are really conditional licenses, despite misleading buttons labelled with words like &#8220;Buy this with one click&#8221; &#8211; I suppose &#8220;Conditionally license this with one click&#8221; is deemed too cumbersome for a button) can be revoked without notice or explanation (or, notably, refund) at any time.</p></blockquote></p>
 
 <p>I agree with replacing the &#8220;Buy this with one click&#8221; button to &#8220;Conditionally license this with one click&#8221;. At least people will know that they won&#8217;t really own what they are about to purchase and proceed with their own risks.</p>
 
@@ -43,9 +39,7 @@ This fine print will always have a clause that says you are a mere tenant farmer
 
 <p>I guess it&#8217;s inevitable for a company who started small then turned big to become evil. Apple, Google, Twitter, just to name a few. And now (or has it been for a long time?) is Amazon&#8217;s turn.</p>
 
-<p>{% blockquote %}
-You either die a hero or you live long enough to see yourself become the villain.
-{% endblockquote %}</p>
+<p><blockquote><p>You either die a hero or you live long enough to see yourself become the villain.</p></blockquote></p>
 ]]></content>
   </entry>
   

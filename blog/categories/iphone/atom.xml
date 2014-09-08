@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Iphone | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/iphone/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -25,16 +25,11 @@
 
 <p>Danny Choo asked good questions on his post <a href="http://www.dannychoo.com/post/en/26806/2013+New+Years+Greetings.html">2013 New Years Greetings!</a>:</p>
 
-<p>{% blockquote %}
-Happy new year folks! Hows your new year celebrations?
-But before you answer that, have you ever thought to yourself why we celebrate the new year? Is it because we want to celebrate what we have achieved in the previous year? Is it because we are celebrating what we want to do in the up n coming year? Is it because we are celebrating the fact that most of us get time off work/school?
-{% endblockquote %}</p>
+<p><blockquote><p>Happy new year folks! Hows your new year celebrations?<br/>But before you answer that, have you ever thought to yourself why we celebrate the new year? Is it because we want to celebrate what we have achieved in the previous year? Is it because we are celebrating what we want to do in the up n coming year? Is it because we are celebrating the fact that most of us get time off work/school?</p></blockquote></p>
 
 <p>In my opinion, new year is a good time to start things new. Either starting something really new, or simply restarting what we have been doing. But remember what <a href="http://en.wikipedia.org/wiki/The_Matrix_Revolutions">Oracle</a> said,</p>
 
-<p>{% blockquote %}
-everything that has a beginning has an end
-{% endblockquote %}</p>
+<p><blockquote><p>everything that has a beginning has an end</p></blockquote></p>
 
 <p>There are ways to read that between the line, but I&#8217;d like to think that to really begin, we need to end something. I had not finished what I wanted to finish in 2012. Thus, I did not fully celebrate new year.</p>
 
@@ -138,9 +133,7 @@ everything that has a beginning has an end
     <id>http://nicnocquee.com/blog/2012/09/20/share-ios-6-maps-it-just-works-not</id>
     <content type="html"><![CDATA[<p>SBS on <a href="http://www.japanmobiletech.com/2012/09/ios-6-maps-fail-in-japan.html">iOS 6 maps FAIL in Japan</a>:</p>
 
-<p>{% blockquote %}
-Looking for Osaka Station? Well, it&#8217;s apparently not in the database. That&#8217;ll piss off Hashimoto!
-{% endblockquote %}</p>
+<p><blockquote><p>Looking for Osaka Station? Well, it&#8217;s apparently not in the database. That&#8217;ll piss off Hashimoto!</p></blockquote></p>
 
 <p><img src="http://3.bp.blogspot.com/-JLuGOmWk5t4/UFrJuaCJ-TI/AAAAAAAABEY/Uuj87fkCMCU/s320/osaka.jpg" alt="Osaka station" /></p>
 

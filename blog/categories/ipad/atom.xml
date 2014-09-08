@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ipad | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/ipad/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T00:33:54+09:00</updated>
+  <updated>2014-09-09T01:32:22+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -20,9 +20,7 @@
     <id>http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine</id>
     <content type="html"><![CDATA[<p><a href="http://www.marco.org/">Marco Ament</a> on the <a href="http://the-magazine.org/1/foreword">Foreword of The Magazine</a>:</p>
 
-<p>{% blockquote %}
-Many iPad magazines are carrying unnecessary and expensive baggage from their print days. Some born-digital magazines even took on print baggage simply because they thought they needed it.
-{% endblockquote %}</p>
+<p><blockquote><p>Many iPad magazines are carrying unnecessary and expensive baggage from their print days. Some born-digital magazines even took on print baggage simply because they thought they needed it.</p></blockquote></p>
 
 <!-- more -->
 
