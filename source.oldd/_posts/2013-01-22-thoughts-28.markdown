@@ -1,0 +1,52 @@
+---
+layout: post
+title: "[THOUGHTS] 28"
+date: 2013-01-22 10:15
+comments: false
+categories: [thoughts]
+---
+![I don't always have birthday](http://f.cl.ly/items/053P1m2W2C0G0k0D0K18/idont.jpg)
+
+Yesterday was that time of the year where another year of my life has gone by. Just like most people, I like to look back and see what I have been doing and what I have accomplished. And it's easy to do these days thanks to Facebook and Twitter.
+
+<!-- more -->
+
+The Work
+--------
+
+Twelve months seems like a very long time but in reality there are only few things you can achieve in 365 days. I consider myself as a developer so I judge myself based on how many apps I have released, and how well they fare. As such, I didn't really accomplish much. During my 27, I released Flutterscape for iPhone, [Kaomoji for Mac](http://kaomojiapp.com/), [Monoco for iPhone](https://monoco.jp/signup?ref=n), and the new [Scribeit for iPhone](https://itunes.apple.com/us/app/scribeit/id369606127?mt=8). 
+
+Kaomoji for Mac fed my ego much better than it did to my stomach. Some people who bought and used it loved it. And they expressed their love vocally. But some factors like the fact that Kaomoji for Mac has a very small market to begin with (Mac users who know what Kaomoji is), the sales was not satisfying. Its biggest achievement was when [BoingBoing](http://boingboing.net/2012/11/27/kaomojiapp-makes-crazy-text-em.html) caught up with it which resulted in burst of sales. Not much, but at least I could say that my work was featured in famous blog.  (*≧▽≦)ﾉｼ))
+
+Scribeit for iPhone was my first paid app. It's been a long time since I gave it my attention, but I finally updated it early this year. It's completely rewritten and redesigned from scratch. I'm kinda proud with it. I hope people love it as much as I do.
+
+The Travel
+----------
+
+![Tubingen](http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg)
+
+Thanks to my wife, during my 27 I finally stepped on the land of Europe. Germany and Switzerland to be exact with a little bit of France. She had work there and I just tagged along. Few things I realized after that trip to Europe:
+
+1. I like living in Japan. 
+2. I like beach better than mountain. （⌒▽⌒）
+3. Travelling becomes less fun when you're still thinking of your work.
+
+It was fun but I wasn't fully satisfied since it wasn't really a vacation. Wife was working and so did I. I'd like to go there again one day for *real* vacation.
+
+The Social
+----------
+
+I'm not a social person. I don't really like going to an event/meetup without any purpose but networking with people. I found it very random, meaningless, and awkward. I went to a meetup in Tokyo once, but didn't really enjoy it. It's random because you have to *randomly* introduce yourself to start conversation. Because without introducing yourself there will be no conversation. And if there's no conversation what's the point of meeting up. It's *meaningless* because if I want to know about somebody, I can do it better in Twitter. From somebody's tweets, I can grasp what kind of person he/she is. And it's simpler too since I don't need to do the hassle of introducing myself. Finally, it's very awkward. Not only it's awkward to introduce yourself randomly, but it's also very *awkward* when I find out that I have no interest at all with the person I'm talking to. Maybe because we have no common interest. Maybe because he/she acts like an ass. True story.
+
+Anyway, I made some new friends online and offline last year. Found somebody who is quite similiar to me in Osaka. He just released an [iPhone game, check it out](https://itunes.apple.com/jp/app/garuda-riders/id572550607?l=en). I also made friend with a Japanese. Fancy that  (*≧▽≦)ﾉｼ))
+
+The Resolution
+--------------
+
+Nope, no new year resolution. Didn't even celebrate new year. I spent new year coding Scribeit. But it will be cool to pass the level 2 of Japanese Proficiency Language Test this year. 
+
+![Regex Man](http://imgs.xkcd.com/comics/regular_expressions.png)
+
+One of the new things I started this year was resuming reading the Steve Jobs by Walter Isaacson. Yeah, I haven't finished reading it. Shame on me! I'm also diving in the art of Regular Expression. It just seems cool （＾ω＾）
+  
+If you read until here, how about checking out my apps [Scribeit for iPhone](https://itunes.apple.com/us/app/scribeit/id369606127?mt=8) and [Kaomoji for Mac](http://kaomojiapp.com/)? ^ ^
