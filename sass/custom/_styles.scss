@@ -12,6 +12,10 @@ html body .full-single-article {
   font-family: $sans;
 }
 
+.all-posts {
+	font-family: $sans;
+}
+
 .article-list .container article p img {
 	display: block;
 	margin-left: auto;
@@ -53,4 +57,23 @@ html body .full-single-article {
 #about-me p {
 	margin-bottom: 0px;
 	font-family: $sans;
+}
+
+.pagination
+{
+	display: inline-block;
+	width: 100%;
+}
+.pagination p {
+	display: block;
+	width: 50%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pagination p a {
+	margin-right: 30px;
 }
