@@ -2,8 +2,22 @@
 // Add styles here to make changes without digging in too much
 
 ul {
-  list-style: circle inside;
+	display: table;
+  	list-style: circle inside;
+  	font-family: $sans;
+  	font-size: 18px;
+  	font-weight: 300;
 }
+
+ol {
+	display: table;
+  	list-style: decimal;
+  	font-family: $sans;
+  	font-size: 18px;
+  	font-weight: 300;
+}
+
+
 html body .home-page .home-field .article-list {
   font-family: $sans;
 }
@@ -38,6 +52,61 @@ html body .full-single-article {
 	}
 }
 
+.full-single-article .container {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.full-single-article .container p {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article .title {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article .meta {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article  pre {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article  ol {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article .container .wide-image {
+	width: 100%;
+}
+
+.full-single-article h2 {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-single-article blockquote {
+	padding-top: 0px;
+}
+
+.full-single-article blockquote p {
+	font-style: italic;
+	font-family: $sans;
+}
+
 .full-single-article .container p img {
   	display: block;
 	margin-left: auto;
@@ -47,6 +116,12 @@ html body .full-single-article {
     width: auto;
 	max-width: 100%;
     max-height: 500px;
+}
+
+.full-single-article .container .wide-image img {
+  	display: block;
+    width: 100%;
+    max-height: none;
 }
 
 @media (max-width: 480px) {

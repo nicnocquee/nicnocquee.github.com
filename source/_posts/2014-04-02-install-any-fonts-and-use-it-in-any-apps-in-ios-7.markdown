@@ -14,10 +14,46 @@ twitter_card:
 
 I just found out about this and turns out it's pretty easy to do.
 
+<!-- more -->
+
 1. Create a XML file and copy the following
 
-	<script src="https://gist.github.com/nicnocquee/9929652.js"></script>
-	<!-- more -->
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+		<plist version="1.0">
+		<dict>
+		    <key>PayloadContent</key>
+		    <array>
+		        <dict>
+		            <key>Font</key>
+		            <data>
+		                Base 64 String
+		            </data>
+		            <key>PayloadIdentifier</key>
+		            <string>font identifider</string>
+		            <key>PayloadType</key>
+		            <string>com.apple.font</string>
+		            <key>PayloadUUID</key>
+		            <string>B0DF5525-7120-406F-AC71-5A5BA59ECD82</string>
+		            <key>PayloadVersion</key>
+		            <integer>1</integer>
+		        </dict>
+		    </array>
+		    <key>PayloadDisplayName</key>
+		    <string>Payload display name</string>
+		    <key>PayloadIdentifier</key>
+		    <string>Pay load Identifier</string>
+		    <key>PayloadOrganization</key>
+		    <string>Font Profile</string>
+		    <key>PayloadType</key>
+		    <string>Configuration</string>
+		    <key>PayloadUUID</key>
+		    <string>0A35FE6A-C980-442B-9BD3-F44C67CA0D19</string>
+		    <key>PayloadVersion</key>
+		    <integer>1</integer>
+		</dict>
+		</plist>
+	
 2. Convert the font you want to install to base64 by executing the following command in terminal
 
 		openssl base64 -in font_name -out output_file_name

@@ -20,7 +20,9 @@ One day in the class room, I saw my Japanese friend was playing with his shiny b
 
 Having free time and lack of interest in what I was doing at that time, I decided to get the Apple Developer Program. Learning Objective-C, submitting my first app, and receiving my first payment from the App Store admittedly changed my life. I decided to quit my PhD and took a job in a startup in Japan as an iOS developer.
 
-![My Apple products family](https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg)
+<p class="wide-image">
+<img src="https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg" alt="My Apple products family">
+</p>
 
 I'm writing this to support [App: The Human Story](http://appdocumentary.com). I didn't plan to write anything since I figured my story is not that exciting. I haven't made any hit game or app like Flappy Bird. But I'm making a living doing what I'm passionate about and I want to share it with others. I'm also pretty proud of the app I'm making for the company, [Monoco (Japan App Store only)](https://itunes.apple.com/jp/app/monoco-monoko-akusesarinoserekutoshoppu/id539376693?mt=8), and my own latest app, [Delightful](http://www.getdelightfulapp.com).
 
