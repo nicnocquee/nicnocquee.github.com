@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T12:08:52+09:00</updated>
+  <updated>2014-09-09T12:51:12+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -426,7 +426,10 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 
 <h2>The Travel</h2>
 
-<p><img src="http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg" alt="Tubingen" /></p>
+<p class="wide-image">
+<img src="http://f.cl.ly/items/2B2R213U2E3S052B3b17/tubingen.jpg" alt="Tubingen">
+</p>
+
 
 <p>Thanks to my wife, during my 27 I finally stepped on the land of Europe. Germany and Switzerland to be exact with a little bit of France. She had work there and I just tagged along. Few things I realized after that trip to Europe:</p>
 
