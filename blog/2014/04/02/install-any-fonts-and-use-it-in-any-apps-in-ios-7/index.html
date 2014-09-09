@@ -45,8 +45,7 @@
 
 
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
 </head>
 
   <body>
@@ -57,8 +56,7 @@
     <article role="article" class="full-single-article">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h1>Install Any Fonts and Use It in Any Apps in iOS 7</h1>
+        <h1 class="title">Install Any Fonts and Use It in Any Apps in iOS 7</h1>
         <div class="meta">
           written 
 
@@ -87,11 +85,48 @@ in
         </div>
         <p>I just found out about this and turns out it&#8217;s pretty easy to do.</p>
 
+<!-- more -->
+
+
 <ol>
 <li><p>Create a XML file and copy the following</p>
 
-<p> <script src="https://gist.github.com/nicnocquee/9929652.js"></script>
- <!-- more --></p></li>
+<pre><code> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+ &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+ &lt;plist version="1.0"&gt;
+ &lt;dict&gt;
+     &lt;key&gt;PayloadContent&lt;/key&gt;
+     &lt;array&gt;
+         &lt;dict&gt;
+             &lt;key&gt;Font&lt;/key&gt;
+             &lt;data&gt;
+                 Base 64 String
+             &lt;/data&gt;
+             &lt;key&gt;PayloadIdentifier&lt;/key&gt;
+             &lt;string&gt;font identifider&lt;/string&gt;
+             &lt;key&gt;PayloadType&lt;/key&gt;
+             &lt;string&gt;com.apple.font&lt;/string&gt;
+             &lt;key&gt;PayloadUUID&lt;/key&gt;
+             &lt;string&gt;B0DF5525-7120-406F-AC71-5A5BA59ECD82&lt;/string&gt;
+             &lt;key&gt;PayloadVersion&lt;/key&gt;
+             &lt;integer&gt;1&lt;/integer&gt;
+         &lt;/dict&gt;
+     &lt;/array&gt;
+     &lt;key&gt;PayloadDisplayName&lt;/key&gt;
+     &lt;string&gt;Payload display name&lt;/string&gt;
+     &lt;key&gt;PayloadIdentifier&lt;/key&gt;
+     &lt;string&gt;Pay load Identifier&lt;/string&gt;
+     &lt;key&gt;PayloadOrganization&lt;/key&gt;
+     &lt;string&gt;Font Profile&lt;/string&gt;
+     &lt;key&gt;PayloadType&lt;/key&gt;
+     &lt;string&gt;Configuration&lt;/string&gt;
+     &lt;key&gt;PayloadUUID&lt;/key&gt;
+     &lt;string&gt;0A35FE6A-C980-442B-9BD3-F44C67CA0D19&lt;/string&gt;
+     &lt;key&gt;PayloadVersion&lt;/key&gt;
+     &lt;integer&gt;1&lt;/integer&gt;
+ &lt;/dict&gt;
+ &lt;/plist&gt;
+</code></pre></li>
 <li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
 
 <pre><code> openssl base64 -in font_name -out output_file_name
@@ -119,7 +154,6 @@ in
         
         
         
-      </div>
     </div>
   </div>
 </article>
