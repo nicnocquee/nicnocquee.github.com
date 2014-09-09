@@ -41,18 +41,6 @@ html body .full-single-article {
     max-height: 500px;
 }
 
-@media (max-width: 480px) {
-	.article-list .container article p img {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		width: 100%;
-		max-height: 500px;
-	}
-}
-
 .full-single-article .container {
 	width: 100%;
 	margin-left: 0px;
@@ -63,6 +51,69 @@ html body .full-single-article {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.full-single-article .container .gist {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 480px) {
+	.article-list .container article p img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		max-height: 500px;
+	}
+	
+	.full-single-article .container p {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.full-single-article .title {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+	}
+
+	.full-single-article .meta {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.full-single-article  pre {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.full-single-article  ol {
+		width: 80% !important;
+		list-style-position: outside !important;
+		padding-left: 20px !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.full-single-article h2 {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.full-single-article .container .gist {
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .full-single-article .title {
@@ -85,12 +136,12 @@ html body .full-single-article {
 
 .full-single-article  ol {
 	width: 50%;
-	list-style-position:inside;
+	list-style-position: outside;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 481px) {
 	.full-single-article  ol {
 		width: 60%;
 		list-style-position:inside;
