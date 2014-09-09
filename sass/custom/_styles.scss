@@ -136,7 +136,7 @@ html body .full-single-article {
 
 .full-single-article  ol {
 	width: 50%;
-	list-style-position: outside;
+	list-style-position: outside !important;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -144,9 +144,10 @@ html body .full-single-article {
 @media (max-width: 768px) and (min-width: 481px) {
 	.full-single-article  ol {
 		width: 60%;
-		list-style-position:inside;
+		list-style-position: outside !important;
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 30px;
 	}
 	
 	.full-single-article .container ol li p {
