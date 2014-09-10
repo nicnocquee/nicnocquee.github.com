@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-10T11:00:53+09:00</updated>
+  <updated>2014-09-10T11:59:01+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[#ExplainAppleKeynoteBadly]]></title>
+    <link href="http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly/"/>
+    <updated>2014-09-10T11:03:53+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly</id>
+    <content type="html"><![CDATA[<p>September 9 2014 Apple Live Event was not my favorite Apple&#8217;s event. I&#8217;ll even say that it was the <em>worst</em> Apple event ever. I haven&#8217;t rewatched the keynote (probably never will) and haven&#8217;t read any reviews of the keynote. So here&#8217;s my review.</p>
+
+<!--more-->
+
+
+<ol>
+<li>Tim Cook decided to hold the event in a different place from where they usually did in the past. This resulted in a terrible streaming quality where I completely missed what&#8217;s so great about the new iPhones.</li>
+<li>Apple was trying to explain to developers that they should have <code>Localizable.strings (Chinese)</code> file in their app by hiring a Chinese lady to speak non-stop louder than Phil Schiller.</li>
+<li>iPhone 6 is amazing. Freeze. Claps. Mute.  Repeat.</li>
+<li>Tim Cook disappointed when nobody recognized the voice of Justin Timberlake.</li>
+<li>Something exciting about paying things with iPhone. In US only. Because other countries are secondary. Except China. China got the unstoppable live translation.</li>
+<li>PAY still means you <em>need</em> to pay for things you buy.</li>
+<li>Jony Ive had pimples problem that they removed him from his white room prison.</li>
+<li>Apple brought &#8220;One More Thing&#8221; back from the grave.</li>
+<li>Apple revealed a watch because that&#8217;s what society needs right now.</li>
+<li>iTime? iWatch? iPrefixIsSoLastYearThatWeChooseUnicodeSymbolAsPrefixFromNowOn.</li>
+<li>Digital Crown on WATCH (ALL CAPITAL, PLEASE) because calling it <em>Dial</em> sounds so cheap.</li>
+<li>An ex-Adobe Bill Gates doppelgänger demoed WATCH where he hardly use the <em>innovative</em> Digital Crown and touch the screen most of the time instead. Tim will be pissed.</li>
+<li>Apple invented new way of communication without words via the WATCH. Because F__K words. Pre-historic way of communicating is the trend of the future.</li>
+<li>YOUTUBE ON STAGE! Oh, it&#8217;s U2. Misheard thanks to poor quality streaming.</li>
+<li>Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.</li>
+<li>FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.</li>
+<li>That white structure? Yeah, nothing special about it.</li>
+</ol>
+
+
+<p>I think the Reality Distortion Field has worn off on me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Costly Mistake]]></title>
@@ -23,7 +58,7 @@
 <!--more-->
 
 
-<p>The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let just say it completely ruined my excitement of Apple Keynote.</p>
+<p>The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let&#8217;s just say it completely ruined my excitement of Apple Keynote.</p>
 
 <h2>Bad people are EVERYWHERE</h2>
 
@@ -33,7 +68,7 @@
 
 <h2>Mistake as an experience</h2>
 
-<p>I always have a hard time to come up with answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
+<p>I always have a hard time to come up with an answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life? I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
 
 <h2>Lessons learned</h2>
 
@@ -804,47 +839,6 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 <p>I&#8217;m on Instagram too as <a href="instagram://user?username=nicnocquee">nicnocquee</a>.</p>
 
 <p>================================*/</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[SHARE] Jobs Was a Romantic]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic/"/>
-    <updated>2013-01-07T09:48:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/07/share-jobs-was-a-romantic</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2E1m0R0422463g2p3M3n/%E5%86%99%E7%9C%9F%202013-01-07%209%2029%2039.jpg" alt="Xerox and Lisa" /></p>
-
-<p>Chapter 8 of Steve Jobs by Walter Isaacson on the <em>myth of Apple stealing from Xerox</em>:</p>
-
-<blockquote><p>Xerox’s venture capital division wanted to be part of the second round of Apple financing during the summer of 1979. Jobs made an offer: “I will let you invest a million dollars in Apple if you will open the kimono at PARC.” Xerox accepted. It agreed to show Apple its new technology and in return got to buy 100,000 shares at about $10 each.</p></blockquote>
-
-
-<p>So much for the stealing. Better call it fair trade.</p>
-
-<!-- more -->
-
-
-<p>Continuing,</p>
-
-<blockquote><p>As he once said, “Picasso had a saying—‘good artists copy, great artists steal’—and we have always been shameless about stealing great ideas.”</p></blockquote>
-
-
-<p>Jobs was a romantic. He liked to exaggerate things. However, he was a good executioner:</p>
-
-<blockquote><p>Jobs and his engineers significantly improved the graphical interface ideas they saw at Xerox PARC, and then were able to implement them in ways that Xerox never could accomplish. For example, the Xerox mouse had three buttons, was complicated, cost $300 apiece, and didn’t roll around smoothly; a few days after his second Xerox PARC visit, Jobs went to a local industrial design firm, IDEO, and told one of its founders, Dean Hovey, that he wanted a simple single-button model that cost $15, “and I want to be able to use it on Formica and my blue jeans.” Hovey complied.</p></blockquote>
-
-
-<p>and ..</p>
-
-<blockquote><p>Apple’s engineers devised an interface so you could not only drag windows and files around, you could even drop them into folders.</p></blockquote>
-
-
-<p>He had a good team as well:</p>
-
-<blockquote><p>One of Atkinson’s amazing feats (which we are so accustomed to nowadays that we rarely marvel at it) was to allow the windows on a screen to overlap so that the “top” one clipped into the ones “below” it.</p><p>…</p><p>Atkinson pushed himself to make this trick work because he thought he had seen this capability during his visit to Xerox PARC. In fact the folks at PARC had never accomplished it, and they later told him they were amazed that he had done so.</p></blockquote>
-
-
-<p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
 ]]></content>
   </entry>
   

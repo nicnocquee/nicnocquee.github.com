@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-10T11:00:53+09:00</updated>
+  <updated>2014-09-10T11:59:01+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[#ExplainAppleKeynoteBadly]]></title>
+    <link href="http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly/"/>
+    <updated>2014-09-10T11:03:53+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly</id>
+    <content type="html"><![CDATA[<p>September 9 2014 Apple Live Event was not my favorite Apple&#8217;s event. I&#8217;ll even say that it was the <em>worst</em> Apple event ever. I haven&#8217;t rewatched the keynote (probably never will) and haven&#8217;t read any reviews of the keynote. So here&#8217;s my review.</p>
+
+<!--more-->
+
+
+<ol>
+<li>Tim Cook decided to hold the event in a different place from where they usually did in the past. This resulted in a terrible streaming quality where I completely missed what&#8217;s so great about the new iPhones.</li>
+<li>Apple was trying to explain to developers that they should have <code>Localizable.strings (Chinese)</code> file in their app by hiring a Chinese lady to speak non-stop louder than Phil Schiller.</li>
+<li>iPhone 6 is amazing. Freeze. Claps. Mute.  Repeat.</li>
+<li>Tim Cook disappointed when nobody recognized the voice of Justin Timberlake.</li>
+<li>Something exciting about paying things with iPhone. In US only. Because other countries are secondary. Except China. China got the unstoppable live translation.</li>
+<li>PAY still means you <em>need</em> to pay for things you buy.</li>
+<li>Jony Ive had pimples problem that they removed him from his white room prison.</li>
+<li>Apple brought &#8220;One More Thing&#8221; back from the grave.</li>
+<li>Apple revealed a watch because that&#8217;s what society needs right now.</li>
+<li>iTime? iWatch? iPrefixIsSoLastYearThatWeChooseUnicodeSymbolAsPrefixFromNowOn.</li>
+<li>Digital Crown on WATCH (ALL CAPITAL, PLEASE) because calling it <em>Dial</em> sounds so cheap.</li>
+<li>An ex-Adobe Bill Gates doppelgänger demoed WATCH where he hardly use the <em>innovative</em> Digital Crown and touch the screen most of the time instead. Tim will be pissed.</li>
+<li>Apple invented new way of communication without words via the WATCH. Because F__K words. Pre-historic way of communicating is the trend of the future.</li>
+<li>YOUTUBE ON STAGE! Oh, it&#8217;s U2. Misheard thanks to poor quality streaming.</li>
+<li>Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.</li>
+<li>FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.</li>
+<li>That white structure? Yeah, nothing special about it.</li>
+</ol>
+
+
+<p>I think the Reality Distortion Field has worn off on me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Script to Download Wwdc 2014 Videos]]></title>
@@ -104,26 +139,6 @@ Of the endless trains of the faithless, of cities fill’d with the foolish,
 <p><blockquote><p></p></p><p><p>The result was that the Macintosh team came to share Jobs’s passion for making a great product, not just a profitable one. “Jobs thought of himself as an artist, and he encouraged the design team to think of ourselves that way too,” said Hertzfeld. “The goal was never to beat the competition, or to make a lot of money. It was to do the greatest thing possible, or even a little greater.” He once took the team to see an exhibit of Tiffany glass at the Metropolitan Museum in Manhattan because he believed they could learn from Louis Tiffany’s example of creating great art that could be mass-produced. Recalled Bud Tribble, “We said to ourselves, ‘Hey, if we’re going to make things in our lives, we might as well make them beautiful.’”</p></p><p><p></p></blockquote></p>
 
 <p>The end results are indeed amazing. But the process seemed so painful. If I have the chance to lead a team, I&#8217;d rather doing it in a fun way. Life is short anyway, why not having fun?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHT] the World Could Have Gotten iBicycle]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle/"/>
-    <updated>2013-01-09T11:54:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/09/thought-the-world-could-have-gotten-ibicycle</id>
-    <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, the Mac was initially called <strong>Annie</strong>:</p>
-
-<p><blockquote><p>One of Raskin’s dreams was to build an inexpensive computer for the masses, and in 1979 he convinced Mike Markkula to put him in charge of a small development project code-named “Annie” to do just that. Since Raskin thought it was sexist to name computers after women, he redubbed the project in honor of his favorite type of apple, the McIntosh. But he changed the spelling in order not to conflict with the name of the audio equipment maker McIntosh Laboratory. The proposed computer became known as the Macintosh.</p></blockquote></p>
-
-<p>Today I learned that a guy named Jef Raskin was the <em>biological</em> father of what we know now as Mac.</p>
-
-<!-- more -->
-
-
-<p><blockquote><p></p></p><p><p>In various interviews, Jobs had been referring to computers as a bicycle for the mind; the ability of humans to create a bicycle allowed them to move more efficiently than even a condor, and likewise the ability to create computers would multiply the efficiency of their minds. So one day Jobs decreed that henceforth the Macintosh should be known instead as the Bicycle. This did not go over well. “Burrell and I thought this was the silliest thing we ever heard, and we simply refused to use the new name,” recalled Hertzfeld. Within a month the idea was dropped.</p></p><p><p></p></blockquote></p>
-
-<p>Thank God there were people who dared to stand up to Steve for his silly decisions.</p>
 ]]></content>
   </entry>
   
