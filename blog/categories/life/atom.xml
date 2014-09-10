@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Life | Something Awesome]]></title>
   <link href="http://nicnocquee.com/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-10T10:45:05+09:00</updated>
+  <updated>2014-09-10T11:00:53+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nicnocquee.com/blog/2014/09/10/costly-mistake/"/>
     <updated>2014-09-10T01:43:18+09:00</updated>
     <id>http://nicnocquee.com/blog/2014/09/10/costly-mistake</id>
-    <content type="html"><![CDATA[<p>I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repo, one of the side project I started and abandoned months ago, in which I <em>stupidly</em> left the AWS access key.</p>
+    <content type="html"><![CDATA[<p>I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repos, one of the side projects I started and abandoned months ago, in which I <em>stupidly</em> left the AWS access key.</p>
 
 <!--more-->
 
@@ -33,7 +33,7 @@
 
 <h2>Mistake as an experience</h2>
 
-<p>I always have a hard time to come up with my own hypothetical question: What is your biggest mistake or unfortunate events in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
+<p>I always have a hard time to come up with answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
 
 <h2>Lessons learned</h2>
 
@@ -41,13 +41,13 @@
 
 <ol>
 <li>Never ever expose your key.</li>
-<li>Act very quickly upon receiving suspicious activities alert.</li>
+<li>Act swiftly upon receiving suspicious activities alert.</li>
 </ol>
 
 
 <h2>A glimpse of hope</h2>
 
-<p>When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing finger now.</p>
+<p>When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing fingers now.</p>
 ]]></content>
   </entry>
   
