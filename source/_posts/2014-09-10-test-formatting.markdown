@@ -3,10 +3,11 @@ layout: post
 title: "test formatting"
 date: 2014-09-10 20:25:32 +0900
 comments: false
+published: false
 categories: [test]
 ---
 
-September 9 2014 Apple Live Event was not my favorite Apple event. I'll even say that it was the _worst_ Apple event ever. I haven't rewatched the keynote (probably never will) and haven't read any reviews of the keynote. So here's my review.
+**September** 9 2014 ~~Apple~~ Live Event was not `my favorite Apple event`. I'll even say that it was the _worst_ Apple event ever. I haven't rewatched the keynote (probably never will) and haven't read any reviews of the keynote. So here's my review.
 
 <!--more-->
 
