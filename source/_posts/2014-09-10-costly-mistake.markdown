@@ -10,7 +10,7 @@ I received an email from Amazon Web Service notifying me that there were suspici
 
 <!--more-->
 
-The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let just say it completely ruined my excitement of Apple Keynote.
+The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let's just say it completely ruined my excitement of Apple Keynote.
 
 ## Bad people are EVERYWHERE
 
@@ -20,7 +20,7 @@ My case was not exactly the same since I _accidentally_ exposed the key to my on
 
 ## Mistake as an experience
 
-I always have a hard time to come up with answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.
+I always have a hard time to come up with an answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life? I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.
 
 ## Lessons learned
 

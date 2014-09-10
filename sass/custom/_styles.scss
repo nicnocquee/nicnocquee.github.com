@@ -1,6 +1,10 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+html {
+	word-wrap: break-word !important; 
+} 
+
 ul {
 	display: table;
   	list-style: circle inside;
@@ -108,6 +112,7 @@ html body .full-single-article {
 		padding-left: 20px !important;
 		margin-left: auto;
 		margin-right: auto;
+		word-wrap: break-word !important;
 	}
 	
 	.full-single-article h2 {
@@ -120,6 +125,11 @@ html body .full-single-article {
 		width: 90% !important;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	
+	.full-single-article li {
+		word-wrap: break-word !important;
+		overflow-wrap: break-word !important;
 	}
 }
 
