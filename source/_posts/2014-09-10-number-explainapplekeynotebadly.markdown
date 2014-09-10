@@ -14,7 +14,7 @@ September 9 2014 Apple Live Event was not my favorite Apple's event. I'll even s
 3. iPhone 6 is amazing. Freeze. Claps. Mute.  Repeat.
 4. Tim Cook disappointed when nobody recognized the voice of Justin Timberlake.
 4. Something exciting about paying things with iPhone. In US only. Because other countries are secondary. Except China. China got the unstoppable live translation.
-5. PAY still means you _need_ to pay for things you buy.
+5. PAY requires you to _still_ pay for things you buy. Much innovation.
 4. Jony Ive had pimples problem that they removed him from his white room prison.
 6. Apple brought "One More Thing" back from the grave.
 7. Apple revealed a watch because that's what society needs right now.
@@ -26,6 +26,6 @@ September 9 2014 Apple Live Event was not my favorite Apple's event. I'll even s
 11. Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.
 10. FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.
 11. That white structure? Yeah, nothing special about it.
-12. Still no Macbook Air 11" Retina Display."
+12. Still no Macbook Air 11" Retina Display.
 
 I think the Reality Distortion Field has worn off on me.
