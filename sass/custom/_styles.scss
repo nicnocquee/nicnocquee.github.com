@@ -18,6 +18,13 @@ ol {
   	font-weight: 300;
 }
 
+em {
+	font-style: italic;
+}
+
+.full-single-article em {
+	font-style: italic;
+}
 
 html body .home-page .home-field .article-list {
   font-family: $sans;
