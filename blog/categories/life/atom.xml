@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life | Something Awesome]]></title>
+  <link href="http://nicnocquee.com/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://nicnocquee.com/"/>
+  <updated>2014-09-10T10:45:05+09:00</updated>
+  <id>http://nicnocquee.com/</id>
+  <author>
+    <name><![CDATA[Nico Prananta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Costly Mistake]]></title>
+    <link href="http://nicnocquee.com/blog/2014/09/10/costly-mistake/"/>
+    <updated>2014-09-10T01:43:18+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/09/10/costly-mistake</id>
+    <content type="html"><![CDATA[<p>I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repo, one of the side project I started and abandoned months ago, in which I <em>stupidly</em> left the AWS access key.</p>
+
+<!--more-->
+
+
+<p>The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let just say it completely ruined my excitement of Apple Keynote.</p>
+
+<h2>Bad people are EVERYWHERE</h2>
+
+<p>This incident has given me a chance to understand how the celebrities might feel when their private photos were <em>stolen</em> lately. I said &#8220;stolen&#8221; because the celebrities did not upload their photos voluntarily to public space. Somebody broke into their personal online space and took their private files without the owner&#8217;s permission. Would you blame yourself for keeping money at home when someone broke into your house and stole your money?</p>
+
+<p>My case was not exactly the same since I <em>accidentally</em> exposed the key to my online space. But good people would not enter your house when they find your key lying on the ground. It reminds me when I forgot my room&#8217;s key and left it hanging on the door a long time ago here in Japan. My neighbor, with whom I never talked, kept the key and returned it to me. That was how good people behave.</p>
+
+<h2>Mistake as an experience</h2>
+
+<p>I always have a hard time to come up with my own hypothetical question: What is your biggest mistake or unfortunate events in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
+
+<h2>Lessons learned</h2>
+
+<p>As obvious as it seems, I learned few things from this mishap.</p>
+
+<ol>
+<li>Never ever expose your key.</li>
+<li>Act very quickly upon receiving suspicious activities alert.</li>
+</ol>
+
+
+<h2>A glimpse of hope</h2>
+
+<p>When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing finger now.</p>
+]]></content>
+  </entry>
+  
+</feed>

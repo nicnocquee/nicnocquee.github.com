@@ -4,7 +4,7 @@
   <title><![CDATA[Something Awesome]]></title>
   <link href="http://nicnocquee.com/atom.xml" rel="self"/>
   <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-09T13:04:34+09:00</updated>
+  <updated>2014-09-10T10:45:05+09:00</updated>
   <id>http://nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Costly Mistake]]></title>
+    <link href="http://nicnocquee.com/blog/2014/09/10/costly-mistake/"/>
+    <updated>2014-09-10T01:43:18+09:00</updated>
+    <id>http://nicnocquee.com/blog/2014/09/10/costly-mistake</id>
+    <content type="html"><![CDATA[<p>I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repo, one of the side project I started and abandoned months ago, in which I <em>stupidly</em> left the AWS access key.</p>
+
+<!--more-->
+
+
+<p>The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let just say it completely ruined my excitement of Apple Keynote.</p>
+
+<h2>Bad people are EVERYWHERE</h2>
+
+<p>This incident has given me a chance to understand how the celebrities might feel when their private photos were <em>stolen</em> lately. I said &#8220;stolen&#8221; because the celebrities did not upload their photos voluntarily to public space. Somebody broke into their personal online space and took their private files without the owner&#8217;s permission. Would you blame yourself for keeping money at home when someone broke into your house and stole your money?</p>
+
+<p>My case was not exactly the same since I <em>accidentally</em> exposed the key to my online space. But good people would not enter your house when they find your key lying on the ground. It reminds me when I forgot my room&#8217;s key and left it hanging on the door a long time ago here in Japan. My neighbor, with whom I never talked, kept the key and returned it to me. That was how good people behave.</p>
+
+<h2>Mistake as an experience</h2>
+
+<p>I always have a hard time to come up with my own hypothetical question: What is your biggest mistake or unfortunate events in life. I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.</p>
+
+<h2>Lessons learned</h2>
+
+<p>As obvious as it seems, I learned few things from this mishap.</p>
+
+<ol>
+<li>Never ever expose your key.</li>
+<li>Act very quickly upon receiving suspicious activities alert.</li>
+</ol>
+
+
+<h2>A glimpse of hope</h2>
+
+<p>When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing finger now.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[App: My Story]]></title>
@@ -807,59 +845,6 @@ Above line not only adds emoji, but also remove name and hostname, and only show
 
 
 <p>So Jobs and team not only got a piece of technology for a price, but they also improved the hell out of it. Impressive.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[THOUGHTS] January 4 Was My Real New Year]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year/"/>
-    <updated>2013-01-05T01:06:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/05/thoughts-january-4-was-my-real-new-year</id>
-    <content type="html"><![CDATA[<p>As I write this sentence on my MBA which rests on my lap, the digital clock at the top right corner shows &#8220;Fri Jan 4 11:26:50 PM&#8221;. In around 30 minutes, it will be January 5. It&#8217;s been 4 days since the year 2013 closed the door of 2012 and came to our life. The holiday for most people in Japan has ended yesterday. Yet here I am feeling like finally I can say &#8220;Happy new year!&#8221; sincerelly.</p>
-
-<!-- more -->
-
-
-<p>Danny Choo asked good questions on his post <a href="http://www.dannychoo.com/post/en/26806/2013+New+Years+Greetings.html">2013 New Years Greetings!</a>:</p>
-
-<blockquote><p>Happy new year folks! Hows your new year celebrations? <br/>But before you answer that, have you ever thought to yourself why we celebrate the new year? Is it because we want to celebrate what we have achieved in the previous year? Is it because we are celebrating what we want to do in the up n coming year? Is it because we are celebrating the fact that most of us get time off work/school?</p></blockquote>
-
-
-<p>In my opinion, new year is a good time to start things new. Either starting something really new, or simply restarting what we have been doing. But remember what <a href="http://en.wikipedia.org/wiki/The_Matrix_Revolutions">Oracle</a> said,</p>
-
-<blockquote><p>everything that has a beginning has an end</p></blockquote>
-
-
-<p>There are ways to read that between the line, but I&#8217;d like to think that to really begin, we need to end something. I had not finished what I wanted to finish in 2012. Thus, I did not fully celebrate new year.</p>
-
-<p><img src="http://f.cl.ly/items/0G3e350L3m1a2K1N0U1M/Screen%20Shot%202013-01-04%20at%2011.42.19%20PM.png" alt="Last day of 2011 with friends in Ise" /></p>
-
-<p>This year, we, as in me and wifey, <em>celebrated</em> new year differently compared to previous years. Last year, we spent new year in Ise together with our friends. However, this year it was just the two of us in our apartment. We were just there sitting on the yellow sofa I got nearly three years ago, if my memory serves me right, from an Indian guy whom I didn&#8217;t (still don&#8217;t) know. We were watching Japanese TV Show called <a href="http://en.wikipedia.org/wiki/K%C5%8Dhaku_Uta_Gassen">Kohaku (紅白) Uta Gassen</a> where a bunch of Japanese singers and musicians was divided into two teams, red and white teams, and they competed with each other.</p>
-
-<p><img src="http://f.cl.ly/items/222Q0y0W1Y2h3I3s460T/maki-chan1.png" alt="Maki-chan on Kohaku" /></p>
-
-<p>But we weren&#8217;t really watching the show. We were most of the time looking at our Macbook&#8217;s monitors. I was busy with XCode while wifey was busy with Photoshop. We were working on Scribeit. Scribeit is the second app I put in Apple Store. It is my first paid app. And it is the only paid app at this moment. It&#8217;s been two years since I updated it. It was never even updated to support retina display when iPhone 4 was released. Despite of that, number of downloads every month never reaches zero. So I finally made up my mind to update this baby and to finish it before 2012 came to an end. And my wife helped me with the graphics and stuff.</p>
-
-<p><img src="http://f.cl.ly/items/2B081D0J0h1c0c450312/9gag2013.png" alt="2013 is the first year since 1987 to have four different numbers" /></p>
-
-<p>Unfortunately, everything doesn&#8217;t always work as planned. As this part of the world turned from December 31 to January 1, Scribeit was not completely done yet. An unexpected behaviour in the app prevented me from fully enjoying the moment where people celebrated the first year since 1987 to have four different numbers!</p>
-
-<p><img src="http://f.cl.ly/items/3h0o2n1X3a3T0j0R1y0s/Screen%20Shot%202013-01-05%20at%2012.17.08%20AM.png" alt="New Scribeit 2013" /></p>
-
-<p>At around 3AM of January 1, I finally found the problem. I closed my Mac and decided to wrap things up in the morning. Then came January 2. Followed by January 3. You see, I realized that contrary to popular belief, <em>finishing</em> is way more difficult than starting. You can always start <em>small</em>, but you cannot finish small. You can start from small things one by one. But you cannot finish only a part of the whole. Of course there&#8217;s no such thing as completely <strong>finish</strong>. There&#8217;s always something to add. Or to reduce. I&#8217;m talking about finishing the <a href="http://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a>. You cannot ship a half ass product. You need to reach that state of MVP. And here&#8217;s a fact: even an MVP has many check lists to complete. If you think starting is hard, finishing will be hell for you.</p>
-
-<p>So, on the last day of new year holiday, I was finally able to submit our baby to App Store. We think it looks amazing. We love it. And we think you&#8217;ll love it too. ♡＾▽＾♡ Follow me on <a href="https://twitter.com/nicnocquee">Twitter</a> to know when the update is available on the App Store.</p>
-
-<p>☆☆ Happy new year!</p>
-
-<p>☆☆ 明けましておめでとうございます！</p>
-
-<p>☆☆ Selamat tahun baru!</p>
-
-<p>☆☆ <strong>UPDATE!</strong></p>
-
-<p><strong>Scribeit is up in the <a href="http://scribeit.appsccelerated.com/">App Store</a> now! Check it out!
-</strong></p>
 ]]></content>
   </entry>
   
