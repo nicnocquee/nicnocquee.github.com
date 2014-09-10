@@ -5,7 +5,7 @@ date: 2014-09-10 11:03:53 +0900
 comments: false
 categories: [apple]
 ---
-September 9 2014 Apple Live Event was not my favorite Apple's event. I'll even say that it was the _worst_ Apple event ever. I haven't rewatched the keynote (probably never will) and haven't read any reviews of the keynote. So here's my review.
+September 9 2014 Apple Live Event was not my favorite Apple event. I'll even say that it was the _worst_ Apple event ever. I haven't rewatched the keynote (probably never will) and haven't read any reviews of the keynote. So here's my review.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ September 9 2014 Apple Live Event was not my favorite Apple's event. I'll even s
 5. PAY requires you to _still_ pay for things you buy. Much innovation.
 4. Jony Ive had pimples problem that they removed him from his white room prison.
 6. Apple brought "One More Thing" back from the grave.
-7. Apple revealed a watch because that's what society needs right now.
+7. Apple revealed a watch because that's what the society needs right now.
 8. iTime? iWatch? iPrefix is so last year that Apple chose Unicode Symbol as prefix from now on.
 7. Digital Crown on WATCH (ALL CAPITAL, PLEASE) because calling it _Dial_ sounds so cheap.
 8. An ex-Adobe Bill Gates doppelgänger demoed WATCH where he hardly use the _innovative_ Digital Crown and touch the screen most of the time instead. Tim will be pissed.
@@ -26,6 +26,7 @@ September 9 2014 Apple Live Event was not my favorite Apple's event. I'll even s
 11. Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.
 10. FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.
 11. That white structure? Yeah, nothing special about it.
+12. No Craig Federighi. 
 12. Still no Macbook Air 11" Retina Display.
 
 I think the Reality Distortion Field has worn off on me.
