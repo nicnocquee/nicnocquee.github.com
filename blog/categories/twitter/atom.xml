@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Twitter | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/twitter/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-11T11:43:18+09:00</updated>
-  <id>http://nicnocquee.com/</id>
+  <link href="http://www.nicnocquee.com/blog/categories/twitter/atom.xml" rel="self"/>
+  <link href="http://www.nicnocquee.com/"/>
+  <updated>2014-09-11T11:47:29+09:00</updated>
+  <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] Dick Move From Twitter]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter/"/>
+    <link href="http://www.nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter/"/>
     <updated>2012-09-21T08:47:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter</id>
+    <id>http://www.nicnocquee.com/blog/2012/09/21/thoughts-dick-move-from-twitter</id>
     <content type="html"><![CDATA[<p>Linden Tibbets on <a href="http://ifttt.com/">IFTTT</a> alerts email:</p>
 
 <p><blockquote><p>In recent weeks, Twitter announced policy changes* that will affect how applications and users like yourself can interact with Twitter&#8217;s data. As a result of these changes, on September 27th we will be removing all Twitter Triggers, disabling your ability to push tweets to places like email, Evernote and Facebook. All Personal and Shared Recipes using a Twitter Trigger will also be removed. Recipes using Twitter Actions and your ability to post new tweets via IFTTT will continue to work just fine.</p></blockquote></p>

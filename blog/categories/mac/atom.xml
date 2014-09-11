@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mac | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/mac/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-11T11:43:18+09:00</updated>
-  <id>http://nicnocquee.com/</id>
+  <link href="http://www.nicnocquee.com/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://www.nicnocquee.com/"/>
+  <updated>2014-09-11T11:47:29+09:00</updated>
+  <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Enter Unicode Characters in Mac]]></title>
-    <link href="http://nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac/"/>
+    <link href="http://www.nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac/"/>
     <updated>2013-10-16T18:54:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac</id>
+    <id>http://www.nicnocquee.com/blog/2013/10/16/how-to-enter-unicode-characters-in-mac</id>
     <content type="html"><![CDATA[<p>So I found out about <a href="http://icomoon.io/">icomoon</a> and was wondering how to use the icon fonts on Mac. Turns out it&#8217;s not so difficult.</p>
 
 <p>Skipt this steps if you already have icon fonts.</p>
@@ -60,9 +60,9 @@ You can find me on <a href="http://twitter.com/nicnocquee">Twitter</a>.</p>
   
   <entry>
     <title type="html"><![CDATA[[REVIEW] Mac Photo Bundle]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle/"/>
+    <link href="http://www.nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle/"/>
     <updated>2012-09-23T12:55:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle</id>
+    <id>http://www.nicnocquee.com/blog/2012/09/23/review-mac-photo-bundle</id>
     <content type="html"><![CDATA[<p><a href="http://www.mightydeals.com?refID=81ccb6">Mighty Deals</a> have an interesting deal for non-pro photography enthusiasts like me, <a href="http://www.mightydeals.com/deal/macphun-photo-bundle.html?refID=81ccb6">The Mac Photo Bundle</a>. There are three apps: Snapheal, FX Studio Pro, and ColorStrokes. My favorite and the one that make the deal worth it is F<a href="http://www.fxphotostudioapp.com/">X Studio Pro</a>.<!-- more --></p>
 
 <p><img src="http://f.cl.ly/items/2I3L1i2S2B2Q1i352U1X/Screen%20Shot%202012-09-23%20at%2012.17.10%20PM.png" alt="FX Studio Pro for Mac" /></p>
@@ -85,9 +85,9 @@ You can find me on <a href="http://twitter.com/nicnocquee">Twitter</a>.</p>
   
   <entry>
     <title type="html"><![CDATA[[NEWS] Kaomoji for Mac 1.5 Is Out!]]></title>
-    <link href="http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/"/>
+    <link href="http://www.nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out/"/>
     <updated>2012-09-19T10:41:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out</id>
+    <id>http://www.nicnocquee.com/blog/2012/09/19/news-kaomoji-for-mac-1-dot-5-is-out</id>
     <content type="html"><![CDATA[<p><img src="http://distilleryimage1.s3.amazonaws.com/1e74e32c01fa11e2ab4c22000a1d0350_7.jpg" alt="Updated #Kaomoji for #Mac! Now with Japanese localization. 日本語でMac向け顔文字を使いましょう！（＾＿＾）☆ http://kaomojiapp.com #japan #apple #顔文字" /></p>
 
 <!-- more -->

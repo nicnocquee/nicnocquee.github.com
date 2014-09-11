@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ipad | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/ipad/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-11T11:43:18+09:00</updated>
-  <id>http://nicnocquee.com/</id>
+  <link href="http://www.nicnocquee.com/blog/categories/ipad/atom.xml" rel="self"/>
+  <link href="http://www.nicnocquee.com/"/>
+  <updated>2014-09-11T11:47:29+09:00</updated>
+  <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[iPad] Upgraded to iOS 6 for the Magazine]]></title>
-    <link href="http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine/"/>
+    <link href="http://www.nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine/"/>
     <updated>2012-10-12T17:29:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine</id>
+    <id>http://www.nicnocquee.com/blog/2012/10/12/ipad-upgraded-to-ios-6-for-the-magazine</id>
     <content type="html"><![CDATA[<p><a href="http://www.marco.org/">Marco Ament</a> on the <a href="http://the-magazine.org/1/foreword">Foreword of The Magazine</a>:</p>
 
 <p><blockquote><p>Many iPad magazines are carrying unnecessary and expensive baggage from their print days. Some born-digital magazines even took on print baggage simply because they thought they needed it.</p></blockquote></p>

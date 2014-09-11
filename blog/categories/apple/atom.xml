@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Apple | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-11T11:43:18+09:00</updated>
-  <id>http://nicnocquee.com/</id>
+  <link href="http://www.nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
+  <link href="http://www.nicnocquee.com/"/>
+  <updated>2014-09-11T11:47:29+09:00</updated>
+  <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[#ExplainAppleKeynoteBadly]]></title>
-    <link href="http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly/"/>
+    <link href="http://www.nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly/"/>
     <updated>2014-09-10T11:03:53+09:00</updated>
-    <id>http://nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly</id>
+    <id>http://www.nicnocquee.com/blog/2014/09/10/number-explainapplekeynotebadly</id>
     <content type="html"><![CDATA[<p>September 9 2014 Apple Live Event was not my favorite Apple event. I&#8217;ll even say that it was the <em>worst</em> Apple event ever. I haven&#8217;t rewatched the keynote (probably never will) and haven&#8217;t read any reviews of the keynote. So here&#8217;s my review.</p>
 
 <!--more-->
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[Script to Download Wwdc 2014 Videos]]></title>
-    <link href="http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos/"/>
+    <link href="http://www.nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos/"/>
     <updated>2014-06-26T23:38:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos</id>
+    <id>http://www.nicnocquee.com/blog/2014/06/26/script-to-download-wwdc-2014-videos</id>
     <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2m2M471z1O072F1F0B2u/Screen%20Shot%202014-06-26%20at%2023.54.57.png" alt="Script to download wwdc 14 videos" /></p>
 
 <p>Although I&#8217;ll be most likely sleeping, I&#8217;m planning to catch up with WWDC 14 videos and watch some on the plane this weekend. I can easily download the videos via WWDC app. However they&#8217;ll eat up my iPhone&#8217;s free space. And I also want to speed up the videos a little bit. But downloading the videos one by one from the <a href="https://developer.apple.com/videos/wwdc/2014/">download page</a> is too barbaric.</p>
@@ -78,9 +78,9 @@
   
   <entry>
     <title type="html"><![CDATA[Your Verse]]></title>
-    <link href="http://nicnocquee.com/blog/2014/01/19/your-verse/"/>
+    <link href="http://www.nicnocquee.com/blog/2014/01/19/your-verse/"/>
     <updated>2014-01-19T22:27:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2014/01/19/your-verse</id>
+    <id>http://www.nicnocquee.com/blog/2014/01/19/your-verse</id>
     <content type="html"><![CDATA[<div class="video-container">
 <iframe width="560" height="315" src="http://www.youtube.com/embed/jiyIcz7wUH0" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -99,9 +99,9 @@ Of the endless trains of the faithless, of cities fill’d with the foolish,
   
   <entry>
     <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
+    <link href="http://www.nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
     <updated>2013-01-11T11:04:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
+    <id>http://www.nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
     <content type="html"><![CDATA[<p>If you didn&#8217;t know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
 
 <!-- more -->
@@ -126,9 +126,9 @@ Of the endless trains of the faithless, of cities fill’d with the foolish,
   
   <entry>
     <title type="html"><![CDATA[[THOUGHTS] RDF: It's in the Juice]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice/"/>
+    <link href="http://www.nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice/"/>
     <updated>2013-01-10T12:29:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice</id>
+    <id>http://www.nicnocquee.com/blog/2013/01/10/thoughts-rdf-its-in-the-juice</id>
     <content type="html"><![CDATA[<p>From <a href="http://www.amazon.com/gp/product/B004W2UBYW/ref=as_li_ss_tl?ie=UTF8&amp;tag=everlasti-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004W2UBYW">Walter Isaacson&#8217;s Steve Jobs</a>, regarding Job&#8217;s superpower Reality Distortion Field:</p>
 
 <p><blockquote><p></p></p><p><p>There was little that could shield you from the force, Hertzfeld discovered. “Amazingly, the reality distortion field seemed to be effective even if you were acutely aware of it. We would often discuss potential techniques for grounding it, but after a while most of us gave up, accepting it as a force of nature.” After Jobs decreed that the sodas in the office refrigerator be replaced by Odwalla organic orange and carrot juices, someone on the team had T-shirts made. “Reality Distortion Field,” they said on the front, and on the back, “It’s in the juice!”</p></p><p><p></p></blockquote></p>

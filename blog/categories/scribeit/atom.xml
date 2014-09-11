@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Scribeit | Something Awesome]]></title>
-  <link href="http://nicnocquee.com/blog/categories/scribeit/atom.xml" rel="self"/>
-  <link href="http://nicnocquee.com/"/>
-  <updated>2014-09-11T11:43:18+09:00</updated>
-  <id>http://nicnocquee.com/</id>
+  <link href="http://www.nicnocquee.com/blog/categories/scribeit/atom.xml" rel="self"/>
+  <link href="http://www.nicnocquee.com/"/>
+  <updated>2014-09-11T11:47:29+09:00</updated>
+  <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[iOS] Things I Bet You Don't Know About Promoting Your App]]></title>
-    <link href="http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
+    <link href="http://www.nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app/"/>
     <updated>2013-01-11T11:04:00+09:00</updated>
-    <id>http://nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
+    <id>http://www.nicnocquee.com/blog/2013/01/11/ios-things-i-bet-you-dont-know-about-promoting-your-app</id>
     <content type="html"><![CDATA[<p>If you didn&#8217;t know, I just released a new version of my old app, <a href="https://itunes.apple.com/us/app/scribeit/id369606127?mt=8">Scribeit</a>. While I was looking for a way to promote and market it, I figured maybe Apple has some tips and tricks to do this. So I went to iTunes Connect and I noticed there was <a href="https://developer.apple.com/appstore/AppStoreMarketingGuidelines.pdf">App Store Marketing and Advertising Guidelines for Developers</a>. I visit iTunes Connect frequently to check Sales and Trends or Payments and Financial Reports, but never bothered to read it.</p>
 
 <!-- more -->
