@@ -28,7 +28,12 @@ As obvious as it seems, I learned few things from this mishap.
 
 1. Never ever expose your key.
 2. Act swiftly upon receiving suspicious activities alert.
+3. Delete keys if you're not using them anymore.
 
 ## A glimpse of hope
 
 When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing fingers now. 
+
+**UPDATE September 11, 2014**
+
+Amazon just contacted me that as a one-time exception, they'll fully refund the bill! d=(´▽｀)=b
