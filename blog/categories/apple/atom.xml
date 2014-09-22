@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-22T20:25:49+09:00</updated>
+  <updated>2014-09-22T23:27:18+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -66,12 +66,12 @@
 
 <p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
 
-<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+<pre><code class="bash">    curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
 </code></pre>
 
 <p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
 
-<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+<pre><code class="bash">    find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
 </code></pre>
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-22T20:25:49+09:00</updated>
+  <updated>2014-09-22T23:27:18+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -23,20 +23,20 @@
 <!--more-->
 
 
-<pre><code>NSString *price = @"7,500";
-NSString *retailPrice = @"10,000円";
-NSString *text = [NSString stringWithFormat:@"%@ %@", price, retailPrice];
-NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
-[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
-[self.label setAttributedText:string];
+<pre><code class="objc">    NSString *price = @"7,500";
+    NSString *retailPrice = @"10,000円";
+    NSString *text = [NSString stringWithFormat:@"%@ %@", price, retailPrice];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+    [string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
+    [self.label setAttributedText:string];
 </code></pre>
 
 <p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug" /></p>
 
 <p>But in iOS 8, that code didn&#8217;t work anymore. The strikethrough line didn&#8217;t appear. Funny thing was, if range&#8217;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
 
-<pre><code>NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleNone)}];
-[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
+<pre><code class="objc">    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleNone)}];
+    [string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
 </code></pre>
 ]]></content>
   </entry>
@@ -51,49 +51,48 @@ NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithS
 <!--more-->
 
 
-<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
-
-func backwards(s1: String, s2: String) -&gt; Bool {
-    return s1 &gt; s2
-}
-var reversed = sorted(names, backwards)
+<pre><code class="objc">    let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+    func backwards(s1: String, s2: String) -&gt; Bool {
+        return s1 &gt; s2
+    }
+    var reversed = sorted(names, backwards)
 </code></pre>
 
 <p>Too long.</p>
 
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
-    return s1 &gt; s2
-})
+<pre><code class="objc">    reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
+            return s1 &gt; s2
+    })
 </code></pre>
 
 <p>Let&#8217;s make it one line.</p>
 
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
+<pre><code class="objc">    reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
 </code></pre>
 
 <p>Don&#8217;t be satisfied yet.</p>
 
-<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
+<pre><code class="objc">    reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
 </code></pre>
 
 <p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
 
-<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
+<pre><code class="objc">    reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
 </code></pre>
 
 <p>Shorter!</p>
 
-<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
+<pre><code class="objc">    reversed = sorted(names, { $0 &gt; $1 } )  
 </code></pre>
 
 <p>You can do it!</p>
 
-<pre><code>reversed = sorted(names, &gt;)
+<pre><code class="objc">    reversed = sorted(names, &gt;)
 </code></pre>
 
 <p>Use the force!</p>
 
-<pre><code>😄=sorted(🐷,&gt;)
+<pre><code class="objc">    😄=sorted(🐷,&gt;)
 </code></pre>
 
 <p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
@@ -149,12 +148,12 @@ var reversed = sorted(names, backwards)
 
 <p>With a slight modification to those last two scripts, I managed to download the SD videos.</p>
 
-<pre><code>curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+<pre><code class="bash">    curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
 </code></pre>
 
 <p>Then to speed up the videos by 1.3x, I used ffmpeg.</p>
 
-<pre><code>find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+<pre><code class="bash">    find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
 </code></pre>
 ]]></content>
   </entry>

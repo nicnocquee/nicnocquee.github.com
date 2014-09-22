@@ -13,7 +13,12 @@
   <meta name="author" content="Nico Prananta">
 
   
-  <meta name="description" content="Swift: There's a Shorter Way for That written in ios Backward sorting array of string using Swift: let names = ["Chris", "Alex", "Ewa", "Barry", " &hellip;">
+  <meta name="description" content="Swift: There's a Shorter Way for That written in ios Backward sorting array of string using Swift: 1
+2
+3
+4
+5
+let names = [&quot;Chris&quot;, &quot; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,50 +101,73 @@ in
 <!--more-->
 
 
-<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
-func backwards(s1: String, s2: String) -&gt; Bool {
-    return s1 &gt; s2
-}
-var reversed = sorted(names, backwards)
-</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Chris&quot;</span><span class="p">,</span> <span class="s">&quot;Alex&quot;</span><span class="p">,</span> <span class="s">&quot;Ewa&quot;</span><span class="p">,</span> <span class="s">&quot;Barry&quot;</span><span class="p">,</span> <span class="s">&quot;Daniella&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">func</span> <span class="n">backwards</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="n">var</span> <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">backwards</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Too long.</p>
 
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
-    return s1 &gt; s2
-})
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Let&#8217;s make it one line.</p>
 
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Don&#8217;t be satisfied yet.</p>
 
-<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
 
-<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Shorter!</p>
 
-<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mi">1</span> <span class="p">}</span> <span class="p">)</span>    
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>You can do it!</p>
 
-<pre><code>reversed = sorted(names, &gt;)
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Use the force!</p>
 
-<pre><code>😄=sorted(🐷,&gt;)
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err">😄</span><span class="o">=</span><span class="n">sorted</span><span class="p">(</span><span class="err">🐷</span><span class="p">,</span><span class="o">&gt;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
 

@@ -96,21 +96,31 @@ in
 <!--more-->
 
 
-<pre><code>NSString *price = @"7,500";
-NSString *retailPrice = @"10,000円";
-NSString *text = [NSString stringWithFormat:@"%@ %@", price, retailPrice];
-NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
-[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
-[self.label setAttributedText:string];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">price</span> <span class="o">=</span> <span class="s">@&quot;7,500&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">retailPrice</span> <span class="o">=</span> <span class="s">@&quot;10,000円&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">retailPrice</span><span class="p">];</span>
+</span><span class='line'><span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)}</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
+</span><span class='line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">label</span> <span class="nl">setAttributedText</span><span class="p">:</span><span class="n">string</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug" /></p>
 
 <p>But in iOS 8, that code didn&#8217;t work anymore. The strikethrough line didn&#8217;t appear. Funny thing was, if range&#8217;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
 
-<pre><code>NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleNone)}];
-[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span> <span class="nl">attributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span> <span class="l">@(</span><span class="n">NSUnderlineStyleNone</span><span class="l">)}</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)}</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 
         
