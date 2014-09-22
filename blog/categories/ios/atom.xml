@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-22T10:05:33+09:00</updated>
+  <updated>2014-09-22T18:58:34+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -68,7 +68,7 @@ var reversed = sorted(names, backwards)
 <pre><code>😄=sorted(🐷,&gt;)
 </code></pre>
 
-<p>There! We have the winner!</p>
+<p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
 ]]></content>
   </entry>
   
