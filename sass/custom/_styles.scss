@@ -227,6 +227,20 @@ html body .full-single-article {
 	.full-single-article .container ol li pre {
 		width: 90%;
 	}
+	
+	footer .pull-right {
+		padding-left: 15px;
+		padding-right: 15px;
+		float: left !important;
+	}
+	
+	footer .pull-right h4 {
+		line-height: 1.5;
+	}
+	
+	footer .col-md-1 {
+		margin-bottom: 10px;
+	}
 }
 
 .full-single-article .container ol li p {
