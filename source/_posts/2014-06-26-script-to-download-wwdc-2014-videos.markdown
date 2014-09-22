@@ -16,8 +16,12 @@ There must be a script to download them all in one click. Google top search resu
 
 With a slight modification to those last two scripts, I managed to download the SD videos.
 
+```bash
 	curl https://developer.apple.com/videos/wwdc/2014/ | grep -iIoh '|.*http.*._sd_.*dl=1' | sed -e 's/|.*"//g' | sed -e 's/\?dl=1//g'|xargs -n1 curl --remote-name
+```
 	
 Then to speed up the videos by 1.3x, I used ffmpeg.
 
+```bash
 	find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
+```
