@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://www.nicnocquee.com/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8/</loc>
+    
+    <lastmod>2014-09-22T20:09:42+09:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that/</loc>
     
     <lastmod>2014-09-22T09:40:52+09:00</lastmod>
@@ -725,42 +733,42 @@
   
   <url>
     <loc>http://www.nicnocquee.com/archives/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.nicnocquee.com/blog/archives/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.nicnocquee.com/blog/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.nicnocquee.com/posts/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.nicnocquee.com/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://www.nicnocquee.com/about/</loc>
-    <lastmod>2014-09-22T18:58:34+09:00</lastmod>
+    <lastmod>2014-09-22T20:25:49+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

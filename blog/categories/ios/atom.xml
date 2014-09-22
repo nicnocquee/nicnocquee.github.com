@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-22T18:58:34+09:00</updated>
+  <updated>2014-09-22T20:25:49+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8]]></title>
+    <link href="http://www.nicnocquee.com/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8/"/>
+    <updated>2014-09-22T20:09:42+09:00</updated>
+    <id>http://www.nicnocquee.com/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8</id>
+    <content type="html"><![CDATA[<p>In iOS 7, it&#8217;s easy to create UILabel with strikethrough text. You can just simply assign <code>NSAttributedString</code> to the text label.</p>
+
+<!--more-->
+
+
+<pre><code>NSString *price = @"7,500";
+NSString *retailPrice = @"10,000円";
+NSString *text = [NSString stringWithFormat:@"%@ %@", price, retailPrice];
+NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
+[self.label setAttributedText:string];
+</code></pre>
+
+<p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug" /></p>
+
+<p>But in iOS 8, that code didn&#8217;t work anymore. The strikethrough line didn&#8217;t appear. Funny thing was, if range&#8217;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
+
+<pre><code>NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleNone)}];
+[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Swift: There's a Shorter Way for That]]></title>
@@ -202,33 +230,6 @@ var reversed = sorted(names, backwards)
 <p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
 
 <p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Run iOS App in Different Languages Quickly in iOS Simulator]]></title>
-    <link href="http://www.nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator/"/>
-    <updated>2014-03-13T16:29:00+09:00</updated>
-    <id>http://www.nicnocquee.com/blog/2014/03/13/run-ios-app-in-different-languages-quickly-in-ios-simulator</id>
-    <content type="html"><![CDATA[<p>If you make an app which support multiple languages, you need to check how your app looks like in different languages. The manual way of doing it is to open Settings app → General → International → Language.</p>
-
-<p><img src="http://f.cl.ly/items/232E1P3V3w3e1w1A3c43/iOS%20Simulator%20Screen%20shot%20Mar%2013,%202014,%204.39.07%20PM.png" alt="" /></p>
-
-<!-- more -->
-
-
-<p>What a waste of time. Put this code instead inside app&#8217;s <code>main.m</code> file.</p>
-
-<script src="https://gist.github.com/nicnocquee/9523311.js"></script>
-
-
-<p>Edit the scheme and add the language&#8217;s <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 codes</a> to <code>Arguments Passed On Launch</code>. For example, <code>ja</code> for Japanese.</p>
-
-<p><img src="http://f.cl.ly/items/042U3F3d2p0d0d2H0E1c/Screen_Shot_2014-03-13_at_5_00_59_PM.png" alt="" /></p>
-
-<p><img src="http://f.cl.ly/items/3N1Y1c311J0y091A1j0C/Screen%20Shot%202014-03-13%20at%205.01.46%20PM.png" alt="" /></p>
-
-<p>Then simply choose one language and run the app.</p>
 ]]></content>
   </entry>
   

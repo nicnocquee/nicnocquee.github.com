@@ -9,11 +9,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Swift: There&#8217;s a Shorter Way for That - Something Awesome</title>
+  <title>Something Awesome</title>
   <meta name="author" content="Nico Prananta">
 
   
-  <meta name="description" content="Swift: There's a Shorter Way for That written in ios Backward sorting array of string using Swift: let names = ["Chris", "Alex", "Ewa", "Barry", " &hellip;">
+  <meta name="description" content="Something Awesome
+Hopefully about me Blog about thoughts, life, iPhone, iOS, web, programming, design, and Japan [NEWS] Going Forward I've been &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   
-  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that">
+  <link rel="canonical" href="http://www.nicnocquee.com/page10">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
@@ -48,8 +49,8 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
 
 <meta property="og:image" content="http://www.nicnocquee.com/images/background.jpg"/>
-<meta property="og:title" content="Swift: There's a shorter way for that"/>
-<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that"/>
+<meta property="og:title" content=""/>
+<meta property="og:url" content="http://www.nicnocquee.com/page10"/>
 <meta property="og:site_name" content="Something Awesome"/>
 <meta property="og:type" content="blog"/>
 
@@ -61,12 +62,61 @@
       <img src="/images/home.png"/>
     </a>
 
-    <article role="article" class="full-single-article">
-  <div class="container">
-    <div class="row">
-        <h1 class="title">Swift: There&#8217;s a Shorter Way for That</h1>
-        <div class="meta">
-          written 
+    <div class="home-page">
+  <div class="hero">
+    <h1>Something Awesome</h1>
+<p>Hopefully</p>
+
+  </div>
+
+  <div class="home-field">
+    <div class="home-landing her-row">
+      <div class="container">
+        <div class="row">
+          <div id="about-me" class="col-md-offset-2 col-md-6">
+  <h4>about me</h4>
+  <p>Blog about thoughts, life, iPhone, iOS, web, programming, design, and Japan</p>
+  <div class="social-icon-list">
+  	
+    <a title="Twitter" href="https://twitter.com/nicnocquee"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+    
+    <a title="GitHub" href="https://github.com/nicnocquee"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+    
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="article-list">
+      <div class="container">
+        
+          
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+              <article>
+  <h2><a href="/blog/2012/09/17/going-forward/">[NEWS] Going Forward</a></h2>
+  
+  <p>
+    <div class="video-container">
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/nRr7H3woFn4" frameborder="0" allowfullscreen></iframe>   
+</div>
+
+
+
+
+<p>I&#8217;ve been using many blogging services. Started with Wordpress, Blogger, Tumblr and most recent one was Posterous. I was satisfied with Posterous, until Twitter acquired them. For some reason, the posts I sent via email got published hours after I sent them. Asked them via Twitter about this but no response. So I figured it is time to move on.</p>
+
+
+
+
+  </p>
+  <span class="meta">
+    written 
 
 
 
@@ -79,93 +129,42 @@
 
 
 
-<time datetime="2014-09-22T09:40:52+09:00" pubdate data-updated="true"></time>
-          
+<time datetime="2012-09-17T01:01:00+09:00" pubdate data-updated="true"></time>
+    
 
 in
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ios/'>ios</a>
+    <a class='category' href='/blog/categories/news/'>news</a>, <a class='category' href='/blog/categories/share/'>share</a>, <a class='category' href='/blog/categories/video/'>video</a>
   
 </span>
 
 
-        </div>
-        <p>Backward sorting array of string using Swift:</p>
+  </span>
 
-<!--more-->
-
-
-<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
-
-func backwards(s1: String, s2: String) -&gt; Bool {
-    return s1 &gt; s2
-}
-var reversed = sorted(names, backwards)
-</code></pre>
-
-<p>Too long.</p>
-
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
-    return s1 &gt; s2
-})
-</code></pre>
-
-<p>Let&#8217;s make it one line.</p>
-
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
-</code></pre>
-
-<p>Don&#8217;t be satisfied yet.</p>
-
-<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
-</code></pre>
-
-<p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
-
-<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
-</code></pre>
-
-<p>Shorter!</p>
-
-<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
-</code></pre>
-
-<p>You can do it!</p>
-
-<pre><code>reversed = sorted(names, &gt;)
-</code></pre>
-
-<p>Use the force!</p>
-
-<pre><code>😄=sorted(🐷,&gt;)
-</code></pre>
-
-<p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
-
-
-        
-        
-        
-    </div>
-  </div>
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2012/09/17/going-forward/">Read on &rarr;</a>
+  
+  <hr class="divider-short"/>
 </article>
 
-<hr class="divider-short"/>
-
-<div class="archive-link">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        
-          <a class="pull-left" href="/blog/2014/09/11/revisiting-the-give-it-five-minutes-principle/" title="Previous Post: Revisiting the give it five minutes principle">&laquo; Previous: Revisiting the give it five minutes principle</a>
-        
-
-        
-          <a class="pull-right" href="/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8/" title="Next Post: NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8">Next: NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8 &raquo;</a>
+            </div>
+          </div>
         
       </div>
     </div>
+
+    <hr class="divider-short"/>
+
+    <div class="pagination">
+    <p>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page9">Newer &rarr;</a>
+    
+    </p>
+  </div>
   </div>
 </div>
 

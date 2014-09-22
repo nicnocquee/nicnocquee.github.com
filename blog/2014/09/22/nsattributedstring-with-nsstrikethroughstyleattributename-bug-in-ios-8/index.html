@@ -9,11 +9,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Swift: There&#8217;s a Shorter Way for That - Something Awesome</title>
+  <title>NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8 - Something Awesome</title>
   <meta name="author" content="Nico Prananta">
 
   
-  <meta name="description" content="Swift: There's a Shorter Way for That written in ios Backward sorting array of string using Swift: let names = ["Chris", "Alex", "Ewa", "Barry", " &hellip;">
+  <meta name="description" content="NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8 written in ios In iOS 7, it's easy to create UILabel with strikethrough text &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   
-  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that">
+  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
@@ -48,8 +48,8 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
 
 <meta property="og:image" content="http://www.nicnocquee.com/images/background.jpg"/>
-<meta property="og:title" content="Swift: There's a shorter way for that"/>
-<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that"/>
+<meta property="og:title" content="NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8"/>
+<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8"/>
 <meta property="og:site_name" content="Something Awesome"/>
 <meta property="og:type" content="blog"/>
 
@@ -64,7 +64,7 @@
     <article role="article" class="full-single-article">
   <div class="container">
     <div class="row">
-        <h1 class="title">Swift: There&#8217;s a Shorter Way for That</h1>
+        <h1 class="title">NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8</h1>
         <div class="meta">
           written 
 
@@ -79,7 +79,7 @@
 
 
 
-<time datetime="2014-09-22T09:40:52+09:00" pubdate data-updated="true"></time>
+<time datetime="2014-09-22T20:09:42+09:00" pubdate data-updated="true"></time>
           
 
 in
@@ -91,57 +91,26 @@ in
 
 
         </div>
-        <p>Backward sorting array of string using Swift:</p>
+        <p>In iOS 7, it&#8217;s easy to create UILabel with strikethrough text. You can just simply assign <code>NSAttributedString</code> to the text label.</p>
 
 <!--more-->
 
 
-<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
-
-func backwards(s1: String, s2: String) -&gt; Bool {
-    return s1 &gt; s2
-}
-var reversed = sorted(names, backwards)
+<pre><code>NSString *price = @"7,500";
+NSString *retailPrice = @"10,000円";
+NSString *text = [NSString stringWithFormat:@"%@ %@", price, retailPrice];
+NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
+[self.label setAttributedText:string];
 </code></pre>
 
-<p>Too long.</p>
+<p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug" /></p>
 
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
-    return s1 &gt; s2
-})
+<p>But in iOS 8, that code didn&#8217;t work anymore. The strikethrough line didn&#8217;t appear. Funny thing was, if range&#8217;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
+
+<pre><code>NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleNone)}];
+[string addAttributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)} range:[text rangeOfString:retailPrice]];
 </code></pre>
-
-<p>Let&#8217;s make it one line.</p>
-
-<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
-</code></pre>
-
-<p>Don&#8217;t be satisfied yet.</p>
-
-<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
-</code></pre>
-
-<p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
-
-<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
-</code></pre>
-
-<p>Shorter!</p>
-
-<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
-</code></pre>
-
-<p>You can do it!</p>
-
-<pre><code>reversed = sorted(names, &gt;)
-</code></pre>
-
-<p>Use the force!</p>
-
-<pre><code>😄=sorted(🐷,&gt;)
-</code></pre>
-
-<p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
 
 
         
@@ -158,11 +127,9 @@ var reversed = sorted(names, backwards)
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2014/09/11/revisiting-the-give-it-five-minutes-principle/" title="Previous Post: Revisiting the give it five minutes principle">&laquo; Previous: Revisiting the give it five minutes principle</a>
+          <a class="pull-left" href="/blog/2014/09/22/swift-theres-a-shorter-way-for-that/" title="Previous Post: Swift: There's a shorter way for that">&laquo; Previous: Swift: There&#8217;s a shorter way for that</a>
         
 
-        
-          <a class="pull-right" href="/blog/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8/" title="Next Post: NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8">Next: NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8 &raquo;</a>
         
       </div>
     </div>
