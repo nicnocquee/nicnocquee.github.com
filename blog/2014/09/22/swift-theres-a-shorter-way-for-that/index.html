@@ -9,11 +9,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Revisiting the Give It Five Minutes Principle - Something Awesome</title>
+  <title>Swift: There&#8217;s a Shorter Way for That - Something Awesome</title>
   <meta name="author" content="Nico Prananta">
 
   
-  <meta name="description" content="Revisiting the Give It Five Minutes Principle written in life They said people change. And it's certainly so in my case. I used to be excited at new &hellip;">
+  <meta name="description" content="Swift: There's a Shorter Way for That written in ios Backward sorting array of string using Swift: let names = ["Chris", "Alex", "Ewa", "Barry", " &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   
-  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/09/11/revisiting-the-give-it-five-minutes-principle">
+  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
@@ -48,8 +48,8 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
 
 <meta property="og:image" content="http://www.nicnocquee.com/images/background.jpg"/>
-<meta property="og:title" content="Revisiting the give it five minutes principle"/>
-<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/09/11/revisiting-the-give-it-five-minutes-principle"/>
+<meta property="og:title" content="Swift: There's a shorter way for that"/>
+<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that"/>
 <meta property="og:site_name" content="Something Awesome"/>
 <meta property="og:type" content="blog"/>
 
@@ -64,7 +64,7 @@
     <article role="article" class="full-single-article">
   <div class="container">
     <div class="row">
-        <h1 class="title">Revisiting the Give It Five Minutes Principle</h1>
+        <h1 class="title">Swift: There&#8217;s a Shorter Way for That</h1>
         <div class="meta">
           written 
 
@@ -79,30 +79,69 @@
 
 
 
-<time datetime="2014-09-11T10:58:22+09:00" pubdate data-updated="true"></time>
+<time datetime="2014-09-22T09:40:52+09:00" pubdate data-updated="true"></time>
           
 
 in
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>life</a>
+    <a class='category' href='/blog/categories/ios/'>ios</a>
   
 </span>
 
 
         </div>
-        <p>They said people change. And it&#8217;s certainly so in my case. I used to be excited at new things or ideas. But not so much lately. New single-word messaging app? Seriously? New shiny digital watch? Meh. New anonymous social networking? Another one? Every new project or startup sounds so dull, stupid, and unnecessary. Even my own ideas.</p>
+        <p>Backward sorting array of string using Swift:</p>
 
-<!-- more -->
+<!--more-->
 
 
-<p>Today somebody tweeted an article by Jason Fried, <a href="https://signalvnoise.com/posts/3124-give-it-five-minutes">Give it five minutes</a>.</p>
+<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
-<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p></blockquote>
+func backwards(s1: String, s2: String) -&gt; Bool {
+    return s1 &gt; s2
+}
+var reversed = sorted(names, backwards)
+</code></pre>
 
-<p>Funny thing is that I read this article before. And I forgot. And I am now reminded again.</p>
+<p>Too long.</p>
 
-<blockquote><p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
+<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
+    return s1 &gt; s2
+})
+</code></pre>
+
+<p>Let&#8217;s make it one line.</p>
+
+<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
+</code></pre>
+
+<p>Don&#8217;t be satisfied yet.</p>
+
+<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
+</code></pre>
+
+<p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
+
+<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
+</code></pre>
+
+<p>Shorter!</p>
+
+<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
+</code></pre>
+
+<p>You can do it!</p>
+
+<pre><code>reversed = sorted(names, &gt;)
+</code></pre>
+
+<p>Use the force!</p>
+
+<pre><code>😄=sorted(🐷,&gt;)
+</code></pre>
+
+<p>There! We have the winner!</p>
 
 
         
@@ -119,11 +158,9 @@ in
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2014/09/10/number-explainapplekeynotebadly/" title="Previous Post: #ExplainAppleKeynoteBadly">&laquo; Previous: #ExplainAppleKeynoteBadly</a>
+          <a class="pull-left" href="/blog/2014/09/11/revisiting-the-give-it-five-minutes-principle/" title="Previous Post: Revisiting the give it five minutes principle">&laquo; Previous: Revisiting the give it five minutes principle</a>
         
 
-        
-          <a class="pull-right" href="/blog/2014/09/22/swift-theres-a-shorter-way-for-that/" title="Next Post: Swift: There's a shorter way for that">Next: Swift: There&#8217;s a shorter way for that &raquo;</a>
         
       </div>
     </div>

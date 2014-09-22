@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-12T11:15:03+09:00</updated>
+  <updated>2014-09-22T10:05:33+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Swift: There's a Shorter Way for That]]></title>
+    <link href="http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that/"/>
+    <updated>2014-09-22T09:40:52+09:00</updated>
+    <id>http://www.nicnocquee.com/blog/2014/09/22/swift-theres-a-shorter-way-for-that</id>
+    <content type="html"><![CDATA[<p>Backward sorting array of string using Swift:</p>
+
+<!--more-->
+
+
+<pre><code>let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+func backwards(s1: String, s2: String) -&gt; Bool {
+    return s1 &gt; s2
+}
+var reversed = sorted(names, backwards)
+</code></pre>
+
+<p>Too long.</p>
+
+<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in
+    return s1 &gt; s2
+})
+</code></pre>
+
+<p>Let&#8217;s make it one line.</p>
+
+<pre><code>reversed = sorted(names, { (s1: String, s2: String) -&gt; Bool in return s1 &gt; s2 } )
+</code></pre>
+
+<p>Don&#8217;t be satisfied yet.</p>
+
+<pre><code>reversed = sorted(names, { s1, s2 in return s1 &gt; s2 } )
+</code></pre>
+
+<p>You didn&#8217;t think that&#8217;s the best we can do, right?</p>
+
+<pre><code>reversed = sorted(names, { s1, s2 in s1 &gt; s2 } )
+</code></pre>
+
+<p>Shorter!</p>
+
+<pre><code>reversed = sorted(names, { $0 &gt; $1 } )  
+</code></pre>
+
+<p>You can do it!</p>
+
+<pre><code>reversed = sorted(names, &gt;)
+</code></pre>
+
+<p>Use the force!</p>
+
+<pre><code>😄=sorted(🐷,&gt;)
+</code></pre>
+
+<p>There! We have the winner!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[App: My Story]]></title>
@@ -170,53 +229,6 @@
 <p><img src="http://f.cl.ly/items/3N1Y1c311J0y091A1j0C/Screen%20Shot%202014-03-13%20at%205.01.46%20PM.png" alt="" /></p>
 
 <p>Then simply choose one language and run the app.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[iOS] Open Source Projects Used in Facebook iOS]]></title>
-    <link href="http://www.nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios/"/>
-    <updated>2013-05-10T20:58:00+09:00</updated>
-    <id>http://www.nicnocquee.com/blog/2013/05/10/ios-open-source-projects-used-in-facebook-ios</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/2O163t1B1i46112q0n1L/Photo%202013-05-10%2021%2003%2015.png" alt="Facebook-Open-Source-Licenses" /></p>
-
-<p>One of my hobby is to star or clone open source iOS components/libraries in Github. There are just many good open source projects there that can speed up app development. And I&#8217;m pretty sure many apps in the app store are using these open source libraries. Unfortunately, most apps don&#8217;t act like good open source citizens by not showing the attributions.</p>
-
-<!--more-->
-
-
-<p>Some big name apps show the attributions in the app. Facebook for example. You can find it in Settings -> Facebook -> Settings -> About. There are many libraries they listed there. But some libraries seem to be server-side libraries. The iOS-related open source libraries (as for version 183159) are</p>
-
-<ol>
-<li><a href="http://code.google.com/p/google-toolbox-for-mac/">Google Toolbox for Mac</a>. I&#8217;ve never used this. Anything insteresting there?</li>
-<li><a href="https://github.com/robbiehanson/CocoaLumberjack">CocoaLumberjack</a>. Never used this one either. But looking at the README, I think I&#8217;ll use this from now on.</li>
-<li><a href="http://gabriel.github.io/gh-kit/">GHKit</a>.</li>
-<li><a href="http://goodliffe.blogspot.jp/2010/09/building-boost-framework-for-ios-iphone.html?m=1">Boost for iPhone</a>. Wonder what part they use Boost for.</li>
-<li><a href="https://github.com/AlanQuatermain/AQGridView">AQGridView</a>. For the feeds stream I guess.</li>
-<li><a href="https://github.com/jasarien/CoreTextHyperlinkView">CoreTextHyperlinkView</a>.</li>
-<li><a href="https://github.com/mikeash/MAZeroingWeakRef">MAZeroingWeakRef</a>.</li>
-<li><a href="https://github.com/mikeash/MAZeroingWeakRef">Mixpanel iPhone</a>. So they use Mixpanel for analytics. I wonder if they will acquire it some time in the future.</li>
-<li><a href="https://github.com/msgpack/msgpack-objectivec">MessagePack Objective-C</a>. Just found out about this JSON alternative.</li>
-<li><a href="https://github.com/jverkoey/nimbus">Nimbus</a>. Even Facebook is not using Three20 anymore.</li>
-<li><a href="https://github.com/jverkoey/ObjQREncoder">Objective-c QR Encoder</a>. Why does the app need this?</li>
-<li><a href="https://github.com/ocrickard/OCPDFGen">OCPDFGen</a>. What feature in the app that requires this library?</li>
-<li><a href="https://github.com/ylechelle/OpenUDID">OpenUDID</a>. Didn&#8217;t know there is such thing.</li>
-<li><a href="https://code.google.com/p/plcrashreporter/">PLCrashReporter</a>.</li>
-<li><a href="https://github.com/mikeho/QSUtilities/">QSUtilities</a>.</li>
-<li><a href="https://github.com/rs/SDURLCache">SDURLCache</a>.</li>
-<li><a href="https://github.com/RestKit/RestKit">RestKit</a>.</li>
-<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a>.</li>
-<li><a href="https://github.com/jverkoey/sockit">SOCKit</a>.</li>
-<li><a href="https://github.com/sorced-jim/SPDY-for-iPhone">SPDY for iPhone</a>. I don&#8217;t know what this is for.</li>
-<li><a href="https://github.com/tweetdeck/TDOAuth">TDOauth</a>.</li>
-<li><a href="https://github.com/coneybeare/UAModalPanel">UIModalPanel</a>. I don&#8217;t think they&#8217;re still using this on the app.</li>
-<li><a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>. This too.</li>
-<li><a href="https://github.com/amarcadet/XMLReader">XMLReader</a>.</li>
-<li><a href="https://code.google.com/p/zxing/">ZXing</a>. Barcode again?</li>
-</ol>
-
-
-<p>That&#8217;s about it. Maybe I missed something though because Facebook makes it really unconvenient to read these attributions.</p>
 ]]></content>
   </entry>
   
