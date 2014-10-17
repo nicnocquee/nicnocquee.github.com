@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>QuartzCode: PaintCode for Animation - Something Awesome</title>
+  <meta name="author" content="Nico Prananta">
+
+  
+  <meta name="description" content="QuartzCode: PaintCode for Animation written in ios There are many amazing tools to help iOS development easier. One of them is PaintCode. A splendid &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  
+  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/10/17/quartzcode">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
+
+
+<meta property="og:image" content="http://www.nicnocquee.com/images/background.jpg"/>
+
+<meta property="og:title" content="QuartzCode: PaintCode for animation"/>
+<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/10/17/quartzcode"/>
+<meta property="og:site_name" content="Something Awesome"/>
+<meta property="og:type" content="blog"/>
+
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+        <h1 class="title">QuartzCode: PaintCode for Animation</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-17T23:49:43+09:00" pubdate data-updated="true"></time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>
+  
+</span>
+
+
+        </div>
+        <p>There are many <a href="blog/2014/09/28/25-must-have-apps-for-your-mac/">amazing tools to help iOS development</a> easier. One of them is <a href="https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;mt=12&amp;at=11lMiE">PaintCode</a>. A splendid tool to turn drawings into code. But what about animation? It would be very helpful if there is a tool to create animations visually and turn them into code. <a href="https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;mt=12&amp;at=11lMiE">QuartzCode</a> is the answer.</p>
+
+<!--more-->
+
+
+<p>I gave it a try by trying to replicate the cute uploading animation I found in <a href="https://dribbble.com/shots/1429143-Upload?list=buckets&amp;offset=14">Dribbble</a>.</p>
+
+<p><img src="https://d13yacurqjgara.cloudfront.net/users/50261/screenshots/1429143/upload.gif" alt="cute uploading animation" /></p>
+
+<p>While it&#8217;s not completely the same, I managed to come up with something close enough after playing with QuartzCode for few hours.</p>
+
+<p><img src="https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-0.gif" alt="" /></p>
+
+<p>QuartzCode surely improves development speed once you get used to it. However it&#8217;s not quite perfect right now since there are some frustrating bugs which I hope will be fixed in the future:</p>
+
+<ol>
+<li>The undo function doesn&#8217;t work properly sometimes. Especially for paths.</li>
+<li>Inspector panel and Keyframe inspector panel are unscrollable which probably is caused by Yosemite.</li>
+<li>The generated code is buggy. Xcode warns a retail cycle, variable redefinition, etc.</li>
+</ol>
+
+
+<p>Regardless, by tweaking the generated code and by learning that we can <a href="http://ronnqvi.st/controlling-animation-timing/">control the animation timing</a>, I could create a lovely upload progress control.</p>
+
+<p><img src="https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-1.gif" alt="" /></p>
+
+<p>You can check out the project in <a href="https://github.com/nicnocquee/FluidProgressIndicator">Github</a> along with the <a href="https://github.com/nicnocquee/FluidProgressIndicator/tree/master/NPRUploadAnimation/files">QuartzCode project</a>.</p>
+
+<p>QuartzCode is <a href="https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;mt=12&amp;at=11lMiE">$79.99 on the Mac App Store</a> or you can try it first for free by downloading it from the <a href="http://www.quartzcodeapp.com">website</a>.</p>
+
+
+        
+        
+        
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/09/28/25-must-have-apps-for-your-mac/" title="Previous Post: 25 must have apps for your Mac">&laquo; Previous: 25 must have apps for your Mac</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/nicnocquee"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/nicnocquee"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+      <div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a> using modified template by <a href="http://AdrianArtiles.com">Adrian Artiles</a>.</h4>
+</div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<script src="/javascripts/open-in-blank.js" type="text/javascript"></script>
+<script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lMiE']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34880613-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+  </body>
+</html>

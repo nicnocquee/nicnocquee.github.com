@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-09-30T11:03:06+09:00</updated>
+  <updated>2014-10-18T00:54:35+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[QuartzCode: PaintCode for Animation]]></title>
+    <link href="http://www.nicnocquee.com/blog/2014/10/17/quartzcode/"/>
+    <updated>2014-10-17T23:49:43+09:00</updated>
+    <id>http://www.nicnocquee.com/blog/2014/10/17/quartzcode</id>
+    <content type="html"><![CDATA[<p>There are many <a href="blog/2014/09/28/25-must-have-apps-for-your-mac/">amazing tools to help iOS development</a> easier. One of them is <a href="https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;mt=12&amp;at=11lMiE">PaintCode</a>. A splendid tool to turn drawings into code. But what about animation? It would be very helpful if there is a tool to create animations visually and turn them into code. <a href="https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;mt=12&amp;at=11lMiE">QuartzCode</a> is the answer.</p>
+
+<!--more-->
+
+
+<p>I gave it a try by trying to replicate the cute uploading animation I found in <a href="https://dribbble.com/shots/1429143-Upload?list=buckets&amp;offset=14">Dribbble</a>.</p>
+
+<p><img src="https://d13yacurqjgara.cloudfront.net/users/50261/screenshots/1429143/upload.gif" alt="cute uploading animation" /></p>
+
+<p>While it&#8217;s not completely the same, I managed to come up with something close enough after playing with QuartzCode for few hours.</p>
+
+<p><img src="https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-0.gif" alt="" /></p>
+
+<p>QuartzCode surely improves development speed once you get used to it. However it&#8217;s not quite perfect right now since there are some frustrating bugs which I hope will be fixed in the future:</p>
+
+<ol>
+<li>The undo function doesn&#8217;t work properly sometimes. Especially for paths.</li>
+<li>Inspector panel and Keyframe inspector panel are unscrollable which probably is caused by Yosemite.</li>
+<li>The generated code is buggy. Xcode warns a retail cycle, variable redefinition, etc.</li>
+</ol>
+
+
+<p>Regardless, by tweaking the generated code and by learning that we can <a href="http://ronnqvi.st/controlling-animation-timing/">control the animation timing</a>, I could create a lovely upload progress control.</p>
+
+<p><img src="https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-1.gif" alt="" /></p>
+
+<p>You can check out the project in <a href="https://github.com/nicnocquee/FluidProgressIndicator">Github</a> along with the <a href="https://github.com/nicnocquee/FluidProgressIndicator/tree/master/NPRUploadAnimation/files">QuartzCode project</a>.</p>
+
+<p>QuartzCode is <a href="https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;mt=12&amp;at=11lMiE">$79.99 on the Mac App Store</a> or you can try it first for free by downloading it from the <a href="http://www.quartzcodeapp.com">website</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8]]></title>
@@ -155,80 +192,6 @@
 
 <pre><code class="bash">    find . -name '*.mov' -exec ffmpeg -i {} -filter_complex "[0:v]setpts=10/13*PTS[v];[0:a]atempo=1.3[a]" -map "[v]" -map "[a]" {}@2x.mov \;
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Any Fonts and Use It in Any Apps in iOS 7]]></title>
-    <link href="http://www.nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7/"/>
-    <updated>2014-04-02T16:43:00+09:00</updated>
-    <id>http://www.nicnocquee.com/blog/2014/04/02/install-any-fonts-and-use-it-in-any-apps-in-ios-7</id>
-    <content type="html"><![CDATA[<p>I just found out about this and turns out it&#8217;s pretty easy to do.</p>
-
-<!-- more -->
-
-
-<ol>
-<li><p>Create a XML file and copy the following</p>
-
-<pre><code> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
- &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
- &lt;plist version="1.0"&gt;
- &lt;dict&gt;
-     &lt;key&gt;PayloadContent&lt;/key&gt;
-     &lt;array&gt;
-         &lt;dict&gt;
-             &lt;key&gt;Font&lt;/key&gt;
-             &lt;data&gt;
-                 Base 64 String
-             &lt;/data&gt;
-             &lt;key&gt;PayloadIdentifier&lt;/key&gt;
-             &lt;string&gt;font identifider&lt;/string&gt;
-             &lt;key&gt;PayloadType&lt;/key&gt;
-             &lt;string&gt;com.apple.font&lt;/string&gt;
-             &lt;key&gt;PayloadUUID&lt;/key&gt;
-             &lt;string&gt;B0DF5525-7120-406F-AC71-5A5BA59ECD82&lt;/string&gt;
-             &lt;key&gt;PayloadVersion&lt;/key&gt;
-             &lt;integer&gt;1&lt;/integer&gt;
-         &lt;/dict&gt;
-     &lt;/array&gt;
-     &lt;key&gt;PayloadDisplayName&lt;/key&gt;
-     &lt;string&gt;Payload display name&lt;/string&gt;
-     &lt;key&gt;PayloadIdentifier&lt;/key&gt;
-     &lt;string&gt;Pay load Identifier&lt;/string&gt;
-     &lt;key&gt;PayloadOrganization&lt;/key&gt;
-     &lt;string&gt;Font Profile&lt;/string&gt;
-     &lt;key&gt;PayloadType&lt;/key&gt;
-     &lt;string&gt;Configuration&lt;/string&gt;
-     &lt;key&gt;PayloadUUID&lt;/key&gt;
-     &lt;string&gt;0A35FE6A-C980-442B-9BD3-F44C67CA0D19&lt;/string&gt;
-     &lt;key&gt;PayloadVersion&lt;/key&gt;
-     &lt;integer&gt;1&lt;/integer&gt;
- &lt;/dict&gt;
- &lt;/plist&gt;
-</code></pre></li>
-<li><p>Convert the font you want to install to base64 by executing the following command in terminal</p>
-
-<pre><code> openssl base64 -in font_name -out output_file_name
-</code></pre></li>
-<li><p>Copy the base64 string to clipboard</p>
-
-<pre><code> cat output_file_name | pbcopy
-</code></pre>
-
-<p> and paste it into the XML file between the <code>&lt;data&gt;  &lt;/data&gt;</code> tags.</p></li>
-<li><p>Open the XML from your iOS 7 device by sending it via email or uploading it to Dropbox or something.</p></li>
-<li><p>Install the profile.</p>
-
-<p> <img src="http://f.cl.ly/items/0F021r1Y2G0A333p2t3U/April_02__2014_at_0451PM.png" alt="" /></p></li>
-</ol>
-
-
-<p>Now you can use the font in any apps that allow font selection, like Keynote for example.</p>
-
-<p><img src="http://f.cl.ly/items/1U1e0N1W111d3W1T0x1X/April_02__2014_at_0437PM.png" alt="" /></p>
-
-<p>Enjoy! ヽ(｡ゝω・｡)ﾉ</p>
 ]]></content>
   </entry>
   
