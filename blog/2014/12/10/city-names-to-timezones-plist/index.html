@@ -9,11 +9,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Change the Color of Finder Folder Icon in OSX Yosemite - Something Awesome</title>
+  <title>City Names to Timezones Plist - Something Awesome</title>
   <meta name="author" content="Nico Prananta">
 
   
-  <meta name="description" content="How to Change the Color of Finder Folder Icon in OSX Yosemite written in mac I wasn't really fond of the blue color of Finder folder icon in &hellip;">
+  <meta name="description" content="City Names to Timezones Plist written in ios For a recent project I need a list that maps city names to timezones. You can easily get a list of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   
-  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite">
+  <link rel="canonical" href="http://www.nicnocquee.com/blog/2014/12/10/city-names-to-timezones-plist">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Something Awesome" type="application/atom+xml">
@@ -34,10 +34,10 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,600italic' rel='stylesheet' type='text/css'>
 
 
-<meta property="og:image" content="http://f.cl.ly/items/1v0f33211J2q2P38161i/finder-folder-icons.png"/>
+<meta property="og:image" content="http://www.nicnocquee.com/images/background.jpg"/>
 
-<meta property="og:title" content="How to change the color of Finder folder icon in OSX Yosemite"/>
-<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite"/>
+<meta property="og:title" content="City names to timezones plist"/>
+<meta property="og:url" content="http://www.nicnocquee.com/blog/2014/12/10/city-names-to-timezones-plist"/>
 <meta property="og:site_name" content="Something Awesome"/>
 <meta property="og:type" content="blog"/>
 
@@ -52,7 +52,7 @@
     <article role="article" class="full-single-article">
   <div class="container">
     <div class="row">
-        <h1 class="title">How to Change the Color of Finder Folder Icon in OSX Yosemite</h1>
+        <h1 class="title">City Names to Timezones Plist</h1>
         <div class="meta">
           written 
 
@@ -67,47 +67,28 @@
 
 
 
-<time datetime="2014-10-19T23:53:29+09:00" pubdate data-updated="true"></time>
+<time datetime="2014-12-10T20:42:06+09:00" pubdate data-updated="true"></time>
           
 
 in
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mac/'>mac</a>
+    <a class='category' href='/blog/categories/ios/'>ios</a>
   
 </span>
 
 
         </div>
-        <p>I wasn&#8217;t really fond of the blue color of Finder folder icon in Yosemite. It&#8217;s too saturated. Luckily I wasn&#8217;t the only one. From <a href="http://yukiyamashina.github.io/blog/2014/10/19/how-to-change-the-color-of-default-folder-icons-in-OS-X-Yosemite/">Yuki Yamashina&#8217;s How to Change Color of Default Folder Icons in OSX Yosemite</a>, I could change the color of Finder folder icon.</p>
+        <p>For a recent project I need a list that maps city names to timezones. You can easily get a list of timezones in iOS or Mac using <code>[NSTimeZone knownTimeZoneNames]</code> but it doesn&#8217;t map from city names.</p>
 
 <!--more-->
 
 
-<p>Basically you just need to find the icons, edit, and restart.</p>
+<p>So with a bit of regex dance, I managed to parse timezones data and create a property list file containing 626 city names and their corresponding timezones. You can check it out <a href="https://github.com/nicnocquee/Timezones-Property-List">here</a>.</p>
 
-<ol>
-<li><p>The icons are located in <code>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/</code>. From Finder, just go to <code>System-&gt;Library-&gt;CoreServices</code> folder, then right click on <code>CoreTypes.bundle</code>, then click <code>Show Package Content</code>. Then open <code>Contents-&gt;Resources</code> folder.</p>
+<p>There are two files you can use. The minimal version and the normal version. The normal version maps city names to timezones dictionary which contains timezones name, timezone abbreviation, and timezone offset from GMT in seconds. The minimal version only maps city names to their timezone names.</p>
 
-<p> <img src="http://f.cl.ly/items/1z1W183F0m2F1k1T3y34/Screen%20Shot%202014-10-20%20at%2000.41.03.png" alt="location-of-osx-icons" /></p></li>
-<li><p>There are several icons (.icns) you need to edit but the first one you should edit is <code>GenericFolderIcon.icns</code>.</p></li>
-<li><p>Copy it first somewhere else then double click the file. Preview app will open and you can adjust the color from <code>Tools-&gt;Adjust Color...</code>. There are several images inside the icns file so you need to adjust the color of all the images. (If anybody knows how to batch edit the files let me know, please).</p>
-
-<p> <img src="http://f.cl.ly/items/183c3d2H0K1N281a3s19/Screen%20Shot%202014-10-20%20at%2000.45.08.png" alt="change-icns-color-with-preview-osx" /></p></li>
-<li><p>Once you&#8217;re done, save it, and copy it back to <code>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/</code> folder. You will be prompted to enter Administrator password.</p></li>
-<li><p>Now the important step. You need to clear the icon cache by executing the following commands in Terminal.</p>
-
-<pre><code> sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \;
- sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
-</code></pre></li>
-<li><p>Restart your Mac.</p></li>
-<li>Do the same thing for other icons such as <code>ApplicationsFolderIcon.icns</code>, <code>DesktopFolderIcon.icns</code>, etc.</li>
-</ol>
-
-
-<p>It&#8217;s a bit of work but at least the folder icon is pleasant to my eyes now.</p>
-
-<p><img src="http://f.cl.ly/items/1v0f33211J2q2P38161i/finder-folder-icons.png" alt="change-yosemite-finder-folder-icon-color" /></p>
+<p>Let me know if you use it and find it useful :)</p>
 
 
         
@@ -124,11 +105,9 @@ in
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2014/10/17/quartzcode/" title="Previous Post: QuartzCode: PaintCode for animation">&laquo; Previous: QuartzCode: PaintCode for animation</a>
+          <a class="pull-left" href="/blog/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite/" title="Previous Post: How to change the color of Finder folder icon in OSX Yosemite">&laquo; Previous: How to change the color of Finder folder icon in OSX Yosemite</a>
         
 
-        
-          <a class="pull-right" href="/blog/2014/12/10/city-names-to-timezones-plist/" title="Next Post: City names to timezones plist">Next: City names to timezones plist &raquo;</a>
         
       </div>
     </div>
@@ -167,19 +146,6 @@ in
   </div>
 </footer>
 
-
-<script type="text/javascript">
-      var disqus_shortname = 'nicnocquee';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
 
 
 
