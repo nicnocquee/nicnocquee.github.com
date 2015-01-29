@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2014-12-10T20:55:41+09:00</updated>
+  <updated>2015-01-29T12:33:31+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Drive UICollectionView Interactive Layout Transition Using Facebook's Pop]]></title>
+    <link href="http://www.nicnocquee.com/blog/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop/"/>
+    <updated>2015-01-29T11:30:53+09:00</updated>
+    <id>http://www.nicnocquee.com/blog/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop</id>
+    <content type="html"><![CDATA[<p>UICollectionView has a method to change layout easily: <code>setCollectionViewLayout:animated:completion:</code>. And according to documentation, if you implement the delegate&#8217;s <code>collectionView:transitionLayoutForOldLayout:newLayout:</code> you can customize the behaviour or the cells and decoration views during transition.</p>
+
+<!-- more -->
+
+
+<blockquote><p>Implement this method if you want to return a custom UICollectionViewTransitionLayout object for use during the transition. A transition layout object lets you customize the behavior of cells and decoration views when transitioning from one layout to the next. Normally, transitioning between layouts causes items to animate directly from their current locations to their new locations. With a transition layout object, you can have objects follow a non linear path, use a different timing algorithm, or move according to incoming touch events.</p>
+
+<p>If your delegate does not implement this method, the collection view creates a standard UICollectionViewTransitionLayout object and uses that object to manage the transition.</p></blockquote>
+
+<p>But strangely, that delegate&#8217;s method is not called when we change layout using <code>setCollectionViewLayout</code>. Somebody in <a href="http://stackoverflow.com/a/23009119/401544">stackoverflow</a> provided a workaround by calling collection view&#8217;s <code>startInteractiveTransitionToCollectionViewLayout:</code> method instead.</p>
+
+<pre><code class="objc">[self.collectionView startInteractiveTransitionToCollectionViewLayout:self.finalLayout completion:nil];
+[self.collectionView finishInteractiveTransition];
+</code></pre>
+
+<p>The problem is we cannot control the speed of the animation. What I wanted is to &#8220;animate&#8221; the <code>UICollectionViewTransitionLayout</code>&#8217;s <code>transitionProgress</code> property like so.</p>
+
+<pre><code class="objc">[UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    transition.transitionProgress = 1;
+} completion:^(BOOL finished) {}];    
+</code></pre>
+
+<p>But since transitionProgress is not animatable, this doesn&#8217;t work. This is where <a href="https://github.com/facebook/pop">Facebook&#8217;s Pop</a> comes to rescue. Using Pop, we can animate custom properties.</p>
+
+<pre><code class="objc">// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout
+CustomTransitionLayout *transition = (CustomTransitionLayout *)[self.collectionView startInteractiveTransitionToCollectionViewLayout:self.finalLayout completion:nil];
+
+POPSpringAnimation *springAnimation = [POPSpringAnimation animation];
+POPAnimatableProperty *property = [POPAnimatableProperty propertyWithName:@"com.photos.transition" initializer:^(POPMutableAnimatableProperty *prop) {
+   prop.readBlock = ^(id obj, CGFloat values[]) {
+       values[0] = [obj transitionProgress];
+   };
+   prop.writeBlock = ^(id obj, const CGFloat values[]) {
+       [obj setTransitionProgress:values[0]];
+   };
+   prop.threshold = 0.01;
+}];
+springAnimation.springBounciness = 8;
+springAnimation.property = property;
+springAnimation.fromValue = @(progress);
+springAnimation.toValue = @(1.0);
+springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished){
+   if (finished) {
+       [transition setTransitionProgress:1];
+       [self.collectionView finishInteractiveTransition];
+   }
+};
+[transition pop_addAnimation:springAnimation forKey:NSStringFromSelector(@selector(transitionProgress))];
+</code></pre>
+
+<p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#8217;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout transition.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[City Names to Timezones Plist]]></title>
@@ -151,39 +210,6 @@
 </code></pre>
 
 <p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[App: My Story]]></title>
-    <link href="http://www.nicnocquee.com/blog/2014/07/22/app-my-story/"/>
-    <updated>2014-07-22T18:54:00+09:00</updated>
-    <id>http://www.nicnocquee.com/blog/2014/07/22/app-my-story</id>
-    <content type="html"><![CDATA[<p><img src="https://pbs.twimg.com/media/BtGz0bLIMAA0UEk.jpg" alt="Comic I made when I was in master course" /></p>
-
-<p>My first app was a bingo game. Prior to that, I had only learned Java in college. Before learning Java, I always thought that software was the result of magic. When I entered master course in Japan, I was coding sloppily in C for research. Mostly playing with <a href="http://www.gnu.org/software/gsl/">GNU Scientific Library</a>. I didn&#8217;t have a Mac nor iPhone. I even teased my friend who used OSX on his laptop back in college.</p>
-
-<!--more-->
-
-
-<p><img src="http://i1.kym-cdn.com/photos/images/newsfeed/000/234/765/b7e.jpg" alt="" /></p>
-
-<p>A year passed by since I took master course and I still had no idea what I was doing. Then I stumbled upon an article by <a href="http://www.dannychoo.com">Danny Choo</a> about his passion and how he started his career. I can&#8217;t recall which article it was but probably this article about <a href="http://www.dannychoo.com/en/post/1691/Pursue+Your+Passion+A+Summary.html">pursuing passion</a> or this article about <a href="http://www.dannychoo.com/en/post/26094/How+Discovering+Japan+Changed+My+Life.html">how discovering Japan changed his life</a>. Reading about his life got me thinking that I needed to find something I&#8217;m passionate about. After digging through more articles on his website, I saw his iMac. I was amazed by how beautiful it was. I ended up buying one for myself. My very first Apple product.</p>
-
-<p>One day in the class room, I saw my Japanese friend was playing with his shiny black phone. I was interested so I asked if I could take a look. There was only one button. And it has this slide to unlock mechanism. Mind. Blown. It was iPhone 3GS. My very first iPhone.</p>
-
-<p>Having free time and lack of interest in what I was doing at that time, I decided to get the Apple Developer Program. Learning Objective-C, submitting my first app, and receiving my first payment from the App Store admittedly changed my life. I decided to quit my PhD and took a job in a startup in Japan as an iOS developer.</p>
-
-<p class="wide-image">
-<img src="https://nicnocquee.trovebox.com/photo/p40/create/1975d/870x870.jpg" alt="My Apple products family">
-</p>
-
-
-<p>I&#8217;m writing this to support <a href="http://appdocumentary.com">App: The Human Story</a>. I didn&#8217;t plan to write anything since I figured my story is not that exciting. I haven&#8217;t made any hit game or app like Flappy Bird. But I&#8217;m making a living doing what I&#8217;m passionate about and I want to share it with others. I&#8217;m also pretty proud of the app I&#8217;m making for the company, <a href="https://itunes.apple.com/jp/app/monoco-monoko-akusesarinoserekutoshoppu/id539376693?mt=8">Monoco (Japan App Store only)</a>, and my own latest app, <a href="http://www.getdelightfulapp.com">Delightful</a>.</p>
-
-<p>If you&#8217;re an app developer, help them to reach their goal in <a href="https://www.kickstarter.com/projects/appdocu/app-the-human-story">kickstarter</a> and spread the word. It seems like it&#8217;s gonna be an interesting documentary.</p>
-
-<p>Update: Also posted in <a href="https://medium.com/@nicnocquee/app-my-story-98803b1299a4">Medium</a>.</p>
 ]]></content>
   </entry>
   
