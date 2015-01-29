@@ -97,7 +97,7 @@ in
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The problem is we cannot control the speed of the animation. What I wanted is to &#8220;animate&#8221; the <code>UICollectionViewTransitionLayout</code>&#8217;s <code>transitionProgress</code> property like so.</p>
+<p>The problem is we cannot control the speed of the animation. What I wanted is to &#8220;animate&#8221; the <code>UICollectionViewTransitionLayout</code>&#8217;s <code>transitionProgress</code> property.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -161,7 +161,7 @@ in
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#8217;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout transition.</p>
+<p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#8217;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout animation transition.</p>
 
 
         

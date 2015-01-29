@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ios | Something Awesome]]></title>
   <link href="http://www.nicnocquee.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.nicnocquee.com/"/>
-  <updated>2015-01-29T12:40:40+09:00</updated>
+  <updated>2015-01-29T13:13:29+09:00</updated>
   <id>http://www.nicnocquee.com/</id>
   <author>
     <name><![CDATA[Nico Prananta]]></name>
@@ -33,7 +33,7 @@
 [self.collectionView finishInteractiveTransition];
 </code></pre>
 
-<p>The problem is we cannot control the speed of the animation. What I wanted is to &#8220;animate&#8221; the <code>UICollectionViewTransitionLayout</code>&#8217;s <code>transitionProgress</code> property like so.</p>
+<p>The problem is we cannot control the speed of the animation. What I wanted is to &#8220;animate&#8221; the <code>UICollectionViewTransitionLayout</code>&#8217;s <code>transitionProgress</code> property.</p>
 
 <pre><code class="objc">[UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
     transition.transitionProgress = 1;
@@ -68,7 +68,7 @@ springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished){
 [transition pop_addAnimation:springAnimation forKey:NSStringFromSelector(@selector(transitionProgress))];
 </code></pre>
 
-<p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#8217;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout transition.</p>
+<p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#8217;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout animation transition.</p>
 ]]></content>
   </entry>
   
