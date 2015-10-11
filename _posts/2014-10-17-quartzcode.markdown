@@ -34,4 +34,3 @@ Regardless, by tweaking the generated code and by learning that we can [control 
 You can check out the project in [Github](https://github.com/nicnocquee/FluidProgressIndicator) along with the [QuartzCode project](https://github.com/nicnocquee/FluidProgressIndicator/tree/master/NPRUploadAnimation/files).
 
 QuartzCode is [$79.99 on the Mac App Store](https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&mt=12&at=11lMiE) or you can try it first for free by downloading it from the [website](http://www.quartzcodeapp.com). Don't forget to take a look at pretty cool examples on the website to find out what you can make with QuartzCode.
- 

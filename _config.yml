@@ -9,5 +9,41 @@ twitter_username: nicnocquee
 github_username:  nicnocquee
 
 # Build settings
-markdown: kramdown
-gem: [octopress-codeblock,octopress-codefence,octopress-image-tag,octopress-quote-tag,octopress-solarized,octopress-social,octopress-linkblog,octopress-filter-tag,octopress-filters,octopress-comment-tag,jekyll-sitemap]
+markdown: redcarpet
+highlighter: pygments
+gem: [octopress-codeblock,octopress-codefence,octopress-image-tag,octopress-quote-tag,octopress-solarized,octopress-social,octopress-linkblog,octopress-filter-tag,octopress-filters,octopress-comment-tag,jekyll-sitemap,jemoji]
+
+paginate:	5
+
+#blog logo
+logo: "/assets/images/nicnocquee-logo.png"
+# blog cover
+cover: "/assets/images/background.jpg"
+
+name: 'Nico Prananta'
+author: 'Nico Prananta'
+author_image: "/assets/images/author.jpg"
+
+social:
+  - icon:	twitter
+    url:	https://twitter.com/nicnocquee
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+    text: Twitter
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/nicnocquee
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+    text: Github
