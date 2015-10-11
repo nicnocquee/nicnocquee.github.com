@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NICNOCQUEE</title>
-    <description>Blog about iOS, programming, japan, or random stuff.
+    <description>Blog about iOS, Programming, Japan, or Random Stuff.
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 19:42:23 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 19:42:23 +0900</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2015 19:44:03 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2015 19:44:03 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
