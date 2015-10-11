@@ -6,9 +6,81 @@
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 19:59:21 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 19:59:21 +0900</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2015 21:45:07 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2015 21:45:07 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Add Caption to iOS Screenshots Automatically Using ImageMagick</title>
+        <description>&lt;p&gt;Recently I submitted a game to the App Store. Apple allows developers to submit up to 5 screenshots for each of the activated languages and for each of the devices. There are 4 iPhone sizes and 1 iPad. That means if I activate three languages, e.g., English, Japanese, and Chinese Simplified, I will need to prepare 75 images (5 screenshots x 5 devices x 3 languages).&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/fastlane-snapshot.png&quot; alt=&quot;95 screenshots generated automatically&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Taking screenshots from 5 different devices and 3 different languages in simulator is going to take forever. Even if you manage to do it manually, you might have to do it again if you make some changes in your app. Luckily, &lt;a href=&quot;https://twitter.com/KrauseFx&quot;&gt;Felix Krause&lt;/a&gt; created a tool called &lt;a href=&quot;https://github.com/KrauseFx/snapshot&quot;&gt;Snapshot&lt;/a&gt; which is a part of &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt; to help automate taking screenshots in iOS simulator.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/captioned-make9.png&quot; alt=&quot;Captioned screenshots&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// overlay.sh
+&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+
+find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r -d &lt;span class=&quot;s1&quot;&gt;$&amp;#39;\0&amp;#39;&lt;/span&gt; line&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Captioning $line: $3&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -ping -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%w&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -ping -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%h&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;point1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;point2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$line-tmp.png&amp;quot;&lt;/span&gt;
+    convert &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt; -fill &lt;span class=&quot;s2&quot;&gt;&amp;quot;#$2&amp;quot;&lt;/span&gt;  -draw &lt;span class=&quot;s2&quot;&gt;&amp;quot;polygon  0,$point1 0,$height $width,$height $width,$point2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$point2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+
+    convert -background none -fill white -font &lt;span class=&quot;s2&quot;&gt;&amp;quot;/Library/Fonts/Arial Black.ttf&amp;quot;&lt;/span&gt; -gravity center -size &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;x&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; caption:&lt;span class=&quot;s2&quot;&gt;&amp;quot;$3&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt; +swap -gravity south -geometry +0+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; -composite &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;-caption.png
+    rm &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then all I have to is to run it.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;./overlay.sh &amp;lt;image&amp;gt; &amp;lt;bg_color_hex&amp;gt; &amp;quot;&amp;lt;caption&amp;gt;&amp;quot;
+./overlay.sh &amp;quot;image1.png&amp;quot; E74C3C &amp;quot;CAPTION 1&amp;quot;
+./overlay.sh &amp;quot;image2.png&amp;quot; E74C3C &amp;quot;CAPTION 2&amp;quot;
+./overlay.sh &amp;quot;image3.png&amp;quot; E74C3C &amp;quot;CAPTION 3&amp;quot;
+./overlay.sh &amp;quot;image4.png&amp;quot; E74C3C &amp;quot;CAPTION 4&amp;quot;
+./overlay.sh &amp;quot;image5.png&amp;quot; E74C3C &amp;quot;CAPTION 5&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I then make another script to run the overlay script over multiple images and texts automatically.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// overlay-batch.sh
+&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r line &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;$line&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./overlay.sh $line&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then I created another file named &lt;code&gt;screenshot-captions&lt;/code&gt; to hold the arguments for the script above.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&quot;image1.png&quot; FDCC56 &quot;Caption 1&quot;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&quot;image2.png&quot; 21D6B2 &quot;Caption 2&quot;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&quot;image3.png&quot; FF3F57 &quot;Caption 3&quot;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;4&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&quot;image4.png&quot; 4A90E2 &quot;Caption 4&quot;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;5&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&quot;image5.png&quot; E74C3C &quot;Caption 5&quot;
+&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, all I have to do is to run&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;./overlay-batch.sh screenshot-captions
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Sun, 11 Oct 2015 20:24:47 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>Drive UICollectionView Interactive Layout Transition Using Facebook&#39;s Pop</title>
@@ -372,51 +444,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>apple</category>
-        
-      </item>
-    
-      <item>
-        <title>Costly Mistake</title>
-        <description>&lt;p&gt;I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repos, one of the side projects I started and abandoned months ago, in which I &lt;em&gt;stupidly&lt;/em&gt; left the AWS access key.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let&amp;#39;s just say it completely ruined my excitement of Apple Keynote.&lt;/p&gt;
-
-&lt;h2&gt;Bad people are EVERYWHERE&lt;/h2&gt;
-
-&lt;p&gt;This incident has given me a chance to understand how the celebrities might feel when their private photos were &lt;em&gt;stolen&lt;/em&gt; lately. I said &amp;quot;stolen&amp;quot; because the celebrities did not upload their photos voluntarily to public space. Somebody broke into their personal online space and took their private files without the owner&amp;#39;s permission. Would you blame yourself for keeping money at home when someone broke into your house and stole your money?&lt;/p&gt;
-
-&lt;p&gt;My case was not exactly the same since I &lt;em&gt;accidentally&lt;/em&gt; exposed the key to my online space. But good people would not enter your house when they find your key lying on the ground. It reminds me when I forgot my room&amp;#39;s key and left it hanging on the door a long time ago here in Japan. My neighbor, with whom I never talked, kept the key and returned it to me. That was how good people behave.&lt;/p&gt;
-
-&lt;h2&gt;Mistake as an experience&lt;/h2&gt;
-
-&lt;p&gt;I always have a hard time to come up with an answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life? I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.&lt;/p&gt;
-
-&lt;h2&gt;Lessons learned&lt;/h2&gt;
-
-&lt;p&gt;As obvious as it seems, I learned few things from this mishap. &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Never ever expose your key.&lt;/li&gt;
-&lt;li&gt;Act swiftly upon receiving suspicious activities alert.&lt;/li&gt;
-&lt;li&gt;Delete keys if you&amp;#39;re not using them anymore.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2&gt;A glimpse of hope&lt;/h2&gt;
-
-&lt;p&gt;When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing fingers now. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;UPDATE September 11, 2014&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Amazon just contacted me that as a one-time exception, they&amp;#39;ll fully refund the bill! d=(´▽｀)=b&lt;/p&gt;
-</description>
-        <pubDate>Wed, 10 Sep 2014 01:43:18 +0900</pubDate>
-        <link>http://nicnocquee.com/life/2014/09/10/costly-mistake.html</link>
-        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/10/costly-mistake.html</guid>
-        
-        
-        <category>life</category>
         
       </item>
     

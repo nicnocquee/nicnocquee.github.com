@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Add Caption to iOS Screenshots Automatically Using ImageMagick</title>
+  <meta name="description" content="Recently I submitted a game to the App Store. Apple allows developers to submit up to 5 screenshots for each of the activated languages and for each of the devices. There are 4 iPhone sizes and 1 i..." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+
+  <meta property="og:site_name" content="NICNOCQUEE" />
+  <meta property="og:title" content="Add Caption to iOS Screenshots Automatically Using ImageMagick"/>
+  
+  <meta property="og:description" content="Recently I submitted a game to the App Store. Apple allows developers to submit up to 5 screenshots for each of the activated languages and for each of the devices. There are 4 iPhone sizes and 1 i..." />
+  
+  <meta property="og:image" content="http://nicnocquee.com/assets/images/background.jpg" />
+  <meta property="og:url" content="http://nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html" >
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2015-10-11T20:24:47+09:00">
+
+  <link rel="canonical" href="http://nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
+
+<!-- header end -->
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">Add Caption to iOS Screenshots Automatically Using ImageMagick</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2015-10-11T20:24:47+09:00">11 Oct 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Recently I submitted a game to the App Store. Apple allows developers to submit up to 5 screenshots for each of the activated languages and for each of the devices. There are 4 iPhone sizes and 1 iPad. That means if I activate three languages, e.g., English, Japanese, and Chinese Simplified, I will need to prepare 75 images (5 screenshots x 5 devices x 3 languages).</p>
+
+<!-- more -->
+
+<p><img src="/assets/images/posts/fastlane-snapshot.png" alt="95 screenshots generated automatically"></p>
+
+<p>Taking screenshots from 5 different devices and 3 different languages in simulator is going to take forever. Even if you manage to do it manually, you might have to do it again if you make some changes in your app. Luckily, <a href="https://twitter.com/KrauseFx">Felix Krause</a> created a tool called <a href="https://github.com/KrauseFx/snapshot">Snapshot</a> which is a part of <a href="https://fastlane.tools">Fastlane</a> to help automate taking screenshots in iOS simulator.</p>
+
+<p><img src="/assets/images/posts/captioned-make9.png" alt="Captioned screenshots"></p>
+
+<p>After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">// overlay.sh
+<span class="c">#!/bin/sh</span>
+
+find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span> <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r -d <span class="s1">$&#39;\0&#39;</span> line<span class="p">;</span> <span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Captioning $line: $3&quot;</span>
+    <span class="nv">width</span><span class="o">=</span><span class="sb">`</span>identify -ping -format <span class="s2">&quot;%w&quot;</span> <span class="nv">$line</span><span class="sb">`</span>
+    <span class="nv">height</span><span class="o">=</span><span class="sb">`</span>identify -ping -format <span class="s2">&quot;%h&quot;</span> <span class="nv">$line</span><span class="sb">`</span>
+    <span class="nv">point1</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">*</span><span class="m">7</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
+    <span class="nv">point2</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">*</span><span class="m">75</span><span class="o">/</span><span class="m">100</span> <span class="k">))</span>
+    <span class="nv">tmp</span><span class="o">=</span><span class="s2">&quot;$line-tmp.png&quot;</span>
+    convert <span class="nv">$line</span> -fill <span class="s2">&quot;#$2&quot;</span>  -draw <span class="s2">&quot;polygon  0,$point1 0,$height $width,$height $width,$point2&quot;</span> <span class="nv">$tmp</span>
+    <span class="nv">availableHeight</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">-</span><span class="nv">$point2</span> <span class="k">))</span>
+    <span class="nv">labelHeight</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$availableHeight</span><span class="o">)*</span><span class="m">8</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
+    <span class="nv">labelWidth</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$width</span><span class="o">*</span><span class="m">8</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
+    <span class="nv">bottomMargin</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$availableHeight</span><span class="o">-</span><span class="nv">$labelHeight</span><span class="o">)/</span><span class="m">2</span> <span class="k">))</span>
+
+    convert -background none -fill white -font <span class="s2">&quot;/Library/Fonts/Arial Black.ttf&quot;</span> -gravity center -size <span class="k">${</span><span class="nv">labelWidth</span><span class="k">}</span>x<span class="k">${</span><span class="nv">labelHeight</span><span class="k">}</span> caption:<span class="s2">&quot;$3&quot;</span> <span class="nv">$tmp</span> +swap -gravity south -geometry +0+<span class="k">${</span><span class="nv">bottomMargin</span><span class="k">}</span> -composite <span class="nv">$line</span>-caption.png
+    rm <span class="nv">$tmp</span>
+<span class="k">done</span></code></pre></div>
+
+<p>Then all I have to is to run it.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">./overlay.sh &lt;image&gt; &lt;bg_color_hex&gt; &quot;&lt;caption&gt;&quot;
+./overlay.sh &quot;image1.png&quot; E74C3C &quot;CAPTION 1&quot;
+./overlay.sh &quot;image2.png&quot; E74C3C &quot;CAPTION 2&quot;
+./overlay.sh &quot;image3.png&quot; E74C3C &quot;CAPTION 3&quot;
+./overlay.sh &quot;image4.png&quot; E74C3C &quot;CAPTION 4&quot;
+./overlay.sh &quot;image5.png&quot; E74C3C &quot;CAPTION 5&quot;
+</code></pre></div>
+<p>I then make another script to run the overlay script over multiple images and texts automatically.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">// overlay-batch.sh
+<span class="c">#!/bin/sh</span>
+
+<span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="nb">read</span> -r line <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&quot;$line&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nb">eval</span> <span class="s2">&quot;./overlay.sh $line&quot;</span>
+<span class="k">done</span> &lt; <span class="s2">&quot;$1&quot;</span></code></pre></div>
+
+<p>Then I created another file named <code>screenshot-captions</code> to hold the arguments for the script above.</p>
+
+<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'>"image1.png" FDCC56 "Caption 1"
+</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>"image2.png" 21D6B2 "Caption 2"
+</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'>"image3.png" FF3F57 "Caption 3"
+</div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'>"image4.png" 4A90E2 "Caption 4"
+</div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'>"image5.png" E74C3C "Caption 5"
+</div></div></pre></div></figure>
+
+<p>Finally, all I have to do is to run</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">./overlay-batch.sh screenshot-captions
+</code></pre></div>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Add+Caption+to+iOS+Screenshots+Automatically+Using+ImageMagick&amp;url=http://nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>Nico Prananta</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-10-11 20:24">11 Oct 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><!-- <span>Supported by</span>--></h5>
+            <footer class="site-footer">
+              <!-- <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section> -->
+              <!-- <a class="subscribe" href="https://twitter.com/nicnocquee"> <span class="tooltip"> <i class="fa fa-twitter"></i> Follow me on Twitter.</span></a> -->
+              <div class="inner">
+                  
+                    
+                        <a href="https://twitter.com/nicnocquee"  title="Follow me on twitter"">
+                            Twitter
+                        </a>
+                        &nbsp;&nbsp;·&nbsp;&nbsp;
+                    
+                  
+                    
+                        <a href="https://github.com/nicnocquee"  title="Fork me on github"">
+                            Github
+                        </a>
+                        &nbsp;&nbsp;·&nbsp;&nbsp;
+                    
+                  
+              <a href="http://delightfuldev.com">Apps</a>
+            </div>
+            
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/background.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">NICNOCQUEE</h1>
+        <h2 class="blog-description">Blog about iOS, Programming, Japan, or Random Stuff.
+</h2>
+        <!-- <a href="/" class="btn">Back to Overview</a> -->
+        
+            <a class="btn" href="/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html">&laquo; Older</a>
+        
+
+        
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+  </body>
+</html>
