@@ -19,9 +19,9 @@ Recently I submitted a game to the App Store. Apple allows developers to submit 
 After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.
 
 {% highlight sh %}
-// overlay.sh
-#!/bin/sh
 
+#!/bin/sh
+# overlay.sh
 find . -type f -iname $1 -print0 | while IFS= read -r -d $'\0' line; do
     echo "Captioning $line: $3"
     width=`identify -ping -format "%w" $line`
@@ -30,7 +30,7 @@ find . -type f -iname $1 -print0 | while IFS= read -r -d $'\0' line; do
     point2=$(( $height*75/100 ))
     tmp="$line-tmp.png"
 
-    // create the background of caption
+    # create the background of caption
     convert $line -fill "#$2"  -draw "polygon  0,$point1 0,$height $width,$height $width,$point2" $tmp
 
     availableHeight=$(( $height-$point2 ))
@@ -38,7 +38,7 @@ find . -type f -iname $1 -print0 | while IFS= read -r -d $'\0' line; do
     labelWidth=$(( $width*8/10 ))
     bottomMargin=$(( ($availableHeight-$labelHeight)/2 ))
 
-    // overlay the background and the text to the image 
+    # overlay the background and the text to the image
     convert -background none -fill white -font "/Library/Fonts/Arial Black.ttf" -gravity center -size ${labelWidth}x${labelHeight} caption:"$3" $tmp +swap -gravity south -geometry +0+${bottomMargin} -composite $line-caption.png
     rm $tmp
 done
@@ -57,9 +57,10 @@ Then all I have to is to run it.
 I then make another script to run the overlay script over multiple images and texts automatically.
 
 {% highlight sh %}
-// overlay-batch.sh
+
 #!/bin/sh
 
+# overlay-batch.sh
 while IFS='' read -r line || [[ -n "$line" ]]; do
     eval "./overlay.sh $line"
 done < "$1"
