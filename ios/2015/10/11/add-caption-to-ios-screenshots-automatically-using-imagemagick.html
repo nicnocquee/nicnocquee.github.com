@@ -77,9 +77,8 @@
 
 <p>After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">// overlay.sh
-<span class="c">#!/bin/sh</span>
-
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
+<span class="c"># overlay.sh</span>
 find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span> <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r -d <span class="s1">$&#39;\0&#39;</span> line<span class="p">;</span> <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&quot;Captioning $line: $3&quot;</span>
     <span class="nv">width</span><span class="o">=</span><span class="sb">`</span>identify -ping -format <span class="s2">&quot;%w&quot;</span> <span class="nv">$line</span><span class="sb">`</span>
@@ -87,12 +86,16 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
     <span class="nv">point1</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">*</span><span class="m">7</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
     <span class="nv">point2</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">*</span><span class="m">75</span><span class="o">/</span><span class="m">100</span> <span class="k">))</span>
     <span class="nv">tmp</span><span class="o">=</span><span class="s2">&quot;$line-tmp.png&quot;</span>
+
+    <span class="c"># create the background of caption</span>
     convert <span class="nv">$line</span> -fill <span class="s2">&quot;#$2&quot;</span>  -draw <span class="s2">&quot;polygon  0,$point1 0,$height $width,$height $width,$point2&quot;</span> <span class="nv">$tmp</span>
+
     <span class="nv">availableHeight</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$height</span><span class="o">-</span><span class="nv">$point2</span> <span class="k">))</span>
     <span class="nv">labelHeight</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$availableHeight</span><span class="o">)*</span><span class="m">8</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
     <span class="nv">labelWidth</span><span class="o">=</span><span class="k">$((</span> <span class="nv">$width</span><span class="o">*</span><span class="m">8</span><span class="o">/</span><span class="m">10</span> <span class="k">))</span>
     <span class="nv">bottomMargin</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$availableHeight</span><span class="o">-</span><span class="nv">$labelHeight</span><span class="o">)/</span><span class="m">2</span> <span class="k">))</span>
 
+    <span class="c"># overlay the background and the text to the image</span>
     convert -background none -fill white -font <span class="s2">&quot;/Library/Fonts/Arial Black.ttf&quot;</span> -gravity center -size <span class="k">${</span><span class="nv">labelWidth</span><span class="k">}</span>x<span class="k">${</span><span class="nv">labelHeight</span><span class="k">}</span> caption:<span class="s2">&quot;$3&quot;</span> <span class="nv">$tmp</span> +swap -gravity south -geometry +0+<span class="k">${</span><span class="nv">bottomMargin</span><span class="k">}</span> -composite <span class="nv">$line</span>-caption.png
     rm <span class="nv">$tmp</span>
 <span class="k">done</span></code></pre></div>
@@ -107,9 +110,9 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
 </code></pre></div>
 <p>I then make another script to run the overlay script over multiple images and texts automatically.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">// overlay-batch.sh
-<span class="c">#!/bin/sh</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
 
+<span class="c"># overlay-batch.sh</span>
 <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="nb">read</span> -r line <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&quot;$line&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
     <span class="nb">eval</span> <span class="s2">&quot;./overlay.sh $line&quot;</span>
 <span class="k">done</span> &lt; <span class="s2">&quot;$1&quot;</span></code></pre></div>

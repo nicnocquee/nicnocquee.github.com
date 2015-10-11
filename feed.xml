@@ -6,8 +6,8 @@
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 21:45:07 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 21:45:07 +0900</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2015 22:46:50 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2015 22:46:50 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -24,9 +24,8 @@
 
 &lt;p&gt;After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// overlay.sh
-&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# overlay.sh&lt;/span&gt;
 find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r -d &lt;span class=&quot;s1&quot;&gt;$&amp;#39;\0&amp;#39;&lt;/span&gt; line&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Captioning $line: $3&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -ping -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%w&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
@@ -34,12 +33,16 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
     &lt;span class=&quot;nv&quot;&gt;point1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;point2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$line-tmp.png&amp;quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# create the background of caption&lt;/span&gt;
     convert &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt; -fill &lt;span class=&quot;s2&quot;&gt;&amp;quot;#$2&amp;quot;&lt;/span&gt;  -draw &lt;span class=&quot;s2&quot;&gt;&amp;quot;polygon  0,$point1 0,$height $width,$height $width,$point2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
+
     &lt;span class=&quot;nv&quot;&gt;availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$point2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
 
+    &lt;span class=&quot;c&quot;&gt;# overlay the background and the text to the image&lt;/span&gt;
     convert -background none -fill white -font &lt;span class=&quot;s2&quot;&gt;&amp;quot;/Library/Fonts/Arial Black.ttf&amp;quot;&lt;/span&gt; -gravity center -size &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;x&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; caption:&lt;span class=&quot;s2&quot;&gt;&amp;quot;$3&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt; +swap -gravity south -geometry +0+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; -composite &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;-caption.png
     rm &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -54,9 +57,9 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;I then make another script to run the overlay script over multiple images and texts automatically.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;// overlay-batch.sh
-&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
 
+&lt;span class=&quot;c&quot;&gt;# overlay-batch.sh&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r line &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;$line&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./overlay.sh $line&amp;quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
