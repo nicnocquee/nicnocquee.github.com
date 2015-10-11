@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Something Awesome</title>
+    <description>Hopefuly.
+</description>
+    <link>http://nicnocquee.com/</link>
+    <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 11 Oct 2015 18:48:28 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2015 18:48:28 +0900</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Drive UICollectionView Interactive Layout Transition Using Facebook&#39;s Pop</title>
+        <description>&lt;p&gt;UICollectionView has a method to change layout easily: &lt;code&gt;setCollectionViewLayout:animated:completion:&lt;/code&gt;. And according to documentation, if you implement the delegate&amp;#39;s &lt;code&gt;collectionView:transitionLayoutForOldLayout:newLayout:&lt;/code&gt; you can customize the behaviour or the cells and decoration views during transition.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement this method if you want to return a custom UICollectionViewTransitionLayout object for use during the transition. A transition layout object lets you customize the behavior of cells and decoration views when transitioning from one layout to the next. Normally, transitioning between layouts causes items to animate directly from their current locations to their new locations. With a transition layout object, you can have objects follow a non linear path, use a different timing algorithm, or move according to incoming touch events.&lt;/p&gt;
+
+&lt;p&gt;If your delegate does not implement this method, the collection view creates a standard UICollectionViewTransitionLayout object and uses that object to manage the transition.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But strangely, that delegate&amp;#39;s method is not called when we change layout using &lt;code&gt;setCollectionViewLayout&lt;/code&gt;. Somebody in &lt;a href=&quot;http://stackoverflow.com/a/23009119/401544&quot;&gt;stackoverflow&lt;/a&gt; provided a workaround by calling collection view&amp;#39;s &lt;code&gt;startInteractiveTransitionToCollectionViewLayout:&lt;/code&gt; method instead.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;startInteractiveTransitionToCollectionViewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finalLayout&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finishInteractiveTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;The problem is we cannot control the speed of the animation. What I wanted is to &amp;quot;animate&amp;quot; the &lt;code&gt;UICollectionViewTransitionLayout&lt;/code&gt;&amp;#39;s &lt;code&gt;transitionProgress&lt;/code&gt; property.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animateWithDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;usingSpringWithDamping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initialSpringVelocity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIViewAnimationOptionCurveEaseInOut&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&amp;#x7d;];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;But since transitionProgress is not animatable, this doesn&amp;#39;t work. This is where &lt;a href=&quot;https://github.com/facebook/pop&quot;&gt;Facebook&amp;#39;s Pop&lt;/a&gt; comes to rescue. Using Pop, we can animate custom properties.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;c1&quot;&gt;// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;CustomTransitionLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CustomTransitionLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;startInteractiveTransitionToCollectionViewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finalLayout&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;4&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;POPSpringAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPSpringAnimation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;5&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;POPAnimatableProperty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPAnimatableProperty&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;propertyWithName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;com.photos.transition&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initializer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPMutableAnimatableProperty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;6&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;7&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;       &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;8&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;p&quot;&gt;&amp;#x7d;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;9&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writeBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;10&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTransitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;11&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;p&quot;&gt;&amp;#x7d;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;12&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threshold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;13&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;&amp;#x7d;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;14&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springBounciness&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;15&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;16&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;17&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;18&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;completionBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;19&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;20&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTransitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;21&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finishInteractiveTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;22&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;   &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;23&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;&amp;#x7d;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;24&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;pop_addAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSStringFromSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;@selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;This way, the value of &lt;code&gt;transitionProgress&lt;/code&gt; will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&amp;#39;s &lt;code&gt;layoutAttributesForElementsInRect:&lt;/code&gt; method and set the attributes of each cell based on the value of &lt;code&gt;transitionProgress&lt;/code&gt;, you can create a custom layout animation transition.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 29 Jan 2015 11:30:53 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>City Names to Timezones Plist</title>
+        <description>&lt;p&gt;For a recent project I need a list that maps city names to timezones. You can easily get a list of timezones in iOS or Mac using &lt;code&gt;[NSTimeZone knownTimeZoneNames]&lt;/code&gt; but it doesn&amp;#39;t map from city names.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;So with a bit of regex dance, I managed to parse timezones data and create a property list file containing 626 city names and their corresponding timezones. You can check it out &lt;a href=&quot;https://github.com/nicnocquee/Timezones-Property-List&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two files you can use. The minimal version and the normal version. The normal version maps city names to timezones dictionary which contains timezones name, timezone abbreviation, and timezone offset from GMT in seconds. The minimal version only maps city names to their timezone names.&lt;/p&gt;
+
+&lt;p&gt;Let me know if you use it and find it useful :)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Dec 2014 20:42:06 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Change the Color of Finder Folder Icon in OSX Yosemite</title>
+        <description>&lt;p&gt;I wasn&amp;#39;t really fond of the blue color of Finder folder icon in Yosemite. It&amp;#39;s too saturated. Luckily I wasn&amp;#39;t the only one. From &lt;a href=&quot;http://yukiyamashina.github.io/blog/2014/10/19/how-to-change-the-color-of-default-folder-icons-in-OS-X-Yosemite/&quot;&gt;Yuki Yamashina&amp;#39;s How to Change Color of Default Folder Icons in OSX Yosemite&lt;/a&gt;, I could change the color of Finder folder icon.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Basically you just need to find the icons, edit, and restart.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The icons are located in &lt;code&gt;/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/&lt;/code&gt;. From Finder, just go to &lt;code&gt;System-&amp;gt;Library-&amp;gt;CoreServices&lt;/code&gt; folder, then right click on &lt;code&gt;CoreTypes.bundle&lt;/code&gt;, then click &lt;code&gt;Show Package Content&lt;/code&gt;. Then open &lt;code&gt;Contents-&amp;gt;Resources&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1z1W183F0m2F1k1T3y34/Screen%20Shot%202014-10-20%20at%2000.41.03.png&quot; alt=&quot;location-of-osx-icons&quot;&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There are several icons (.icns) you need to edit but the first one you should edit is &lt;code&gt;GenericFolderIcon.icns&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Copy it first somewhere else then double click the file. Preview app will open and you can adjust the color from &lt;code&gt;Tools-&amp;gt;Adjust Color...&lt;/code&gt;. There are several images inside the icns file so you need to adjust the color of all the images. (If anybody knows how to batch edit the files let me know, please).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/183c3d2H0K1N281a3s19/Screen%20Shot%202014-10-20%20at%2000.45.08.png&quot; alt=&quot;change-icns-color-with-preview-osx&quot;&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once you&amp;#39;re done, save it, and copy it back to &lt;code&gt;/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/&lt;/code&gt; folder. You will be prompted to enter Administrator password.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now the important step. You need to clear the icon cache by executing the following commands in Terminal.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \;
+sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Restart your Mac.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Do the same thing for other icons such as &lt;code&gt;ApplicationsFolderIcon.icns&lt;/code&gt;, &lt;code&gt;DesktopFolderIcon.icns&lt;/code&gt;, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It&amp;#39;s a bit of work but at least the folder icon is pleasant to my eyes now.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1v0f33211J2q2P38161i/finder-folder-icons.png&quot; alt=&quot;change-yosemite-finder-folder-icon-color&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Oct 2014 23:53:29 +0900</pubDate>
+        <link>http://nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</guid>
+        
+        
+        <category>mac</category>
+        
+      </item>
+    
+      <item>
+        <title>QuartzCode: PaintCode for Animation</title>
+        <description>&lt;p&gt;There are many &lt;a href=&quot;blog/2014/09/28/25-must-have-apps-for-your-mac/&quot;&gt;amazing tools to help iOS development&lt;/a&gt; easier. One of them is &lt;a href=&quot;https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;PaintCode&lt;/a&gt;. A splendid tool to turn drawings into code. But what about animation? It would be very helpful if there is a tool to create animations visually and turn them into code. &lt;a href=&quot;https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;QuartzCode&lt;/a&gt; is the answer.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I gave it a try by trying to replicate the cute uploading animation I found in &lt;a href=&quot;https://dribbble.com/shots/1429143-Upload?list=buckets&amp;amp;offset=14&quot;&gt;Dribbble&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://d13yacurqjgara.cloudfront.net/users/50261/screenshots/1429143/upload.gif&quot; alt=&quot;cute uploading animation&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;While it&amp;#39;s not completely the same, I managed to come up with something close enough after playing with QuartzCode for few hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;QuartzCode surely improves development speed once you get used to it. However it&amp;#39;s not quite perfect right now since there are some frustrating bugs which I hope will be fixed in the future:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The undo function doesn&amp;#39;t work properly sometimes. Especially for paths.&lt;/li&gt;
+&lt;li&gt;Inspector panel and Keyframe inspector panel are unscrollable which probably is caused by Yosemite.&lt;/li&gt;
+&lt;li&gt;The generated code is buggy. Xcode warns a retail cycle, variable redefinition, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Regardless, by tweaking the generated code and by learning that we can &lt;a href=&quot;http://ronnqvi.st/controlling-animation-timing/&quot;&gt;control the animation timing&lt;/a&gt;, I could create a lovely upload progress control.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-1.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check out the project in &lt;a href=&quot;https://github.com/nicnocquee/FluidProgressIndicator&quot;&gt;Github&lt;/a&gt; along with the &lt;a href=&quot;https://github.com/nicnocquee/FluidProgressIndicator/tree/master/NPRUploadAnimation/files&quot;&gt;QuartzCode project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;QuartzCode is &lt;a href=&quot;https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;$79.99 on the Mac App Store&lt;/a&gt; or you can try it first for free by downloading it from the &lt;a href=&quot;http://www.quartzcodeapp.com&quot;&gt;website&lt;/a&gt;. Don&amp;#39;t forget to take a look at pretty cool examples on the website to find out what you can make with QuartzCode.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 17 Oct 2014 23:49:43 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2014/10/17/quartzcode.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/10/17/quartzcode.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>25 Must Have Apps for Your Mac</title>
+        <description>&lt;p class=&quot;wide-image&quot;&gt;
+&lt;img src=&quot;http://f.cl.ly/items/1Q1c2q1L2n2s3J1e0e2L/Optimized-macs.jpg&quot; alt=&quot;My Apple products family&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;These are the 25+ apps that I found really useful on my Mac. There are apps that aid software development (iOS mostly) and there are also apps for general activities. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;Note: The links are affiliate links. If you&amp;#39;re not into it, you can just simply google these apps. But I really appreciate if you use these links&lt;/em&gt; （＾ω＾）&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS: If you know better affiliate program, &lt;a href=&quot;https://twitter.com/nicnocquee&quot;&gt;let me know please&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;General&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/1&quot;&gt;DragonDrop&lt;/a&gt;. Drag and drop done right on the Mac. The price is nothing compared to useful this small little app is. &lt;a href=&quot;https://itunes.apple.com/jp/app/dragondrop/id499148234?l=en&amp;amp;mt=12&quot;&gt;$4.99 USD on the Mac App Store&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/2&quot;&gt;Instashare&lt;/a&gt;. Transfering files between Mac and iPhone has been a pain in the ass. Yosemite &lt;em&gt;might&lt;/em&gt; solve this problem with the Airdrop feature, but in the mean time, Instashare works wonderfully. And it works on older devices as well! &lt;a href=&quot;https://itunes.apple.com/jp/app/instashare-transfer-files/id685953216?l=en&amp;amp;mt=12&quot;&gt;$3.99 USD on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/3&quot;&gt;Disk Inventory X&lt;/a&gt;. FREE. Disk Inventory X shows which folders that are eating up the space in your Mac. Thanks to it I managed to clear up more than 30GB of free space from my Mac.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/4&quot;&gt;1Password&lt;/a&gt;. Apple has iCloud Keychain to help with passwords management. But I find it unreliable most of the time. For example, there are times when the Safari on iOS doesn&amp;#39;t show auto-fill for username and password on a website. 1Password just works. And it can secure more than just login information, it can also secure credit card information, Wifi router password, notes, and many more. It can even sync your passwords to Dropbox or iCloud. It&amp;#39;s worth the price. &lt;a href=&quot;https://itunes.apple.com/jp/app/1password-password-manager/id443987910?l=en&amp;amp;mt=12&quot;&gt;$49.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kaomojiapp.com&quot;&gt;Kaomoji for Mac&lt;/a&gt;. &lt;em&gt;Disclaimer: This is my app&lt;/em&gt;. With Kaomoji for Mac, you don&amp;#39;t need to copy and paste kaomoji anymore. Keyboard shortcut and tons of kaomojis in many different categories. $3.00 to unlock all kaomojis.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/5&quot;&gt;CloudApp&lt;/a&gt;. FREE. With CloudApp, I can quickly share screenshots.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/6&quot;&gt;MPlayerX&lt;/a&gt;. FREE and Open Source. VLC has been the most popular video player but I really like MPlayerX simplicity. And autoplay the next episode is very neat.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/7&quot;&gt;LaunchBar&lt;/a&gt;. €24.00. I&amp;#39;m using it mainly to quickly launch apps and its clipboard history.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/8&quot;&gt;Skitch&lt;/a&gt;. FREE. The simplest app to annotate images. If you don&amp;#39;t want Skitch to save to Evernote like I do, simply go to &lt;em&gt;Preferences -&amp;gt; Sync -&amp;gt; Save New Skitch Notes to Evernote: Manual&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/9&quot;&gt;Mou&lt;/a&gt;. FREE. A very simple Markdown editor. All of the posts in this blog were written in Mou.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/A&quot;&gt;GifRocket&lt;/a&gt;. FREE (for now). A simple app to create GIF from video.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.downthemall.net&quot;&gt;DownThemAll&lt;/a&gt;. FREE. DownThemAll is a powerful Firefox extension to download stuff. It can increase download speed significantly. Seriously. Download all files with certain filetypes feature had helped me to download all PDFs quickly from &lt;a href=&quot;https://developer.apple.com/videos/wwdc/2014/&quot;&gt;Apple&amp;#39;s WWDC website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/B&quot;&gt;Reflector&lt;/a&gt;. $12.99. Easily and wirelessly display my iPhone to my Mac. Even video playing on the iPhone can be displayed on the Mac. Unfortunately it doesn&amp;#39;t work if the video is longer than 10 minutes. Bug probably.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/O&quot;&gt;Knock&lt;/a&gt;. FREE. My Mac doesn&amp;#39;t really need Knock. But it&amp;#39;s just fun to unlock the Mac by knocking.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/D&quot;&gt;OpenEmu&lt;/a&gt;. FREE and Open Source. I&amp;#39;m not a gamer but sometimes it&amp;#39;s fun to play retro games and OpenEmu is awesome for it.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/N&quot;&gt;Day One&lt;/a&gt;. Day One helps me to keep track what I have been doing. Syncs with the iOS app via Dropbox or iCloud. &lt;a href=&quot;https://itunes.apple.com/us/app/day-one/id422304217?mt=12&quot;&gt;$9.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/E&quot;&gt;AppCleaner&lt;/a&gt;. FREE. Most of the times apps create files throughout the system. Simply removing the app doesn&amp;#39;t necesserily removes the temporary files. AppCleaner finds the small files and deletes them.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/C&quot;&gt;HandBrake&lt;/a&gt;. FREE and Open Source. Convert video from nearly every format.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Development Tools&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/F&quot;&gt;Go2Shell&lt;/a&gt;. Opens Terminal to the current directory in Finder. Wonder why Apple doesn&amp;#39;t have this feature by default. &lt;a href=&quot;https://itunes.apple.com/jp/app/go2shell/id445770608?l=en&amp;amp;mt=12&quot;&gt;FREE on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/G&quot;&gt;SourceTree&lt;/a&gt;. A nice GUI client for Git. FREE.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://revealapp.com&quot;&gt;Reveal&lt;/a&gt;. Reveal app has saved me a lot of time debugging user interface bugs in my app. $89 USD.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/H&quot;&gt;PaintCode&lt;/a&gt;. I&amp;#39;ve been using PaintCode 1 to turn drawings into code. But I just found out that there is PaintCode 2 with more awesome features. &lt;a href=&quot;https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;amp;mt=12&quot;&gt;$99.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/I&quot;&gt;CodeRunner&lt;/a&gt;. Sometimes you just want to quickly test if a snippet of code works as you expected. CodeRunner helps you to do that. It&amp;#39;s like Swift playground but with support for many different languages. &lt;a href=&quot;https://itunes.apple.com/us/app/coderunner/id433335799?mt=12&quot;&gt;$9.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.pixelmator.com&quot;&gt;Pixelmator&lt;/a&gt;. Pixelmator is a brilliant Photoshop replacement. I use it to quickly edit assets for my apps. &lt;a href=&quot;https://itunes.apple.com/jp/app/pixelmator/id407963104?l=en&amp;amp;mt=12&quot;&gt;$29.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/J&quot;&gt;Simpholders&lt;/a&gt;. A small app to quickly access the folder of applications you have in iOS simulator. FREE.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/K&quot;&gt;Postman REST Client&lt;/a&gt;. Easily test API by creating requests and view the responses in a beautiful way. FREE.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/L&quot;&gt;Mockupphone&lt;/a&gt;. It&amp;#39;s not a Mac app but if you want to easily wrap your app screenshots in device mockup, then you should bookmark Mockupphone. FREE (Pay with your e-mail address).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/M&quot;&gt;Makeappicon&lt;/a&gt;. Another website you should bookmark if you&amp;#39;re an app developer. Simply upload a big size of your icon image, then download the app icons in many different sizes. FREE (Pay with e-mail address).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 28 Sep 2014 15:50:16 +0900</pubDate>
+        <link>http://nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</guid>
+        
+        
+        <category>mac</category>
+        
+      </item>
+    
+      <item>
+        <title>NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8</title>
+        <description>&lt;p&gt;In iOS 7, it&amp;#39;s easy to create UILabel with strikethrough text. You can just simply assign &lt;code&gt;NSAttributedString&lt;/code&gt; to the text label.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;figcaption class=&#39;code-highlight-caption&#39;&gt;&lt;span class=&#39;code-highlight-caption-title&#39;&gt;more&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;7,500&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;10,000円&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;%@ %@&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;4&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;5&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addAttributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleSingle&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;rangeOfString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;6&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setAttributedText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png&quot; alt=&quot;nsattributedstring-ios-8-bug&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;But in iOS 8, that code didn&amp;#39;t work anymore. The strikethrough line didn&amp;#39;t appear. Funny thing was, if range&amp;#39;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, &lt;code&gt;NSUnderlineStyleNone&lt;/code&gt; to the whole string on initialization.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleNone&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addAttributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleSingle&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;rangeOfString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Mon, 22 Sep 2014 20:09:42 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>Swift: There&#39;s a Shorter Way for That</title>
+        <description>&lt;p&gt;Backward sorting array of string using Swift:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Chris&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Alex&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Ewa&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Barry&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Daniella&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;backwards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;s2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;4&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;5&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;backwards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Too long.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;s2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7d;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s make it one line.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;s2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Don&amp;#39;t be satisfied yet.&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;You didn&amp;#39;t think that&amp;#39;s the best we can do, right?&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Shorter!&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can do it!&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;n&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Use the force!&lt;/p&gt;
+
+&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;err&quot;&gt;😄&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;🐷&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 22 Sep 2014 09:40:52 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>Revisiting the Give It Five Minutes Principle</title>
+        <description>&lt;p&gt;They said people change. And it&amp;#39;s certainly so in my case. I used to be excited at new things or ideas. But not so much lately. New single-word messaging app? Seriously? New shiny digital watch? Meh. New anonymous social networking? Another one? Every new project or startup sounds so dull, stupid, and unnecessary. Even my own ideas.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Today somebody tweeted an article by Jason Fried, &lt;a href=&quot;https://signalvnoise.com/posts/3124-give-it-five-minutes&quot;&gt;Give it five minutes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Funny thing is that I read this article before. And I forgot. And I am now reminded again.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 11 Sep 2014 10:58:22 +0900</pubDate>
+        <link>http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>#ExplainAppleKeynoteBadly</title>
+        <description>&lt;p&gt;September 9 2014 Apple Live Event was not my favorite Apple event. I&amp;#39;ll even say that it was the &lt;em&gt;worst&lt;/em&gt; Apple event ever. I haven&amp;#39;t rewatched the keynote (probably never will) and haven&amp;#39;t read any reviews of the keynote. So here&amp;#39;s my review.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tim Cook decided to hold the event in a different place from where they usually did in the past. This resulted in a terrible streaming quality where I completely missed what&amp;#39;s so great about the new iPhones.&lt;/li&gt;
+&lt;li&gt;Apple was trying to explain to developers that they should have &lt;code&gt;Localizable.strings (Chinese)&lt;/code&gt; file in their app by hiring a Chinese lady to speak non-stop louder than Phil Schiller.&lt;/li&gt;
+&lt;li&gt;iPhone 6 is amazing. Freeze. Claps. Mute.  Repeat.&lt;/li&gt;
+&lt;li&gt;Tim Cook disappointed when nobody recognized the voice of Justin Timberlake.&lt;/li&gt;
+&lt;li&gt;Something exciting about paying things with iPhone. In US only. Because other countries are secondary. Except China. China got the unstoppable live translation.&lt;/li&gt;
+&lt;li&gt;PAY requires you to &lt;em&gt;still&lt;/em&gt; pay for things you buy. Much innovation.&lt;/li&gt;
+&lt;li&gt;Jony Ive had pimples problem that they removed him from his white room prison.&lt;/li&gt;
+&lt;li&gt;Apple brought &amp;quot;One More Thing&amp;quot; back from the grave.&lt;/li&gt;
+&lt;li&gt;Apple revealed a watch because that&amp;#39;s what the society needs right now.&lt;/li&gt;
+&lt;li&gt;iTime? iWatch? iPrefix is so last year that Apple chose Unicode Symbol as prefix from now on.&lt;/li&gt;
+&lt;li&gt;Digital Crown on WATCH (ALL CAPITAL, PLEASE) because calling it &lt;em&gt;Dial&lt;/em&gt; sounds so cheap.&lt;/li&gt;
+&lt;li&gt;An ex-Adobe Bill Gates doppelgänger demoed WATCH where he hardly use the &lt;em&gt;innovative&lt;/em&gt; Digital Crown and touch the screen most of the time instead. Tim will be pissed.&lt;/li&gt;
+&lt;li&gt;Apple invented new way of communication without words via the WATCH. Because F__K words. Pre-historic way of communicating is the trend of the future.&lt;/li&gt;
+&lt;li&gt;YOUTUBE ON STAGE! Oh, it&amp;#39;s U2. Misheard thanks to poor quality streaming.&lt;/li&gt;
+&lt;li&gt;Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.&lt;/li&gt;
+&lt;li&gt;FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.&lt;/li&gt;
+&lt;li&gt;That white structure? Yeah, nothing special about it.&lt;/li&gt;
+&lt;li&gt;No Craig Federighi. &lt;/li&gt;
+&lt;li&gt;Still no Macbook Air 11&amp;quot; Retina Display.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I think the Reality Distortion Field has worn off on me.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Sep 2014 11:03:53 +0900</pubDate>
+        <link>http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</guid>
+        
+        
+        <category>apple</category>
+        
+      </item>
+    
+      <item>
+        <title>Costly Mistake</title>
+        <description>&lt;p&gt;I received an email from Amazon Web Service notifying me that there were suspicious unauthorized activities in my account. Apparently my access key was exposed. It happened because I made public one of my private repos, one of the side projects I started and abandoned months ago, in which I &lt;em&gt;stupidly&lt;/em&gt; left the AWS access key.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The unauthorized person(s) created 20 Windows instances on each of regions. By the time I received the e-mail notification from AWS, those instances had been running for about two hours. I deleted the exposed access key, and turned off all the instances as soon as possible. Not soon enough unfortunately since I got another email 4 hours after the incident alerting my usage billing exceeded 50 USD (the number I set up). Way over 50 USD. Let&amp;#39;s just say it completely ruined my excitement of Apple Keynote.&lt;/p&gt;
+
+&lt;h2&gt;Bad people are EVERYWHERE&lt;/h2&gt;
+
+&lt;p&gt;This incident has given me a chance to understand how the celebrities might feel when their private photos were &lt;em&gt;stolen&lt;/em&gt; lately. I said &amp;quot;stolen&amp;quot; because the celebrities did not upload their photos voluntarily to public space. Somebody broke into their personal online space and took their private files without the owner&amp;#39;s permission. Would you blame yourself for keeping money at home when someone broke into your house and stole your money?&lt;/p&gt;
+
+&lt;p&gt;My case was not exactly the same since I &lt;em&gt;accidentally&lt;/em&gt; exposed the key to my online space. But good people would not enter your house when they find your key lying on the ground. It reminds me when I forgot my room&amp;#39;s key and left it hanging on the door a long time ago here in Japan. My neighbor, with whom I never talked, kept the key and returned it to me. That was how good people behave.&lt;/p&gt;
+
+&lt;h2&gt;Mistake as an experience&lt;/h2&gt;
+
+&lt;p&gt;I always have a hard time to come up with an answer for my own hypothetical question: What is your biggest mistake or unfortunate event in life? I can now proudly answer that this incident was my biggest mistake yet. Even so, I realized that this unfortunate event is nothing compared with all the terrible things happening all around the world right now.&lt;/p&gt;
+
+&lt;h2&gt;Lessons learned&lt;/h2&gt;
+
+&lt;p&gt;As obvious as it seems, I learned few things from this mishap. &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Never ever expose your key.&lt;/li&gt;
+&lt;li&gt;Act swiftly upon receiving suspicious activities alert.&lt;/li&gt;
+&lt;li&gt;Delete keys if you&amp;#39;re not using them anymore.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;A glimpse of hope&lt;/h2&gt;
+
+&lt;p&gt;When I woke up this morning, I found another email from Amazon replying to my plea to refund or to cancel the excessive billing. They said they will monitor my account for 24 hours prior to submitting a refund request on my behalf. Crossing fingers now. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE September 11, 2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon just contacted me that as a one-time exception, they&amp;#39;ll fully refund the bill! d=(´▽｀)=b&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Sep 2014 01:43:18 +0900</pubDate>
+        <link>http://nicnocquee.com/life/2014/09/10/costly-mistake.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/10/costly-mistake.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+  </channel>
+</rss>
