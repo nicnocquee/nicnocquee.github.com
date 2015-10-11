@@ -12,6 +12,7 @@ github_username:  nicnocquee
 markdown: redcarpet
 highlighter: pygments
 gem: [octopress-codeblock,octopress-codefence,octopress-image-tag,octopress-quote-tag,octopress-solarized,octopress-social,octopress-linkblog,octopress-filter-tag,octopress-filters,octopress-comment-tag,jekyll-sitemap,jemoji]
+include: [CNAME]
 
 paginate:	5
 
