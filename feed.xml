@@ -4,10 +4,10 @@
     <title>NICNOCQUEE</title>
     <description>Blog about iOS, Programming, Japan, or Random Stuff.
 </description>
-    <link>http://www.nicnocquee.com/</link>
-    <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 19:52:40 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 19:52:40 +0900</lastBuildDate>
+    <link>http://nicnocquee.com/</link>
+    <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 11 Oct 2015 19:59:21 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2015 19:59:21 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -62,8 +62,8 @@
 &lt;p&gt;This way, the value of &lt;code&gt;transitionProgress&lt;/code&gt; will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&amp;#39;s &lt;code&gt;layoutAttributesForElementsInRect:&lt;/code&gt; method and set the attributes of each cell based on the value of &lt;code&gt;transitionProgress&lt;/code&gt;, you can create a custom layout animation transition.&lt;/p&gt;
 </description>
         <pubDate>Thu, 29 Jan 2015 11:30:53 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</guid>
+        <link>http://nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</guid>
         
         
         <category>ios</category>
@@ -83,8 +83,8 @@
 &lt;p&gt;Let me know if you use it and find it useful :)&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Dec 2014 20:42:06 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</guid>
+        <link>http://nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</guid>
         
         
         <category>ios</category>
@@ -121,8 +121,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1v0f33211J2q2P38161i/finder-folder-icons.png&quot; alt=&quot;change-yosemite-finder-folder-icon-color&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Oct 2014 23:53:29 +0900</pubDate>
-        <link>http://www.nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</guid>
+        <link>http://nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</guid>
         
         
         <category>mac</category>
@@ -160,8 +160,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;p&gt;QuartzCode is &lt;a href=&quot;https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;$79.99 on the Mac App Store&lt;/a&gt; or you can try it first for free by downloading it from the &lt;a href=&quot;http://www.quartzcodeapp.com&quot;&gt;website&lt;/a&gt;. Don&amp;#39;t forget to take a look at pretty cool examples on the website to find out what you can make with QuartzCode.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Oct 2014 23:49:43 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2014/10/17/quartzcode.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/10/17/quartzcode.html</guid>
+        <link>http://nicnocquee.com/ios/2014/10/17/quartzcode.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/10/17/quartzcode.html</guid>
         
         
         <category>ios</category>
@@ -221,8 +221,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 28 Sep 2014 15:50:16 +0900</pubDate>
-        <link>http://www.nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</guid>
+        <link>http://nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</guid>
         
         
         <category>mac</category>
@@ -248,8 +248,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addAttributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleSingle&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;rangeOfString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
 </description>
         <pubDate>Mon, 22 Sep 2014 20:09:42 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</guid>
+        <link>http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</guid>
         
         
         <category>ios</category>
@@ -301,8 +301,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;p&gt;There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)&lt;/p&gt;
 </description>
         <pubDate>Mon, 22 Sep 2014 09:40:52 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</guid>
+        <link>http://nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html</guid>
         
         
         <category>ios</category>
@@ -328,8 +328,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 11 Sep 2014 10:58:22 +0900</pubDate>
-        <link>http://www.nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</guid>
+        <link>http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</guid>
         
         
         <category>life</category>
@@ -367,8 +367,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;p&gt;I think the Reality Distortion Field has worn off on me.&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Sep 2014 11:03:53 +0900</pubDate>
-        <link>http://www.nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</guid>
+        <link>http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</guid>
         
         
         <category>apple</category>
@@ -412,8 +412,8 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 &lt;p&gt;Amazon just contacted me that as a one-time exception, they&amp;#39;ll fully refund the bill! d=(´▽｀)=b&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Sep 2014 01:43:18 +0900</pubDate>
-        <link>http://www.nicnocquee.com/life/2014/09/10/costly-mistake.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/life/2014/09/10/costly-mistake.html</guid>
+        <link>http://nicnocquee.com/life/2014/09/10/costly-mistake.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/10/costly-mistake.html</guid>
         
         
         <category>life</category>
