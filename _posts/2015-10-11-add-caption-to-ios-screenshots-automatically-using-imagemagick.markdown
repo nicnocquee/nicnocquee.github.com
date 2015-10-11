@@ -29,12 +29,16 @@ find . -type f -iname $1 -print0 | while IFS= read -r -d $'\0' line; do
     point1=$(( $height*7/10 ))
     point2=$(( $height*75/100 ))
     tmp="$line-tmp.png"
+
+    // create the background of caption
     convert $line -fill "#$2"  -draw "polygon  0,$point1 0,$height $width,$height $width,$point2" $tmp
+
     availableHeight=$(( $height-$point2 ))
     labelHeight=$(( ($availableHeight)*8/10 ))
     labelWidth=$(( $width*8/10 ))
     bottomMargin=$(( ($availableHeight-$labelHeight)/2 ))
 
+    // overlay the background and the text to the image 
     convert -background none -fill white -font "/Library/Fonts/Arial Black.ttf" -gravity center -size ${labelWidth}x${labelHeight} caption:"$3" $tmp +swap -gravity south -geometry +0+${bottomMargin} -composite $line-caption.png
     rm $tmp
 done
