@@ -651,6 +651,9 @@ body {
     .share a:hover {
       color: #333; }
 
+.categories {
+  font-style: italic; }
+
 .bottom-closer {
   width: 100%;
   position: relative;
