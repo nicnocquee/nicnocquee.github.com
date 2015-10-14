@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Game Making Diary: Java Method Signature</title>
-  <meta name="description" content="While making my first cross platform game using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cp..." />
+  <title>How to Delete and Deactivate Google Search History</title>
+  <meta name="description" content="I was just wondering out of the blue if I could delete and deactivate all my Google search history. Turns out it&#39;s easy. All you have to do is to go to your account&#39;s activity control page,..." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,16 +17,16 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="Game Making Diary: Java Method Signature"/>
+  <meta property="og:title" content="How to Delete and Deactivate Google Search History"/>
   
-  <meta property="og:description" content="While making my first cross platform game using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cp..." />
+  <meta property="og:description" content="I was just wondering out of the blue if I could delete and deactivate all my Google search history. Turns out it&#39;s easy. All you have to do is to go to your account&#39;s activity control page,..." />
   
   <meta property="og:image" content="http://nicnocquee.com/assets/images/background.jpg" />
-  <meta property="og:url" content="http://nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html" >
+  <meta property="og:url" content="http://nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html" >
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2015-10-14T17:28:47+09:00">
+  <meta property="article:published_time" content="2015-10-14T19:39:27+09:00">
 
-  <link rel="canonical" href="http://nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html">
+  <link rel="canonical" href="http://nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -46,12 +46,12 @@
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Game Making Diary: Java Method Signature</h1>
+            <h1 class="post-title">How to Delete and Deactivate Google Search History</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
               on
-              <time datetime="2015-10-14T17:28:47+09:00">14 Oct 2015</time>
+              <time datetime="2015-10-14T19:39:27+09:00">14 Oct 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
           </div>
@@ -65,35 +65,24 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>While making <a href="http://www.delightfuldev.com/make9/">my first cross platform game</a> using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cpp file to .mm and include it in the project and I can call C++ or Objective-C methods right away. In Android, if I want to call a Java method from C++, I need to use JNI (Java Native Interface). For example, to call a static method named <code>share</code> in <code>AppActivity</code> class, I need to do it like so.</p>
+          <p>I was just wondering out of the blue if I could delete and deactivate all my Google search history. Turns out it&#39;s easy. All you have to do is to go to your account&#39;s <a href="https://myaccount.google.com/privacy">activity control page</a>, and turn off the <code>Your searches and browsing activity</code> setting to stop Google from saving your Google search activities.</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JniMethodInfo</span> <span class="n">t</span><span class="o">;</span>
-<span class="k">if</span> <span class="o">(</span><span class="nl">JniHelper:</span><span class="o">:</span><span class="n">getStaticMethodInfo</span><span class="o">(</span><span class="n">t</span><span class="o">,</span> <span class="s">&quot;org/cocos2dx/cpp/AppActivity&quot;</span><span class="o">,</span> <span class="s">&quot;share&quot;</span><span class="o">,</span> <span class="s">&quot;(Ljava/lang/String;Ljava/lang/String;)V&quot;</span><span class="o">))</span> <span class="o">{</span>
-    <span class="n">jstring</span> <span class="n">StringArg1</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
-    <span class="n">jstring</span> <span class="n">StringArg2</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
-    <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">CallStaticVoidMethod</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">classID</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">methodID</span><span class="o">,</span> <span class="n">StringArg1</span><span class="o">,</span> <span class="n">StringArg2</span><span class="o">);</span>
-    <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">classID</span><span class="o">);</span>
-    <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">StringArg1</span><span class="o">);</span>
-    <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">StringArg2</span><span class="o">);</span>
-<span class="o">}</span></code></pre></div>
+<p><img src="/assets/images/posts/google2.png" alt="turn off google search activity"></p>
 
-<p>The last argument of <code>getStaticMethodInfo</code> is the method signature of the <code>share</code> static method. This signature must be correct or else you&#39;ll get <code>Failed to find static method id</code> error. To get this method signature, use <code>javap -s</code> command from command line.</p>
+<p>To delete the search history, click on <code>Manage Activity</code>, click the three vertical dots button on the top right corner of the page, and click the <code>Delete Options</code>. After that, choose the <code>Advanced</code> option and choose <code>All time</code> to delete all the searches.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
+<p><img src="/assets/images/posts/google3.png" alt="delete google search activity"></p>
 
-<span class="c">#output</span>
-Compiled from <span class="s2">&quot;AppActivity.java&quot;</span>
-public class org.cocos2dx.cpp.AppActivity extends org.cocos2dx.lib.Cocos2dxActivity <span class="o">{</span>
-public static void share<span class="o">(</span>java.lang.String, java.lang.String<span class="o">)</span><span class="p">;</span>
-    descriptor: <span class="o">(</span>Ljava/lang/String<span class="p">;</span>Ljava/lang/String<span class="p">;</span><span class="o">)</span>V
-<span class="o">}</span></code></pre></div>
+<p>Enjoy searching safely in Google from now on! You can also disable other tracking settings, such as Location history, in your account page. I&#39;m curious about how my Google experience will be now that I disable the search history setting. This could be the last time I could see my search activity insight. Thank you, Stackoverflow!</p>
+
+<p><img src="/assets/images/posts/google1.png" alt="google search activity insight"></p>
 
         </section>
         <footer class="post-footer">
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Game+Making+Diary%3A+Java+Method+Signature&amp;url=http://nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature"
+                <a class="icon-twitter" href="http://twitter.com/share?text=How+to+Delete+and+Deactivate+Google+Search+History&amp;url=http://nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -111,7 +100,7 @@ public static void share<span class="o">(</span>java.lang.String, java.lang.Stri
               <h4>Nico Prananta</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-10-14 17:28">14 Oct 2015</time></p>
+              <p class="published">Published <time datetime="2015-10-14 19:39">14 Oct 2015</time></p>
             </section>
           </div>
           
@@ -158,11 +147,9 @@ public static void share<span class="o">(</span>java.lang.String, java.lang.Stri
 </h2>
         <!-- <a href="/" class="btn">Back to Overview</a> -->
         
-            <a class="btn" href="/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html">&laquo; Older</a>
+            <a class="btn" href="/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html">&laquo; Older</a>
         
 
-        
-            <a class="btn" href="/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html">Newer &raquo;</a>
         
       </div>
     </div>

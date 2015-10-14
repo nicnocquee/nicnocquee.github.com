@@ -6,9 +6,32 @@
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Oct 2015 17:48:33 +0900</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2015 17:48:33 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Oct 2015 19:56:10 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2015 19:56:10 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>How to Delete and Deactivate Google Search History</title>
+        <description>&lt;p&gt;I was just wondering out of the blue if I could delete and deactivate all my Google search history. Turns out it&amp;#39;s easy. All you have to do is to go to your account&amp;#39;s &lt;a href=&quot;https://myaccount.google.com/privacy&quot;&gt;activity control page&lt;/a&gt;, and turn off the &lt;code&gt;Your searches and browsing activity&lt;/code&gt; setting to stop Google from saving your Google search activities.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google2.png&quot; alt=&quot;turn off google search activity&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;To delete the search history, click on &lt;code&gt;Manage Activity&lt;/code&gt;, click the three vertical dots button on the top right corner of the page, and click the &lt;code&gt;Delete Options&lt;/code&gt;. After that, choose the &lt;code&gt;Advanced&lt;/code&gt; option and choose &lt;code&gt;All time&lt;/code&gt; to delete all the searches.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google3.png&quot; alt=&quot;delete google search activity&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy searching safely in Google from now on! You can also disable other tracking settings, such as Location history, in your account page. I&amp;#39;m curious about how my Google experience will be now that I disable the search history setting. This could be the last time I could see my search activity insight. Thank you, Stackoverflow!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google1.png&quot; alt=&quot;google search activity insight&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 14 Oct 2015 19:39:27 +0900</pubDate>
+        <link>http://nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>Game Making Diary: Java Method Signature</title>
@@ -419,33 +442,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>ios</category>
-        
-      </item>
-    
-      <item>
-        <title>Revisiting the Give It Five Minutes Principle</title>
-        <description>&lt;p&gt;They said people change. And it&amp;#39;s certainly so in my case. I used to be excited at new things or ideas. But not so much lately. New single-word messaging app? Seriously? New shiny digital watch? Meh. New anonymous social networking? Another one? Every new project or startup sounds so dull, stupid, and unnecessary. Even my own ideas.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Today somebody tweeted an article by Jason Fried, &lt;a href=&quot;https://signalvnoise.com/posts/3124-give-it-five-minutes&quot;&gt;Give it five minutes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Funny thing is that I read this article before. And I forgot. And I am now reminded again.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 11 Sep 2014 10:58:22 +0900</pubDate>
-        <link>http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</link>
-        <guid isPermaLink="true">http://nicnocquee.com/life/2014/09/11/revisiting-the-give-it-five-minutes-principle.html</guid>
-        
-        
-        <category>life</category>
         
       </item>
     
