@@ -6,9 +6,47 @@
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 22:46:50 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 22:46:50 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Oct 2015 17:46:39 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Oct 2015 17:46:39 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Game Making Diary: Java Method Signature</title>
+        <description>&lt;p&gt;While making my first cross platform game using Cocos2d-x CPP version, I realized that it&amp;#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cpp file to .mm and include it in the project and I can call C++ or Objective-C methods right away. In Android, if I want to call a Java method from C++, I need to use JNI (Java Native Interface). For example, to call a static method named &lt;code&gt;share&lt;/code&gt; in &lt;code&gt;AppActivity&lt;/code&gt; class, I need to do it like so.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;JniMethodInfo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;JniHelper:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getStaticMethodInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;org/cocos2dx/cpp/AppActivity&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;share&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;(Ljava/lang/String;Ljava/lang/String;)V&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;jstring&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewStringUTF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;jstring&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewStringUTF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CallStaticVoidMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;classID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;methodID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;classID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The last argument of &lt;code&gt;getStaticMethodInfo&lt;/code&gt; is the method signature of the &lt;code&gt;share&lt;/code&gt; static method. This signature must be correct or else you&amp;#39;ll get &lt;code&gt;Failed to find static method id&lt;/code&gt; error. To get this method signature, use &lt;code&gt;javap -s&lt;/code&gt; command from command line.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
+
+&lt;span class=&quot;c&quot;&gt;#output&lt;/span&gt;
+Compiled from &lt;span class=&quot;s2&quot;&gt;&amp;quot;AppActivity.java&amp;quot;&lt;/span&gt;
+public class org.cocos2dx.cpp.AppActivity extends org.cocos2dx.lib.Cocos2dxActivity &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+public static void share&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;java.lang.String, java.lang.String&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    descriptor: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;V
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 14 Oct 2015 17:28:47 +0900</pubDate>
+        <link>http://nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</guid>
+        
+        
+        <category>ios</category>
+        
+        <category>android</category>
+        
+        <category>game</category>
+        
+      </item>
     
       <item>
         <title>Add Caption to iOS Screenshots Automatically Using ImageMagick</title>
@@ -408,45 +446,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>#ExplainAppleKeynoteBadly</title>
-        <description>&lt;p&gt;September 9 2014 Apple Live Event was not my favorite Apple event. I&amp;#39;ll even say that it was the &lt;em&gt;worst&lt;/em&gt; Apple event ever. I haven&amp;#39;t rewatched the keynote (probably never will) and haven&amp;#39;t read any reviews of the keynote. So here&amp;#39;s my review.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Tim Cook decided to hold the event in a different place from where they usually did in the past. This resulted in a terrible streaming quality where I completely missed what&amp;#39;s so great about the new iPhones.&lt;/li&gt;
-&lt;li&gt;Apple was trying to explain to developers that they should have &lt;code&gt;Localizable.strings (Chinese)&lt;/code&gt; file in their app by hiring a Chinese lady to speak non-stop louder than Phil Schiller.&lt;/li&gt;
-&lt;li&gt;iPhone 6 is amazing. Freeze. Claps. Mute.  Repeat.&lt;/li&gt;
-&lt;li&gt;Tim Cook disappointed when nobody recognized the voice of Justin Timberlake.&lt;/li&gt;
-&lt;li&gt;Something exciting about paying things with iPhone. In US only. Because other countries are secondary. Except China. China got the unstoppable live translation.&lt;/li&gt;
-&lt;li&gt;PAY requires you to &lt;em&gt;still&lt;/em&gt; pay for things you buy. Much innovation.&lt;/li&gt;
-&lt;li&gt;Jony Ive had pimples problem that they removed him from his white room prison.&lt;/li&gt;
-&lt;li&gt;Apple brought &amp;quot;One More Thing&amp;quot; back from the grave.&lt;/li&gt;
-&lt;li&gt;Apple revealed a watch because that&amp;#39;s what the society needs right now.&lt;/li&gt;
-&lt;li&gt;iTime? iWatch? iPrefix is so last year that Apple chose Unicode Symbol as prefix from now on.&lt;/li&gt;
-&lt;li&gt;Digital Crown on WATCH (ALL CAPITAL, PLEASE) because calling it &lt;em&gt;Dial&lt;/em&gt; sounds so cheap.&lt;/li&gt;
-&lt;li&gt;An ex-Adobe Bill Gates doppelgänger demoed WATCH where he hardly use the &lt;em&gt;innovative&lt;/em&gt; Digital Crown and touch the screen most of the time instead. Tim will be pissed.&lt;/li&gt;
-&lt;li&gt;Apple invented new way of communication without words via the WATCH. Because F__K words. Pre-historic way of communicating is the trend of the future.&lt;/li&gt;
-&lt;li&gt;YOUTUBE ON STAGE! Oh, it&amp;#39;s U2. Misheard thanks to poor quality streaming.&lt;/li&gt;
-&lt;li&gt;Tim Cook and U2 slapstick was so bad that everyone wished the Chinese lady started talking again.&lt;/li&gt;
-&lt;li&gt;FREE U2 ALBUM FOR EVERYONE! Not sure if you can delete it from your iTunes library though.&lt;/li&gt;
-&lt;li&gt;That white structure? Yeah, nothing special about it.&lt;/li&gt;
-&lt;li&gt;No Craig Federighi. &lt;/li&gt;
-&lt;li&gt;Still no Macbook Air 11&amp;quot; Retina Display.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I think the Reality Distortion Field has worn off on me.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 10 Sep 2014 11:03:53 +0900</pubDate>
-        <link>http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</link>
-        <guid isPermaLink="true">http://nicnocquee.com/apple/2014/09/10/number-explainapplekeynotebadly.html</guid>
-        
-        
-        <category>apple</category>
         
       </item>
     
