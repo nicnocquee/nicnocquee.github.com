@@ -33,6 +33,8 @@
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
+              by
+              {{ site.author }}
               on
               <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
@@ -51,6 +53,7 @@
           {{content}}
         </section>
         <footer class="post-footer">
+            <hr/>
           <section class="share">
             {% for social in site.social %}
               {% if social.share_url != null %}
@@ -61,42 +64,9 @@
               {% endif %}
             {% endfor %}
           </section>
+          <!-- <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{site.author}}</a> &copy; {{ site.time | date: '%Y' }}<br>All rights reserved.</section> -->
         </footer>
-        <div class="bottom-teaser cf">
-          <div class="isLeft">
-            <h5 class="index-headline featured"><span>Written by</span></h5>
-            <section class="author">
-              <div class="author-image" style="background-image: url({{site.author_image}})">Blog Logo</div>
-              <h4>{{ site.author }}</h4>
-              <p class="bio">{{author.bio}}</p>
-              <hr>
-              <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
-            </section>
-          </div>
-          {{/post}}
-          <div class="isRight">
-            <h5 class="index-headline featured"><!-- <span>Supported by</span>--></h5>
-            <footer class="site-footer">
-              <!-- <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section> -->
-              <!-- <a class="subscribe" href="{{ "https://twitter.com/" | append: site.twitter_username }}"> <span class="tooltip"> <i class="fa fa-twitter"></i> Follow me on Twitter.</span></a> -->
-              <div class="inner">
-                  {% for social in site.social %}
-                    {% if social.url %}
-                        <a href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
-                            {{ social.text }}
-                        </a>
-                        &nbsp;&nbsp;·&nbsp;&nbsp;
-                    {% endif %}
-                  {% endfor %}
-              <a href="http://delightfuldev.com">Apps</a>
-            </div>
-            
-              <div class="inner">
-                <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{site.author}}</a> &copy; {{ site.time | date: '%Y' }}<br>All rights reserved.</section>
-              </div>
-            </footer>
-          </div>
-        </div>
+
         {%if site.disqus %}
         <div id="disqus_thread"></div>
         <script type="text/javascript">
