@@ -11,7 +11,7 @@ github_username:  nicnocquee
 # Build settings
 markdown: redcarpet
 highlighter: pygments
-gem: [octopress-codeblock,octopress-codefence,octopress-image-tag,octopress-quote-tag,octopress-solarized,octopress-social,octopress-linkblog,octopress-filter-tag,octopress-filters,octopress-comment-tag,jekyll-sitemap,jemoji]
+gem: [octopress-codeblock,octopress-codefence,octopress-image-tag,octopress-quote-tag,octopress-solarized,octopress-social,octopress-linkblog,octopress-filter-tag,octopress-filters,octopress-comment-tag,jekyll-sitemap,jemoji,oembed]
 include: [CNAME]
 
 paginate:	5
