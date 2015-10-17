@@ -4,7 +4,7 @@ email: nico@delightfuldev.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog about iOS, Programming, Japan, or Random Stuff.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://nicnocquee.com" # the base hostname & protocol for your site
+url: "http://www.nicnocquee.com" # the base hostname & protocol for your site
 twitter_username: nicnocquee
 github_username:  nicnocquee
 
