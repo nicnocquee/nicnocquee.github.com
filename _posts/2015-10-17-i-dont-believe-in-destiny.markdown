@@ -17,7 +17,7 @@ Life is like climbing a mountain. And some kind of success awaits at the top. Ex
 
 While everyone has the right to be successful, good luck can kick people in the ass and push them up higher in an instant. At the same time, bad luck can also trip some people off their track and make them fall so far behind. But both good and bad lucks are random. And we can respond to them in any way we want. Some people, like J.K. Rowling, didn't let failures and bad luck stop them from continuing the climb to the top of the mountain. On the other hand, some people who were blessed with good luck wasted them.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/wHGqp8lz36c" frameborder="0" allowfullscreen></iframe>
+{% oembed http://www.youtube.com/watch?v=wHGqp8lz36c %}
 
 ## Note to self
 
