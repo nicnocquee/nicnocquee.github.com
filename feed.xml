@@ -6,9 +6,36 @@
 </description>
     <link>http://nicnocquee.com/</link>
     <atom:link href="http://nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Oct 2015 01:15:49 +0900</pubDate>
-    <lastBuildDate>Sat, 17 Oct 2015 01:15:49 +0900</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2015 16:06:58 +0900</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2015 16:06:58 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>I Don&#39;t Believe in Destiny</title>
+        <description>&lt;p&gt;Actually, maybe I refuse to believe in destiny. There were millions of 23 year-olds when Mark Zuckerberg became a &lt;a href=&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;&gt;billionaire at the age of 23 as a result of Facebook&amp;#39;s success&lt;/a&gt;. I don&amp;#39;t believe that the rest of the 23 year-olds at that time were not destined to be billionaires like Mark. I do believe though in two of the laws of the universe.&lt;/p&gt;
+
+&lt;h2&gt;The higher the success is, the fewer the people who can achieve it.&lt;/h2&gt;
+
+&lt;p&gt;Life is like climbing a mountain. And some kind of success awaits at the top. Everybody has the right to climb the mountain. Everybody has the chance to reach the top. But it&amp;#39;s in the law of nature that only a few can reach the top. It&amp;#39;s a long and hard road to get there. Gravity pulls everyone down. Some will give up along the way. Some will be satisfied reaching the middle and call it a success.&lt;/p&gt;
+
+&lt;h2&gt;Good and bad luck occur randomly.&lt;/h2&gt;
+
+&lt;p&gt;While everyone has the right to be successful, good luck can kick people in the ass and push them up higher in an instant. At the same time, bad luck can also trip some people off their track and make them fall so far behind. But both good and bad lucks are random. And we can respond to them in any way we want. Some people, like J.K. Rowling, didn&amp;#39;t let failures and bad luck stop them from continuing the climb to the top of the mountain. On the other hand, some people who were blessed with good luck wasted them.&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/wHGqp8lz36c&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Note to self&lt;/h2&gt;
+
+&lt;p&gt;Don&amp;#39;t give up because of destiny. If everyone has their destiny decided since they were born, so what&amp;#39;s the point of living? And be prepared when good or bad luck greets you.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 17 Oct 2015 14:11:47 +0900</pubDate>
+        <link>http://nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</link>
+        <guid isPermaLink="true">http://nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</guid>
+        
+        
+        <category>random</category>
+        
+      </item>
     
       <item>
         <title>Game Making Diary: Crash on Android When Calling OpenGL From Java</title>
@@ -427,33 +454,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>mac</category>
-        
-      </item>
-    
-      <item>
-        <title>NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8</title>
-        <description>&lt;p&gt;In iOS 7, it&amp;#39;s easy to create UILabel with strikethrough text. You can just simply assign &lt;code&gt;NSAttributedString&lt;/code&gt; to the text label.&lt;/p&gt;
-
-&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;figcaption class=&#39;code-highlight-caption&#39;&gt;&lt;span class=&#39;code-highlight-caption-title&#39;&gt;more&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;7,500&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;10,000円&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;3&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;%@ %@&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;4&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;5&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addAttributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleSingle&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;rangeOfString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;6&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setAttributedText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png&quot; alt=&quot;nsattributedstring-ios-8-bug&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;But in iOS 8, that code didn&amp;#39;t work anymore. The strikethrough line didn&amp;#39;t appear. Funny thing was, if range&amp;#39;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, &lt;code&gt;NSUnderlineStyleNone&lt;/code&gt; to the whole string on initialization.&lt;/p&gt;
-
-&lt;figure class=&#39;code-highlight-figure&#39;&gt;&lt;div class=&#39;code-highlight&#39;&gt;&lt;pre class=&#39;code-highlight-pre&#39;&gt;&lt;div data-line=&#39;1&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleNone&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&#39;2&#39; class=&#39;code-highlight-row numbered&#39;&gt;&lt;div class=&#39;code-highlight-line&#39;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;addAttributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@&amp;#x7b;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;NSStrikethroughStyleAttributeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUnderlineStyleSingle&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&amp;#x7d;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;rangeOfString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
-</description>
-        <pubDate>Mon, 22 Sep 2014 20:09:42 +0900</pubDate>
-        <link>http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</link>
-        <guid isPermaLink="true">http://nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html</guid>
-        
-        
-        <category>ios</category>
         
       </item>
     

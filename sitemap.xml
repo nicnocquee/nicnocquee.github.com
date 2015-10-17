@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</loc>
+    <lastmod>2015-10-17T14:11:47+09:00</lastmod>
+  </url>
+  <url>
     <loc>http://nicnocquee.com/ios/android/game/2015/10/17/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</loc>
     <lastmod>2015-10-17T00:57:52+09:00</lastmod>
   </url>
@@ -405,5 +409,65 @@
   </url>
   <url>
     <loc>http://nicnocquee.com/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page2/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page3/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page4/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page5/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page6/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page7/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page8/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page9/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page10/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page11/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page12/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page13/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page14/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page15/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page16/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page17/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page18/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page19/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page20/</loc>
+  </url>
+  <url>
+    <loc>http://nicnocquee.com/page21/</loc>
   </url>
 </urlset>

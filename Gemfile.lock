@@ -122,6 +122,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.3.3)
+    ruby-oembed (0.8.14)
     rubypants (0.2.0)
     rubypants-unicode (0.2.5)
     safe_yaml (1.0.4)
@@ -152,6 +153,7 @@ DEPENDENCIES
   octopress-quote-tag
   octopress-social
   octopress-solarized
+  ruby-oembed
 
 BUNDLED WITH
    1.10.6
