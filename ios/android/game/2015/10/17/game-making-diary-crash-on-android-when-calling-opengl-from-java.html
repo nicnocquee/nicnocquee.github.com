@@ -77,7 +77,11 @@
 
 <span class="o">}</span></code></pre></div>
 
-<p>Then in some C++ header file, add the interface declaration for <code>showOptions</code> with Java full-path classname like so.</p>
+<p>Then in some C++ header file, we need to add the JNI declaration for <code>showOptions</code> method with Java full-path classname. To get this, run the following from <code>proj.android</code> directory.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity</code></pre></div>
+
+<p>That <code>javah</code> command will create a new file called <code>org_cocos2dx_cpp_AppActivity.h</code>. You can simply include this header in your project, or just copy the interface declaraions and paste them in your own header file.</p>
 
 <div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;jni.h&gt;</span>
 <span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
