@@ -20,7 +20,15 @@ public class AppActivity extends Cocos2dxActivity {
 
 {% endhighlight %}
 
-Then in some C++ header file, add the interface declaration for `showOptions` with Java full-path classname like so.
+Then in some C++ header file, we need to add the JNI declaration for `showOptions` method with Java full-path classname. To get this, run the following from `proj.android` directory.
+
+{% highlight sh %}
+
+javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity
+
+{% endhighlight %}
+
+That `javah` command will create a new file called `org_cocos2dx_cpp_AppActivity.h`. You can simply include this header in your project, or just copy the interface declaraions and paste them in your own header file.
 
 {% highlight cpp %}
 
