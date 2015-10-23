@@ -27,6 +27,6 @@ After implementing In-App Purchase and the iAd in iOS, I submitted Make9 to the 
 
 While waiting for the second time, I started working on adding ad and implementing In-App Billing on Android. It wasn't a walk in the park. Maybe because I'm not used to Android development, but testing In-App Billing in Android is a hellish experience. And [I wasn't the only one who thought that way](http://suda.pl/the-hell-of-testing-google-play-in-app-billing/). The bright side however, submitting the game to Google Play Store was a pleasure. It was easy and fast. Less than 24 hours after I submitted, the game is live on the Play Store. After receiving bug reports and some feedback from my friends, I uploaded an update and boom, it's available on the store in just few hours. The way I see it, Google's decision is benefiting both developers and users here.
 
-Despite of the struggles, making the game was fun! It inspired me to make more game in the future. If you have an Android phone, you can download the game from the Play Store now. I submitted Make9 to [Product Hunt](https://www.producthunt.com/games/make9), so let me know what you think of the game there. （＾＿－）≡★
+Despite of the struggles, making the game was fun! It inspired me to make more games in the future. If you have an Android phone, you can download the game from the Play Store now. I submitted Make9 to [Product Hunt](https://www.producthunt.com/games/make9), so let me know what you think of the game there. （＾＿－）≡★
 
 Have fun!
