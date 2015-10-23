@@ -6,9 +6,48 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Oct 2015 22:43:26 +0900</pubDate>
-    <lastBuildDate>Mon, 19 Oct 2015 22:43:26 +0900</lastBuildDate>
+    <pubDate>Fri, 23 Oct 2015 17:12:08 +0900</pubDate>
+    <lastBuildDate>Fri, 23 Oct 2015 17:12:08 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Make9: From Zero to First iOS Android Game in 2 Months With Cocos2d-x</title>
+        <description>&lt;p&gt;I have been wanting to make a game even though I&amp;#39;m a not really a gamer. I don&amp;#39;t play games much. I haven&amp;#39;t finished games I bought, like Tomb Rider on PS3, Pokemon X on 3DS, and Super Mario 3D World on Wii U. But I play many mobile games. Some of them I completed, like Monument Valley, Army of Darkness, and Tower Madness. But many I didn&amp;#39;t finish, like Angry Birds, and Infinity Blade II.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/zero-to-make9.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I started researching on how to make a game. From the beginning, I wanted the game to be cross platform, at least on Android and iOS. So SpriteKit is not an option. My choices came down to &lt;a href=&quot;http://www.cocos2d-x.org/&quot;&gt;Cocos2d-x&lt;/a&gt; and Unity. I chose to try Cocos2d-x because it seemed less intimidating at that time. And I thought Unity was for 3D games. Later I found out that you could use &lt;a href=&quot;https://unity3d.com/learn/tutorials/topics/2d-game-creation&quot;&gt;Unity for making 2D games&lt;/a&gt;. Maybe I&amp;#39;ll give it a try next time.&lt;/p&gt;
+
+&lt;p&gt;I have no experience in making games, so I wanted to make something simple that my wife will love to play. Since she likes to play Threes!, I decided to make a number puzzle game. 68 days after committing my first commit, Make9 was finally available on the &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.delightfuldev.make9&quot;&gt;Google Play Store&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/cocos2dx-doc.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;It was pretty challenging. While cocos2d-x was easy to get started, the &lt;a href=&quot;http://cocos2d-x.org/wiki&quot;&gt;documentation&lt;/a&gt; is not really good; there are many features that are not included in the documentation. Not to mention that C++ is not really my favorite language. But it was fun to see my game run on both Android and iOS with just writing it once. In the end, aside from the code for In-App Purchase and the Ad, the code for the game is shared between iOS and Android.&lt;/p&gt;
+
+&lt;p&gt;I also learned that using C++ in iOS is so much easier than using it in Android. In iOS, I just need to use &lt;code&gt;.mm&lt;/code&gt; extension for &lt;code&gt;.cpp&lt;/code&gt; files and I can use both C++ and Objective-C in the same file. While for Android, I need to use Java Native Interface (JNI) to bridge Java and C++. And it&amp;#39;s not a &lt;a href=&quot;/ios/android/game/2015/10/17/game-making-diary-crash-on-android-when-calling-opengl-from-java.html&quot;&gt;simple chore&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/itunes-connect-stupid.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;After implementing In-App Purchase and the iAd in iOS, I submitted Make9 to the App Store. It was a terrible experience. Apple has successfully degraded the quality of iTunesConnect, which is the portal to submit apps to the App Store, every time they updated it. When I tried to submit Make9, I used Felix Krause&amp;#39;s &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt; tool to upload 95 screenshots in a single command. Unfortunately, it appeared that iTunesConnect backend is not designed to handle a large number of images upload simultaneously. After Fastlane&amp;#39;s &lt;a href=&quot;https://github.com/KrauseFx/deliver&quot;&gt;deliver&lt;/a&gt; tool failed to upload the images, the backend decided to keep me away from uploading images, even from the web portal, for another day. So I waited. 10 days after I &lt;em&gt;finally&lt;/em&gt; submitted the game successfully, they rejected it because according to them, it didn&amp;#39;t have a way to restore purchases. But there was. After re-testing the game, I found out that there&amp;#39;s a bug where one of the in-app purchases cannot be restored. So it was my mistake. However, they didn&amp;#39;t actually give proper explanation of the problem. Anyway, I re-submitted and waited again.&lt;/p&gt;
+
+&lt;p&gt;While waiting for the second time, I started working on adding ad and implementing In-App Billing on Android. It wasn&amp;#39;t a walk in the park. Maybe because I&amp;#39;m not used to Android development, but testing In-App Billing in Android is a hellish experience. And &lt;a href=&quot;http://suda.pl/the-hell-of-testing-google-play-in-app-billing/&quot;&gt;I wasn&amp;#39;t the only one who thought that way&lt;/a&gt;. The bright side however, submitting the game to Google Play Store was a pleasure. It was easy and fast. Less than 24 hours after I submitted, the game is live on the Play Store. After receiving bug reports and some feedback from my friends, I uploaded an update and boom, it&amp;#39;s available on the store in just few hours. The way I see it, Google&amp;#39;s decision is benefiting both developers and users here.&lt;/p&gt;
+
+&lt;p&gt;Despite of the struggles, making the game was fun! It inspired me to make more game in the future. If you have an Android phone, you can download the game from the Play Store now. I submitted Make9 to &lt;a href=&quot;https://www.producthunt.com/games/make9&quot;&gt;Product Hunt&lt;/a&gt;, so let me know what you think of the game there. （＾＿－）≡★&lt;/p&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Oct 2015 11:14:47 +0900</pubDate>
+        <link>http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
+        
+        
+        <category>ios</category>
+        
+        <category>game</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>I Don&#39;t Believe in Destiny</title>
@@ -397,67 +436,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>ios</category>
-        
-      </item>
-    
-      <item>
-        <title>25 Must Have Apps for Your Mac</title>
-        <description>&lt;p class=&quot;wide-image&quot;&gt;
-&lt;img src=&quot;http://f.cl.ly/items/1Q1c2q1L2n2s3J1e0e2L/Optimized-macs.jpg&quot; alt=&quot;My Apple products family&quot;&gt;
-&lt;/p&gt;
-
-&lt;p&gt;These are the 25+ apps that I found really useful on my Mac. There are apps that aid software development (iOS mostly) and there are also apps for general activities. &lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;em&gt;Note: The links are affiliate links. If you&amp;#39;re not into it, you can just simply google these apps. But I really appreciate if you use these links&lt;/em&gt; （＾ω＾）&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;PS: If you know better affiliate program, &lt;a href=&quot;https://twitter.com/nicnocquee&quot;&gt;let me know please&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2&gt;General&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/1&quot;&gt;DragonDrop&lt;/a&gt;. Drag and drop done right on the Mac. The price is nothing compared to useful this small little app is. &lt;a href=&quot;https://itunes.apple.com/jp/app/dragondrop/id499148234?l=en&amp;amp;mt=12&quot;&gt;$4.99 USD on the Mac App Store&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/2&quot;&gt;Instashare&lt;/a&gt;. Transfering files between Mac and iPhone has been a pain in the ass. Yosemite &lt;em&gt;might&lt;/em&gt; solve this problem with the Airdrop feature, but in the mean time, Instashare works wonderfully. And it works on older devices as well! &lt;a href=&quot;https://itunes.apple.com/jp/app/instashare-transfer-files/id685953216?l=en&amp;amp;mt=12&quot;&gt;$3.99 USD on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/3&quot;&gt;Disk Inventory X&lt;/a&gt;. FREE. Disk Inventory X shows which folders that are eating up the space in your Mac. Thanks to it I managed to clear up more than 30GB of free space from my Mac.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/4&quot;&gt;1Password&lt;/a&gt;. Apple has iCloud Keychain to help with passwords management. But I find it unreliable most of the time. For example, there are times when the Safari on iOS doesn&amp;#39;t show auto-fill for username and password on a website. 1Password just works. And it can secure more than just login information, it can also secure credit card information, Wifi router password, notes, and many more. It can even sync your passwords to Dropbox or iCloud. It&amp;#39;s worth the price. &lt;a href=&quot;https://itunes.apple.com/jp/app/1password-password-manager/id443987910?l=en&amp;amp;mt=12&quot;&gt;$49.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.kaomojiapp.com&quot;&gt;Kaomoji for Mac&lt;/a&gt;. &lt;em&gt;Disclaimer: This is my app&lt;/em&gt;. With Kaomoji for Mac, you don&amp;#39;t need to copy and paste kaomoji anymore. Keyboard shortcut and tons of kaomojis in many different categories. $3.00 to unlock all kaomojis.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/5&quot;&gt;CloudApp&lt;/a&gt;. FREE. With CloudApp, I can quickly share screenshots.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/6&quot;&gt;MPlayerX&lt;/a&gt;. FREE and Open Source. VLC has been the most popular video player but I really like MPlayerX simplicity. And autoplay the next episode is very neat.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/7&quot;&gt;LaunchBar&lt;/a&gt;. €24.00. I&amp;#39;m using it mainly to quickly launch apps and its clipboard history.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/8&quot;&gt;Skitch&lt;/a&gt;. FREE. The simplest app to annotate images. If you don&amp;#39;t want Skitch to save to Evernote like I do, simply go to &lt;em&gt;Preferences -&amp;gt; Sync -&amp;gt; Save New Skitch Notes to Evernote: Manual&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/9&quot;&gt;Mou&lt;/a&gt;. FREE. A very simple Markdown editor. All of the posts in this blog were written in Mou.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/A&quot;&gt;GifRocket&lt;/a&gt;. FREE (for now). A simple app to create GIF from video.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.downthemall.net&quot;&gt;DownThemAll&lt;/a&gt;. FREE. DownThemAll is a powerful Firefox extension to download stuff. It can increase download speed significantly. Seriously. Download all files with certain filetypes feature had helped me to download all PDFs quickly from &lt;a href=&quot;https://developer.apple.com/videos/wwdc/2014/&quot;&gt;Apple&amp;#39;s WWDC website&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/B&quot;&gt;Reflector&lt;/a&gt;. $12.99. Easily and wirelessly display my iPhone to my Mac. Even video playing on the iPhone can be displayed on the Mac. Unfortunately it doesn&amp;#39;t work if the video is longer than 10 minutes. Bug probably.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/O&quot;&gt;Knock&lt;/a&gt;. FREE. My Mac doesn&amp;#39;t really need Knock. But it&amp;#39;s just fun to unlock the Mac by knocking.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/D&quot;&gt;OpenEmu&lt;/a&gt;. FREE and Open Source. I&amp;#39;m not a gamer but sometimes it&amp;#39;s fun to play retro games and OpenEmu is awesome for it.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/N&quot;&gt;Day One&lt;/a&gt;. Day One helps me to keep track what I have been doing. Syncs with the iOS app via Dropbox or iCloud. &lt;a href=&quot;https://itunes.apple.com/us/app/day-one/id422304217?mt=12&quot;&gt;$9.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/E&quot;&gt;AppCleaner&lt;/a&gt;. FREE. Most of the times apps create files throughout the system. Simply removing the app doesn&amp;#39;t necesserily removes the temporary files. AppCleaner finds the small files and deletes them.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/C&quot;&gt;HandBrake&lt;/a&gt;. FREE and Open Source. Convert video from nearly every format.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2&gt;Development Tools&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/F&quot;&gt;Go2Shell&lt;/a&gt;. Opens Terminal to the current directory in Finder. Wonder why Apple doesn&amp;#39;t have this feature by default. &lt;a href=&quot;https://itunes.apple.com/jp/app/go2shell/id445770608?l=en&amp;amp;mt=12&quot;&gt;FREE on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/G&quot;&gt;SourceTree&lt;/a&gt;. A nice GUI client for Git. FREE.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://revealapp.com&quot;&gt;Reveal&lt;/a&gt;. Reveal app has saved me a lot of time debugging user interface bugs in my app. $89 USD.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/H&quot;&gt;PaintCode&lt;/a&gt;. I&amp;#39;ve been using PaintCode 1 to turn drawings into code. But I just found out that there is PaintCode 2 with more awesome features. &lt;a href=&quot;https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;amp;mt=12&quot;&gt;$99.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/I&quot;&gt;CodeRunner&lt;/a&gt;. Sometimes you just want to quickly test if a snippet of code works as you expected. CodeRunner helps you to do that. It&amp;#39;s like Swift playground but with support for many different languages. &lt;a href=&quot;https://itunes.apple.com/us/app/coderunner/id433335799?mt=12&quot;&gt;$9.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.pixelmator.com&quot;&gt;Pixelmator&lt;/a&gt;. Pixelmator is a brilliant Photoshop replacement. I use it to quickly edit assets for my apps. &lt;a href=&quot;https://itunes.apple.com/jp/app/pixelmator/id407963104?l=en&amp;amp;mt=12&quot;&gt;$29.99 on the Mac App Store&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/J&quot;&gt;Simpholders&lt;/a&gt;. A small app to quickly access the folder of applications you have in iOS simulator. FREE.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/K&quot;&gt;Postman REST Client&lt;/a&gt;. Easily test API by creating requests and view the responses in a beautiful way. FREE.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/L&quot;&gt;Mockupphone&lt;/a&gt;. It&amp;#39;s not a Mac app but if you want to easily wrap your app screenshots in device mockup, then you should bookmark Mockupphone. FREE (Pay with your e-mail address).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://l.nicnocquee.com/M&quot;&gt;Makeappicon&lt;/a&gt;. Another website you should bookmark if you&amp;#39;re an app developer. Simply upload a big size of your icon image, then download the app icons in many different sizes. FREE (Pay with e-mail address).&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Sun, 28 Sep 2014 15:50:16 +0900</pubDate>
-        <link>http://www.nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/mac/2014/09/28/25-must-have-apps-for-your-mac.html</guid>
-        
-        
-        <category>mac</category>
         
       </item>
     
