@@ -6,9 +6,70 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Oct 2015 07:19:25 +0900</pubDate>
-    <lastBuildDate>Tue, 27 Oct 2015 07:19:25 +0900</lastBuildDate>
+    <pubDate>Mon, 16 Nov 2015 19:40:08 +0900</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2015 19:40:08 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Keep on or Move On</title>
+        <description>&lt;p&gt;Every time I stare at my Macbook Pro, I&amp;#39;m always amazed. This $3000 machine is beautiful. Its design is so simple, the retina display is amazing, the battery life is outstanding, and the weight is tolerable. I can smoothly code in Xcode and Eclipse while opening Pixelmator, Sketch, Mail, and Safari with many tabs. It always inspires me to create something as amazing as this computer. And so I did create things. It&amp;#39;s been almost a year since the fall of the startup I worked at and I decided to work on &lt;a href=&quot;http://www.delightfuldev.com&quot;&gt;my own apps&lt;/a&gt;. During the course of 11 months, I created 6 apps: 4 iOS only apps, 1 Mac app, and 1 iOS/Android game.&lt;/p&gt;
+
+&lt;h1&gt;#1 Delightful for iPhone&lt;/h1&gt;
+
+&lt;p&gt;The first app, &lt;a href=&quot;http://www.getdelightfulapp.com/&quot;&gt;Delightful for iPhone&lt;/a&gt;, is a free and open source iOS client for &lt;a href=&quot;https://github.com/photo/frontend&quot;&gt;Trovebox&lt;/a&gt; Photo service. Delightful was supported by &lt;a href=&quot;https://www.shuttleworthfoundation.org/&quot;&gt;Shuttleworth Foundation&lt;/a&gt; via &lt;a href=&quot;https://twitter.com/jmathai&quot;&gt;Jaisen Mathai&lt;/a&gt;, the founder of Trovebox.&lt;/p&gt;
+
+&lt;h1&gt;#2 Lovely for iPhone&lt;/h1&gt;
+
+&lt;p&gt;The second one was &lt;a href=&quot;http://www.getlovelyapp.com/&quot;&gt;Lovely for iPhone&lt;/a&gt;, which is an alternative to iOS&amp;#39; Photos app. I made it because I wasn&amp;#39;t satisfied with the Photos app. It uses tab navigation so that you can quickly and efficiently browse photos on your iPhone, GIF viewer and maker, advanced photo editor powered by Adobe, photostrip creator, multiple photos resize, and many more.&lt;/p&gt;
+
+&lt;h1&gt;#3 Deep for iPhone&lt;/h1&gt;
+
+&lt;p&gt;The third one is &lt;a href=&quot;http://www.getdeepapp.com/&quot;&gt;Deep for iPhone&lt;/a&gt; which was inspired by Pablo from Buffer. It allows you to create a captivating social media photos by using one of free and beautiful photos and add text on it. I have a plan to add a search feature and more photos in the future. Someday..&lt;/p&gt;
+
+&lt;h1&gt;#4 Tiny for Mac&lt;/h1&gt;
+
+&lt;p&gt;The fourth app has an interesting story. I made a Mac app on a weekend called &lt;a href=&quot;http://www.delightfuldev.com/tiny&quot;&gt;Tiny for Mac&lt;/a&gt;. It is a tiny app that runs in the background and renames the screenshot file you take on your Mac based on the front running application. I thought it was cool to have something like that. After releasing it for free and posting it on &lt;a href=&quot;https://www.producthunt.com/tech/tiny-for-mac&quot;&gt;ProductHunt&lt;/a&gt;, it was reviewed by &lt;a href=&quot;Tiny%20for%20Mac%20Got%20featured%20in%20The%20Next%20Web.%20http://thenextweb.com/apps/2015/05/26/rename-mac-screenshots-something-useful-tiny-mac/&quot;&gt;The Next Web&lt;/a&gt;. I didn&amp;#39;t ask them to review it so that was one of the surprising and exciting times of my indie life. I got so many feedback about the app itself and about the download page as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/tiny-download-page.jpg&quot; alt=&quot;Tiny for Mac Download Page Reviews&quot;&gt;&lt;/p&gt;
+
+&lt;h1&gt;#5 Burzt for iPhone&lt;/h1&gt;
+
+&lt;p&gt;The fifth app was very random and one of most frustrating apps I ever made. I wanted to convert burst photos to GIF so I made &lt;a href=&quot;http://www.delightfuldev.com/burzt&quot;&gt;Burzt for iPhone&lt;/a&gt;. It only took me a day to make it but was rejected twice for bogus reasons. In the end, it took a month from development to release. I admit it&amp;#39;s a little bit buggy at this moment, but the experience with the App reviewer really turned me off to update it. However, the app was 98% Swift and I learned a lot about Swift from it. Moreover, I have some features I need in the app so I&amp;#39;m going to update it.&lt;/p&gt;
+
+&lt;h1&gt;#6 Make9 for iOS and Android&lt;/h1&gt;
+
+&lt;p&gt;The most recent app I made is a game for iOS and Android called &lt;a href=&quot;http://www.delightfuldev.com/make9&quot;&gt;Make9&lt;/a&gt;. I have always wanted to make a game even though I&amp;#39;m not an avid gamer. You can read more about how Make9 came to be &lt;a href=&quot;http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html&quot;&gt;here&lt;/a&gt;. I am pretty satisfied with the process of developing Make9 not only because I could learn something new, I could also involve my closest friends in it. Usually my closest friends were either not interested in the apps I made or their phones could not run the apps. But since Make9 is a game and doesn&amp;#39;t require the newest iOS, they could try it early and they gave valuable insights and feedback. I also can finally share my creation to my Indonesian friends because most of them (all?) are on Android. I also got to experience a delightful process of submitting an app to Google Play Store.  &lt;/p&gt;
+
+&lt;h1&gt;The million dollar questions&lt;/h1&gt;
+
+&lt;p&gt;It is almost a month since Make9 was available on Play Store, and 2 weeks on the App Store. While I enjoyed the process of making Make9, the sales and public reception of Make9 are a downer. I tried many things to spread the word about Make9 including posting it in &lt;a href=&quot;https://www.producthunt.com/games/make9&quot;&gt;ProductHunt&lt;/a&gt;, contacting some websites, posting it on forums, and telling people one by one. I don&amp;#39;t have the budget to pay for Facebook/Google/Twitter ads.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/make9-stats.jpg&quot; alt=&quot;Make9 Installs on iOS and Android&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Sam Altman recently wrote on &lt;a href=&quot;http://playbook.samaltman.com&quot;&gt;Startup Playbook&lt;/a&gt;,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Your goal as a startup is to make something users love. If you do that, then you have to figure out how to get a lot more users. But this first part is critical—think about the really successful companies of today. They all started with a product that their early users loved so much they told other people about it. If you fail to do this, you will fail.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That paragraph has been making me think about what I should do with Make9. I can count with my fingers the number of players who share Make9 in social media and all of them are my friends. &lt;em&gt;Does it mean users don&amp;#39;t love or care about Make9? So does it fail already?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The metrics of the game so far gave birth to this one single question which lingers at the back of my mind and bugs me all the time. &lt;em&gt;Should I keep on working on Make9 or move on to something new?&lt;/em&gt; I know it&amp;#39;s just been a short time and there are still things I could do to try to increase engagement and downloads. But &lt;em&gt;will it matter?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m going to ponder on these questions for a while longer while I&amp;#39;m busy preparing my moving out of Japan. In the mean time, if you have any advice or suggestions, let me know on Twitter or send me an &lt;a href=&quot;mailto:nico@delightfuldev.com&quot;&gt;email&lt;/a&gt;. I&amp;#39;d greatly appreciate it.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Nov 2015 11:30:49 +0900</pubDate>
+        <link>http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
+        
+        
+        <category>ios</category>
+        
+        <category>game</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Make9: From Zero to First iOS Android Game in 2 Months With Cocos2d-x</title>
@@ -397,45 +458,6 @@ sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
         
         
         <category>mac</category>
-        
-      </item>
-    
-      <item>
-        <title>QuartzCode: PaintCode for Animation</title>
-        <description>&lt;p&gt;There are many &lt;a href=&quot;blog/2014/09/28/25-must-have-apps-for-your-mac/&quot;&gt;amazing tools to help iOS development&lt;/a&gt; easier. One of them is &lt;a href=&quot;https://itunes.apple.com/jp/app/paintcode-2/id808809998?l=en&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;PaintCode&lt;/a&gt;. A splendid tool to turn drawings into code. But what about animation? It would be very helpful if there is a tool to create animations visually and turn them into code. &lt;a href=&quot;https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;QuartzCode&lt;/a&gt; is the answer.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;I gave it a try by trying to replicate the cute uploading animation I found in &lt;a href=&quot;https://dribbble.com/shots/1429143-Upload?list=buckets&amp;amp;offset=14&quot;&gt;Dribbble&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d13yacurqjgara.cloudfront.net/users/50261/screenshots/1429143/upload.gif&quot; alt=&quot;cute uploading animation&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;While it&amp;#39;s not completely the same, I managed to come up with something close enough after playing with QuartzCode for few hours.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;QuartzCode surely improves development speed once you get used to it. However it&amp;#39;s not quite perfect right now since there are some frustrating bugs which I hope will be fixed in the future:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;The undo function doesn&amp;#39;t work properly sometimes. Especially for paths.&lt;/li&gt;
-&lt;li&gt;Inspector panel and Keyframe inspector panel are unscrollable which probably is caused by Yosemite.&lt;/li&gt;
-&lt;li&gt;The generated code is buggy. Xcode warns a retail cycle, variable redefinition, etc.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Regardless, by tweaking the generated code and by learning that we can &lt;a href=&quot;http://ronnqvi.st/controlling-animation-timing/&quot;&gt;control the animation timing&lt;/a&gt;, I could create a lovely upload progress control.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/nicnocquee/FluidProgressIndicator/master/NPRUploadAnimation/files/demo-1.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;You can check out the project in &lt;a href=&quot;https://github.com/nicnocquee/FluidProgressIndicator&quot;&gt;Github&lt;/a&gt; along with the &lt;a href=&quot;https://github.com/nicnocquee/FluidProgressIndicator/tree/master/NPRUploadAnimation/files&quot;&gt;QuartzCode project&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;QuartzCode is &lt;a href=&quot;https://itunes.apple.com/us/app/quartzcode-vector-animation/id913523893?ls=1&amp;amp;mt=12&amp;amp;at=11lMiE&quot;&gt;$79.99 on the Mac App Store&lt;/a&gt; or you can try it first for free by downloading it from the &lt;a href=&quot;http://www.quartzcodeapp.com&quot;&gt;website&lt;/a&gt;. Don&amp;#39;t forget to take a look at pretty cool examples on the website to find out what you can make with QuartzCode.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 17 Oct 2014 23:49:43 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/2014/10/17/quartzcode.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/10/17/quartzcode.html</guid>
-        
-        
-        <category>ios</category>
         
       </item>
     
