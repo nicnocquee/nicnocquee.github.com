@@ -6,13 +6,15 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Dec 2015 17:58:52 +0100</pubDate>
-    <lastBuildDate>Sun, 13 Dec 2015 17:58:52 +0100</lastBuildDate>
+    <pubDate>Sun, 13 Dec 2015 18:03:44 +0100</pubDate>
+    <lastBuildDate>Sun, 13 Dec 2015 18:03:44 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>The Making of Nori for Mac</title>
         <description>&lt;p&gt;I recently announced &lt;a href=&quot;https://medium.com/@nicnocquee/one-week-app-making-challenge-9e47a1aac9f3#.8dbxxtqtd&quot;&gt;Nori for Mac as part of weekly app challenge&lt;/a&gt;. &lt;a href=&quot;http://www.delightfuldev.com/nori/&quot;&gt;Nori&lt;/a&gt; is a simple Mac app to instantly create photo strips by simply dragging and dropping images to Nori&amp;#39;s window. Nori is not my first Mac app; I had released &lt;a href=&quot;http://www.kaomojiapp.com&quot;&gt;Kaomoji for Mac&lt;/a&gt; and &lt;a href=&quot;http://www.delightfuldev.com/tiny/&quot;&gt;Tiny for Mac&lt;/a&gt; before. However, both Kaomoji and Tiny are not window-based Mac app. On the other hand, Nori is a window-based application which gave me the opportunity to learn the complexity of making a Mac app with user interface.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/nori-icon.png&quot; alt=&quot;Nori for Mac icon&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;In this post, I will share some interesting stuff I encountered when developing Nori.&lt;/p&gt;
 
