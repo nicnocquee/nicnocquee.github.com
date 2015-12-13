@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>The Making of Nori for Mac</title>
+  <meta name="description" content="I recently announced Nori for Mac as part of weekly app challenge. Nori is a simple Mac app to instantly create photo strips by simply dragging and dropping images to Nori&#39;s window. Nori is not..." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+
+  <meta property="og:site_name" content="NICNOCQUEE" />
+  <meta property="og:title" content="The Making of Nori for Mac"/>
+  
+  <meta property="og:description" content="I recently announced Nori for Mac as part of weekly app challenge. Nori is a simple Mac app to instantly create photo strips by simply dragging and dropping images to Nori&#39;s window. Nori is not..." />
+  
+  <meta property="og:image" content="http://www.nicnocquee.com" />
+  <meta property="og:url" content="http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html" >
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2015-12-13T16:37:55+01:00">
+
+  <link rel="canonical" href="http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
+
+<!-- header end -->
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">The Making of Nori for Mac</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              by
+              <a href="https://twitter.com/nicnocquee">Nico Prananta</a>
+              on
+              <time datetime="2015-12-13T16:37:55+01:00">13 Dec 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>I recently announced <a href="https://medium.com/@nicnocquee/one-week-app-making-challenge-9e47a1aac9f3#.8dbxxtqtd">Nori for Mac as part of weekly app challenge</a>. <a href="http://www.delightfuldev.com/nori/">Nori</a> is a simple Mac app to instantly create photo strips by simply dragging and dropping images to Nori&#39;s window. Nori is not my first Mac app; I had released <a href="http://www.kaomojiapp.com">Kaomoji for Mac</a> and <a href="http://www.delightfuldev.com/tiny/">Tiny for Mac</a> before. However, both Kaomoji and Tiny are not window-based Mac app. On the other hand, Nori is a window-based application which gave me the opportunity to learn the complexity of making a Mac app with user interface.</p>
+
+<p>In this post, I will share some interesting stuff I encountered when developing Nori.</p>
+
+<h1>AppDelegate in Mac is clueless about the UI</h1>
+
+<p>When creating a new iOS project in Xcode, we will get a reference to <code>window</code> in <code>AppDelegate</code> class, while a Mac app does not have <code>window</code> property. It feels like the AppDelegate in Mac does not know even what the initial window is. This is probably due to the fact that a Mac app can have multiple windows.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="c1">// AppDelegate in iOS</span>
+<span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+<span class="k">@interface</span> <span class="nc">AppDelegate</span> : <span class="bp">UIResponder</span> <span class="o">&lt;</span><span class="bp">UIApplicationDelegate</span><span class="o">&gt;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="k">strong</span><span class="p">,</span> <span class="k">nonatomic</span><span class="p">)</span> <span class="bp">UIWindow</span> <span class="o">*</span><span class="n">window</span><span class="p">;</span>
+<span class="k">@end</span>
+
+<span class="c1">// AppDelegate in OSX</span>
+<span class="cp">#import &quot;AppDelegate.h&quot;</span>
+<span class="k">@interface</span> <span class="nc">AppDelegate</span> <span class="p">()</span>
+<span class="k">@end</span>
+<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidFinishLaunching:</span><span class="p">(</span><span class="bp">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+    <span class="c1">// Insert code here to initialize your application</span>
+<span class="p">}</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillTerminate:</span><span class="p">(</span><span class="bp">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+    <span class="c1">// Insert code here to tear down your application</span>
+<span class="p">}</span>
+<span class="k">@end</span></code></pre></div>
+
+<p>In Nori&#39;s case, I need to the app to generate photo strips when the app receive user-selected images from Finder. When the user click <code>Create Photostrip</code> from Finder&#39;s contextual menu (right click), the system will call a registered method in Nori. Inside this method, the app will fetch the selected file URLs and generate photo strip from the image files.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">photoStripFromImage:</span><span class="p">(</span><span class="n">NSPasteboard</span> <span class="o">*</span><span class="p">)</span><span class="nv">pboard</span> <span class="nf">userData:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">error:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">**</span><span class="p">)</span><span class="nv">error</span> <span class="p">{</span>
+    <span class="bp">NSArray</span> <span class="o">*</span><span class="n">classes</span> <span class="o">=</span> <span class="l">@[</span> <span class="p">[</span><span class="bp">NSURL</span> <span class="k">class</span><span class="p">]</span> <span class="l">]</span><span class="p">;</span>
+    <span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">options</span> <span class="o">=</span> <span class="l">@{</span> <span class="nl">NSPasteboardURLReadingFileURLsOnlyKey</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSNumber</span> <span class="nl">numberWithBool</span><span class="p">:</span><span class="nb">YES</span><span class="p">],</span>
+                               <span class="nl">NSPasteboardURLReadingContentsConformToTypesKey</span><span class="p">:</span> <span class="p">[</span><span class="n">NSImage</span> <span class="n">imageTypes</span><span class="p">]</span> <span class="l">}</span><span class="p">;</span>
+    <span class="bp">NSArray</span> <span class="o">*</span><span class="n">fileURLs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pboard</span> <span class="nl">readObjectsForClasses</span><span class="p">:</span><span class="n">classes</span> <span class="nl">options</span><span class="p">:</span><span class="n">options</span><span class="p">];</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">fileURLs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">NSArray</span><span class="o">*</span> <span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">pboard</span> <span class="nl">propertyListForType</span><span class="p">:</span> <span class="n">NSFilenamesPboardType</span><span class="p">];</span>
+
+        <span class="c1">// generate photo strip from files</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>I need to pass this file URLs to the view controller who is responsible in displaying the generated photo strip. In iOS, I can simply get the root view controller like so.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="bp">UIViewController</span> <span class="o">*</span><span class="n">root</span> <span class="o">=</span> <span class="p">[[[[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">delegate</span><span class="p">]</span> <span class="n">window</span><span class="p">]</span> <span class="n">rootViewController</span><span class="p">];</span></code></pre></div>
+
+<p>But the problem was there&#39;s no straight forward way to tell the view controller about these files. There are several ways to solve this, but I chose to disable the &quot;magic&quot; of storyboard by unchecking the &quot;Is Initial Controller&quot; in the main storyboard. Then I create the window programmatically in AppDelegate&#39;s <code>applicationDidFinishLaunching</code>.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidFinishLaunching:</span><span class="p">(</span><span class="bp">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>    
+    <span class="n">NSStoryboard</span> <span class="o">*</span><span class="n">mainStoryBoard</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSStoryboard</span> <span class="nl">storyboardWithName</span><span class="p">:</span><span class="s">@&quot;Main&quot;</span> <span class="nl">bundle</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="n">MainWindowController</span> <span class="o">*</span><span class="n">windowController</span> <span class="o">=</span> <span class="p">[</span><span class="n">mainStoryBoard</span> <span class="nl">instantiateControllerWithIdentifier</span><span class="p">:</span><span class="s">@&quot;mainWindowController&quot;</span><span class="p">];</span>
+    <span class="nb">self</span><span class="p">.</span><span class="n">mainWindowController</span> <span class="o">=</span> <span class="n">windowController</span><span class="p">;</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">mainWindowController</span><span class="p">.</span><span class="n">window</span> <span class="nl">makeKeyAndOrderFront</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">windowController</span> <span class="nl">showWindow</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
+<span class="p">}</span></code></pre></div>
+
+<p>This way, the AppDelegate can refer to the main window controller and &quot;speak&quot; to it when the app receives images.</p>
+
+<h1>NSImage size is not pixel size</h1>
+
+<p>NSImage has a <code>size</code> property, but unfortunately it is not the pixel size of the image. The size property returns the <a href="http://stackoverflow.com/a/11877049/401544">size information that is screen resolution dependent</a>. To get the pixel size, we need to use <code>NSImageRep</code>.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="c1">// NSImage category</span>
+<span class="p">-</span> <span class="p">(</span><span class="n">NSSize</span><span class="p">)</span><span class="nf">pixelSize</span> <span class="p">{</span>
+    <span class="n">NSImageRep</span> <span class="o">*</span><span class="n">rep</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">self</span> <span class="n">representations</span><span class="p">]</span> <span class="nl">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>
+    <span class="n">NSSize</span> <span class="n">imageSize</span> <span class="o">=</span> <span class="n">NSMakeSize</span><span class="p">(</span><span class="n">rep</span><span class="p">.</span><span class="n">pixelsWide</span><span class="p">,</span> <span class="n">rep</span><span class="p">.</span><span class="n">pixelsHigh</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">imageSize</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h1>NSView does not have background color</h1>
+
+<p>In iOS, changing the background color of a <code>UIView</code> is as simple as changing its <code>backgroundColor</code> property. But it&#39;s not that simple with NSView. I need to subclass <code>NSView</code> and override <code>drawRect</code> method.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">drawRect:</span><span class="p">(</span><span class="n">NSRect</span><span class="p">)</span><span class="nv">dirtyRect</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="nl">drawRect</span><span class="p">:</span><span class="n">dirtyRect</span><span class="p">];</span>
+
+    <span class="p">[[</span><span class="n">NSColor</span> <span class="nl">colorWithDeviceWhite</span><span class="p">:</span><span class="mi">0</span> <span class="nl">alpha</span><span class="p">:</span><span class="mf">0.7</span><span class="p">]</span> <span class="n">setFill</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">NSBezierPath</span> <span class="nl">fillRect</span><span class="p">:</span><span class="n">dirtyRect</span><span class="p">];</span>
+<span class="p">}</span></code></pre></div>
+
+<h1>App Sandbox is annoying</h1>
+
+<p><img src="/assets/images/posts/sandbox-file-readwrite.png" alt=""></p>
+
+<p>While I understand the security reason for App Sandbox, I don&#39;t understand why opening <code>Open Panel</code> and <code>Save Panel</code> to open and save files, respectively, requires read/write permission. Selecting and saving files via Open panel and save panel are <em>user initiated process</em>. It&#39;s not something the app does in the background without user&#39;s knowledge. What&#39;s worse than its iOS counterpart is that in Mac, the system does not show an alert to ask user for permission.</p>
+
+<hr>
+
+<p>Nori for Mac will be available on the Mac App Store. Follow me on <a href="https://twitter.com/nicnocquee">Twitter</a> to be notified when it&#39;s available. Let me know if you think you need the app and want to test it early.</p>
+
+        </section>
+        <footer class="post-footer">
+            <hr/>
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=The+Making+of+Nori+for+Mac&amp;url=http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+        </footer>
+
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/background.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">NICNOCQUEE</h1>
+        <h2 class="blog-description">Blog about iOS, Programming, Japan, or Random Stuff.
+</h2>
+        <!-- <a href="/" class="btn">Back to Overview</a> -->
+        
+            <a class="btn" href="/ios/game/android/2015/11/16/keep-on-or-move-on.html">&laquo; Older</a>
+        
+
+        
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+  </body>
+</html>

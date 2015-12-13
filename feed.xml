@@ -6,9 +6,108 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Nov 2015 19:40:08 +0900</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 19:40:08 +0900</lastBuildDate>
+    <pubDate>Sun, 13 Dec 2015 17:58:52 +0100</pubDate>
+    <lastBuildDate>Sun, 13 Dec 2015 17:58:52 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>The Making of Nori for Mac</title>
+        <description>&lt;p&gt;I recently announced &lt;a href=&quot;https://medium.com/@nicnocquee/one-week-app-making-challenge-9e47a1aac9f3#.8dbxxtqtd&quot;&gt;Nori for Mac as part of weekly app challenge&lt;/a&gt;. &lt;a href=&quot;http://www.delightfuldev.com/nori/&quot;&gt;Nori&lt;/a&gt; is a simple Mac app to instantly create photo strips by simply dragging and dropping images to Nori&amp;#39;s window. Nori is not my first Mac app; I had released &lt;a href=&quot;http://www.kaomojiapp.com&quot;&gt;Kaomoji for Mac&lt;/a&gt; and &lt;a href=&quot;http://www.delightfuldev.com/tiny/&quot;&gt;Tiny for Mac&lt;/a&gt; before. However, both Kaomoji and Tiny are not window-based Mac app. On the other hand, Nori is a window-based application which gave me the opportunity to learn the complexity of making a Mac app with user interface.&lt;/p&gt;
+
+&lt;p&gt;In this post, I will share some interesting stuff I encountered when developing Nori.&lt;/p&gt;
+
+&lt;h1&gt;AppDelegate in Mac is clueless about the UI&lt;/h1&gt;
+
+&lt;p&gt;When creating a new iOS project in Xcode, we will get a reference to &lt;code&gt;window&lt;/code&gt; in &lt;code&gt;AppDelegate&lt;/code&gt; class, while a Mac app does not have &lt;code&gt;window&lt;/code&gt; property. It feels like the AppDelegate in Mac does not know even what the initial window is. This is probably due to the fact that a Mac app can have multiple windows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// AppDelegate in iOS&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppDelegate&lt;/span&gt; : &lt;span class=&quot;bp&quot;&gt;UIResponder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplicationDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// AppDelegate in OSX&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#import &amp;quot;AppDelegate.h&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppDelegate&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;applicationDidFinishLaunching:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNotification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aNotification&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Insert code here to initialize your application&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;applicationWillTerminate:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNotification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aNotification&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Insert code here to tear down your application&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In Nori&amp;#39;s case, I need to the app to generate photo strips when the app receive user-selected images from Finder. When the user click &lt;code&gt;Create Photostrip&lt;/code&gt; from Finder&amp;#39;s contextual menu (right click), the system will call a registered method in Nori. Inside this method, the app will fetch the selected file URLs and generate photo strip from the image files.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;photoStripFromImage:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSPasteboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pboard&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;userData:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;error:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;NSPasteboardURLReadingFileURLsOnlyKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;numberWithBool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+                               &lt;span class=&quot;nl&quot;&gt;NSPasteboardURLReadingContentsConformToTypesKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imageTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileURLs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pboard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;readObjectsForClasses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileURLs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filenames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pboard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;propertyListForType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSFilenamesPboardType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// generate photo strip from files&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I need to pass this file URLs to the view controller who is responsible in displaying the generated photo strip. In iOS, I can simply get the root view controller like so.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;bp&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But the problem was there&amp;#39;s no straight forward way to tell the view controller about these files. There are several ways to solve this, but I chose to disable the &amp;quot;magic&amp;quot; of storyboard by unchecking the &amp;quot;Is Initial Controller&amp;quot; in the main storyboard. Then I create the window programmatically in AppDelegate&amp;#39;s &lt;code&gt;applicationDidFinishLaunching&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;applicationDidFinishLaunching:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNotification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aNotification&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    
+    &lt;span class=&quot;n&quot;&gt;NSStoryboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainStoryBoard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSStoryboard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;storyboardWithName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;Main&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;MainWindowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;windowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainStoryBoard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;instantiateControllerWithIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;mainWindowController&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainWindowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windowController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainWindowController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;makeKeyAndOrderFront&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;windowController&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;showWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This way, the AppDelegate can refer to the main window controller and &amp;quot;speak&amp;quot; to it when the app receives images.&lt;/p&gt;
+
+&lt;h1&gt;NSImage size is not pixel size&lt;/h1&gt;
+
+&lt;p&gt;NSImage has a &lt;code&gt;size&lt;/code&gt; property, but unfortunately it is not the pixel size of the image. The size property returns the &lt;a href=&quot;http://stackoverflow.com/a/11877049/401544&quot;&gt;size information that is screen resolution dependent&lt;/a&gt;. To get the pixel size, we need to use &lt;code&gt;NSImageRep&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// NSImage category&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pixelSize&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSImageRep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;representations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;objectAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSSize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imageSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSMakeSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsWide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsHigh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imageSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;NSView does not have background color&lt;/h1&gt;
+
+&lt;p&gt;In iOS, changing the background color of a &lt;code&gt;UIView&lt;/code&gt; is as simple as changing its &lt;code&gt;backgroundColor&lt;/code&gt; property. But it&amp;#39;s not that simple with NSView. I need to subclass &lt;code&gt;NSView&lt;/code&gt; and override &lt;code&gt;drawRect&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;drawRect:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dirtyRect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;drawRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirtyRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSColor&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;colorWithDeviceWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSBezierPath&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;fillRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirtyRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;App Sandbox is annoying&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/sandbox-file-readwrite.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;While I understand the security reason for App Sandbox, I don&amp;#39;t understand why opening &lt;code&gt;Open Panel&lt;/code&gt; and &lt;code&gt;Save Panel&lt;/code&gt; to open and save files, respectively, requires read/write permission. Selecting and saving files via Open panel and save panel are &lt;em&gt;user initiated process&lt;/em&gt;. It&amp;#39;s not something the app does in the background without user&amp;#39;s knowledge. What&amp;#39;s worse than its iOS counterpart is that in Mac, the system does not show an alert to ask user for permission.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Nori for Mac will be available on the Mac App Store. Follow me on &lt;a href=&quot;https://twitter.com/nicnocquee&quot;&gt;Twitter&lt;/a&gt; to be notified when it&amp;#39;s available. Let me know if you think you need the app and want to test it early.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Dec 2015 16:37:55 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Keep on or Move On</title>
@@ -58,7 +157,7 @@
 
 &lt;p&gt;I&amp;#39;m going to ponder on these questions for a while longer while I&amp;#39;m busy preparing my moving out of Japan. In the mean time, if you have any advice or suggestions, let me know on Twitter or send me an &lt;a href=&quot;mailto:nico@delightfuldev.com&quot;&gt;email&lt;/a&gt;. I&amp;#39;d greatly appreciate it.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 16 Nov 2015 11:30:49 +0900</pubDate>
+        <pubDate>Mon, 16 Nov 2015 03:30:49 +0100</pubDate>
         <link>http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
         
@@ -97,7 +196,7 @@
 
 &lt;p&gt;Have fun!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 23 Oct 2015 11:14:47 +0900</pubDate>
+        <pubDate>Fri, 23 Oct 2015 04:14:47 +0200</pubDate>
         <link>http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
         
@@ -128,7 +227,7 @@
 
 &lt;p&gt;Don&amp;#39;t give up because of destiny. If everyone has their destiny decided since they were born, so what&amp;#39;s the point of living? And be prepared when good or bad luck greets you.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 17 Oct 2015 14:11:47 +0900</pubDate>
+        <pubDate>Sat, 17 Oct 2015 07:11:47 +0200</pubDate>
         <link>http://www.nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</guid>
         
@@ -193,9 +292,9 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-        <pubDate>Sat, 17 Oct 2015 00:57:52 +0900</pubDate>
-        <link>http://www.nicnocquee.com/ios/android/game/2015/10/17/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/android/game/2015/10/17/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</guid>
+        <pubDate>Fri, 16 Oct 2015 17:57:52 +0200</pubDate>
+        <link>http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</guid>
         
         
         <category>ios</category>
@@ -220,7 +319,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/google1.png&quot; alt=&quot;google search activity insight&quot;&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 14 Oct 2015 19:39:27 +0900</pubDate>
+        <pubDate>Wed, 14 Oct 2015 12:39:27 +0200</pubDate>
         <link>http://www.nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</guid>
         
@@ -254,7 +353,7 @@ public static void share&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;java.lang.
     descriptor: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;V
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-        <pubDate>Wed, 14 Oct 2015 17:28:47 +0900</pubDate>
+        <pubDate>Wed, 14 Oct 2015 10:28:47 +0200</pubDate>
         <link>http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</guid>
         
@@ -333,7 +432,7 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
 &lt;p&gt;Finally, all I have to do is to run&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;./overlay-batch.sh screenshot-captions
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 11 Oct 2015 20:24:47 +0900</pubDate>
+        <pubDate>Sun, 11 Oct 2015 13:24:47 +0200</pubDate>
         <link>http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</guid>
         
@@ -393,7 +492,7 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
 
 &lt;p&gt;This way, the value of &lt;code&gt;transitionProgress&lt;/code&gt; will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&amp;#39;s &lt;code&gt;layoutAttributesForElementsInRect:&lt;/code&gt; method and set the attributes of each cell based on the value of &lt;code&gt;transitionProgress&lt;/code&gt;, you can create a custom layout animation transition.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 29 Jan 2015 11:30:53 +0900</pubDate>
+        <pubDate>Thu, 29 Jan 2015 03:30:53 +0100</pubDate>
         <link>http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</guid>
         
@@ -414,50 +513,12 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
 
 &lt;p&gt;Let me know if you use it and find it useful :)&lt;/p&gt;
 </description>
-        <pubDate>Wed, 10 Dec 2014 20:42:06 +0900</pubDate>
+        <pubDate>Wed, 10 Dec 2014 12:42:06 +0100</pubDate>
         <link>http://www.nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/2014/12/10/city-names-to-timezones-plist.html</guid>
         
         
         <category>ios</category>
-        
-      </item>
-    
-      <item>
-        <title>How to Change the Color of Finder Folder Icon in OSX Yosemite</title>
-        <description>&lt;p&gt;I wasn&amp;#39;t really fond of the blue color of Finder folder icon in Yosemite. It&amp;#39;s too saturated. Luckily I wasn&amp;#39;t the only one. From &lt;a href=&quot;http://yukiyamashina.github.io/blog/2014/10/19/how-to-change-the-color-of-default-folder-icons-in-OS-X-Yosemite/&quot;&gt;Yuki Yamashina&amp;#39;s How to Change Color of Default Folder Icons in OSX Yosemite&lt;/a&gt;, I could change the color of Finder folder icon.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Basically you just need to find the icons, edit, and restart.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The icons are located in &lt;code&gt;/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/&lt;/code&gt;. From Finder, just go to &lt;code&gt;System-&amp;gt;Library-&amp;gt;CoreServices&lt;/code&gt; folder, then right click on &lt;code&gt;CoreTypes.bundle&lt;/code&gt;, then click &lt;code&gt;Show Package Content&lt;/code&gt;. Then open &lt;code&gt;Contents-&amp;gt;Resources&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1z1W183F0m2F1k1T3y34/Screen%20Shot%202014-10-20%20at%2000.41.03.png&quot; alt=&quot;location-of-osx-icons&quot;&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;There are several icons (.icns) you need to edit but the first one you should edit is &lt;code&gt;GenericFolderIcon.icns&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Copy it first somewhere else then double click the file. Preview app will open and you can adjust the color from &lt;code&gt;Tools-&amp;gt;Adjust Color...&lt;/code&gt;. There are several images inside the icns file so you need to adjust the color of all the images. (If anybody knows how to batch edit the files let me know, please).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/183c3d2H0K1N281a3s19/Screen%20Shot%202014-10-20%20at%2000.45.08.png&quot; alt=&quot;change-icns-color-with-preview-osx&quot;&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Once you&amp;#39;re done, save it, and copy it back to &lt;code&gt;/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/&lt;/code&gt; folder. You will be prompted to enter Administrator password.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Now the important step. You need to clear the icon cache by executing the following commands in Terminal.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \;
-sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Restart your Mac.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Do the same thing for other icons such as &lt;code&gt;ApplicationsFolderIcon.icns&lt;/code&gt;, &lt;code&gt;DesktopFolderIcon.icns&lt;/code&gt;, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It&amp;#39;s a bit of work but at least the folder icon is pleasant to my eyes now.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://f.cl.ly/items/1v0f33211J2q2P38161i/finder-folder-icons.png&quot; alt=&quot;change-yosemite-finder-folder-icon-color&quot;&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Oct 2014 23:53:29 +0900</pubDate>
-        <link>http://www.nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/mac/2014/10/19/how-to-change-the-color-of-finder-folder-icon-in-osx-yosemite.html</guid>
-        
-        
-        <category>mac</category>
         
       </item>
     
