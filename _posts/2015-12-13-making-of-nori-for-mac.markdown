@@ -120,4 +120,4 @@ While I understand the security reason for App Sandbox, I don't understand why o
 
 ***
 
-Nori for Mac will be available on the Mac App Store. Follow me on [Twitter](https://twitter.com/nicnocquee) to be notified when it's available. Let me know if you think you need the app and want to test it early.
+Nori for Mac is [now available on the Mac App Store](https://itunes.apple.com/us/app/nori-photo-strips-creator/id1067017035?ls=1&mt=12). Check it out! :)
