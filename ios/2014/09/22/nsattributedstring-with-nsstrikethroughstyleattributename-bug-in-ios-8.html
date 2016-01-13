@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8</title>
+  <title>NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8</title>
   <meta name="description" content="In iOS 7, it&#39;s easy to create UILabel with strikethrough text. You can just simply assign NSAttributedString to the text label." />
 
   <meta name="HandheldFriendly" content="True" />
@@ -17,7 +17,7 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8"/>
+  <meta property="og:title" content="NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8"/>
   
   <meta property="og:description" content="In iOS 7, it&#39;s easy to create UILabel with strikethrough text. You can just simply assign NSAttributedString to the text label." />
   
@@ -35,18 +35,20 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">NSAttributedString With NSStrikethroughStyleAttributeName Bug in iOS 8</h1>
+            <h1 class="post-title">NSAttributedString with NSStrikethroughStyleAttributeName bug in iOS 8</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
@@ -69,27 +71,27 @@
           <a name="topofpage"></a>
           <p>In iOS 7, it&#39;s easy to create UILabel with strikethrough text. You can just simply assign <code>NSAttributedString</code> to the text label.</p>
 
-<figure class='code-highlight-figure'><figcaption class='code-highlight-caption'><span class='code-highlight-caption-title'>more</span></figcaption><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">price</span> <span class="o">=</span> <span class="s">@&quot;7,500&quot;</span><span class="p">;</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="bp">NSString</span> <span class="o">*</span><span class="n">retailPrice</span> <span class="o">=</span> <span class="s">@&quot;10,000円&quot;</span><span class="p">;</span>
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="bp">NSString</span> <span class="o">*</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">retailPrice</span><span class="p">];</span>
-</div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span><span class="p">];</span>
-</div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@&#x7b;</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)&#x7d;</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
-</div></div><div data-line='6' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">label</span> <span class="nl">setAttributedText</span><span class="p">:</span><span class="n">string</span><span class="p">];</span></div></div></pre></div></figure>
-
+<!--more-->
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="bp">NSString</span> <span class="o">*</span><span class="n">price</span> <span class="o">=</span> <span class="s">@&quot;7,500&quot;</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">retailPrice</span> <span class="o">=</span> <span class="s">@&quot;10,000円&quot;</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">retailPrice</span><span class="p">];</span>
+    <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)}</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">label</span> <span class="nl">setAttributedText</span><span class="p">:</span><span class="n">string</span><span class="p">];</span>
+</code></pre></div>
 <p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug"></p>
 
 <p>But in iOS 8, that code didn&#39;t work anymore. The strikethrough line didn&#39;t appear. Funny thing was, if range&#39;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span> <span class="nl">attributes</span><span class="p">:</span><span class="l">@&#x7b;</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span> <span class="l">@(</span><span class="n">NSUnderlineStyleNone</span><span class="l">)&#x7d;</span><span class="p">];</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@&#x7b;</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)&#x7d;</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span> <span class="nl">attributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span> <span class="l">@(</span><span class="n">NSUnderlineStyleNone</span><span class="l">)}</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)}</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
+</code></pre></div>
         </section>
         <footer class="post-footer">
             <hr/>
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=NSAttributedString+With+NSStrikethroughStyleAttributeName+Bug+in+iOS+8&amp;url=http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=NSAttributedString+with+NSStrikethroughStyleAttributeName+bug+in+iOS+8&amp;url=http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -98,7 +100,7 @@
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -162,5 +164,7 @@
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

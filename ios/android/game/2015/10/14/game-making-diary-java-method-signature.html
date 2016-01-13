@@ -35,12 +35,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
@@ -69,7 +71,7 @@
           <a name="topofpage"></a>
           <p>While making <a href="http://www.delightfuldev.com/make9/">my first cross platform game</a> using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cpp file to .mm and include it in the project and I can call C++ or Objective-C methods right away. In Android, if I want to call a Java method from C++, I need to use JNI (Java Native Interface). For example, to call a static method named <code>share</code> in <code>AppActivity</code> class, I need to do it like so.</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JniMethodInfo</span> <span class="n">t</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JniMethodInfo</span> <span class="n">t</span><span class="o">;</span>
 <span class="k">if</span> <span class="o">(</span><span class="nl">JniHelper:</span><span class="o">:</span><span class="n">getStaticMethodInfo</span><span class="o">(</span><span class="n">t</span><span class="o">,</span> <span class="s">&quot;org/cocos2dx/cpp/AppActivity&quot;</span><span class="o">,</span> <span class="s">&quot;share&quot;</span><span class="o">,</span> <span class="s">&quot;(Ljava/lang/String;Ljava/lang/String;)V&quot;</span><span class="o">))</span> <span class="o">{</span>
     <span class="n">jstring</span> <span class="n">StringArg1</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
     <span class="n">jstring</span> <span class="n">StringArg2</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
@@ -77,18 +79,18 @@
     <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">classID</span><span class="o">);</span>
     <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">StringArg1</span><span class="o">);</span>
     <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">DeleteLocalRef</span><span class="o">(</span><span class="n">StringArg2</span><span class="o">);</span>
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
 <p>The last argument of <code>getStaticMethodInfo</code> is the method signature of the <code>share</code> static method. This signature must be correct or else you&#39;ll get <code>Failed to find static method id</code> error. To get this method signature, use <code>javap -s</code> command from command line.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
 
 <span class="c">#output</span>
 Compiled from <span class="s2">&quot;AppActivity.java&quot;</span>
 public class org.cocos2dx.cpp.AppActivity extends org.cocos2dx.lib.Cocos2dxActivity <span class="o">{</span>
 public static void share<span class="o">(</span>java.lang.String, java.lang.String<span class="o">)</span><span class="p">;</span>
     descriptor: <span class="o">(</span>Ljava/lang/String<span class="p">;</span>Ljava/lang/String<span class="p">;</span><span class="o">)</span>V
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
         </section>
         <footer class="post-footer">
@@ -105,7 +107,7 @@ public static void share<span class="o">(</span>java.lang.String, java.lang.Stri
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -169,5 +171,7 @@ public static void share<span class="o">(</span>java.lang.String, java.lang.Stri
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

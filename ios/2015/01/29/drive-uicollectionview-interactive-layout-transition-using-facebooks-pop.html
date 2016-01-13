@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Drive UICollectionView Interactive Layout Transition Using Facebook's Pop</title>
+  <title>Drive UICollectionView interactive layout transition using Facebook's Pop</title>
   <meta name="description" content="UICollectionView has a method to change layout easily: setCollectionViewLayout:animated:completion:. And according to documentation, if you implement the delegate&#39;s collectionView:transitionLay..." />
 
   <meta name="HandheldFriendly" content="True" />
@@ -17,7 +17,7 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="Drive UICollectionView Interactive Layout Transition Using Facebook's Pop"/>
+  <meta property="og:title" content="Drive UICollectionView interactive layout transition using Facebook's Pop"/>
   
   <meta property="og:description" content="UICollectionView has a method to change layout easily: setCollectionViewLayout:animated:completion:. And according to documentation, if you implement the delegate&#39;s collectionView:transitionLay..." />
   
@@ -35,18 +35,20 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Drive UICollectionView Interactive Layout Transition Using Facebook's Pop</h1>
+            <h1 class="post-title">Drive UICollectionView interactive layout transition using Facebook's Pop</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
@@ -78,42 +80,40 @@
 </blockquote>
 
 <p>But strangely, that delegate&#39;s method is not called when we change layout using <code>setCollectionViewLayout</code>. Somebody in <a href="http://stackoverflow.com/a/23009119/401544">stackoverflow</a> provided a workaround by calling collection view&#39;s <code>startInteractiveTransitionToCollectionViewLayout:</code> method instead.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="n">finishInteractiveTransition</span><span class="p">];</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="n">finishInteractiveTransition</span><span class="p">];</span>
+</code></pre></div>
 <p>The problem is we cannot control the speed of the animation. What I wanted is to &quot;animate&quot; the <code>UICollectionViewTransitionLayout</code>&#39;s <code>transitionProgress</code> property.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">[</span><span class="bp">UIView</span> <span class="nl">animateWithDuration</span><span class="p">:</span><span class="mf">0.3</span> <span class="nl">delay</span><span class="p">:</span><span class="mi">0</span> <span class="nl">usingSpringWithDamping</span><span class="p">:</span><span class="mi">1</span> <span class="nl">initialSpringVelocity</span><span class="p">:</span><span class="mi">1</span> <span class="nl">options</span><span class="p">:</span><span class="n">UIViewAnimationOptionCurveEaseInOut</span> <span class="nl">animations</span><span class="p">:</span><span class="o">^</span><span class="p">&#x7b;</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="n">transition</span><span class="p">.</span><span class="n">transitionProgress</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">&#x7d;</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">finished</span><span class="p">)</span> <span class="p">&#x7b;&#x7d;];</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="bp">UIView</span> <span class="nl">animateWithDuration</span><span class="p">:</span><span class="mf">0.3</span> <span class="nl">delay</span><span class="p">:</span><span class="mi">0</span> <span class="nl">usingSpringWithDamping</span><span class="p">:</span><span class="mi">1</span> <span class="nl">initialSpringVelocity</span><span class="p">:</span><span class="mi">1</span> <span class="nl">options</span><span class="p">:</span><span class="n">UIViewAnimationOptionCurveEaseInOut</span> <span class="nl">animations</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
+    <span class="n">transition</span><span class="p">.</span><span class="n">transitionProgress</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">finished</span><span class="p">)</span> <span class="p">{}];</span>    
+</code></pre></div>
 <p>But since transitionProgress is not animatable, this doesn&#39;t work. This is where <a href="https://github.com/facebook/pop">Facebook&#39;s Pop</a> comes to rescue. Using Pop, we can animate custom properties.</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="c1">// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout</span>
+<span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="n">transition</span> <span class="o">=</span> <span class="p">(</span><span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="p">)[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="c1">// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="n">transition</span> <span class="o">=</span> <span class="p">(</span><span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="p">)[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'> </div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">POPSpringAnimation</span> <span class="o">*</span><span class="n">springAnimation</span> <span class="o">=</span> <span class="p">[</span><span class="n">POPSpringAnimation</span> <span class="n">animation</span><span class="p">];</span>
-</div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">POPAnimatableProperty</span> <span class="o">*</span><span class="n">property</span> <span class="o">=</span> <span class="p">[</span><span class="n">POPAnimatableProperty</span> <span class="nl">propertyWithName</span><span class="p">:</span><span class="s">@&quot;com.photos.transition&quot;</span> <span class="nl">initializer</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">POPMutableAnimatableProperty</span> <span class="o">*</span><span class="n">prop</span><span class="p">)</span> <span class="p">&#x7b;</span>
-</div></div><div data-line='6' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="n">prop</span><span class="p">.</span><span class="n">readBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">obj</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">values</span><span class="p">[])</span> <span class="p">&#x7b;</span>
-</div></div><div data-line='7' class='code-highlight-row numbered'><div class='code-highlight-line'>       <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span> <span class="n">transitionProgress</span><span class="p">];</span>
-</div></div><div data-line='8' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="p">&#x7d;;</span>
-</div></div><div data-line='9' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="n">prop</span><span class="p">.</span><span class="n">writeBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">obj</span><span class="p">,</span> <span class="k">const</span> <span class="n">CGFloat</span> <span class="n">values</span><span class="p">[])</span> <span class="p">&#x7b;</span>
-</div></div><div data-line='10' class='code-highlight-row numbered'><div class='code-highlight-line'>       <span class="p">[</span><span class="n">obj</span> <span class="nl">setTransitionProgress</span><span class="p">:</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]];</span>
-</div></div><div data-line='11' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="p">&#x7d;;</span>
-</div></div><div data-line='12' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="n">prop</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span>
-</div></div><div data-line='13' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">&#x7d;];</span>
-</div></div><div data-line='14' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">springAnimation</span><span class="p">.</span><span class="n">springBounciness</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
-</div></div><div data-line='15' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">springAnimation</span><span class="p">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">property</span><span class="p">;</span>
-</div></div><div data-line='16' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">springAnimation</span><span class="p">.</span><span class="n">fromValue</span> <span class="o">=</span> <span class="l">@(</span><span class="n">progress</span><span class="l">)</span><span class="p">;</span>
-</div></div><div data-line='17' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">springAnimation</span><span class="p">.</span><span class="n">toValue</span> <span class="o">=</span> <span class="l">@(</span><span class="mf">1.0</span><span class="l">)</span><span class="p">;</span>
-</div></div><div data-line='18' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">springAnimation</span><span class="p">.</span><span class="n">completionBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="n">POPAnimation</span> <span class="o">*</span><span class="n">anim</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="n">finished</span><span class="p">)&#x7b;</span>
-</div></div><div data-line='19' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="k">if</span> <span class="p">(</span><span class="n">finished</span><span class="p">)</span> <span class="p">&#x7b;</span>
-</div></div><div data-line='20' class='code-highlight-row numbered'><div class='code-highlight-line'>       <span class="p">[</span><span class="n">transition</span> <span class="nl">setTransitionProgress</span><span class="p">:</span><span class="mi">1</span><span class="p">];</span>
-</div></div><div data-line='21' class='code-highlight-row numbered'><div class='code-highlight-line'>       <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="n">finishInteractiveTransition</span><span class="p">];</span>
-</div></div><div data-line='22' class='code-highlight-row numbered'><div class='code-highlight-line'>   <span class="p">&#x7d;</span>
-</div></div><div data-line='23' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">&#x7d;;</span>
-</div></div><div data-line='24' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="p">[</span><span class="n">transition</span> <span class="nl">pop_addAnimation</span><span class="p">:</span><span class="n">springAnimation</span> <span class="nl">forKey</span><span class="p">:</span><span class="n">NSStringFromSelector</span><span class="p">(</span><span class="k">@selector</span><span class="p">(</span><span class="n">transitionProgress</span><span class="p">))];</span></div></div></pre></div></figure>
-
+<span class="n">POPSpringAnimation</span> <span class="o">*</span><span class="n">springAnimation</span> <span class="o">=</span> <span class="p">[</span><span class="n">POPSpringAnimation</span> <span class="n">animation</span><span class="p">];</span>
+<span class="n">POPAnimatableProperty</span> <span class="o">*</span><span class="n">property</span> <span class="o">=</span> <span class="p">[</span><span class="n">POPAnimatableProperty</span> <span class="nl">propertyWithName</span><span class="p">:</span><span class="s">@&quot;com.photos.transition&quot;</span> <span class="nl">initializer</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">POPMutableAnimatableProperty</span> <span class="o">*</span><span class="n">prop</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">prop</span><span class="p">.</span><span class="n">readBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">obj</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">values</span><span class="p">[])</span> <span class="p">{</span>
+       <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span> <span class="n">transitionProgress</span><span class="p">];</span>
+   <span class="p">};</span>
+   <span class="n">prop</span><span class="p">.</span><span class="n">writeBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">obj</span><span class="p">,</span> <span class="k">const</span> <span class="n">CGFloat</span> <span class="n">values</span><span class="p">[])</span> <span class="p">{</span>
+       <span class="p">[</span><span class="n">obj</span> <span class="nl">setTransitionProgress</span><span class="p">:</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]];</span>
+   <span class="p">};</span>
+   <span class="n">prop</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span>
+<span class="p">}];</span>
+<span class="n">springAnimation</span><span class="p">.</span><span class="n">springBounciness</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="n">springAnimation</span><span class="p">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">property</span><span class="p">;</span>
+<span class="n">springAnimation</span><span class="p">.</span><span class="n">fromValue</span> <span class="o">=</span> <span class="l">@(</span><span class="n">progress</span><span class="l">)</span><span class="p">;</span>
+<span class="n">springAnimation</span><span class="p">.</span><span class="n">toValue</span> <span class="o">=</span> <span class="l">@(</span><span class="mf">1.0</span><span class="l">)</span><span class="p">;</span>
+<span class="n">springAnimation</span><span class="p">.</span><span class="n">completionBlock</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="n">POPAnimation</span> <span class="o">*</span><span class="n">anim</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="n">finished</span><span class="p">){</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">finished</span><span class="p">)</span> <span class="p">{</span>
+       <span class="p">[</span><span class="n">transition</span> <span class="nl">setTransitionProgress</span><span class="p">:</span><span class="mi">1</span><span class="p">];</span>
+       <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="n">finishInteractiveTransition</span><span class="p">];</span>
+   <span class="p">}</span>
+<span class="p">};</span>
+<span class="p">[</span><span class="n">transition</span> <span class="nl">pop_addAnimation</span><span class="p">:</span><span class="n">springAnimation</span> <span class="nl">forKey</span><span class="p">:</span><span class="n">NSStringFromSelector</span><span class="p">(</span><span class="k">@selector</span><span class="p">(</span><span class="n">transitionProgress</span><span class="p">))];</span>
+</code></pre></div>
 <p>This way, the value of <code>transitionProgress</code> will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&#39;s <code>layoutAttributesForElementsInRect:</code> method and set the attributes of each cell based on the value of <code>transitionProgress</code>, you can create a custom layout animation transition.</p>
 
         </section>
@@ -122,7 +122,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Drive+UICollectionView+Interactive+Layout+Transition+Using+Facebook%27s+Pop&amp;url=http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Drive+UICollectionView+interactive+layout+transition+using+Facebook%27s+Pop&amp;url=http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -131,7 +131,7 @@
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -195,5 +195,7 @@
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

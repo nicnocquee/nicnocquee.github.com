@@ -35,12 +35,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
@@ -79,7 +81,7 @@
 
 <p>After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
 <span class="c"># overlay.sh</span>
 find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span> <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r -d <span class="s1">$&#39;\0&#39;</span> line<span class="p">;</span> <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&quot;Captioning $line: $3&quot;</span>
@@ -100,7 +102,7 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
     <span class="c"># overlay the background and the text to the image</span>
     convert -background none -fill white -font <span class="s2">&quot;/Library/Fonts/Arial Black.ttf&quot;</span> -gravity center -size <span class="k">${</span><span class="nv">labelWidth</span><span class="k">}</span>x<span class="k">${</span><span class="nv">labelHeight</span><span class="k">}</span> caption:<span class="s2">&quot;$3&quot;</span> <span class="nv">$tmp</span> +swap -gravity south -geometry +0+<span class="k">${</span><span class="nv">bottomMargin</span><span class="k">}</span> -composite <span class="nv">$line</span>-caption.png
     rm <span class="nv">$tmp</span>
-<span class="k">done</span></code></pre></div>
+<span class="k">done</span></code></pre></figure>
 
 <p>Then all I have to is to run it.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">./overlay.sh &lt;image&gt; &lt;bg_color_hex&gt; &quot;&lt;caption&gt;&quot;
@@ -112,22 +114,20 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
 </code></pre></div>
 <p>I then make another script to run the overlay script over multiple images and texts automatically.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
 
 <span class="c"># overlay-batch.sh</span>
 <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="nb">read</span> -r line <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&quot;$line&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
     <span class="nb">eval</span> <span class="s2">&quot;./overlay.sh $line&quot;</span>
-<span class="k">done</span> &lt; <span class="s2">&quot;$1&quot;</span></code></pre></div>
+<span class="k">done</span> &lt; <span class="s2">&quot;$1&quot;</span></code></pre></figure>
 
 <p>Then I created another file named <code>screenshot-captions</code> to hold the arguments for the script above.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'>"image1.png" FDCC56 "Caption 1"
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>"image2.png" 21D6B2 "Caption 2"
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'>"image3.png" FF3F57 "Caption 3"
-</div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'>"image4.png" 4A90E2 "Caption 4"
-</div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'>"image5.png" E74C3C "Caption 5"
-</div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;image1.png&quot; FDCC56 &quot;Caption 1&quot;
+&quot;image2.png&quot; 21D6B2 &quot;Caption 2&quot;
+&quot;image3.png&quot; FF3F57 &quot;Caption 3&quot;
+&quot;image4.png&quot; 4A90E2 &quot;Caption 4&quot;
+&quot;image5.png&quot; E74C3C &quot;Caption 5&quot;
+</code></pre></div>
 <p>Finally, all I have to do is to run</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">./overlay-batch.sh screenshot-captions
 </code></pre></div>
@@ -146,7 +146,7 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -210,5 +210,7 @@ find . -type f -iname <span class="nv">$1</span> -print0 <span class="p">|</span
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

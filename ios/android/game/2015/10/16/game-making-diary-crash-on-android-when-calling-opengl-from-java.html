@@ -35,12 +35,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
@@ -71,32 +73,32 @@
 
 <p>To do this, first declare a native method <code>showOptions</code> in AppActivity class.</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppActivity</span> <span class="kd">extends</span> <span class="n">Cocos2dxActivity</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppActivity</span> <span class="kd">extends</span> <span class="n">Cocos2dxActivity</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">native</span> <span class="kt">void</span> <span class="nf">showOptions</span> <span class="o">();</span>
 
 
-<span class="o">}</span></code></pre></div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Then in some C++ header file, we need to add the JNI declaration for <code>showOptions</code> method with Java full-path classname. To get this, run the following from <code>proj.android</code> directory.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity</code></pre></figure>
 
 <p>That <code>javah</code> command will create a new file called <code>org_cocos2dx_cpp_AppActivity.h</code>. You can simply include this header in your project, or just copy the interface declaraions and paste them in your own header file.</p>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;jni.h&gt;</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;jni.h&gt;</span>
 <span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
     <span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="n">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
     <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span> <span class="p">,</span> <span class="n">jclass</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Next, create the implementation of that function.</p>
 
-<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
 <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span> <span class="p">,</span> <span class="n">jclass</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// call the C++ showOptions method.</span>
     <span class="n">NativeBridge</span><span class="o">::</span><span class="n">getInstance</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">showOptions</span><span class="p">();</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Finally, all you have to do is to call <code>AppActivity.showOptions()</code> when the button is pressed.</p>
 
@@ -104,7 +106,7 @@
 
 <p>To fix this, all you have to do is to call it on a GL thread.</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">optionsButton</span><span class="o">.</span><span class="na">setOnTouchListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnTouchListener</span><span class="o">()</span> <span class="o">{</span>      
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">optionsButton</span><span class="o">.</span><span class="na">setOnTouchListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnTouchListener</span><span class="o">()</span> <span class="o">{</span>       
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onTouch</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">,</span> <span class="n">MotionEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO Auto-generated method stub</span>
@@ -119,7 +121,7 @@
 
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     <span class="o">}</span>
-<span class="o">});</span></code></pre></div>
+<span class="o">});</span></code></pre></figure>
 
         </section>
         <footer class="post-footer">
@@ -136,7 +138,7 @@
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -200,5 +202,7 @@
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

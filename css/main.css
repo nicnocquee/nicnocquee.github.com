@@ -157,6 +157,7 @@ body {
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
 .logo-readium {
@@ -199,6 +200,7 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 0;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   @media only screen and (max-width: 800px) {
@@ -217,6 +219,8 @@ body {
     text-indent: -9999px;
     border: 3px solid #fff;
     background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
   .blog-header .blog-title {
     margin: 0;
@@ -251,6 +255,7 @@ body {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   @media only screen and (max-width: 800px) {
@@ -381,6 +386,7 @@ body {
     right: 30%;
     z-index: 9;
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     @media only screen and (max-width: 800px) {
@@ -500,8 +506,7 @@ body {
     color: #333;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
-    -ms-hyphens: auto;
-        hyphens: auto; }
+    hyphens: auto; }
   .post .post-content a {
     color: #333;
     text-decoration: underline; }
@@ -574,6 +579,7 @@ body {
   .post .bottom-teaser .isLeft {
     float: left;
     width: 47%;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     @media only screen and (max-width: 800px) {
@@ -615,6 +621,7 @@ body {
   .post .bottom-teaser .isRight {
     float: right;
     width: 47%;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     @media only screen and (max-width: 800px) {
@@ -735,8 +742,7 @@ body {
       background: #57ad68;
       color: #fff;
       vertical-align: middle;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
+      box-sizing: border-box;
       border-radius: 999em;
       line-height: 44px;
       padding: 0 18px; }
@@ -764,3 +770,17 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 50px; }
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

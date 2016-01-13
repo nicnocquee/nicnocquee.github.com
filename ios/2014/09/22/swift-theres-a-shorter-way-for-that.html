@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Swift: There's a Shorter Way for That</title>
+  <title>Swift: There's a shorter way for that</title>
   <meta name="description" content="Backward sorting array of string using Swift:" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -17,7 +17,7 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="Swift: There's a Shorter Way for That"/>
+  <meta property="og:title" content="Swift: There's a shorter way for that"/>
   
   <meta property="og:description" content="Backward sorting array of string using Swift:" />
   
@@ -35,18 +35,20 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
   <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
 </head>
+
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
 <a href="/" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/nicnocquee-logo.png)"></span></a>
 
 <!-- header end -->
+
     <main class="content" role="main">
       <article class="post">
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Swift: There's a Shorter Way for That</h1>
+            <h1 class="post-title">Swift: There's a shorter way for that</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
@@ -70,43 +72,35 @@
           <p>Backward sorting array of string using Swift:</p>
 
 <!--more-->
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Chris&quot;</span><span class="p">,</span> <span class="s">&quot;Alex&quot;</span><span class="p">,</span> <span class="s">&quot;Ewa&quot;</span><span class="p">,</span> <span class="s">&quot;Barry&quot;</span><span class="p">,</span> <span class="s">&quot;Daniella&quot;</span><span class="p">]</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="n">func</span> <span class="n">backwards</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">&#x7b;</span>
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'>        <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
-</div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="p">&#x7d;</span>
-</div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="n">var</span> <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">backwards</span><span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Chris&quot;</span><span class="p">,</span> <span class="s">&quot;Alex&quot;</span><span class="p">,</span> <span class="s">&quot;Ewa&quot;</span><span class="p">,</span> <span class="s">&quot;Barry&quot;</span><span class="p">,</span> <span class="s">&quot;Daniella&quot;</span><span class="p">]</span>
+    <span class="n">func</span> <span class="n">backwards</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+    <span class="p">}</span>
+    <span class="n">var</span> <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">backwards</span><span class="p">)</span>
+</code></pre></div>
 <p>Too long.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">&#x7b;</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
-</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>            <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
-</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="p">&#x7d;)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
+            <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
+    <span class="p">})</span>
+</code></pre></div>
 <p>Let&#39;s make it one line.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">&#x7b;</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">&#x7d;</span> <span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</code></pre></div>
 <p>Don&#39;t be satisfied yet.</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">&#x7b;</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">&#x7d;</span> <span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</code></pre></div>
 <p>You didn&#39;t think that&#39;s the best we can do, right?</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">&#x7b;</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">&#x7d;</span> <span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+</code></pre></div>
 <p>Shorter!</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">&#x7b;</span> <span class="err">$</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mi">1</span> <span class="p">&#x7d;</span> <span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mi">1</span> <span class="p">}</span> <span class="p">)</span>  
+</code></pre></div>
 <p>You can do it!</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
 <p>Use the force!</p>
-
-<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="err">😄</span><span class="o">=</span><span class="n">sorted</span><span class="p">(</span><span class="err">🐷</span><span class="p">,</span><span class="o">&gt;</span><span class="p">)</span></div></div></pre></div></figure>
-
+<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="err">😄</span><span class="o">=</span><span class="n">sorted</span><span class="p">(</span><span class="err">🐷</span><span class="p">,</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
 <p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
 
         </section>
@@ -115,7 +109,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Swift%3A+There%27s+a+Shorter+Way+for+That&amp;url=http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Swift%3A+There%27s+a+shorter+way+for+that&amp;url=http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -124,7 +118,7 @@
               
             
           </section>
-          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2015<br>All rights reserved.</section> -->
+          <!-- <section class="copyright">All content copyright <a href="/">Nico Prananta</a> &copy; 2016<br>All rights reserved.</section> -->
         </footer>
 
         
@@ -188,5 +182,7 @@
   });
 }(jQuery));
 </script>
+
+
   </body>
 </html>

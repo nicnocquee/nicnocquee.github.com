@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>That's so two years ago</title>
-  <meta name="description" content="" />
+  <title>Organize Photos via Command Line</title>
+  <meta name="description" content="I am using a Synology NAS at home to back up all photos from my iPhone using Synology&#39;s DS Photo app. It&#39;s fairly simple since I just need to specify a destination folder in the NAS, and th..." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,16 +17,16 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="That's so two years ago"/>
+  <meta property="og:title" content="Organize Photos via Command Line"/>
   
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="I am using a Synology NAS at home to back up all photos from my iPhone using Synology&#39;s DS Photo app. It&#39;s fairly simple since I just need to specify a destination folder in the NAS, and th..." />
   
   <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/sherlock/pixel/2014/01/03/thats-so-two-years-ago.html" >
+  <meta property="og:url" content="http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html" >
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2014-01-03T12:27:00+01:00">
+  <meta property="article:published_time" content="2016-01-13T10:00:14+01:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/sherlock/pixel/2014/01/03/thats-so-two-years-ago.html">
+  <link rel="canonical" href="http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -48,14 +48,14 @@
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">That's so two years ago</h1>
+            <h1 class="post-title">Organize Photos via Command Line</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
               by
               <a href="https://twitter.com/nicnocquee">Nico Prananta</a>
               on
-              <time datetime="2014-01-03T12:27:00+01:00">03 Jan 2014</time>
+              <time datetime="2016-01-13T10:00:14+01:00">13 Jan 2016</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
           </div>
@@ -69,9 +69,19 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="http://f.cl.ly/items/120y351h1V2M1A3Z2o3f/sherlock.png" alt="Sherlock quote"></p>
+          <p>I am using a Synology NAS at home to back up all photos from my iPhone using Synology&#39;s DS Photo app. It&#39;s fairly simple since I just need to specify a destination folder in the NAS, and the app will automatically back up photos to that directory. But they are not organized: thousands of photos inside a directory. Fortunately, Synology has a web app called Photo Station to browse photos in the NAS. Unfortunately, it&#39;s not so easy to browse photos by month even though it has a Timeline View because it only shows a few photos for each month. So I figured I&#39;d organize the photos by grouping them into folders.</p>
 
-<p>Best. TV. Show. Ever.</p>
+<p><img src="/assets/images/posts/photo-station.png" alt="Photo Station Timeline View showing only view photos per month"></p>
+
+<p>I remember <a href="https://twitter.com/jmathai">Jaisen Mathai</a> created <a href="https://github.com/jmathai/elodie.git">Elodie, a personal EXIF-based photo, video, and audio assistant to help organizing photos</a>. But when I wanted to organize my photos, I didn&#39;t have internet at that time to download Elodie. So I needed to improvise a little bit and ended up with a small shell script to group my photos based on their taken date. You only need ImageMagick for this script.</p>
+
+<script src="https://gist.github.com/nicnocquee/5a24bd6ac8b92cceab33.js"></script>
+
+<p>To use the script, simply copy this script to the directory containing the photos, then run it: <code>./organize_photos.sh .</code></p>
+
+<p><img src="/assets/images/posts/organize-photos-command-line.png" alt="Script in action"></p>
+
+<p>What the script does is basically loop through all the image files (png,jpg,jpeg) in the given directory, use ImageMagick&#39;s <code>identify</code> to extract the image&#39;s metadata, then use <code>grep</code> and <code>sed</code> to get the year and month of the image&#39;s taken date from the EXIF. After that, it just creates the directory if needed and moves the image to the directory. If there&#39;s no EXIF data, the images will be moved to <code>Unknown</code> folder.</p>
 
         </section>
         <footer class="post-footer">
@@ -79,7 +89,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=That%27s+so+two+years+ago&amp;url=http://www.nicnocquee.com/sherlock/pixel/2014/01/03/thats-so-two-years-ago"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Organize+Photos+via+Command+Line&amp;url=http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -104,11 +114,9 @@
 </h2>
         <!-- <a href="/" class="btn">Back to Overview</a> -->
         
-            <a class="btn" href="/mac/osx/2013/10/16/how-to-enter-unicode-characters-in-mac.html">&laquo; Older</a>
+            <a class="btn" href="/2015/12/13/making-of-nori-for-mac.html">&laquo; Older</a>
         
 
-        
-            <a class="btn" href="/apple/2014/01/19/your-verse.html">Newer &raquo;</a>
         
       </div>
     </div>
