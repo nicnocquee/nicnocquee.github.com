@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</loc>
+    <lastmod>2016-01-20T19:29:17+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</loc>
     <lastmod>2016-01-13T10:00:14+01:00</lastmod>
   </url>
@@ -486,6 +490,9 @@
   <url>
     <loc>http://www.nicnocquee.com/page21/</loc>
   </url>
+  <url>
+    <loc>http://www.nicnocquee.com/page22/</loc>
+  </url>
     <url>
       <loc>http://www.nicnocquee.com/video/share/news/2012/09/17/going-forward.html</loc>
     </url>
@@ -800,5 +807,8 @@
     </url>
     <url>
       <loc>http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</loc>
+    </url>
+    <url>
+      <loc>http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</loc>
     </url>
 </urlset>

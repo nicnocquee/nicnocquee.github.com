@@ -6,9 +6,46 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2016 11:35:58 +0100</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2016 11:35:58 +0100</lastBuildDate>
+    <pubDate>Wed, 20 Jan 2016 21:50:31 +0100</pubDate>
+    <lastBuildDate>Wed, 20 Jan 2016 21:50:31 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Build cocos2d-x fat static library</title>
+        <description>&lt;p&gt;Cocos2d-x is a fantastic game development framework. But using Xcode to build a cocos2d-x game wastes a lot of time because Xcode re-compiles the cocos2d-x source codes every time we build the game. And there are 834 source files! I have googled around but could not find the way to tell Xcode to not recompile all the time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/cocos2d-x-slow-compile.png&quot; alt=&quot;Slow compilation in Xcode for cocos2d-x&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The solution is to create a fat static library of the Cocos2d-x once then use it in any number of our game projects. Here&amp;#39;s how to do it.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First download or clone the cocos2d-x from &lt;a href=&quot;https://github.com/cocos2d/cocos2d-x&quot;&gt;Github&lt;/a&gt; if you haven&amp;#39;t done it.&lt;/li&gt;
+&lt;li&gt;Go to &lt;code&gt;&amp;lt;cocos2d-x_directory&amp;gt;/build&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;Create a shell script file using your favorite text editor, let&amp;#39;s call it &lt;code&gt;buildstaticlib.sh&lt;/code&gt;, and fill it up with the following code. &lt;script src=&quot;https://gist.github.com/nicnocquee/9dc4c4a128d7c0bafe23.js&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;Make the script executable. &lt;code&gt;chmod +x buildstaticlib.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the script: &lt;code&gt;./buildstaticlib.sh cocos2d_libs.xcodeproj &amp;quot;libcocos2d iOS&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Plug the charger of your Macbook then go to the gym or have lunch or something, because it will take quiet some time to create the static library.&lt;/li&gt;
+&lt;li&gt;Once the script is completed, you will have a &lt;code&gt;libcocos2d iOS.a&lt;/code&gt; file in the directory, which you can use in all your cocos2d-x projects.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/libcocos2dios-xctool.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you have the static library, you can delete the &lt;code&gt;cocos2d_libs.xcodeproj&lt;/code&gt; from your project. Then go to &lt;code&gt;Build Settings&lt;/code&gt;, and add &lt;code&gt;&amp;lt;path_to_libcocos2d iOS.a&amp;gt;&lt;/code&gt; to &lt;code&gt;Other Linker Flags&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/delete-cocos2d-proj.jpeg&quot; alt=&quot;Remove cocos2d_libs.xcodeproj&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Build and run your project and enjoy the fast compilation.&lt;/p&gt;
+
+&lt;p&gt;PS: If you are using &lt;a href=&quot;https://github.com/facebook/xctool&quot;&gt;xctool&lt;/a&gt;, simply replace all &lt;code&gt;xcodebuild&lt;/code&gt; occurrences with &lt;code&gt;xctool&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;PPS: You can copy &lt;code&gt;libcocos2d iOS.a&lt;/code&gt; to your project folder and commit it to your repo so that your team can build and run the project immediately.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2016 19:29:17 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Organize Photos via Command Line</title>
@@ -458,64 +495,6 @@ find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &
         <pubDate>Sun, 11 Oct 2015 13:24:47 +0200</pubDate>
         <link>http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</link>
         <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</guid>
-        
-        
-        <category>ios</category>
-        
-      </item>
-    
-      <item>
-        <title>Drive UICollectionView interactive layout transition using Facebook&#39;s Pop</title>
-        <description>&lt;p&gt;UICollectionView has a method to change layout easily: &lt;code&gt;setCollectionViewLayout:animated:completion:&lt;/code&gt;. And according to documentation, if you implement the delegate&amp;#39;s &lt;code&gt;collectionView:transitionLayoutForOldLayout:newLayout:&lt;/code&gt; you can customize the behaviour or the cells and decoration views during transition.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Implement this method if you want to return a custom UICollectionViewTransitionLayout object for use during the transition. A transition layout object lets you customize the behavior of cells and decoration views when transitioning from one layout to the next. Normally, transitioning between layouts causes items to animate directly from their current locations to their new locations. With a transition layout object, you can have objects follow a non linear path, use a different timing algorithm, or move according to incoming touch events.&lt;/p&gt;
-
-&lt;p&gt;If your delegate does not implement this method, the collection view creates a standard UICollectionViewTransitionLayout object and uses that object to manage the transition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;But strangely, that delegate&amp;#39;s method is not called when we change layout using &lt;code&gt;setCollectionViewLayout&lt;/code&gt;. Somebody in &lt;a href=&quot;http://stackoverflow.com/a/23009119/401544&quot;&gt;stackoverflow&lt;/a&gt; provided a workaround by calling collection view&amp;#39;s &lt;code&gt;startInteractiveTransitionToCollectionViewLayout:&lt;/code&gt; method instead.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;startInteractiveTransitionToCollectionViewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finalLayout&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finishInteractiveTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The problem is we cannot control the speed of the animation. What I wanted is to &amp;quot;animate&amp;quot; the &lt;code&gt;UICollectionViewTransitionLayout&lt;/code&gt;&amp;#39;s &lt;code&gt;transitionProgress&lt;/code&gt; property.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animateWithDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;usingSpringWithDamping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initialSpringVelocity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIViewAnimationOptionCurveEaseInOut&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}];&lt;/span&gt;    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;But since transitionProgress is not animatable, this doesn&amp;#39;t work. This is where &lt;a href=&quot;https://github.com/facebook/pop&quot;&gt;Facebook&amp;#39;s Pop&lt;/a&gt; comes to rescue. Using Pop, we can animate custom properties.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;CustomTransitionLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CustomTransitionLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;startInteractiveTransitionToCollectionViewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finalLayout&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;completion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;POPSpringAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPSpringAnimation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;POPAnimatableProperty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPAnimatableProperty&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;propertyWithName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;com.photos.transition&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;initializer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPMutableAnimatableProperty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writeBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTransitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threshold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springBounciness&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;l&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;completionBlock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POPAnimation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTransitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finishInteractiveTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;pop_addAnimation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;springAnimation&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSStringFromSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;@selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitionProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This way, the value of &lt;code&gt;transitionProgress&lt;/code&gt; will gradually change from 0 to 1. If you implement UICollectionViewTransitionLayout&amp;#39;s &lt;code&gt;layoutAttributesForElementsInRect:&lt;/code&gt; method and set the attributes of each cell based on the value of &lt;code&gt;transitionProgress&lt;/code&gt;, you can create a custom layout animation transition.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 29 Jan 2015 03:30:53 +0100</pubDate>
-        <link>http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html</guid>
         
         
         <category>ios</category>
