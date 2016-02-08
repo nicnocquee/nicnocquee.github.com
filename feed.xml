@@ -6,29 +6,31 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Feb 2016 01:57:51 +0100</pubDate>
-    <lastBuildDate>Mon, 08 Feb 2016 01:57:51 +0100</lastBuildDate>
+    <pubDate>Mon, 08 Feb 2016 02:03:46 +0100</pubDate>
+    <lastBuildDate>Mon, 08 Feb 2016 02:03:46 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>DayOne 2: A Disappointment</title>
-        <description>&lt;p&gt;I&amp;#39;ve been using DayOne for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind DayOne replied and told me they would include that in DayOne 2.&lt;/p&gt;
+        <title>Day One 2: A Disappointment</title>
+        <description>&lt;p&gt;I&amp;#39;ve been using Day One for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind Day One replied and told me they would include that in Day One 2.&lt;/p&gt;
 
-&lt;p&gt;That&amp;#39;s why I&amp;#39;m so excited when they finally announced DayOne 2. I was a little bit surprised with the 50% discount launch price, $19.99 for Mac and $4.99 for iOS. I thought it was a little bit pricey but I understood that it&amp;#39;s hard to make money in the App Store so I bought them anyway.&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s why I was so excited when they finally announced Day One 2. I was a little bit surprised with the 50% discount launch price, $19.99 for Mac and $4.99 for iOS. I thought it was a little bit pricey but I understood that it&amp;#39;s hard to make money in the App Store so I bought them anyway.&lt;/p&gt;
 
-&lt;p&gt;I should&amp;#39;ve read thoroughly about the upgrade before purchasing it because it turned out to be a disappointment. The first surprise I encountered was the lack of Dropbox support. They decided to dispose Dropbox and iCloud sync in favor of their own syncing service. I never had a problem using Dropbox to sync my DayOne entries so I&amp;#39;m not so happy with this feature. While &lt;a href=&quot;https://www.dropbox.com/help/27&quot;&gt;Dropbox is not entirely secure&lt;/a&gt;, at least it has two-step verification while DayOne 2 doesn&amp;#39;t have. It&amp;#39;s not even in their &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;todo list&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I should&amp;#39;ve read thoroughly about the upgrade before purchasing it because it turned out to be a disappointment. The first surprise I encountered was the lack of Dropbox support. They decided to dispose Dropbox and iCloud sync in favor of their own syncing service. I never had a problem using Dropbox to sync my Day One entries so I&amp;#39;m not so happy with this feature. While &lt;a href=&quot;https://www.dropbox.com/help/27&quot;&gt;Dropbox is not entirely secure&lt;/a&gt;, at least it has two-step verification while Day One 2 doesn&amp;#39;t have. It&amp;#39;s not even in their &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;todo list&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/dayone-stupid.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/dayone-stupid.png&quot; alt=&quot;Set to Photo&amp;#39;s date is MIA&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;After using the iOS app for a while, I found out that now I cannot set a journal entry to the taken date of a photo anymore. This is a setback from DayOne Classic. The iOS app also suffers from choppy scrolling in the &lt;code&gt;All Entries&lt;/code&gt; tab and the photos picker on my iPhone 6plus. And the UI-blocking weather fetch is still around. (&lt;em&gt;C&amp;#39;mon, fetch weather info in the background. Don&amp;#39;t block the main thread!&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;After using the iOS app for a while, I found out that I cannot set a journal entry&amp;#39;s date to the taken date of a photo anymore. This is a setback from Day One Classic. The iOS app also suffers from choppy scrolling in the &lt;code&gt;All Entries&lt;/code&gt; tab and the photos picker on my iPhone 6plus. And the UI-blocking weather fetch is still around. (&lt;em&gt;C&amp;#39;mon, fetch weather info in the background. Don&amp;#39;t block the main thread!&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;I realize some people are using DayOne differently and maybe the new features in DayOne 2 satisfy them. But all I wanted was the ability to add multiple photos in a journal entry. I got what I asked for. But I lost what I&amp;#39;ve been using and gained things I don&amp;#39;t need.&lt;/p&gt;
+&lt;p&gt;I realize some people are using Day One differently from me and maybe the new features in Day One 2 satisfy them. But all I wanted was the ability to add multiple photos in a journal entry. I got what I asked for. But I lost what I&amp;#39;ve been using and gained things I don&amp;#39;t need.&lt;/p&gt;
 
 &lt;blockquote&gt;
 If I&#39;d asked customers what they wanted, they would have said &quot;a faster horse&quot;.
 &lt;br /&gt;Henry Ford &lt;/blockquote&gt;
 
 &lt;p&gt;Take a look at &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;what other features they are going to release in the near  future&lt;/a&gt;. &lt;em&gt;Encryption&lt;/em&gt; is the only feature I need. And it&amp;#39;s not even the top priority. I really just wanted a &lt;em&gt;faster horse&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I hope they will fix the bugs ASAP because I&amp;#39;m a fan of Day One. It is one of the apps I&amp;#39;m using daily.&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Feb 2016 01:16:24 +0100</pubDate>
         <link>http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</link>
