@@ -6,9 +6,36 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jan 2016 21:50:31 +0100</pubDate>
-    <lastBuildDate>Wed, 20 Jan 2016 21:50:31 +0100</lastBuildDate>
+    <pubDate>Mon, 08 Feb 2016 01:57:51 +0100</pubDate>
+    <lastBuildDate>Mon, 08 Feb 2016 01:57:51 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>DayOne 2: A Disappointment</title>
+        <description>&lt;p&gt;I&amp;#39;ve been using DayOne for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind DayOne replied and told me they would include that in DayOne 2.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why I&amp;#39;m so excited when they finally announced DayOne 2. I was a little bit surprised with the 50% discount launch price, $19.99 for Mac and $4.99 for iOS. I thought it was a little bit pricey but I understood that it&amp;#39;s hard to make money in the App Store so I bought them anyway.&lt;/p&gt;
+
+&lt;p&gt;I should&amp;#39;ve read thoroughly about the upgrade before purchasing it because it turned out to be a disappointment. The first surprise I encountered was the lack of Dropbox support. They decided to dispose Dropbox and iCloud sync in favor of their own syncing service. I never had a problem using Dropbox to sync my DayOne entries so I&amp;#39;m not so happy with this feature. While &lt;a href=&quot;https://www.dropbox.com/help/27&quot;&gt;Dropbox is not entirely secure&lt;/a&gt;, at least it has two-step verification while DayOne 2 doesn&amp;#39;t have. It&amp;#39;s not even in their &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;todo list&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/dayone-stupid.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;After using the iOS app for a while, I found out that now I cannot set a journal entry to the taken date of a photo anymore. This is a setback from DayOne Classic. The iOS app also suffers from choppy scrolling in the &lt;code&gt;All Entries&lt;/code&gt; tab and the photos picker on my iPhone 6plus. And the UI-blocking weather fetch is still around. (&lt;em&gt;C&amp;#39;mon, fetch weather info in the background. Don&amp;#39;t block the main thread!&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;I realize some people are using DayOne differently and maybe the new features in DayOne 2 satisfy them. But all I wanted was the ability to add multiple photos in a journal entry. I got what I asked for. But I lost what I&amp;#39;ve been using and gained things I don&amp;#39;t need.&lt;/p&gt;
+
+&lt;blockquote&gt;
+If I&#39;d asked customers what they wanted, they would have said &quot;a faster horse&quot;.
+&lt;br /&gt;Henry Ford &lt;/blockquote&gt;
+
+&lt;p&gt;Take a look at &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;what other features they are going to release in the near  future&lt;/a&gt;. &lt;em&gt;Encryption&lt;/em&gt; is the only feature I need. And it&amp;#39;s not even the top priority. I really just wanted a &lt;em&gt;faster horse&lt;/em&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Feb 2016 01:16:24 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Build cocos2d-x fat static library</title>
@@ -425,79 +452,6 @@ public static void share&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;java.lang.
         <category>android</category>
         
         <category>game</category>
-        
-      </item>
-    
-      <item>
-        <title>Add Caption to iOS Screenshots Automatically Using ImageMagick</title>
-        <description>&lt;p&gt;Recently I submitted a game to the App Store. Apple allows developers to submit up to 5 screenshots for each of the activated languages and for each of the devices. There are 4 iPhone sizes and 1 iPad. That means if I activate three languages, e.g., English, Japanese, and Chinese Simplified, I will need to prepare 75 images (5 screenshots x 5 devices x 3 languages).&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/fastlane-snapshot.png&quot; alt=&quot;95 screenshots generated automatically&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Taking screenshots from 5 different devices and 3 different languages in simulator is going to take forever. Even if you manage to do it manually, you might have to do it again if you make some changes in your app. Luckily, &lt;a href=&quot;https://twitter.com/KrauseFx&quot;&gt;Felix Krause&lt;/a&gt; created a tool called &lt;a href=&quot;https://github.com/KrauseFx/snapshot&quot;&gt;Snapshot&lt;/a&gt; which is a part of &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt; to help automate taking screenshots in iOS simulator.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/captioned-make9.png&quot; alt=&quot;Captioned screenshots&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;After that, I wanted to decorate the screenshots with some simple captions. For each of the device, I prepared 5 different captions for 5 different screenshots. Doing this manually with Sketch or Photoshop will be gruelling. Luckily again, there is an awesome tool called ImageMagick. With a bit of tinkering and googling, I wrote the following script to automate the captioning.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# overlay.sh&lt;/span&gt;
-find . -type f -iname &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; -print0 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r -d &lt;span class=&quot;s1&quot;&gt;$&amp;#39;\0&amp;#39;&lt;/span&gt; line&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Captioning $line: $3&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -ping -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%w&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;identify -ping -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%h&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;point1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;point2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$line-tmp.png&amp;quot;&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;# create the background of caption&lt;/span&gt;
-    convert &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt; -fill &lt;span class=&quot;s2&quot;&gt;&amp;quot;#$2&amp;quot;&lt;/span&gt;  -draw &lt;span class=&quot;s2&quot;&gt;&amp;quot;polygon  0,$point1 0,$height $width,$height $width,$point2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
-
-    &lt;span class=&quot;nv&quot;&gt;availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$point2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$availableHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$labelHeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;# overlay the background and the text to the image&lt;/span&gt;
-    convert -background none -fill white -font &lt;span class=&quot;s2&quot;&gt;&amp;quot;/Library/Fonts/Arial Black.ttf&amp;quot;&lt;/span&gt; -gravity center -size &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelWidth&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;x&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;labelHeight&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; caption:&lt;span class=&quot;s2&quot;&gt;&amp;quot;$3&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt; +swap -gravity south -geometry +0+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bottomMargin&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; -composite &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;-caption.png
-    rm &lt;span class=&quot;nv&quot;&gt;$tmp&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then all I have to is to run it.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;./overlay.sh &amp;lt;image&amp;gt; &amp;lt;bg_color_hex&amp;gt; &amp;quot;&amp;lt;caption&amp;gt;&amp;quot;
-./overlay.sh &amp;quot;image1.png&amp;quot; E74C3C &amp;quot;CAPTION 1&amp;quot;
-./overlay.sh &amp;quot;image2.png&amp;quot; E74C3C &amp;quot;CAPTION 2&amp;quot;
-./overlay.sh &amp;quot;image3.png&amp;quot; E74C3C &amp;quot;CAPTION 3&amp;quot;
-./overlay.sh &amp;quot;image4.png&amp;quot; E74C3C &amp;quot;CAPTION 4&amp;quot;
-./overlay.sh &amp;quot;image5.png&amp;quot; E74C3C &amp;quot;CAPTION 5&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I then make another script to run the overlay script over multiple images and texts automatically.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# overlay-batch.sh&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -r line &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;$line&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./overlay.sh $line&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then I created another file named &lt;code&gt;screenshot-captions&lt;/code&gt; to hold the arguments for the script above.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;image1.png&amp;quot; FDCC56 &amp;quot;Caption 1&amp;quot;
-&amp;quot;image2.png&amp;quot; 21D6B2 &amp;quot;Caption 2&amp;quot;
-&amp;quot;image3.png&amp;quot; FF3F57 &amp;quot;Caption 3&amp;quot;
-&amp;quot;image4.png&amp;quot; 4A90E2 &amp;quot;Caption 4&amp;quot;
-&amp;quot;image5.png&amp;quot; E74C3C &amp;quot;Caption 5&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Finally, all I have to do is to run&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;./overlay-batch.sh screenshot-captions
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Sun, 11 Oct 2015 13:24:47 +0200</pubDate>
-        <link>http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/2015/10/11/add-caption-to-ios-screenshots-automatically-using-imagemagick.html</guid>
-        
-        
-        <category>ios</category>
         
       </item>
     
