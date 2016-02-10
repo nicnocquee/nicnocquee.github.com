@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Day One 2: A Disappointment"
+title: "Day One 2: A Disappointment (UPDATED)"
 date: 2016-02-08T01:16:24+01:00
 comments: false
 ---
+
 
 I've been using Day One for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind Day One replied and told me they would include that in Day One 2.
 
@@ -24,3 +25,9 @@ If I'd asked customers what they wanted, they would have said "a faster horse".
 Take a look at [what other features they are going to release in the near  future](http://help.dayoneapp.com/day-one-2-0-faq/). _Encryption_ is the only feature I need. And it's not even the top priority. I really just wanted a _faster horse_.
 
 I hope they will fix the bugs ASAP because I'm a fan of Day One. It is one of the apps I'm using daily.
+
+*UPDATE Feb 10, 2016*
+
+New update of Day One 2, now it supports photo's date for entry's date. 👍
+
+![](/assets/images/posts/day-one-2-photo-location.jpeg)
