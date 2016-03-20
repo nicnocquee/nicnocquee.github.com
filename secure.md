@@ -30,11 +30,11 @@ Send me encrypted email
 
 To encrypt and secure our messages, use PGP/GPG and my [public key](https://keybase.io/nico_p/key.asc). I have verified myself via [Keybase.io](https://keybase.io/nico_p). All you have to do is to download [my public key](https://keybase.io/nico_p/key.asc) and import it to your computer using OpenPGP software. Below you'll find a list of possible solutions for your operating system:
 
-- OS X	[https://ssd.eff.org/en/module/how-use-pgp-mac-os-x](https://ssd.eff.org/en/module/how-use-pgp-mac-os-x)
-- Linux	[https://ssd.eff.org/en/module/how-use-pgp-linux](https://ssd.eff.org/en/module/how-use-pgp-linux)
-- Windows	[https://ssd.eff.org/en/module/how-use-pgp-windows-pc](https://ssd.eff.org/en/module/how-use-pgp-windows-pc)
-- iOS		[https://itunes.apple.com/app/ipgmail/id430780873?mt=8](https://itunes.apple.com/app/ipgmail/id430780873?mt=8)
-- Android	[https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain)
+- [OSX](https://ssd.eff.org/en/module/how-use-pgp-mac-os-x)
+- [Linux](https://ssd.eff.org/en/module/how-use-pgp-linux)
+- [Windows](https://ssd.eff.org/en/module/how-use-pgp-windows-pc)
+- [iOS](https://itunes.apple.com/app/ipgmail/id430780873?mt=8)
+- [Android](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain)
 
 However, if you're lazy to install new software in your computer, you can simply go to [Keybase Encrypt Page](https://keybase.io/encrypt), type `nico_p` in Recipient,  type your message, then click `Encrypt`. After that simply copy paste and send it to me. (Unfortunately I won't be able to reply securely to you this way if I don't have your publick key).
 
