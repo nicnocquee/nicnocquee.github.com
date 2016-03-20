@@ -5,6 +5,7 @@ date: 2012-09-20 12:03
 comments: false
 categories: [thoughts, iphone]
 ---
+
 Andrew Wulf on [I'm sorry but the revolution in smartphones is long over](http://thecodist.com/article/i_39_m_sorry_but_the_revolution_in_smartphones_is_long_over):
 {% blockquote %}
 Will there ever be a real innovation in the smartphone market anytime soon? I doubt it. Maybe plugging into my brain directly (a scary concept) but I can't see anything remaining that would be a real game changer. Bigger and smaller phones are limited by biology. Thinner phones are very hard to make much thinner since you wind up limited by physics. Maybe flexible phones might be cool. Or foldable phones you can stick in your wallet. But making things too small runs into the issue of being easy to lose or break. So what's left? Windows 8 has an interesting take on UI but I'm not sure it's better, just different. If you try to take your UI too far away from the basic design in place (finger friendly) you might lose too many customers. Android, while partially open, can't move too far way in its UI or risk irritating customers. Simple is a tough thing to improve.

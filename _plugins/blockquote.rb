@@ -16,10 +16,12 @@ module Jekyll
     Syntax = /([\w\s]+)/
 
     def initialize(tag_name, markup, tokens)
-      @by = nil
-      if markup =~ Syntax
-        @by = $1
-      end
+
+      args = markup.split('|')
+      @by = args[0]
+      @title = args[1]
+      @url = args[2]
+
       super
     end
 
@@ -27,8 +29,10 @@ module Jekyll
       output = super
       if @by.nil?
         '<blockquote>' + output + '</blockquote>'
+      elsif @title.nil?
+        '<blockquote>' + output + '<br /><br />' + @by + '</blockquote>'
       else
-        '<blockquote>' + output + '<br />' + @by + '</blockquote>'
+        '<blockquote>' + output + '<br /><br />' + @by + 'in <a href="'+@url+'" target="_blank">' +@title+ '</a></blockquote>'
       end
     end
   end
