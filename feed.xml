@@ -6,9 +6,22 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Mar 2016 18:00:08 +0100</pubDate>
-    <lastBuildDate>Sun, 20 Mar 2016 18:00:08 +0100</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Thu, 17 Nov 2016 00:13:23 +0100</pubDate>
+    <lastBuildDate>Thu, 17 Nov 2016 00:13:23 +0100</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Everytime! #1</title>
+        <description>&lt;p&gt;brew update? upgrade?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/comic-01-brew-update-upgrade.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Nov 2016 01:16:24 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Day One 2: A Disappointment (UPDATED)</title>
@@ -25,7 +38,7 @@
 &lt;p&gt;I realize some people are using Day One differently from me and maybe the new features in Day One 2 satisfy them. But all I wanted was the ability to add multiple photos in a journal entry. I got what I asked for. But I lost what I&amp;#39;ve been using and gained things I don&amp;#39;t need.&lt;/p&gt;
 
 &lt;blockquote&gt;
-If I&#39;d asked customers what they wanted, they would have said &quot;a faster horse&quot;.
+If I'd asked customers what they wanted, they would have said &quot;a faster horse&quot;.
 &lt;br /&gt;&lt;br /&gt;Henry Ford &lt;/blockquote&gt;
 
 &lt;p&gt;Take a look at &lt;a href=&quot;http://help.dayoneapp.com/day-one-2-0-faq/&quot;&gt;what other features they are going to release in the near  future&lt;/a&gt;. &lt;em&gt;Encryption&lt;/em&gt; is the only feature I need. And it&amp;#39;s not even the top priority. I really just wanted a &lt;em&gt;faster horse&lt;/em&gt;.&lt;/p&gt;
@@ -307,7 +320,7 @@ If I&#39;d asked customers what they wanted, they would have said &quot;a faster
       </item>
     
       <item>
-        <title>I Don&#39;t Believe in Destiny</title>
+        <title>I Don't Believe in Destiny</title>
         <description>&lt;p&gt;Actually, maybe I refuse to believe in destiny. There were millions of 23 year-olds when Mark Zuckerberg became a &lt;a href=&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;&gt;billionaire at the age of 23 as a result of Facebook&amp;#39;s success&lt;/a&gt;. I don&amp;#39;t believe that the rest of the 23 year-olds at that time were not destined to be billionaires like Mark. I do believe though in two of the laws of the universe.&lt;/p&gt;
 
 &lt;h2&gt;The higher the success is, the fewer the people who can achieve it.&lt;/h2&gt;
@@ -422,44 +435,6 @@ If I&#39;d asked customers what they wanted, they would have said &quot;a faster
         
         
         <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Game Making Diary: Java Method Signature</title>
-        <description>&lt;p&gt;While making &lt;a href=&quot;http://www.delightfuldev.com/make9/&quot;&gt;my first cross platform game&lt;/a&gt; using Cocos2d-x CPP version, I realized that it&amp;#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cpp file to .mm and include it in the project and I can call C++ or Objective-C methods right away. In Android, if I want to call a Java method from C++, I need to use JNI (Java Native Interface). For example, to call a static method named &lt;code&gt;share&lt;/code&gt; in &lt;code&gt;AppActivity&lt;/code&gt; class, I need to do it like so.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;JniMethodInfo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;JniHelper:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getStaticMethodInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;org/cocos2dx/cpp/AppActivity&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;share&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;(Ljava/lang/String;Ljava/lang/String;)V&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;jstring&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewStringUTF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;jstring&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewStringUTF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;c_str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CallStaticVoidMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;classID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;methodID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;classID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringArg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DeleteLocalRef&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringArg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The last argument of &lt;code&gt;getStaticMethodInfo&lt;/code&gt; is the method signature of the &lt;code&gt;share&lt;/code&gt; static method. This signature must be correct or else you&amp;#39;ll get &lt;code&gt;Failed to find static method id&lt;/code&gt; error. To get this method signature, use &lt;code&gt;javap -s&lt;/code&gt; command from command line.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
-
-&lt;span class=&quot;c&quot;&gt;#output&lt;/span&gt;
-Compiled from &lt;span class=&quot;s2&quot;&gt;&amp;quot;AppActivity.java&amp;quot;&lt;/span&gt;
-public class org.cocos2dx.cpp.AppActivity extends org.cocos2dx.lib.Cocos2dxActivity &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-public static void share&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;java.lang.String, java.lang.String&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    descriptor: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;Ljava/lang/String&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;V
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-</description>
-        <pubDate>Wed, 14 Oct 2015 10:28:47 +0200</pubDate>
-        <link>http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html</guid>
-        
-        
-        <category>ios</category>
-        
-        <category>android</category>
-        
-        <category>game</category>
         
       </item>
     
