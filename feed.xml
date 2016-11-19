@@ -6,9 +6,22 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Nov 2016 00:13:23 +0100</pubDate>
-    <lastBuildDate>Thu, 17 Nov 2016 00:13:23 +0100</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 19:43:41 +0100</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 19:43:41 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Sharing Protocol</title>
+        <description>&lt;p&gt;So you&amp;#39;re thinking of sharing or liking that link? 🤔&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/share-protocol.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Nov 2016 01:16:24 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Everytime! #1</title>
@@ -412,29 +425,6 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
         <category>android</category>
         
         <category>game</category>
-        
-      </item>
-    
-      <item>
-        <title>How to Delete and Deactivate Google Search History</title>
-        <description>&lt;p&gt;I was just wondering out of the blue if I could delete and deactivate all my Google search history. Turns out it&amp;#39;s easy. All you have to do is to go to your account&amp;#39;s &lt;a href=&quot;https://myaccount.google.com/privacy&quot;&gt;activity control page&lt;/a&gt;, and turn off the &lt;code&gt;Your searches and browsing activity&lt;/code&gt; setting to stop Google from saving your Google search activities.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google2.png&quot; alt=&quot;turn off google search activity&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;To delete the search history, click on &lt;code&gt;Manage Activity&lt;/code&gt;, click the three vertical dots button on the top right corner of the page, and click the &lt;code&gt;Delete Options&lt;/code&gt;. After that, choose the &lt;code&gt;Advanced&lt;/code&gt; option and choose &lt;code&gt;All time&lt;/code&gt; to delete all the searches.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google3.png&quot; alt=&quot;delete google search activity&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Enjoy searching safely in Google from now on! You can also disable other tracking settings, such as Location history, in your account page. I&amp;#39;m curious about how my Google experience will be now that I disable the search history setting. This could be the last time I could see my search activity insight. Thank you, Stackoverflow!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/google1.png&quot; alt=&quot;google search activity insight&quot;&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 14 Oct 2015 12:39:27 +0200</pubDate>
-        <link>http://www.nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/tech/2015/10/14/how-to-delete-and-deactivate-google-search-history.html</guid>
-        
-        
-        <category>tech</category>
         
       </item>
     
