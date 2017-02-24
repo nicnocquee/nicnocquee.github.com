@@ -6,9 +6,109 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 19:43:41 +0100</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 19:43:41 +0100</lastBuildDate>
+    <pubDate>Fri, 24 Feb 2017 22:22:18 +0100</pubDate>
+    <lastBuildDate>Fri, 24 Feb 2017 22:22:18 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Universal keyPath Resolver For Immutable.js</title>
+        <description>&lt;p&gt;Using &lt;a href=&quot;http://facebook.github.io/immutable-js/&quot;&gt;immutable.js&lt;/a&gt;, we can easily read, set, and update a key on nested data.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var nested2 = nested.mergeDeep({a:{b:{d:6}}});
+// Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
+
+nested2.getIn([&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;d&amp;#39;]); // 6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But it does not work &lt;strong&gt;only&lt;/strong&gt; for &lt;code&gt;Map&lt;/code&gt;. We can use keypath to read or set a value even through a &lt;code&gt;List&lt;/code&gt; as long as we know the index of the element.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;const Immutable = require(&amp;#39;immutable&amp;#39;)
+
+const data = {
+  state: {
+    users: [
+      {
+        id: 1,
+        pets: [
+          {
+            kind: &amp;#39;dog&amp;#39;,
+            name: &amp;#39;Luffy&amp;#39;
+          },
+          {
+            kind: &amp;#39;cat&amp;#39;,
+            name: &amp;#39;Nami&amp;#39;
+          }
+        ]
+      },
+      {
+        id: 2,
+        pets: [
+          {
+            kind: &amp;#39;rabbit&amp;#39;,
+            name: &amp;#39;Robin&amp;#39;
+          }
+        ]
+      }
+    ]
+  }
+}
+
+const immutableData = Immutable.fromJS(data)
+const namiCatName = immutableData.getIn([&amp;#39;state&amp;#39;, &amp;#39;users&amp;#39;, 0, &amp;#39;pets&amp;#39;, 1, &amp;#39;name&amp;#39;])
+// Nami
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Unfortunately we need to know in advance the index of the element we&amp;#39;re trying to access. So I made this small helper so that I can use a function to find the index as a key.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/nicnocquee/67d44687984b4c1a3f15456ffa89ba93.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;And to read the name of the &lt;code&gt;cat&lt;/code&gt; pet for user with id &lt;code&gt;1&lt;/code&gt;,&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;const immutableData = Immutable.fromJS(data)
+const keypath = [
+  &amp;#39;state&amp;#39;, 
+  &amp;#39;users&amp;#39;, 
+  val =&amp;gt; val.get(&amp;#39;id&amp;#39;) === 1, 
+  &amp;#39;pets&amp;#39;, 
+  val =&amp;gt; val.get(&amp;#39;kind&amp;#39;) === &amp;#39;cat&amp;#39;, 
+  &amp;#39;name&amp;#39;
+]
+const namiCatName = immutableData.getIn(resolveKeyPaths(immutableData, keypath))
+// Nami
+
+const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &amp;#39;Usopp&amp;#39;)
+/*
+{
+ &amp;quot;state&amp;quot;: {
+  &amp;quot;users&amp;quot;: [
+   {
+    &amp;quot;id&amp;quot;: 1,
+    &amp;quot;pets&amp;quot;: [
+     {
+      &amp;quot;kind&amp;quot;: &amp;quot;dog&amp;quot;,
+      &amp;quot;name&amp;quot;: &amp;quot;Luffy&amp;quot;
+     },
+     {
+      &amp;quot;kind&amp;quot;: &amp;quot;cat&amp;quot;,
+      &amp;quot;name&amp;quot;: &amp;quot;Usopp&amp;quot;
+     }
+    ]
+   },
+   {
+    &amp;quot;id&amp;quot;: 2,
+    &amp;quot;pets&amp;quot;: [
+     {
+      &amp;quot;kind&amp;quot;: &amp;quot;rabbit&amp;quot;,
+      &amp;quot;name&amp;quot;: &amp;quot;Robin&amp;quot;
+     }
+    ]
+   }
+  ]
+ }
+}
+*/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Fri, 24 Feb 2017 01:16:24 +0100</pubDate>
+        <link>http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Sharing Protocol</title>
@@ -356,75 +456,6 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
         
         
         <category>random</category>
-        
-      </item>
-    
-      <item>
-        <title>Game Making Diary: Crash on Android When Calling OpenGL From Java</title>
-        <description>&lt;p&gt;Continuing my struggle with &lt;a href=&quot;/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html&quot;&gt;Java-C++ interoperability&lt;/a&gt;, calling a C++ function from Java is not straight forward as well. In my cocos2d-x game, I need to call a function called &lt;code&gt;showOptions&lt;/code&gt; in a C++ class from &lt;code&gt;AppActivity&lt;/code&gt; Java class when user taps on a button outside &lt;code&gt;Cocos2dxGLSurfaceView&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;To do this, first declare a native method &lt;code&gt;showOptions&lt;/code&gt; in AppActivity class.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cocos2dxActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;native&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then in some C++ header file, we need to add the JNI declaration for &lt;code&gt;showOptions&lt;/code&gt; method with Java full-path classname. To get this, run the following from &lt;code&gt;proj.android&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;That &lt;code&gt;javah&lt;/code&gt; command will create a new file called &lt;code&gt;org_cocos2dx_cpp_AppActivity.h&lt;/code&gt;. You can simply include this header in your project, or just copy the interface declaraions and paste them in your own header file.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;jni.h&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;extern&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;JNIEXPORT&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JNICALL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Java_org_cocos2dx_cpp_AppActivity_showOptions&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JNIEnv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Next, create the implementation of that function.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;n&quot;&gt;JNIEXPORT&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JNICALL&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Java_org_cocos2dx_cpp_AppActivity_showOptions&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JNIEnv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// call the C++ showOptions method.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NativeBridge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;showOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Finally, all you have to do is to call &lt;code&gt;AppActivity.showOptions()&lt;/code&gt; when the button is pressed.&lt;/p&gt;
-
-&lt;p&gt;However, calling &lt;code&gt;AppActivity.showOptions()&lt;/code&gt; directly will crash the game with &lt;code&gt;call to OpenGL ES API with no current context (logged once per thread)&lt;/code&gt; error.&lt;/p&gt;
-
-&lt;p&gt;To fix this, all you have to do is to call it on a GL thread.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;optionsButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOnTouchListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OnTouchListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;       
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onTouch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MotionEvent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated method stub&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MotionEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_UP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;runOnGLThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Runnable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-                &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                
-                    &lt;span class=&quot;n&quot;&gt;AppActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;showOptions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-</description>
-        <pubDate>Fri, 16 Oct 2015 17:57:52 +0200</pubDate>
-        <link>http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html</guid>
-        
-        
-        <category>ios</category>
-        
-        <category>android</category>
-        
-        <category>game</category>
         
       </item>
     

@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Day One 2: A Disappointment (UPDATED)</title>
-  <meta name="description" content="I&#39;ve been using Day One for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind Day One replied and told..." />
+  <title>Universal keyPath Resolver For Immutable.js</title>
+  <meta name="description" content="Using immutable.js, we can easily read, set, and update a key on nested data." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,16 +17,16 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="Day One 2: A Disappointment (UPDATED)"/>
+  <meta property="og:title" content="Universal keyPath Resolver For Immutable.js"/>
   
-  <meta property="og:description" content="I&#39;ve been using Day One for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind Day One replied and told..." />
+  <meta property="og:description" content="Using immutable.js, we can easily read, set, and update a key on nested data." />
   
   <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html" >
+  <meta property="og:url" content="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html" >
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2016-02-08T01:16:24+01:00">
+  <meta property="article:published_time" content="2017-02-24T01:16:24+01:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html">
+  <link rel="canonical" href="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -48,14 +48,14 @@
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Day One 2: A Disappointment (UPDATED)</h1>
+            <h1 class="post-title">Universal keyPath Resolver For Immutable.js</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
               by
               <a href="https://twitter.com/nicnocquee">Nico Prananta</a>
               on
-              <time datetime="2016-02-08T01:16:24+01:00">08 Feb 2016</time>
+              <time datetime="2017-02-24T01:16:24+01:00">24 Feb 2017</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
           </div>
@@ -69,39 +69,104 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I&#39;ve been using Day One for a long time on iOS and Mac. My wife is also using it. I once sent a feature request to allow multiple photos on an entry and the team behind Day One replied and told me they would include that in Day One 2.</p>
+          <p>Using <a href="http://facebook.github.io/immutable-js/">immutable.js</a>, we can easily read, set, and update a key on nested data.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var nested2 = nested.mergeDeep({a:{b:{d:6}}});
+// Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
 
-<p>That&#39;s why I was so excited when they finally announced Day One 2. I was a little bit surprised with the 50% discount launch price, $19.99 for Mac and $4.99 for iOS. I thought it was a little bit pricey but I understood that it&#39;s hard to make money in the App Store so I bought them anyway.</p>
+nested2.getIn([&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]); // 6
+</code></pre></div>
+<p>But it does not work <strong>only</strong> for <code>Map</code>. We can use keypath to read or set a value even through a <code>List</code> as long as we know the index of the element.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">const Immutable = require(&#39;immutable&#39;)
 
-<p>I should&#39;ve read thoroughly about the upgrade before purchasing it because it turned out to be a disappointment. The first surprise I encountered was the lack of Dropbox support. They decided to dispose Dropbox and iCloud sync in favor of their own syncing service. I never had a problem using Dropbox to sync my Day One entries so I&#39;m not so happy with this feature. While <a href="https://www.dropbox.com/help/27">Dropbox is not entirely secure</a>, at least it has two-step verification while Day One 2 doesn&#39;t have. It&#39;s not even in their <a href="http://help.dayoneapp.com/day-one-2-0-faq/">todo list</a>.</p>
+const data = {
+  state: {
+    users: [
+      {
+        id: 1,
+        pets: [
+          {
+            kind: &#39;dog&#39;,
+            name: &#39;Luffy&#39;
+          },
+          {
+            kind: &#39;cat&#39;,
+            name: &#39;Nami&#39;
+          }
+        ]
+      },
+      {
+        id: 2,
+        pets: [
+          {
+            kind: &#39;rabbit&#39;,
+            name: &#39;Robin&#39;
+          }
+        ]
+      }
+    ]
+  }
+}
 
-<p><img src="/assets/images/posts/dayone-stupid.png" alt="Set to Photo&#39;s date is MIA"></p>
+const immutableData = Immutable.fromJS(data)
+const namiCatName = immutableData.getIn([&#39;state&#39;, &#39;users&#39;, 0, &#39;pets&#39;, 1, &#39;name&#39;])
+// Nami
+</code></pre></div>
+<p>Unfortunately we need to know in advance the index of the element we&#39;re trying to access. So I made this small helper so that I can use a function to find the index as a key.</p>
 
-<p>After using the iOS app for a while, I found out that I cannot set a journal entry&#39;s date to the taken date of a photo anymore. This is a setback from Day One Classic. The iOS app also suffers from choppy scrolling in the <code>All Entries</code> tab and the photos picker on my iPhone 6plus. And the UI-blocking weather fetch is still around. (<em>C&#39;mon, fetch weather info in the background. Don&#39;t block the main thread!</em>)</p>
+<script src="https://gist.github.com/nicnocquee/67d44687984b4c1a3f15456ffa89ba93.js"></script>
 
-<p>I realize some people are using Day One differently from me and maybe the new features in Day One 2 satisfy them. But all I wanted was the ability to add multiple photos in a journal entry. I got what I asked for. But I lost what I&#39;ve been using and gained things I don&#39;t need.</p>
+<p>And to read the name of the <code>cat</code> pet for user with id <code>1</code>,</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">const immutableData = Immutable.fromJS(data)
+const keypath = [
+  &#39;state&#39;, 
+  &#39;users&#39;, 
+  val =&gt; val.get(&#39;id&#39;) === 1, 
+  &#39;pets&#39;, 
+  val =&gt; val.get(&#39;kind&#39;) === &#39;cat&#39;, 
+  &#39;name&#39;
+]
+const namiCatName = immutableData.getIn(resolveKeyPaths(immutableData, keypath))
+// Nami
 
-<blockquote>
-If I'd asked customers what they wanted, they would have said "a faster horse".
-<br /><br />Henry Ford </blockquote>
-
-<p>Take a look at <a href="http://help.dayoneapp.com/day-one-2-0-faq/">what other features they are going to release in the near  future</a>. <em>Encryption</em> is the only feature I need. And it&#39;s not even the top priority. I really just wanted a <em>faster horse</em>.</p>
-
-<p>I hope they will fix the bugs ASAP because I&#39;m a fan of Day One. It is one of the apps I&#39;m using daily.</p>
-
-<p><em>UPDATE Feb 10, 2016</em></p>
-
-<p>New update of Day One 2, now it supports photo&#39;s date for entry&#39;s date. 👍</p>
-
-<p><img src="/assets/images/posts/day-one-2-photo-location.jpeg" alt=""></p>
-
+const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &#39;Usopp&#39;)
+/*
+{
+ &quot;state&quot;: {
+  &quot;users&quot;: [
+   {
+    &quot;id&quot;: 1,
+    &quot;pets&quot;: [
+     {
+      &quot;kind&quot;: &quot;dog&quot;,
+      &quot;name&quot;: &quot;Luffy&quot;
+     },
+     {
+      &quot;kind&quot;: &quot;cat&quot;,
+      &quot;name&quot;: &quot;Usopp&quot;
+     }
+    ]
+   },
+   {
+    &quot;id&quot;: 2,
+    &quot;pets&quot;: [
+     {
+      &quot;kind&quot;: &quot;rabbit&quot;,
+      &quot;name&quot;: &quot;Robin&quot;
+     }
+    ]
+   }
+  ]
+ }
+}
+*/
+</code></pre></div>
         </section>
         <footer class="post-footer">
             <hr/>
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Day+One+2%3A+A+Disappointment+%28UPDATED%29&amp;url=http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Universal+keyPath+Resolver+For+Immutable.js&amp;url=http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -126,11 +191,9 @@ If I'd asked customers what they wanted, they would have said "a faster horse".
 </h2>
         <!-- <a href="/" class="btn">Back to Overview</a> -->
         
-            <a class="btn" href="/2016/01/20/build-cocos2d-x-fat-static-library.html">&laquo; Older</a>
+            <a class="btn" href="/2016/11/18/sharing-protocol.html">&laquo; Older</a>
         
 
-        
-            <a class="btn" href="/2016/11/16/brew-update-upgrade-comic.html">Newer &raquo;</a>
         
       </div>
     </div>
