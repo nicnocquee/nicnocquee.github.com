@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Universal keyPath Resolver For Immutable.js</title>
-  <meta name="description" content="Using immutable.js, we can easily read, set, and update a key on nested data." />
+  <title>tldr cheat bro</title>
+  <meta name="description" content="Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,16 +17,16 @@
   
 
   <meta property="og:site_name" content="NICNOCQUEE" />
-  <meta property="og:title" content="Universal keyPath Resolver For Immutable.js"/>
+  <meta property="og:title" content="tldr cheat bro"/>
   
-  <meta property="og:description" content="Using immutable.js, we can easily read, set, and update a key on nested data." />
+  <meta property="og:description" content="Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them." />
   
   <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html" >
+  <meta property="og:url" content="http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html" >
   <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2017-02-24T01:16:24+01:00">
+  <meta property="article:published_time" content="2017-03-06T01:16:24+01:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html">
+  <link rel="canonical" href="http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -48,14 +48,14 @@
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Universal keyPath Resolver For Immutable.js</h1>
+            <h1 class="post-title">tldr cheat bro</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
               by
               <a href="https://twitter.com/nicnocquee">Nico Prananta</a>
               on
-              <time datetime="2017-02-24T01:16:24+01:00">24 Feb 2017</time>
+              <time datetime="2017-03-06T01:16:24+01:00">06 Mar 2017</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
           </div>
@@ -69,104 +69,21 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Using <a href="http://facebook.github.io/immutable-js/">immutable.js</a>, we can easily read, set, and update a key on nested data.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var nested2 = nested.mergeDeep({a:{b:{d:6}}});
-// Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
+          <p>Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them.</p>
 
-nested2.getIn([&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]); // 6
-</code></pre></div>
-<p>But it does not work <strong>only</strong> for <code>Map</code>. We can use keypath to read or set a value even through a <code>List</code> as long as we know the index of the element.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">const Immutable = require(&#39;immutable&#39;)
+<ul>
+<li><a href="https://github.com/tldr-pages/tldr">tldr</a> <code>npm install -g tldr</code>. </li>
+<li><a href="https://github.com/chrisallenlane/cheat">cheat</a> <code>pip install cheat</code></li>
+<li><a href="http://bropages.org">bro</a> <code>gem install bropages</code></li>
+</ul>
 
-const data = {
-  state: {
-    users: [
-      {
-        id: 1,
-        pets: [
-          {
-            kind: &#39;dog&#39;,
-            name: &#39;Luffy&#39;
-          },
-          {
-            kind: &#39;cat&#39;,
-            name: &#39;Nami&#39;
-          }
-        ]
-      },
-      {
-        id: 2,
-        pets: [
-          {
-            kind: &#39;rabbit&#39;,
-            name: &#39;Robin&#39;
-          }
-        ]
-      }
-    ]
-  }
-}
-
-const immutableData = Immutable.fromJS(data)
-const namiCatName = immutableData.getIn([&#39;state&#39;, &#39;users&#39;, 0, &#39;pets&#39;, 1, &#39;name&#39;])
-// Nami
-</code></pre></div>
-<p>Unfortunately we need to know in advance the index of the element we&#39;re trying to access. So I made this small helper so that I can use a function to find the index as a key.</p>
-
-<script src="https://gist.github.com/nicnocquee/67d44687984b4c1a3f15456ffa89ba93.js"></script>
-
-<p>And to read the name of the <code>cat</code> pet for user with id <code>1</code>,</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">const immutableData = Immutable.fromJS(data)
-const keypath = [
-  &#39;state&#39;, 
-  &#39;users&#39;, 
-  val =&gt; val.get(&#39;id&#39;) === 1, 
-  &#39;pets&#39;, 
-  val =&gt; val.get(&#39;kind&#39;) === &#39;cat&#39;, 
-  &#39;name&#39;
-]
-const namiCatName = immutableData.getIn(resolveKeyPaths(immutableData, keypath))
-// Nami
-
-const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &#39;Usopp&#39;)
-/*
-{
- &quot;state&quot;: {
-  &quot;users&quot;: [
-   {
-    &quot;id&quot;: 1,
-    &quot;pets&quot;: [
-     {
-      &quot;kind&quot;: &quot;dog&quot;,
-      &quot;name&quot;: &quot;Luffy&quot;
-     },
-     {
-      &quot;kind&quot;: &quot;cat&quot;,
-      &quot;name&quot;: &quot;Usopp&quot;
-     }
-    ]
-   },
-   {
-    &quot;id&quot;: 2,
-    &quot;pets&quot;: [
-     {
-      &quot;kind&quot;: &quot;rabbit&quot;,
-      &quot;name&quot;: &quot;Robin&quot;
-     }
-    ]
-   }
-  ]
- }
-}
-*/
-</code></pre></div>
         </section>
         <footer class="post-footer">
             <hr/>
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Universal+keyPath+Resolver+For+Immutable.js&amp;url=http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=tldr+cheat+bro&amp;url=http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -191,11 +108,9 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &#3
 </h2>
         <!-- <a href="/" class="btn">Back to Overview</a> -->
         
-            <a class="btn" href="/2016/11/18/sharing-protocol.html">&laquo; Older</a>
+            <a class="btn" href="/2017/02/24/resolve-keypath-immutablejs.html">&laquo; Older</a>
         
 
-        
-            <a class="btn" href="/cli/2017/03/06/man-tldr-cheat-bro.html">Newer &raquo;</a>
         
       </div>
     </div>

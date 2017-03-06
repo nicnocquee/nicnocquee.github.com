@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</loc>
+<lastmod>2017-03-06T01:16:24+01:00</lastmod>
+</url>
+<url>
 <loc>http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</loc>
 <lastmod>2017-02-24T01:16:24+01:00</lastmod>
 </url>
@@ -511,5 +515,8 @@
 </url>
 <url>
 <loc>http://www.nicnocquee.com/page22/</loc>
+</url>
+<url>
+<loc>http://www.nicnocquee.com/page23/</loc>
 </url>
 </urlset>

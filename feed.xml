@@ -6,9 +6,28 @@
 </description>
     <link>http://www.nicnocquee.com/</link>
     <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Feb 2017 22:22:18 +0100</pubDate>
-    <lastBuildDate>Fri, 24 Feb 2017 22:22:18 +0100</lastBuildDate>
+    <pubDate>Mon, 06 Mar 2017 19:19:44 +0100</pubDate>
+    <lastBuildDate>Mon, 06 Mar 2017 19:19:44 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>tldr cheat bro</title>
+        <description>&lt;p&gt;Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tldr-pages/tldr&quot;&gt;tldr&lt;/a&gt; &lt;code&gt;npm install -g tldr&lt;/code&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/chrisallenlane/cheat&quot;&gt;cheat&lt;/a&gt; &lt;code&gt;pip install cheat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bropages.org&quot;&gt;bro&lt;/a&gt; &lt;code&gt;gem install bropages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 06 Mar 2017 01:16:24 +0100</pubDate>
+        <link>http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</guid>
+        
+        
+        <category>cli</category>
+        
+      </item>
     
       <item>
         <title>Universal keyPath Resolver For Immutable.js</title>
@@ -429,33 +448,6 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
         <category>game</category>
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>I Don't Believe in Destiny</title>
-        <description>&lt;p&gt;Actually, maybe I refuse to believe in destiny. There were millions of 23 year-olds when Mark Zuckerberg became a &lt;a href=&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;&gt;billionaire at the age of 23 as a result of Facebook&amp;#39;s success&lt;/a&gt;. I don&amp;#39;t believe that the rest of the 23 year-olds at that time were not destined to be billionaires like Mark. I do believe though in two of the laws of the universe.&lt;/p&gt;
-
-&lt;h2&gt;The higher the success is, the fewer the people who can achieve it.&lt;/h2&gt;
-
-&lt;p&gt;Life is like climbing a mountain. And some kind of success awaits at the top. Except there is no top. It just goes up and up. Everybody has the right to climb the mountain. Everybody has the chance to reach the top. But it&amp;#39;s in the law of nature that only a few can reach the top. It&amp;#39;s a long and hard road to get there. Gravity pulls everyone down. Some will give up along the way. Some will be satisfied reaching the middle and call it a success.&lt;/p&gt;
-
-&lt;h2&gt;Good and bad luck occur randomly.&lt;/h2&gt;
-
-&lt;p&gt;While everyone has the right to be successful, good luck can kick people in the ass and push them up higher in an instant. At the same time, bad luck can also trip some people off their track and make them fall so far behind. But both good and bad lucks are random. And we can respond to them in any way we want. Some people, like J.K. Rowling, didn&amp;#39;t let failures and bad luck stop them from continuing the climb to the top of the mountain. On the other hand, some people who were blessed with good luck wasted them.&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;80%&quot; max-width=&quot;640px&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/http://www.youtube.com/watch?v=wHGqp8lz36c &quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;h2&gt;Note to self&lt;/h2&gt;
-
-&lt;p&gt;Don&amp;#39;t give up because of destiny. If everyone has their destiny decided since they were born, so what&amp;#39;s the point of living? And be prepared when good or bad luck greets you.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 17 Oct 2015 07:11:47 +0200</pubDate>
-        <link>http://www.nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/random/2015/10/17/i-dont-believe-in-destiny.html</guid>
-        
-        
-        <category>random</category>
         
       </item>
     
