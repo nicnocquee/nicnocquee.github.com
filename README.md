@@ -1,5 +1,4 @@
-- `gem install octopress`
 - `bundle install`
-- `bundle exec jekyll serve`
+- `bundle exec jekyll serve` 
 - `bundle exec jekyll build`
-- `octopress deploy`
+- `bundle exec octopress deploy`
