@@ -4,15 +4,15 @@
     <title>NICNOCQUEE</title>
     <description>Blog about iOS, Programming, Japan, or Random Stuff.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Jul 2017 22:09:01 +0200</pubDate>
-    <lastBuildDate>Sat, 01 Jul 2017 22:09:01 +0200</lastBuildDate>
+    <link>http://www.nicnocquee.com/</link>
+    <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 02 Jul 2017 00:14:47 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Jul 2017 00:14:47 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>tldr cheat bro</title>
-        <description>&lt;p&gt;Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them.&lt;/p&gt;
+        <description>&lt;p&gt;Install these three tools to increase productivity when working with command line interface. They all give you examples of any commands you gave them. &lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tldr-pages/tldr&quot;&gt;tldr&lt;/a&gt; &lt;code&gt;npm install -g tldr&lt;/code&gt;. &lt;/li&gt;
@@ -21,8 +21,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 06 Mar 2017 01:16:24 +0100</pubDate>
-        <link>http://localhost:4000/cli/2017/03/06/man-tldr-cheat-bro.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cli/2017/03/06/man-tldr-cheat-bro.html</guid>
+        <link>http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</guid>
         
         
         <category>cli</category>
@@ -123,8 +123,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 */
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Fri, 24 Feb 2017 01:16:24 +0100</pubDate>
-        <link>http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html</guid>
+        <link>http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</guid>
         
         
       </item>
@@ -136,8 +136,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/share-protocol.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 01:16:24 +0100</pubDate>
-        <link>http://localhost:4000/2016/11/18/sharing-protocol.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/11/18/sharing-protocol.html</guid>
+        <link>http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</guid>
         
         
       </item>
@@ -149,8 +149,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/comic-01-brew-update-upgrade.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Nov 2016 01:16:24 +0100</pubDate>
-        <link>http://localhost:4000/2016/11/16/brew-update-upgrade-comic.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/11/16/brew-update-upgrade-comic.html</guid>
+        <link>http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</guid>
         
         
       </item>
@@ -184,8 +184,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/day-one-2-photo-location.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Feb 2016 01:16:24 +0100</pubDate>
-        <link>http://localhost:4000/2016/02/08/dayone-2-a-disappointment.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/08/dayone-2-a-disappointment.html</guid>
+        <link>http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</guid>
         
         
       </item>
@@ -221,8 +221,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;PPS: You can copy &lt;code&gt;libcocos2d iOS.a&lt;/code&gt; to your project folder and commit it to your repo so that your team can build and run the project immediately.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2016 19:29:17 +0100</pubDate>
-        <link>http://localhost:4000/2016/01/20/build-cocos2d-x-fat-static-library.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/01/20/build-cocos2d-x-fat-static-library.html</guid>
+        <link>http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</guid>
         
         
       </item>
@@ -244,8 +244,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;What the script does is basically loop through all the image files (png,jpg,jpeg) in the given directory, use ImageMagick&amp;#39;s &lt;code&gt;identify&lt;/code&gt; to extract the image&amp;#39;s metadata, then use &lt;code&gt;grep&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt; to get the year and month of the image&amp;#39;s taken date from the EXIF. After that, it just creates the directory if needed and moves the image to the directory. If there&amp;#39;s no EXIF data, the images will be moved to &lt;code&gt;Unknown&lt;/code&gt; folder.&lt;/p&gt;
 </description>
         <pubDate>Wed, 13 Jan 2016 10:00:14 +0100</pubDate>
-        <link>http://localhost:4000/2016/01/13/organize-photos-via-command-line.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/01/13/organize-photos-via-command-line.html</guid>
+        <link>http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</guid>
         
         
       </item>
@@ -345,8 +345,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;Nori for Mac is &lt;a href=&quot;https://itunes.apple.com/us/app/nori-photo-strips-creator/id1067017035?ls=1&amp;mt=12&quot;&gt;now available on the Mac App Store&lt;/a&gt;. Check it out! :)&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Dec 2015 16:37:55 +0100</pubDate>
-        <link>http://localhost:4000/2015/12/13/making-of-nori-for-mac.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/13/making-of-nori-for-mac.html</guid>
+        <link>http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</guid>
         
         
       </item>
@@ -400,8 +400,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;I&amp;#39;m going to ponder on these questions for a while longer while I&amp;#39;m busy preparing my moving out of Japan. In the mean time, if you have any advice or suggestions, let me know on Twitter or send me an &lt;a href=&quot;mailto:nico@delightfuldev.com&quot;&gt;email&lt;/a&gt;. I&amp;#39;d greatly appreciate it.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Nov 2015 03:30:49 +0100</pubDate>
-        <link>http://localhost:4000/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
-        <guid isPermaLink="true">http://localhost:4000/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
+        <link>http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
         
         
         <category>ios</category>
@@ -439,8 +439,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;Have fun!&lt;/p&gt;
 </description>
         <pubDate>Fri, 23 Oct 2015 04:14:47 +0200</pubDate>
-        <link>http://localhost:4000/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
-        <guid isPermaLink="true">http://localhost:4000/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
+        <link>http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
+        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
         
         
         <category>ios</category>
