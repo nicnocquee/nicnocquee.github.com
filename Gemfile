@@ -1,6 +1,5 @@
 source 'https://rubygems.org' do
   # Gems here
-  gem 'octopress'
   gem 'jekyll'
   gem 'jemoji'
   gem 'jekyll-paginate'

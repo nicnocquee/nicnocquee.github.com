@@ -1,4 +1,4 @@
 - `bundle install`
 - `bundle exec jekyll serve` 
 - `bundle exec jekyll build`
-- `bundle exec octopress deploy`
+- `./deploy.sh`
