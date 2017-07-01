@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="While making my first cross platform game using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cp..." />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2015-10-14T10:28:47+02:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html">
+  <link rel="canonical" href="http://localhost:4000/ios/android/game/2015/10/14/game-making-diary-java-method-signature.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -71,8 +71,8 @@
           <a name="topofpage"></a>
           <p>While making <a href="http://www.delightfuldev.com/make9/">my first cross platform game</a> using Cocos2d-x CPP version, I realized that it&#39;s so much easier to use C++ with Objective-C than to use C++ with Java. In iOS, I can simply name a .cpp file to .mm and include it in the project and I can call C++ or Objective-C methods right away. In Android, if I want to call a Java method from C++, I need to use JNI (Java Native Interface). For example, to call a static method named <code>share</code> in <code>AppActivity</code> class, I need to do it like so.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JniMethodInfo</span> <span class="n">t</span><span class="o">;</span>
-<span class="k">if</span> <span class="o">(</span><span class="nl">JniHelper:</span><span class="o">:</span><span class="n">getStaticMethodInfo</span><span class="o">(</span><span class="n">t</span><span class="o">,</span> <span class="s">&quot;org/cocos2dx/cpp/AppActivity&quot;</span><span class="o">,</span> <span class="s">&quot;share&quot;</span><span class="o">,</span> <span class="s">&quot;(Ljava/lang/String;Ljava/lang/String;)V&quot;</span><span class="o">))</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">JniMethodInfo</span> <span class="n">t</span><span class="o">;</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">JniHelper</span><span class="o">::</span><span class="n">getStaticMethodInfo</span><span class="o">(</span><span class="n">t</span><span class="o">,</span> <span class="s">&quot;org/cocos2dx/cpp/AppActivity&quot;</span><span class="o">,</span> <span class="s">&quot;share&quot;</span><span class="o">,</span> <span class="s">&quot;(Ljava/lang/String;Ljava/lang/String;)V&quot;</span><span class="o">))</span> <span class="o">{</span>
     <span class="n">jstring</span> <span class="n">StringArg1</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
     <span class="n">jstring</span> <span class="n">StringArg2</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">c_str</span><span class="o">());</span>
     <span class="n">t</span><span class="o">.</span><span class="na">env</span><span class="o">-&gt;</span><span class="n">CallStaticVoidMethod</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">classID</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">methodID</span><span class="o">,</span> <span class="n">StringArg1</span><span class="o">,</span> <span class="n">StringArg2</span><span class="o">);</span>
@@ -83,9 +83,9 @@
 
 <p>The last argument of <code>getStaticMethodInfo</code> is the method signature of the <code>share</code> static method. This signature must be correct or else you&#39;ll get <code>Failed to find static method id</code> error. To get this method signature, use <code>javap -s</code> command from command line.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh">javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span></span>javap -s -classpath bin/classes/org/cocos2dx/cpp/ AppActivity
 
-<span class="c">#output</span>
+<span class="c1">#output</span>
 Compiled from <span class="s2">&quot;AppActivity.java&quot;</span>
 public class org.cocos2dx.cpp.AppActivity extends org.cocos2dx.lib.Cocos2dxActivity <span class="o">{</span>
 public static void share<span class="o">(</span>java.lang.String, java.lang.String<span class="o">)</span><span class="p">;</span>
@@ -98,7 +98,7 @@ public static void share<span class="o">(</span>java.lang.String, java.lang.Stri
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Game+Making+Diary%3A+Java+Method+Signature&amp;url=http://www.nicnocquee.com/ios/android/game/2015/10/14/game-making-diary-java-method-signature"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Game+Making+Diary%3A+Java+Method+Signature&amp;url=http://localhost:4000/ios/android/game/2015/10/14/game-making-diary-java-method-signature"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

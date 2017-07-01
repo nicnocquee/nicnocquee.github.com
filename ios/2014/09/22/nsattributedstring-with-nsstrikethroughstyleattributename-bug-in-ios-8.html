@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="In iOS 7, it&#39;s easy to create UILabel with strikethrough text. You can just simply assign NSAttributedString to the text label." />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2014-09-22T13:09:42+02:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html">
+  <link rel="canonical" href="http://localhost:4000/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -72,7 +72,7 @@
           <p>In iOS 7, it&#39;s easy to create UILabel with strikethrough text. You can just simply assign <code>NSAttributedString</code> to the text label.</p>
 
 <!--more-->
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="bp">NSString</span> <span class="o">*</span><span class="n">price</span> <span class="o">=</span> <span class="s">@&quot;7,500&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="bp">NSString</span> <span class="o">*</span><span class="n">price</span> <span class="o">=</span> <span class="s">@&quot;7,500&quot;</span><span class="p">;</span>
     <span class="bp">NSString</span> <span class="o">*</span><span class="n">retailPrice</span> <span class="o">=</span> <span class="s">@&quot;10,000円&quot;</span><span class="p">;</span>
     <span class="bp">NSString</span> <span class="o">*</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">retailPrice</span><span class="p">];</span>
     <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span><span class="p">];</span>
@@ -82,7 +82,7 @@
 <p><img src="http://f.cl.ly/items/1s1g3A3Z070n0u1k2t2W/iOS%20Simulator%20Screen%20Shot%20Sep%2022,%202014,%2020.11.27.png" alt="nsattributedstring-ios-8-bug"></p>
 
 <p>But in iOS 8, that code didn&#39;t work anymore. The strikethrough line didn&#39;t appear. Funny thing was, if range&#39;s location is set to 0, or strikethrough from the beginning, the line appeared. To fix this you just have to assign the strikethrough attribute, <code>NSUnderlineStyleNone</code> to the whole string on initialization.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span> <span class="nl">attributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span> <span class="l">@(</span><span class="n">NSUnderlineStyleNone</span><span class="l">)}</span><span class="p">];</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="bp">NSMutableAttributedString</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSMutableAttributedString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithString</span><span class="p">:</span><span class="n">text</span> <span class="nl">attributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span> <span class="l">@(</span><span class="n">NSUnderlineStyleNone</span><span class="l">)}</span><span class="p">];</span>
     <span class="p">[</span><span class="n">string</span> <span class="nl">addAttributes</span><span class="p">:</span><span class="l">@{</span><span class="nl">NSStrikethroughStyleAttributeName</span><span class="p">:</span><span class="l">@(</span><span class="n">NSUnderlineStyleSingle</span><span class="l">)}</span> <span class="nl">range</span><span class="p">:[</span><span class="n">text</span> <span class="nl">rangeOfString</span><span class="p">:</span><span class="n">retailPrice</span><span class="p">]];</span>
 </code></pre></div>
         </section>
@@ -91,7 +91,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=NSAttributedString+with+NSStrikethroughStyleAttributeName+bug+in+iOS+8&amp;url=http://www.nicnocquee.com/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=NSAttributedString+with+NSStrikethroughStyleAttributeName+bug+in+iOS+8&amp;url=http://localhost:4000/ios/2014/09/22/nsattributedstring-with-nsstrikethroughstyleattributename-bug-in-ios-8"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

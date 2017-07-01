@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="Using immutable.js, we can easily read, set, and update a key on nested data." />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2017-02-24T01:16:24+01:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html">
+  <link rel="canonical" href="http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -70,13 +70,13 @@
           </div>
           <a name="topofpage"></a>
           <p>Using <a href="http://facebook.github.io/immutable-js/">immutable.js</a>, we can easily read, set, and update a key on nested data.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var nested2 = nested.mergeDeep({a:{b:{d:6}}});
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>var nested2 = nested.mergeDeep({a:{b:{d:6}}});
 // Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
 
 nested2.getIn([&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]); // 6
 </code></pre></div>
 <p>But it does not work <strong>only</strong> for <code>Map</code>. We can use keypath to read or set a value even through a <code>List</code> as long as we know the index of the element.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">const Immutable = require(&#39;immutable&#39;)
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>const Immutable = require(&#39;immutable&#39;)
 
 const data = {
   state: {
@@ -116,7 +116,7 @@ const namiCatName = immutableData.getIn([&#39;state&#39;, &#39;users&#39;, 0, &#
 <script src="https://gist.github.com/nicnocquee/67d44687984b4c1a3f15456ffa89ba93.js"></script>
 
 <p>And to read the name of the <code>cat</code> pet for user with id <code>1</code>,</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">const immutableData = Immutable.fromJS(data)
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>const immutableData = Immutable.fromJS(data)
 const keypath = [
   &#39;state&#39;, 
   &#39;users&#39;, 
@@ -166,7 +166,7 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &#3
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Universal+keyPath+Resolver+For+Immutable.js&amp;url=http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Universal+keyPath+Resolver+For+Immutable.js&amp;url=http://localhost:4000/2017/02/24/resolve-keypath-immutablejs"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

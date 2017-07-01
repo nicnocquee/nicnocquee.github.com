@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="Continuing my struggle with Java-C++ interoperability, calling a C++ function from Java is not straight forward as well. In my cocos2d-x game, I need to call a function called showOptions in a C++ ..." />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2015-10-16T17:57:52+02:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html">
+  <link rel="canonical" href="http://localhost:4000/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -73,7 +73,7 @@
 
 <p>To do this, first declare a native method <code>showOptions</code> in AppActivity class.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppActivity</span> <span class="kd">extends</span> <span class="n">Cocos2dxActivity</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppActivity</span> <span class="kd">extends</span> <span class="n">Cocos2dxActivity</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">native</span> <span class="kt">void</span> <span class="nf">showOptions</span> <span class="o">();</span>
 
 
@@ -81,11 +81,11 @@
 
 <p>Then in some C++ header file, we need to add the JNI declaration for <code>showOptions</code> method with Java full-path classname. To get this, run the following from <code>proj.android</code> directory.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh">javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity</code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span></span>javah -classpath bin/classes:src org.cocos2dx.cpp.AppActivity</code></pre></figure>
 
 <p>That <code>javah</code> command will create a new file called <code>org_cocos2dx_cpp_AppActivity.h</code>. You can simply include this header in your project, or just copy the interface declaraions and paste them in your own header file.</p>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;jni.h&gt;</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span></span><span class="cp">#include</span> <span class="cpf">&lt;jni.h&gt;</span><span class="cp"></span>
 <span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
     <span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="n">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
     <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span> <span class="p">,</span> <span class="n">jclass</span><span class="p">);</span>
@@ -93,7 +93,7 @@
 
 <p>Next, create the implementation of that function.</p>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span></span><span class="n">JNIEXPORT</span> <span class="kt">void</span> <span class="n">JNICALL</span> <span class="nf">Java_org_cocos2dx_cpp_AppActivity_showOptions</span>
 <span class="p">(</span><span class="n">JNIEnv</span> <span class="o">*</span> <span class="p">,</span> <span class="n">jclass</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// call the C++ showOptions method.</span>
@@ -106,12 +106,12 @@
 
 <p>To fix this, all you have to do is to call it on a GL thread.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">optionsButton</span><span class="o">.</span><span class="na">setOnTouchListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnTouchListener</span><span class="o">()</span> <span class="o">{</span>       
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">optionsButton</span><span class="o">.</span><span class="na">setOnTouchListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnTouchListener</span><span class="o">()</span> <span class="o">{</span>      
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onTouch</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">,</span> <span class="n">MotionEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO Auto-generated method stub</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">getAction</span><span class="o">()</span> <span class="o">==</span> <span class="n">MotionEvent</span><span class="o">.</span><span class="na">ACTION_UP</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">instance</span><span class="o">.</span><span class="na">runOnGLThread</span> <span class="o">(</span><span class="k">new</span> <span class="nf">Runnable</span> <span class="o">()</span> <span class="o">{</span>
+            <span class="n">instance</span><span class="o">.</span><span class="na">runOnGLThread</span> <span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span> <span class="o">()</span> <span class="o">{</span>
                 <span class="nd">@Override</span>
                 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span> <span class="o">()</span> <span class="o">{</span>                
                     <span class="n">AppActivity</span><span class="o">.</span><span class="na">showOptions</span><span class="o">();</span>
@@ -129,7 +129,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Game+Making+Diary%3A+Crash+on+Android+When+Calling+OpenGL+From+Java&amp;url=http://www.nicnocquee.com/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Game+Making+Diary%3A+Crash+on+Android+When+Calling+OpenGL+From+Java&amp;url=http://localhost:4000/ios/android/game/2015/10/16/game-making-diary-crash-on-android-when-calling-opengl-from-java"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

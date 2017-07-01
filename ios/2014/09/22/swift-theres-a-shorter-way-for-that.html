@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="Backward sorting array of string using Swift:" />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2014-09-22T02:40:52+02:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html">
+  <link rel="canonical" href="http://localhost:4000/ios/2014/09/22/swift-theres-a-shorter-way-for-that.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -72,34 +72,34 @@
           <p>Backward sorting array of string using Swift:</p>
 
 <!--more-->
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Chris&quot;</span><span class="p">,</span> <span class="s">&quot;Alex&quot;</span><span class="p">,</span> <span class="s">&quot;Ewa&quot;</span><span class="p">,</span> <span class="s">&quot;Barry&quot;</span><span class="p">,</span> <span class="s">&quot;Daniella&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Chris&quot;</span><span class="p">,</span> <span class="s">&quot;Alex&quot;</span><span class="p">,</span> <span class="s">&quot;Ewa&quot;</span><span class="p">,</span> <span class="s">&quot;Barry&quot;</span><span class="p">,</span> <span class="s">&quot;Daniella&quot;</span><span class="p">]</span>
     <span class="n">func</span> <span class="n">backwards</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
     <span class="p">}</span>
     <span class="n">var</span> <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">backwards</span><span class="p">)</span>
 </code></pre></div>
 <p>Too long.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
             <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span>
     <span class="p">})</span>
 </code></pre></div>
 <p>Let&#39;s make it one line.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
 <p>Don&#39;t be satisfied yet.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="k">return</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
 <p>You didn&#39;t think that&#39;s the best we can do, right?</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="k">in</span> <span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre></div>
 <p>Shorter!</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mi">1</span> <span class="p">}</span> <span class="p">)</span>  
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mi">1</span> <span class="p">}</span> <span class="p">)</span>  
 </code></pre></div>
 <p>You can do it!</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="n">reversed</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">)</span>
 </code></pre></div>
 <p>Use the force!</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc">    <span class="err">😄</span><span class="o">=</span><span class="n">sorted</span><span class="p">(</span><span class="err">🐷</span><span class="p">,</span><span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span>    <span class="err">😄</span><span class="o">=</span><span class="n">sorted</span><span class="p">(</span><span class="err">🐷</span><span class="p">,</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre></div>
 <p>There! We have the winner! Oh, if you see two rectangles on the code above, use Safari or  Firefox, please :)</p>
 
@@ -109,7 +109,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Swift%3A+There%27s+a+shorter+way+for+that&amp;url=http://www.nicnocquee.com/ios/2014/09/22/swift-theres-a-shorter-way-for-that"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Swift%3A+There%27s+a+shorter+way+for+that&amp;url=http://localhost:4000/ios/2014/09/22/swift-theres-a-shorter-way-for-that"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

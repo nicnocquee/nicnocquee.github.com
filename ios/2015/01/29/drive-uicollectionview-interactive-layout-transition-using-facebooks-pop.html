@@ -21,12 +21,12 @@
   
   <meta property="og:description" content="UICollectionView has a method to change layout easily: setCollectionViewLayout:animated:completion:. And according to documentation, if you implement the delegate&#39;s collectionView:transitionLay..." />
   
-  <meta property="og:image" content="http://www.nicnocquee.com" />
-  <meta property="og:url" content="http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html" >
+  <meta property="og:image" content="http://localhost:4000" />
+  <meta property="og:url" content="http://localhost:4000/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html" >
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2015-01-29T03:30:53+01:00">
 
-  <link rel="canonical" href="http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html">
+  <link rel="canonical" href="http://localhost:4000/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
@@ -80,16 +80,16 @@
 </blockquote>
 
 <p>But strangely, that delegate&#39;s method is not called when we change layout using <code>setCollectionViewLayout</code>. Somebody in <a href="http://stackoverflow.com/a/23009119/401544">stackoverflow</a> provided a workaround by calling collection view&#39;s <code>startInteractiveTransitionToCollectionViewLayout:</code> method instead.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="n">finishInteractiveTransition</span><span class="p">];</span>
 </code></pre></div>
 <p>The problem is we cannot control the speed of the animation. What I wanted is to &quot;animate&quot; the <code>UICollectionViewTransitionLayout</code>&#39;s <code>transitionProgress</code> property.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="p">[</span><span class="bp">UIView</span> <span class="nl">animateWithDuration</span><span class="p">:</span><span class="mf">0.3</span> <span class="nl">delay</span><span class="p">:</span><span class="mi">0</span> <span class="nl">usingSpringWithDamping</span><span class="p">:</span><span class="mi">1</span> <span class="nl">initialSpringVelocity</span><span class="p">:</span><span class="mi">1</span> <span class="nl">options</span><span class="p">:</span><span class="n">UIViewAnimationOptionCurveEaseInOut</span> <span class="nl">animations</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="p">[</span><span class="bp">UIView</span> <span class="nl">animateWithDuration</span><span class="p">:</span><span class="mf">0.3</span> <span class="nl">delay</span><span class="p">:</span><span class="mi">0</span> <span class="nl">usingSpringWithDamping</span><span class="p">:</span><span class="mi">1</span> <span class="nl">initialSpringVelocity</span><span class="p">:</span><span class="mi">1</span> <span class="nl">options</span><span class="p">:</span><span class="n">UIViewAnimationOptionCurveEaseInOut</span> <span class="nl">animations</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
     <span class="n">transition</span><span class="p">.</span><span class="n">transitionProgress</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">finished</span><span class="p">)</span> <span class="p">{}];</span>    
 </code></pre></div>
 <p>But since transitionProgress is not animatable, this doesn&#39;t work. This is where <a href="https://github.com/facebook/pop">Facebook&#39;s Pop</a> comes to rescue. Using Pop, we can animate custom properties.</p>
-<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="c1">// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// CustomTransitionLayout is subclass of UICollectionViewTransitionLayout</span>
 <span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="n">transition</span> <span class="o">=</span> <span class="p">(</span><span class="n">CustomTransitionLayout</span> <span class="o">*</span><span class="p">)[</span><span class="nb">self</span><span class="p">.</span><span class="n">collectionView</span> <span class="nl">startInteractiveTransitionToCollectionViewLayout</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">finalLayout</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 
 <span class="n">POPSpringAnimation</span> <span class="o">*</span><span class="n">springAnimation</span> <span class="o">=</span> <span class="p">[</span><span class="n">POPSpringAnimation</span> <span class="n">animation</span><span class="p">];</span>
@@ -122,7 +122,7 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Drive+UICollectionView+interactive+layout+transition+using+Facebook%27s+Pop&amp;url=http://www.nicnocquee.com/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop"
+                <a class="icon-twitter" href="http://twitter.com/share?via=nicnocquee&text=Drive+UICollectionView+interactive+layout+transition+using+Facebook%27s+Pop&amp;url=http://localhost:4000/ios/2015/01/29/drive-uicollectionview-interactive-layout-transition-using-facebooks-pop"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>

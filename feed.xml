@@ -4,11 +4,11 @@
     <title>NICNOCQUEE</title>
     <description>Blog about iOS, Programming, Japan, or Random Stuff.
 </description>
-    <link>http://www.nicnocquee.com/</link>
-    <atom:link href="http://www.nicnocquee.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Mar 2017 19:19:44 +0100</pubDate>
-    <lastBuildDate>Mon, 06 Mar 2017 19:19:44 +0100</lastBuildDate>
-    <generator>Jekyll v3.3.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 01 Jul 2017 22:09:01 +0200</pubDate>
+    <lastBuildDate>Sat, 01 Jul 2017 22:09:01 +0200</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>tldr cheat bro</title>
@@ -21,8 +21,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 06 Mar 2017 01:16:24 +0100</pubDate>
-        <link>http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/cli/2017/03/06/man-tldr-cheat-bro.html</guid>
+        <link>http://localhost:4000/cli/2017/03/06/man-tldr-cheat-bro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cli/2017/03/06/man-tldr-cheat-bro.html</guid>
         
         
         <category>cli</category>
@@ -32,13 +32,13 @@
       <item>
         <title>Universal keyPath Resolver For Immutable.js</title>
         <description>&lt;p&gt;Using &lt;a href=&quot;http://facebook.github.io/immutable-js/&quot;&gt;immutable.js&lt;/a&gt;, we can easily read, set, and update a key on nested data.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var nested2 = nested.mergeDeep({a:{b:{d:6}}});
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;var nested2 = nested.mergeDeep({a:{b:{d:6}}});
 // Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
 
 nested2.getIn([&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;d&amp;#39;]); // 6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But it does not work &lt;strong&gt;only&lt;/strong&gt; for &lt;code&gt;Map&lt;/code&gt;. We can use keypath to read or set a value even through a &lt;code&gt;List&lt;/code&gt; as long as we know the index of the element.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;const Immutable = require(&amp;#39;immutable&amp;#39;)
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;const Immutable = require(&amp;#39;immutable&amp;#39;)
 
 const data = {
   state: {
@@ -78,7 +78,7 @@ const namiCatName = immutableData.getIn([&amp;#39;state&amp;#39;, &amp;#39;users
 &lt;script src=&quot;https://gist.github.com/nicnocquee/67d44687984b4c1a3f15456ffa89ba93.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;And to read the name of the &lt;code&gt;cat&lt;/code&gt; pet for user with id &lt;code&gt;1&lt;/code&gt;,&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;const immutableData = Immutable.fromJS(data)
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;const immutableData = Immutable.fromJS(data)
 const keypath = [
   &amp;#39;state&amp;#39;, 
   &amp;#39;users&amp;#39;, 
@@ -123,8 +123,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 */
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Fri, 24 Feb 2017 01:16:24 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2017/02/24/resolve-keypath-immutablejs.html</guid>
+        <link>http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/24/resolve-keypath-immutablejs.html</guid>
         
         
       </item>
@@ -136,8 +136,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/share-protocol.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 01:16:24 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/18/sharing-protocol.html</guid>
+        <link>http://localhost:4000/2016/11/18/sharing-protocol.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/18/sharing-protocol.html</guid>
         
         
       </item>
@@ -149,8 +149,8 @@ const newData = immutableData.setIn(resolveKeyPaths(immutableData, keypath), &am
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/comic-01-brew-update-upgrade.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 16 Nov 2016 01:16:24 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2016/11/16/brew-update-upgrade-comic.html</guid>
+        <link>http://localhost:4000/2016/11/16/brew-update-upgrade-comic.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/16/brew-update-upgrade-comic.html</guid>
         
         
       </item>
@@ -184,8 +184,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/day-one-2-photo-location.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Feb 2016 01:16:24 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2016/02/08/dayone-2-a-disappointment.html</guid>
+        <link>http://localhost:4000/2016/02/08/dayone-2-a-disappointment.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/08/dayone-2-a-disappointment.html</guid>
         
         
       </item>
@@ -221,8 +221,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;PPS: You can copy &lt;code&gt;libcocos2d iOS.a&lt;/code&gt; to your project folder and commit it to your repo so that your team can build and run the project immediately.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jan 2016 19:29:17 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2016/01/20/build-cocos2d-x-fat-static-library.html</guid>
+        <link>http://localhost:4000/2016/01/20/build-cocos2d-x-fat-static-library.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/01/20/build-cocos2d-x-fat-static-library.html</guid>
         
         
       </item>
@@ -244,8 +244,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;What the script does is basically loop through all the image files (png,jpg,jpeg) in the given directory, use ImageMagick&amp;#39;s &lt;code&gt;identify&lt;/code&gt; to extract the image&amp;#39;s metadata, then use &lt;code&gt;grep&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt; to get the year and month of the image&amp;#39;s taken date from the EXIF. After that, it just creates the directory if needed and moves the image to the directory. If there&amp;#39;s no EXIF data, the images will be moved to &lt;code&gt;Unknown&lt;/code&gt; folder.&lt;/p&gt;
 </description>
         <pubDate>Wed, 13 Jan 2016 10:00:14 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2016/01/13/organize-photos-via-command-line.html</guid>
+        <link>http://localhost:4000/2016/01/13/organize-photos-via-command-line.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/01/13/organize-photos-via-command-line.html</guid>
         
         
       </item>
@@ -262,7 +262,7 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;When creating a new iOS project in Xcode, we will get a reference to &lt;code&gt;window&lt;/code&gt; in &lt;code&gt;AppDelegate&lt;/code&gt; class, while a Mac app does not have &lt;code&gt;window&lt;/code&gt; property. It feels like the AppDelegate in Mac does not know even what the initial window is. This is probably due to the fact that a Mac app can have multiple windows.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// AppDelegate in iOS&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// AppDelegate in iOS&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppDelegate&lt;/span&gt; : &lt;span class=&quot;bp&quot;&gt;UIResponder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplicationDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -283,7 +283,7 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;In Nori&amp;#39;s case, I need to the app to generate photo strips when the app receive user-selected images from Finder. When the user click &lt;code&gt;Create Photostrip&lt;/code&gt; from Finder&amp;#39;s contextual menu (right click), the system will call a registered method in Nori. Inside this method, the app will fetch the selected file URLs and generate photo strip from the image files.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;photoStripFromImage:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSPasteboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pboard&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;userData:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;error:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;photoStripFromImage:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSPasteboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pboard&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;userData:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;error:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;bp&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;bp&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;@{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;NSPasteboardURLReadingFileURLsOnlyKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;numberWithBool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
                                &lt;span class=&quot;nl&quot;&gt;NSPasteboardURLReadingContentsConformToTypesKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imageTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;l&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -298,11 +298,11 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;I need to pass this file URLs to the view controller who is responsible in displaying the generated photo strip. In iOS, I can simply get the root view controller like so.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;bp&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;But the problem was there&amp;#39;s no straight forward way to tell the view controller about these files. There are several ways to solve this, but I chose to disable the &amp;quot;magic&amp;quot; of storyboard by unchecking the &amp;quot;Is Initial Controller&amp;quot; in the main storyboard. Then I create the window programmatically in AppDelegate&amp;#39;s &lt;code&gt;applicationDidFinishLaunching&lt;/code&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;applicationDidFinishLaunching:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNotification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aNotification&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;applicationDidFinishLaunching:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSNotification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aNotification&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    
     &lt;span class=&quot;n&quot;&gt;NSStoryboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainStoryBoard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSStoryboard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;storyboardWithName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;Main&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;MainWindowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;windowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainStoryBoard&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;instantiateControllerWithIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;mainWindowController&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainWindowController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windowController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -316,7 +316,7 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;NSImage has a &lt;code&gt;size&lt;/code&gt; property, but unfortunately it is not the pixel size of the image. The size property returns the &lt;a href=&quot;http://stackoverflow.com/a/11877049/401544&quot;&gt;size information that is screen resolution dependent&lt;/a&gt;. To get the pixel size, we need to use &lt;code&gt;NSImageRep&lt;/code&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// NSImage category&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// NSImage category&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pixelSize&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;NSImageRep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;representations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;objectAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;NSSize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imageSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSMakeSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsWide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixelsHigh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -327,7 +327,7 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;In iOS, changing the background color of a &lt;code&gt;UIView&lt;/code&gt; is as simple as changing its &lt;code&gt;backgroundColor&lt;/code&gt; property. But it&amp;#39;s not that simple with NSView. I need to subclass &lt;code&gt;NSView&lt;/code&gt; and override &lt;code&gt;drawRect&lt;/code&gt; method.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;drawRect:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dirtyRect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;drawRect:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dirtyRect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;drawRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirtyRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 
     &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSColor&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;colorWithDeviceWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
@@ -342,11 +342,11 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;hr&gt;
 
-&lt;p&gt;Nori for Mac is &lt;a href=&quot;https://itunes.apple.com/us/app/nori-photo-strips-creator/id1067017035?ls=1&amp;amp;mt=12&quot;&gt;now available on the Mac App Store&lt;/a&gt;. Check it out! :)&lt;/p&gt;
+&lt;p&gt;Nori for Mac is &lt;a href=&quot;https://itunes.apple.com/us/app/nori-photo-strips-creator/id1067017035?ls=1&amp;mt=12&quot;&gt;now available on the Mac App Store&lt;/a&gt;. Check it out! :)&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Dec 2015 16:37:55 +0100</pubDate>
-        <link>http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/2015/12/13/making-of-nori-for-mac.html</guid>
+        <link>http://localhost:4000/2015/12/13/making-of-nori-for-mac.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/12/13/making-of-nori-for-mac.html</guid>
         
         
       </item>
@@ -400,8 +400,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;I&amp;#39;m going to ponder on these questions for a while longer while I&amp;#39;m busy preparing my moving out of Japan. In the mean time, if you have any advice or suggestions, let me know on Twitter or send me an &lt;a href=&quot;mailto:nico@delightfuldev.com&quot;&gt;email&lt;/a&gt;. I&amp;#39;d greatly appreciate it.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Nov 2015 03:30:49 +0100</pubDate>
-        <link>http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
+        <link>http://localhost:4000/ios/game/android/2015/11/16/keep-on-or-move-on.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ios/game/android/2015/11/16/keep-on-or-move-on.html</guid>
         
         
         <category>ios</category>
@@ -430,7 +430,7 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/itunes-connect-stupid.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;After implementing In-App Purchase and the iAd in iOS, I submitted Make9 to the App Store. It was a terrible experience. Apple has successfully degraded the quality of iTunesConnect, which is the portal to submit apps to the App Store, every time they updated it. When I tried to submit Make9, I used Felix Krause&amp;#39;s &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt; tool to upload 95 screenshots in a single command. Unfortunately, it appeared that iTunesConnect backend is not designed to handle a large number of images upload simultaneously. After Fastlane&amp;#39;s &lt;a href=&quot;https://github.com/KrauseFx/deliver&quot;&gt;deliver&lt;/a&gt; tool failed to upload the images, the backend decided to keep me away from uploading images, even from the web portal, for another day. So I waited. 10 days after I &lt;em&gt;finally&lt;/em&gt; submitted the game successfully, they rejected it because according to them, it didn&amp;#39;t have a way to restore purchases. But there was. After re-testing the game, I found out that there&amp;#39;s a bug where one of the in-app purchases cannot be restored. So it was my mistake. However, they didn&amp;#39;t actually give proper explanation of the problem. Anyway, I re-submitted and waited again. UPDATE: Apple finally approved Make9. It&amp;#39;s &lt;a href=&quot;https://itunes.apple.com/us/app/make9-number-puzzle-game/id1044061338?ls=1&amp;amp;mt=8&quot;&gt;available on the App Store now&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After implementing In-App Purchase and the iAd in iOS, I submitted Make9 to the App Store. It was a terrible experience. Apple has successfully degraded the quality of iTunesConnect, which is the portal to submit apps to the App Store, every time they updated it. When I tried to submit Make9, I used Felix Krause&amp;#39;s &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt; tool to upload 95 screenshots in a single command. Unfortunately, it appeared that iTunesConnect backend is not designed to handle a large number of images upload simultaneously. After Fastlane&amp;#39;s &lt;a href=&quot;https://github.com/KrauseFx/deliver&quot;&gt;deliver&lt;/a&gt; tool failed to upload the images, the backend decided to keep me away from uploading images, even from the web portal, for another day. So I waited. 10 days after I &lt;em&gt;finally&lt;/em&gt; submitted the game successfully, they rejected it because according to them, it didn&amp;#39;t have a way to restore purchases. But there was. After re-testing the game, I found out that there&amp;#39;s a bug where one of the in-app purchases cannot be restored. So it was my mistake. However, they didn&amp;#39;t actually give proper explanation of the problem. Anyway, I re-submitted and waited again. UPDATE: Apple finally approved Make9. It&amp;#39;s &lt;a href=&quot;https://itunes.apple.com/us/app/make9-number-puzzle-game/id1044061338?ls=1&amp;mt=8&quot;&gt;available on the App Store now&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;While waiting for the second time, I started working on adding ad and implementing In-App Billing on Android. It wasn&amp;#39;t a walk in the park. Maybe because I&amp;#39;m not used to Android development, but testing In-App Billing in Android is a hellish experience. And &lt;a href=&quot;http://suda.pl/the-hell-of-testing-google-play-in-app-billing/&quot;&gt;I wasn&amp;#39;t the only one who thought that way&lt;/a&gt;. The bright side however, submitting the game to Google Play Store was a pleasure. It was easy and fast. Less than 24 hours after I submitted, the game is live on the Play Store. After receiving bug reports and some feedback from my friends, I uploaded an update and boom, it&amp;#39;s available on the store in just few hours. The way I see it, Google&amp;#39;s decision is benefiting both developers and users here.&lt;/p&gt;
 
@@ -439,8 +439,8 @@ If I'd asked customers what they wanted, they would have said &quot;a faster hor
 &lt;p&gt;Have fun!&lt;/p&gt;
 </description>
         <pubDate>Fri, 23 Oct 2015 04:14:47 +0200</pubDate>
-        <link>http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
-        <guid isPermaLink="true">http://www.nicnocquee.com/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
+        <link>http://localhost:4000/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ios/game/android/2015/10/23/0-to-first-ios-android-game-in-68-days.html</guid>
         
         
         <category>ios</category>
