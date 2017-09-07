@@ -74,7 +74,7 @@ parse_args() {
 	deploy_branch="master"
 
 	#if no user identity is already set in the current git environment, use this:
-	default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
+	default_username="nicnocquee"
 	default_email=${GIT_DEPLOY_EMAIL:-}
 
 	#repository to deploy to. must be readable and writable.
